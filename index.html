@@ -2,18 +2,28 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff8f0">
 <title>胖寶寶台灣行</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<!-- 樣式由 C 模組負責（css/*.css）；下面只留骨架能用的最小樣式 -->
 <style>
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; background: #fff8f0; color: #3a2a1a; }
+  :root { color-scheme: light dark; }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #fff8f0; color: #3a2a1a; }
   @media (prefers-color-scheme: dark) { body { background: #1c1712; color: #f2e6d8; } }
-  main { text-align: center; padding: 0 16px; }
+  [hidden] { display: none !important; }
 </style>
+<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-<main>
-  <h1>胖寶寶台灣行</h1>
-  <p>施工中，馬上來。</p>
+<header id="tw-header" class="tw-header"></header>
+<main id="tw-view" class="tw-view" aria-live="polite">
+  <p class="tw-loading">載入中…</p>
 </main>
+<nav id="tw-nav" class="tw-nav" aria-label="主選單"></nav>
+<div id="tw-overlay" class="tw-overlay" hidden></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
