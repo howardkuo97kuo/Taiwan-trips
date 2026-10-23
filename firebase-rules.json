@@ -1,0 +1,74 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "marks": {
+      "$who": {
+        "$placeId": {
+          ".write": "$who === 'apong' || $who === 'baobao'",
+          ".validate": "newData.hasChildren(['ts'])",
+          "want": {
+            ".validate": "newData.isBoolean()"
+          },
+          "been": {
+            ".validate": "newData.isBoolean()"
+          },
+          "again": {
+            ".validate": "newData.isBoolean()"
+          },
+          "ym": {
+            ".validate": "newData.isString() && newData.val().matches(/^[0-9]{4}-(0[1-9]|1[0-2])$/)"
+          },
+          "stars": {
+            ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 5 && newData.val() % 1 === 0"
+          },
+          "note": {
+            ".validate": "newData.isString() && newData.val().length <= 200"
+          },
+          "ts": {
+            ".validate": "newData.isNumber()"
+          },
+          "$other": {
+            ".validate": false
+          }
+        },
+        ".validate": "$who === 'apong' || $who === 'baobao'"
+      },
+      ".read": true
+    },
+    "inbox": {
+      "$id": {
+        ".write": true,
+        ".validate": "newData.hasChildren(['text', 'by', 'ts', 'status'])",
+        "text": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
+        },
+        "by": {
+          ".validate": "newData.val() === 'apong' || newData.val() === 'baobao'"
+        },
+        "ts": {
+          ".validate": "newData.isNumber()"
+        },
+        "status": {
+          ".validate": "newData.isString() && newData.val().length <= 20"
+        },
+        "$other": {
+          ".validate": false
+        }
+      },
+      ".read": true
+    },
+    "places": {
+      ".write": false,
+      ".read": true
+    },
+    "removed": {
+      ".write": false,
+      ".read": true
+    },
+    "trips": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

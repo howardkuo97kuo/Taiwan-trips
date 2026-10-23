@@ -1,0 +1,27 @@
+name: snapshot
+
+on:
+  schedule:
+    - cron: '17 19 * * *' # 每天 03:17（台灣時間）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: firebase-io
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 備份整個資料庫到 snapshot 分支
+        env:
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+        run: |
+          source scripts/fb-env.sh
+          mkdir -p out/daily
+          curl -fsS --max-time 120 "$DB/.json?auth=$FIREBASE_SECRET" | jq -S . > out/latest.json
+          cp out/latest.json "out/daily/$(TZ=Asia/Taipei date +%F).json"
+          bash scripts/snapshot-commit.sh out "snapshot: $(TZ=Asia/Taipei date +%F)"

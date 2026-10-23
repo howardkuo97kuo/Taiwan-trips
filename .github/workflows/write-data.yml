@@ -1,0 +1,89 @@
+name: write-data
+
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: 要寫的路徑（marks/{apong|baobao}/{id}、inbox/{id}、places 或 places/{id}、removed 或 removed/{id}）
+        type: string
+        required: true
+      expect_ts:
+        description: 現場資料的 ts 必須等於此值；none 表示該節點必須不存在；skip 表示不比對
+        type: string
+        required: true
+      payload:
+        description: 要寫入的 JSON；null 表示刪除
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: firebase-io
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 寫前備份、比對時間戳、寫入、讀回確認
+        env:
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+          INPUT_PATH: ${{ inputs.path }}
+          INPUT_EXPECT_TS: ${{ inputs.expect_ts }}
+          INPUT_PAYLOAD: ${{ inputs.payload }}
+        run: |
+          source scripts/fb-env.sh
+
+          # 只允許寫約定好的路徑
+          if ! [[ "$INPUT_PATH" =~ ^(marks/(apong|baobao)/[A-Za-z0-9_-]+|inbox/[A-Za-z0-9_-]+|(places|removed)(/[A-Za-z0-9_-]+)?)$ ]]; then
+            echo "::error::不允許的路徑：$INPUT_PATH"
+            exit 1
+          fi
+          if ! [[ "$INPUT_EXPECT_TS" =~ ^(none|skip|[0-9]+)$ ]]; then
+            echo "::error::expect_ts 必須是 none、skip 或數字"
+            exit 1
+          fi
+          printf '%s' "$INPUT_PAYLOAD" | jq -e . > payload.json || { echo "::error::payload 不是合法 JSON"; exit 1; }
+
+          url="$DB/$INPUT_PATH.json?auth=$FIREBASE_SECRET"
+          curl -fsS --max-time 60 "$url" | jq -S . > live.json
+
+          # 備份寫入前的現場資料
+          slug="${INPUT_PATH//\//_}"
+          mkdir -p out/backup
+          cp live.json "out/backup/$(date -u +%Y%m%dT%H%M%SZ)-$slug.json"
+          bash scripts/snapshot-commit.sh out "write-data: backup before $INPUT_PATH"
+
+          # 比對時間戳
+          live_ts="$(jq -r 'if type == "object" then (.ts // "null") else "null" end' live.json)"
+          case "$INPUT_EXPECT_TS" in
+            skip) ;;
+            none)
+              if [ "$(jq -c . live.json)" != "null" ]; then
+                echo "::error::現場已有資料，與 expect_ts=none 不符，已拒絕寫入"
+                exit 1
+              fi ;;
+            *)
+              if [ "$live_ts" != "$INPUT_EXPECT_TS" ]; then
+                echo "::error::現場 ts=$live_ts，與 expect_ts=$INPUT_EXPECT_TS 不符（資料已被改動），已拒絕寫入"
+                exit 1
+              fi ;;
+          esac
+
+          # 寫入（null 即刪除）
+          if [ "$(jq -c . payload.json)" = "null" ]; then
+            curl -fsS --max-time 60 -X DELETE "$url" > /dev/null
+          else
+            curl -fsS --max-time 60 -X PUT -H 'Content-Type: application/json' --data @payload.json "$url" > /dev/null
+          fi
+
+          # 讀回比對
+          curl -fsS --max-time 60 "$url" | jq -S . > after.json
+          jq -S . payload.json > expected.json
+          if ! diff -q after.json expected.json > /dev/null; then
+            echo "::error::讀回的資料與寫入的不一致"
+            exit 1
+          fi
+          echo "已寫入 $INPUT_PATH 並讀回確認"

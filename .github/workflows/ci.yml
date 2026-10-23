@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 資料格式驗證
+        run: node scripts/validate.mjs
+      - name: 語法檢查
+        run: |
+          shopt -s nullglob
+          for f in js/*.js sw.js scripts/*.mjs tools/*.mjs; do
+            echo "node --check $f"
+            node --check "$f"
+          done
+      - name: Firebase 規則是合法 JSON
+        run: jq empty firebase-rules.json
+      - name: Workflow 與 shell 腳本語法
+        run: |
+          for f in scripts/*.sh; do bash -n "$f"; done
