@@ -31,7 +31,7 @@
 | 模組 | 檔案 |
 |---|---|
 | A 資料 | `data/*.json`、`data/geo/` |
-| B 骨架與同步 | `index.html`、`js/app.js`、`js/state.js`、`js/sync.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md` |
+| B 骨架與同步 | `index.html`、`js/app.js`、`js/state.js`、`js/sync.js`、`js/util.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md` |
 | C 介面 | `css/*.css` |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` |

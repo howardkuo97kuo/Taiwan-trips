@@ -146,7 +146,7 @@
 
 | 路徑 | 內容 | 模組 |
 |---|---|---|
-| `index.html`、`js/app.js`、`js/state.js`、`js/sync.js` | 骨架、啟動、共用狀態、Firebase 連線、身分選擇 | B |
+| `index.html`、`js/app.js`、`js/state.js`、`js/sync.js`、`js/util.js` | 骨架、啟動、共用狀態、Firebase 連線、身分選擇 | B |
 | `css/*.css` | 介面樣式、手機優先、深淺色 | C |
 | `js/map.js`、`js/places.js`、`js/marks.js` | 首頁地圖、地區瀏覽、篩選、地點詳情、個人標記、兩人對照、點亮台灣 | D |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線、加到主畫面 | E |
@@ -179,7 +179,7 @@
 | 模組 | 負責的檔案 | 產出 | 前置 |
 |---|---|---|---|
 | A 資料 | `data/*.json`、`data/geo/` | `config.json`、五區與 22 縣市地區樹、縣市邊界、地點庫（含 Google 清單匯入與補欄位）、去過紀錄匯入 | 無 |
-| B 骨架與同步 | `index.html`、`js/app.js`、`state.js`、`sync.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md` | 新 repo、Pages 上線、模組載入、Firebase 連線與身分選擇、規則存檔、讀寫與快照 workflow、驗證腳本與 CI | 無（先用假資料） |
+| B 骨架與同步 | `index.html`、`js/app.js`、`state.js`、`sync.js`、`util.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md` | 新 repo、Pages 上線、模組載入、Firebase 連線與身分選擇、規則存檔、讀寫與快照 workflow、驗證腳本與 CI | 無（先用假資料） |
 | C 介面 | `css/*.css` | 「胖寶寶台灣行」視覺、手機優先版面、卡片、篩選列、深淺色 | A 的資料格式、B 的頁面結構 |
 | D 地圖與地點庫 | `js/map.js`、`places.js`、`marks.js` | 首頁地圖、地區瀏覽、篩選、地點詳情、想去／去過／心得／星等、兩人對照、點亮台灣 | A、B |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料、併回 `places.json`、離線、備份、上線前檢查與手機測試 | B、D |
