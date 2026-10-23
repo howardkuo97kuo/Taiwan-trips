@@ -15,16 +15,17 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: 資料格式驗證
         run: node scripts/validate.mjs
       - name: 語法檢查
         run: |
           shopt -s nullglob
-          for f in js/*.js sw.js scripts/*.mjs tools/*.mjs; do
+          for f in js/*.js scripts/*.mjs tools/*.mjs; do
             echo "node --check $f"
             node --check "$f"
           done
+          if [ -f sw.js ]; then node --check sw.js; fi
       - name: Firebase 規則是合法 JSON
         run: jq empty firebase-rules.json
       - name: Workflow 與 shell 腳本語法
