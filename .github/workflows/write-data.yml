@@ -45,7 +45,7 @@ jobs:
             echo "::error::expect_ts 必須是 none、skip 或數字"
             exit 1
           fi
-          printf '%s' "$INPUT_PAYLOAD" | jq -e . > payload.json || { echo "::error::payload 不是合法 JSON"; exit 1; }
+          printf '%s' "$INPUT_PAYLOAD" | jq . > payload.json || { echo "::error::payload 不是合法 JSON"; exit 1; }
 
           url="$DB/$INPUT_PATH.json?auth=$FIREBASE_SECRET"
           curl -fsS --max-time 60 "$url" | jq -S . > live.json
