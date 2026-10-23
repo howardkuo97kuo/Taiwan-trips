@@ -1,0 +1,285 @@
+{
+  "note": "地區樹：大區 → 縣市 → 區域。id 格式 {大區}-{縣市}-{區域}，永不改名。center 為 [緯度, 經度]，zoom 為 Leaflet 縮放。districts 等地點進來再補。",
+  "center": [
+    23.7,
+    120.96
+  ],
+  "zoom": 7,
+  "zones": [
+    {
+      "id": "north",
+      "n": "北部",
+      "center": [
+        25,
+        121.4
+      ],
+      "zoom": 9,
+      "counties": [
+        {
+          "id": "north-taipei",
+          "n": "台北市",
+          "center": [
+            25.04,
+            121.55
+          ],
+          "zoom": 12,
+          "districts": []
+        },
+        {
+          "id": "north-newtaipei",
+          "n": "新北市",
+          "center": [
+            25.01,
+            121.46
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "north-keelung",
+          "n": "基隆市",
+          "center": [
+            25.13,
+            121.74
+          ],
+          "zoom": 12,
+          "districts": []
+        },
+        {
+          "id": "north-taoyuan",
+          "n": "桃園市",
+          "center": [
+            24.99,
+            121.3
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "north-hsinchu-city",
+          "n": "新竹市",
+          "center": [
+            24.8,
+            120.97
+          ],
+          "zoom": 12,
+          "districts": []
+        },
+        {
+          "id": "north-hsinchu-county",
+          "n": "新竹縣",
+          "center": [
+            24.7,
+            121.12
+          ],
+          "zoom": 10,
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": "central",
+      "n": "中部",
+      "center": [
+        24,
+        120.7
+      ],
+      "zoom": 9,
+      "counties": [
+        {
+          "id": "central-miaoli",
+          "n": "苗栗縣",
+          "center": [
+            24.56,
+            120.82
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "central-taichung",
+          "n": "台中市",
+          "center": [
+            24.15,
+            120.68
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "central-changhua",
+          "n": "彰化縣",
+          "center": [
+            24.07,
+            120.54
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "central-nantou",
+          "n": "南投縣",
+          "center": [
+            23.96,
+            120.97
+          ],
+          "zoom": 9,
+          "districts": []
+        },
+        {
+          "id": "central-yunlin",
+          "n": "雲林縣",
+          "center": [
+            23.71,
+            120.43
+          ],
+          "zoom": 10,
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": "south",
+      "n": "南部",
+      "center": [
+        22.9,
+        120.4
+      ],
+      "zoom": 9,
+      "counties": [
+        {
+          "id": "south-chiayi-city",
+          "n": "嘉義市",
+          "center": [
+            23.48,
+            120.45
+          ],
+          "zoom": 12,
+          "districts": []
+        },
+        {
+          "id": "south-chiayi-county",
+          "n": "嘉義縣",
+          "center": [
+            23.45,
+            120.57
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "south-tainan",
+          "n": "台南市",
+          "center": [
+            23,
+            120.21
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "south-kaohsiung",
+          "n": "高雄市",
+          "center": [
+            22.63,
+            120.3
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "south-pingtung",
+          "n": "屏東縣",
+          "center": [
+            22.55,
+            120.55
+          ],
+          "zoom": 9,
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": "east",
+      "n": "東部",
+      "center": [
+        23.8,
+        121.4
+      ],
+      "zoom": 8,
+      "counties": [
+        {
+          "id": "east-yilan",
+          "n": "宜蘭縣",
+          "center": [
+            24.7,
+            121.74
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "east-hualien",
+          "n": "花蓮縣",
+          "center": [
+            23.75,
+            121.4
+          ],
+          "zoom": 9,
+          "districts": []
+        },
+        {
+          "id": "east-taitung",
+          "n": "台東縣",
+          "center": [
+            22.99,
+            121.15
+          ],
+          "zoom": 9,
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": "island",
+      "n": "離島",
+      "center": [
+        24.3,
+        119.9
+      ],
+      "zoom": 7,
+      "counties": [
+        {
+          "id": "island-penghu",
+          "n": "澎湖縣",
+          "center": [
+            23.57,
+            119.58
+          ],
+          "zoom": 10,
+          "districts": []
+        },
+        {
+          "id": "island-kinmen",
+          "n": "金門縣",
+          "center": [
+            24.45,
+            118.37
+          ],
+          "zoom": 11,
+          "districts": []
+        },
+        {
+          "id": "island-lienchiang",
+          "n": "連江縣",
+          "center": [
+            26.16,
+            119.95
+          ],
+          "zoom": 11,
+          "districts": []
+        }
+      ]
+    }
+  ]
+}
