@@ -3,10 +3,28 @@
   "prefix": "tw",
   "tz": "Asia/Taipei",
   "who": [
-    { "id": "apong", "name": "阿胖" },
-    { "id": "baobao", "name": "寶寶" }
+    {
+      "id": "apong",
+      "name": "阿胖"
+    },
+    {
+      "id": "baobao",
+      "name": "寶寶"
+    }
   ],
-  "categories": ["景點", "美食", "小吃夜市", "咖啡甜點", "溫泉", "住宿", "購物市集"],
-  "firebase": { "dbUrl": "" },
-  "google": { "placesKey": "" }
+  "categories": [
+    "景點",
+    "美食",
+    "小吃夜市",
+    "咖啡甜點",
+    "溫泉",
+    "住宿",
+    "購物市集"
+  ],
+  "firebase": {
+    "dbUrl": "https://taiwan-trips-default-rtdb.asia-southeast1.firebasedatabase.app"
+  },
+  "google": {
+    "placesKey": ""
+  }
 }
