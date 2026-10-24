@@ -113,5 +113,7996 @@
   },
   "alts": [],
   "ok": true
+ },
+ {
+  "i": 5,
+  "n": "軟食力 行天宮店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJg5CffQqpQjQRGC-w8J-69mg",
+   "name": "軟食力 行天宮店",
+   "addr": "10491臺北市中山區民權東路二段135巷30弄21號",
+   "ll": [
+    25.0642997,
+    121.53412999999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7563437820315971352&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 6,
+  "n": "So Taipei 趖 宵夜專門",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJK__AfxCrQjQRJyCC7SCw9ns",
+   "name": "So Taipei 趖 宵夜專門",
+   "addr": "11052臺北市信義區景聯里基隆路二段71號",
+   "ll": [
+    25.0305194,
+    121.5582581
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8932520566406127655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 7,
+  "n": "樸食間（最後收客午餐13:30｜晚餐19:30）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJwzf5Ny_nZzQRG3dNrofzL1A",
+   "name": "樸食間（最後收客午餐13:30｜晚餐19:30）",
+   "addr": "265003宜蘭縣羅東鎮國華里培英路88號",
+   "ll": [
+    24.6782149,
+    121.75986929999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5778104611010082587&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 8,
+  "n": "拌伴健康韓食-中山旗艦店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJS-0HwYipQjQRSi0PNg4YHU4",
+   "name": "拌伴健康韓食-中山旗艦店",
+   "addr": "104臺北市中山區松江里錦州街298號",
+   "ll": [
+    25.060212999999997,
+    121.53590949999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5628681558598561098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 9,
+  "n": "FRASSI",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ1Sk-qa2tQjQRXxXekf5f9p8",
+   "name": "FRASSI",
+   "addr": "10491臺北市中山區金泰里樂群三路299號1樓",
+   "ll": [
+    25.0828435,
+    121.5591591
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11526505843274945887&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 10,
+  "n": "亘一郎 KOICHIRO",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJR25pFzCtQjQRM0hlkV1ni54",
+   "name": "亘一郎 KOICHIRO",
+   "addr": "104臺北市中山區金泰里樂群三路301號5F",
+   "ll": [
+    25.0828626,
+    121.5593985
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11424338531324348467&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 11,
+  "n": "茹絲葵經典牛排館 大直店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJb6wy1BKsQjQR0lBIwBMQOUI",
+   "name": "茹絲葵經典牛排館 大直店",
+   "addr": "10491臺北市中山區金泰里樂群三路301號3樓",
+   "ll": [
+    25.0829277,
+    121.5593325
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4771862957192138962&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 12,
+  "n": "USHIGORO S. TAIWAN",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJMUp2BgCtQjQR8nRBxsKIN94",
+   "name": "USHIGORO S. TAIWAN",
+   "addr": "10491臺北市中山區金泰里樂群三路299號2樓",
+   "ll": [
+    25.082893499999997,
+    121.5591284
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16012417370270299378&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 13,
+  "n": "麒麟閣沙茶火鍋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJV_xv_OmpQjQR8FFY6X66-j8",
+   "name": "麒麟閣沙茶火鍋",
+   "addr": "234新北市永和區信義里永和路二段57號2樓",
+   "ll": [
+    25.011065,
+    121.51460599999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4610202222810649072&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 14,
+  "n": "榕樹下綿綿冰",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJEX5_SEgiaDQR3Klqwo8NtvQ",
+   "name": "榕樹下綿綿冰",
+   "addr": "320桃園市中壢區石頭里中山路83號",
+   "ll": [
+    24.9551575,
+    121.2262142
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17633296302109010396&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [
+   {
+    "pid": "ChIJf8RDPfkeaDQRyyP5hb9b9mc",
+    "name": "榕樹下綿綿冰 旗艦總店Mianmianbing flagship store",
+    "addr": "330桃園市桃園區中山東路75號",
+    "ll": [
+     24.996303299999997,
+     121.3156375
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=7491275908321977291&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "桃園市",
+    "region": "north-taoyuan"
+   },
+   {
+    "pid": "ChIJJS6ms6sfaDQRbEJDNIp2nOc",
+    "name": "榕樹下綿綿冰",
+    "addr": "330桃園市桃園區長安里中正路671號",
+    "ll": [
+     25.0061137,
+     121.3037111
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=16689344655082603116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "桃園市",
+    "region": "north-taoyuan"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 15,
+  "n": "雅香石頭火鍋(西門總店)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ97CWKgapQjQReeG-20Sl9KY",
+   "name": "雅香石頭火鍋(西門總店)",
+   "addr": "10844臺北市萬華區西門里成都路159號",
+   "ll": [
+    25.0438263,
+    121.50285489999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12030422219776516473&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 16,
+  "n": "boon現代韓式餐酒館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJv2D4eN2rQjQRZJ1Owh-R8jo",
+   "name": "boon現代韓式餐酒館",
+   "addr": "110台北市信义区西村里松智路17號微風南山48 樓",
+   "ll": [
+    25.0344052,
+    121.56742399999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4247616964153744740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 17,
+  "n": "Les tables歐陸料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJIU2EWtypQjQRjZIwpUbyzJs",
+   "name": "Les tables歐陸料理",
+   "addr": "103臺北市大同區永樂里貴德街75-2號1樓",
+   "ll": [
+    25.0562594,
+    121.5084595
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11226614356360860301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 18,
+  "n": "NOBUO",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJHXEjL_SpQjQRtPqWK5a_D1w",
+   "name": "NOBUO",
+   "addr": "100022臺北市中正區文北里泰安街8號",
+   "ll": [
+    25.039958799999997,
+    121.5279626
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6633731427837344436&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 19,
+  "n": "Restaurant A",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJt2exNxurQjQROcDnwKLeXA4",
+   "name": "Restaurant A",
+   "addr": "106台北市大安区义村里忠孝东路三段282號新光三越Diamond Towers 二館4樓四樓",
+   "ll": [
+    25.0414216,
+    121.5426945
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1034946804990853177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 20,
+  "n": "咿品 香雞排-台中霧峰中正店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJX4XrLwA7aTQRCcO8LtT9sPQ",
+   "name": "咿品 香雞排-台中霧峰中正店",
+   "addr": "41341臺中市霧峰區本堂里中正路767之13號",
+   "ll": [
+    24.061356699999997,
+    120.69813959999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17631871628914508553&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 21,
+  "n": "咿品 香雞排-台中南屯嶺東店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ4ak1DAAXaTQRHn8_Tu-Lx94",
+   "name": "咿品 香雞排-台中南屯嶺東店",
+   "addr": "40858臺中市南屯區文山里嶺東路782號",
+   "ll": [
+    24.1495095,
+    120.6121043
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16052953256711651102&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [
+   {
+    "pid": "ChIJU4BCZTw_aTQRCCiPND7lE0Q",
+    "name": "咿品 香雞排-台中西屯中工店",
+    "addr": "40766臺中市西屯區中工三路",
+    "ll": [
+     24.1753099,
+     120.6174181
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=4905516474469132296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   },
+   {
+    "pid": "ChIJUax4AH0-aTQRIb7AL4C13Rs",
+    "name": "品饌雞排 嶺東店",
+    "addr": "408臺中市南屯區春社里永春南路71號",
+    "ll": [
+     24.1383143,
+     120.6113579
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=2007960571038711329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 22,
+  "n": "咿品 香雞排-台南永康大仁店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJIV00EQBxbjQRTG9XxlGkiCw",
+   "name": "咿品 香雞排-台南永康大仁店",
+   "addr": "710臺南市永康區崑山里大仁街197之1號",
+   "ll": [
+    23.0051393,
+    120.25766340000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3208995405628403532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 23,
+  "n": "雅朵義大利餐館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ0yaH1RCrQjQR52gRDsxW-UA",
+   "name": "雅朵義大利餐館",
+   "addr": "106臺北市大安區光復南路260巷5號",
+   "ll": [
+    25.040075899999998,
+    121.5569003
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4681868722037680359&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJic7B7qurQjQRw4LMQlrn5Dg",
+    "name": "Rialto Cucina e Vino 雅朵光復2店",
+    "addr": "106臺北市大安區正聲里光復南路346巷54號",
+    "ll": [
+     25.0385214,
+     121.55583980000002
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=4099655935667765955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   },
+   {
+    "pid": "ChIJoQJDvpSrQjQROX-evGUkrRo",
+    "name": "雅朵義大利餐館(新光三越A4店)",
+    "addr": "110臺北市信義區興雅里松高路19號地下一樓",
+    "ll": [
+     25.0397669,
+     121.56689539999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=1922232635331870521&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 24,
+  "n": "半島牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJT5Lgu7yrQjQR-4z6kZ30ZOc",
+   "name": "半島牛肉麵",
+   "addr": "110臺北市信義區敦厚里忠孝東路五段215巷23號",
+   "ll": [
+    25.0419245,
+    121.57029109999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16673720678028578043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 25,
+  "n": "銘記越南文化美食 Ming Jih - Vietnamese Culture Restaurant",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJCcJ-WUlTXTQRXCH_rCIVYlc",
+   "name": "銘記越南文化美食 Ming Jih - Vietnamese Culture Restaurant",
+   "addr": "221新北市汐止區湖光里康寧街536-1號",
+   "ll": [
+    25.0696223,
+    121.6353008
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6296618467692847452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 26,
+  "n": "賴山嶼 麻辣燙內湖旗艦店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJc6XOWfCtQjQRlHy5ADqBGo8",
+   "name": "賴山嶼 麻辣燙內湖旗艦店",
+   "addr": "1樓, No. 22號瑞光路583巷西湖里內湖區臺北市114",
+   "ll": [
+    25.0805962,
+    121.5682654
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10311696382938414228&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 27,
+  "n": "鳥力",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyRI_hXurQjQRdxmPHhcj6ok",
+   "name": "鳥力",
+   "addr": "104臺北市中山區江山里建國北路二段125號",
+   "ll": [
+    25.0598332,
+    121.5373479
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9937794109950335351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 28,
+  "n": "聖瑪莉丹麥麵包莊園&親子樂園",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJxTDtRAEdaDQR_19jk7DTC-k",
+   "name": "聖瑪莉丹麥麵包莊園&親子樂園",
+   "addr": "236新北市土城區沛陂里中山路21號",
+   "ll": [
+    24.9629487,
+    121.41801369999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16792748390921494527&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 29,
+  "n": "武田咖哩食堂",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJDcrHdQCrQjQRHoBQFEVfUJI",
+   "name": "武田咖哩食堂",
+   "addr": "105臺北市松山區富錦里三民路146號",
+   "ll": [
+    25.060825299999998,
+    121.5633837
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10543031477972533278&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 30,
+  "n": "NARA Thai Cuisine 泰式料理 台北南港CITYLINK店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJESxABQCrQjQRA45QSKApVG0",
+   "name": "NARA Thai Cuisine 泰式料理 台北南港CITYLINK店",
+   "addr": "115臺北市南港區新光里忠孝東路七段299號7樓C棟",
+   "ll": [
+    25.0525582,
+    121.604518
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7877967416562585091&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 31,
+  "n": "Pasta Notte夜義",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJpcc14MqpQjQRTJLILFePjwo",
+   "name": "Pasta Notte夜義",
+   "addr": "100006臺北市中正區黎明里懷寧街100號",
+   "ll": [
+    25.0420579,
+    121.513932
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=760984466625172044&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 32,
+  "n": "2 in one 冰淇淋專賣店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJGdZX3ZY9aTQRTGurS2zi1Zk",
+   "name": "2 in one 冰淇淋專賣店",
+   "addr": "408臺中市南屯區大業里大墩十四街170號",
+   "ll": [
+    24.152428699999998,
+    120.65105899999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11085015012596214604&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 33,
+  "n": "一麵之椒",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ0TdiwHKrQjQRrSjbKhGIpk8",
+   "name": "一麵之椒",
+   "addr": "110臺北市信義區大道里林口街105號1",
+   "ll": [
+    25.0401168,
+    121.5802085
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5739424382445103277&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJE8ZlLvGtQjQRQxA9e00t93s",
+    "name": "一麵知椒",
+    "addr": "114臺北市內湖區西安里文湖街87號1樓",
+    "ll": [
+     25.086572300000004,
+     121.5643927
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=8932658196715999299&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 34,
+  "n": "CAFÉ PADRINO教父咖啡",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJs3-UuY-rQjQRp8aPL06uJnM",
+   "name": "CAFÉ PADRINO教父咖啡",
+   "addr": "105016臺北市松山區光復北路175號1F",
+   "ll": [
+    25.057837199999998,
+    121.55550230000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8297511014305351335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 35,
+  "n": "Pastaio Noodle cafe 敦北",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJgRcaTPerQjQRsBHoPDTQXbI",
+   "name": "Pastaio Noodle cafe 敦北",
+   "addr": "105臺北市松山區中華里敦化北路199巷2弄19號",
+   "ll": [
+    25.055004399999998,
+    121.5500558
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12852657834363982256&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 36,
+  "n": "PATTIE-O DINER 中山店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJaRWgSR2pQjQR-PVqZFGSr10",
+   "name": "PATTIE-O DINER 中山店",
+   "addr": "103臺北市大同區光能里赤峰街8巷20-1號",
+   "ll": [
+    25.053788299999997,
+    121.5186789
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6750775244726400504&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 37,
+  "n": "了了 礁溪",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJtZoHD6f7ZzQRqLV4T6XY-pA",
+   "name": "了了 礁溪",
+   "addr": "262宜蘭縣礁溪鄉玉石村公園路70巷39弄30號",
+   "ll": [
+    24.8323592,
+    121.77536309999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10446900490153801128&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 38,
+  "n": "復興路炸醬麵 宜蘭",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ4xnQ9enkZzQRpPaP4trP1BU",
+   "name": "復興路炸醬麵 宜蘭",
+   "addr": "260宜蘭縣宜蘭市文化里復興路二段65號",
+   "ll": [
+    24.7487928,
+    121.7481182
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1573110708870051492&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 39,
+  "n": "蔡叔叔比薩屋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJiZIU3J-nQjQRPcSGBMrcBZc",
+   "name": "蔡叔叔比薩屋",
+   "addr": "244新北市林口區南勢里文化三路一段408號",
+   "ll": [
+    25.0742507,
+    121.368178
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10882346834828117053&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 40,
+  "n": "BURNT BURGER SOCIAL CLUB",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJzYnsPQCrQjQRtxhA1aMxwDo",
+   "name": "BURNT BURGER SOCIAL CLUB",
+   "addr": "110臺北市信義區興雅里基隆路一段147巷54號",
+   "ll": [
+    25.042293299999997,
+    121.5678181
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4233438229455444151&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 41,
+  "n": "清河鵝肉",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJKzvJMZuuQjQRcbNb7kebMXM",
+   "name": "清河鵝肉",
+   "addr": "111臺北市士林區三玉里德行東路129巷10號",
+   "ll": [
+    25.108449999999998,
+    121.52924379999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8300586321464505201&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 42,
+  "n": "初芽 Sprout",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJn38a932uQjQRfEng8ILihp0",
+   "name": "初芽 Sprout",
+   "addr": "111臺北市士林區天福里忠誠路二段166巷7號1樓",
+   "ll": [
+    25.115538599999997,
+    121.5328793
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11351008962848770428&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 43,
+  "n": "ON TAP",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJVx-Ij_zFuFQRdUQWGlIJjTc",
+   "name": "On Tap",
+   "addr": "1424 NE Cushing Dr, Bend, OR 97701美國",
+   "ll": [
+    44.0649775,
+    -121.26464829999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4002865892031874165&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "Oregon",
+   "region": null
+  },
+  "alts": [
+   {
+    "pid": "ChIJuaugn8irQjQRGK9M9fzfO6c",
+    "name": "ON TAP",
+    "addr": "106臺北市大安區車層里忠孝東路四段216巷11弄21號",
+    "ll": [
+     25.0408963,
+     121.55393490000002
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=12050471505500090136&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": false
+ },
+ {
+  "i": 44,
+  "n": "Tony’s BBQ Smokehouse",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJGVraMpusQjQRWUq0Jyx_dgw",
+   "name": "Tony’s BBQ Smokehouse",
+   "addr": "104074臺北市中山區中央里伊通街106巷5之一號",
+   "ll": [
+    25.0540642,
+    121.5343521
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=898045003328408153&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 45,
+  "n": "台灣手作水果冰淇淋",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJi6zs38qrQjQR-ZKgcHPbgiw",
+   "name": "台灣手作水果冰淇淋",
+   "addr": "106臺北市大安區臨江里臨江街64號",
+   "ll": [
+    25.0297187,
+    121.55574560000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3207367173498508025&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 46,
+  "n": "塔吉摩洛哥料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJOQxXLcurQjQRdA2IH0xpZ60",
+   "name": "塔吉摩洛哥料理",
+   "addr": "106臺北市大安區臨江里基隆路二段144巷3號",
+   "ll": [
+    25.028254,
+    121.55624939999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12495071466830171508&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 47,
+  "n": "曹料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJAb3zesqrQjQRA68GEKWJN2w",
+   "name": "曹料理",
+   "addr": "110臺北市信義區景聯里基隆路二段39巷16號",
+   "ll": [
+    25.0307174,
+    121.55937399999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7797852621846785795&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 48,
+  "n": "週末炸雞俱樂部 信義店 / WEEKEND CHICKEN CLUB & BAR",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJZawoNkarQjQRc1IYDXRaAXc",
+   "name": "週末炸雞俱樂部 信義店 / WEEKEND CHICKEN CLUB & BAR",
+   "addr": "110臺北市信義區中興里基隆路二段74號",
+   "ll": [
+    25.0307526,
+    121.55785929999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8575234619972538995&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 49,
+  "n": "77opèt Restaurant",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJxTLhpyg9aTQRecXNly6631M",
+   "name": "77opèt Restaurant",
+   "addr": "106臺北市大安區仁慈里復興南路一段279巷30弄3號1樓",
+   "ll": [
+    25.035436999999998,
+    121.5452608
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6043753934232601977&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 50,
+  "n": "燒肉三六苑｜40年正宗日本魂/美食/餐廳/燒肉",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJtb08nvmpQjQRaRAVmSoyG5A",
+   "name": "燒肉三六苑｜40年正宗日本魂/美食/餐廳/燒肉",
+   "addr": "106臺北市大安區通安里通安街84號",
+   "ll": [
+    25.0302574,
+    121.55313749999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10383948524371120233&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 51,
+  "n": "龍洞海鮮餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJjTcPCUiqQjQRHV953FGHSEI",
+   "name": "龍洞海鮮餐廳",
+   "addr": "106臺北市大安區通安里安和路二段69巷2號",
+   "ll": [
+    25.0303024,
+    121.55256469999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4776216190487453469&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 52,
+  "n": "泡泡Spumoni",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ9VdvIwCrQjQRfbsbsWYGBTE",
+   "name": "泡泡Spumoni",
+   "addr": "106臺北市大安區通安里安和路二段71巷7號1樓",
+   "ll": [
+    25.0301995,
+    121.552663
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3532236520869837693&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 53,
+  "n": "Divino Taipei",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyytYucyrQjQRuUWbJ0VOrko",
+   "name": "Divino Taipei",
+   "addr": "106臺北市大安區通安里安和路二段71巷15號",
+   "ll": [
+    25.030027399999998,
+    121.55301750000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5381324663678518713&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 54,
+  "n": "阿文米粿",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJUaIJ5Hp2bjQRkNIhVzOVI34",
+   "name": "阿文米粿",
+   "addr": "700臺南市中西區府前里保安路74號",
+   "ll": [
+    22.9904781,
+    120.1960822
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9089272520701498000&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 55,
+  "n": "宜大蔥油餅",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJx-7gb-nkZzQRZXAs4XLwbVA",
+   "name": "宜大蔥油餅",
+   "addr": "260宜蘭縣宜蘭市進士里女中路二段533號",
+   "ll": [
+    24.744682899999997,
+    121.74860290000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5795552671690420325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 56,
+  "n": "大仁哥蔗香脆皮桶仔雞-宜蘭旗艦店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJBU_Vvpr7ZzQRG0T2d0f0HjQ",
+   "name": "大仁哥蔗香脆皮桶仔雞-宜蘭旗艦店",
+   "addr": "263宜蘭縣壯圍鄉美城村大福路三段232巷20號",
+   "ll": [
+    24.776238199999998,
+    121.77919370000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3755707727066055707&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 57,
+  "n": "四海居小吃部",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJiaHS0MTkZzQRzOtk2VI9UjE",
+   "name": "四海居小吃部",
+   "addr": "260宜兰县宜兰市新民里康樂路137巷9號",
+   "ll": [
+    24.7561805,
+    121.7530709
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3553970481992625100&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜兰县",
+   "region": null
+  },
+  "alts": [],
+  "ok": false
+ },
+ {
+  "i": 58,
+  "n": "涼心冰店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJNf7XAMPkZzQR098mKA25eP0",
+   "name": "涼心冰店",
+   "addr": "260宜蘭縣宜蘭市民族里神農路二段63號",
+   "ll": [
+    24.752181,
+    121.751073
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18264551754960396243&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 59,
+  "n": "財記臭豆腐",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJKxwOWnjmZzQRzdBg7MCHrsg",
+   "name": "財記臭豆腐",
+   "addr": "265宜蘭縣羅東鎮公正里公正路110號",
+   "ll": [
+    24.6785823,
+    121.7709659
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14460644716202479821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 60,
+  "n": "麵魂家-真。濃厚豚骨拉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJS3_u9IfmZzQRamkJbxqhMXY",
+   "name": "麵魂家-真。濃厚豚骨拉麵",
+   "addr": "265宜蘭縣羅東鎮漢民里南門路140號",
+   "ll": [
+    24.6731082,
+    121.7655084
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8516765505238428010&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 61,
+  "n": "日嚐こんばんは - 羅東店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJd9UyTXXnZzQRBU68xePonbs",
+   "name": "日嚐こんばんは - 羅東店",
+   "addr": "265宜蘭縣羅東鎮仁和里康樂巷38之8號",
+   "ll": [
+    24.673810099999997,
+    121.76873690000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13519217721408769541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 62,
+  "n": "福緣火鍋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJr4LsEFVLXTQRT19wcj8qSGc",
+   "name": "福緣火鍋",
+   "addr": "208新北市金山區環金路466號",
+   "ll": [
+    25.2250394,
+    121.6302262
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7442244836221017935&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 63,
+  "n": "陶意蘋串燒小酒館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJWQSWMoznZzQRj7bQqQuwBPs",
+   "name": "陶意蘋串燒小酒館",
+   "addr": "269宜蘭縣冬山鄉柯林村柯林路317號",
+   "ll": [
+    24.6795497,
+    121.7353306
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18087775567566911119&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 64,
+  "n": "羅東帝爺廟口喥咕麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ_____5DmZzQREpmRcFu852s",
+   "name": "羅東帝爺廟口喥咕麵",
+   "addr": "265宜蘭縣羅東鎮中山里中山路三段242號",
+   "ll": [
+    24.675181499999997,
+    121.76937649999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7775390382595086610&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 65,
+  "n": "猿燒 季節料理-羅東店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJf05HWn7mZzQR4n-JXRRy3Tg",
+   "name": "猿燒 季節料理-羅東店",
+   "addr": "265宜蘭縣羅東鎮信義里復興路一段115號",
+   "ll": [
+    24.6834581,
+    121.76795989999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4097556667771224034&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 66,
+  "n": "臭老闆現蒸臭豆腐",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJLQaBIrupQjQRwcO6yT5U_Ok",
+   "name": "臭老闆現蒸臭豆腐",
+   "addr": "100臺北市中正區忠勤里中華路二段313巷6號",
+   "ll": [
+    25.028128300000002,
+    121.5061458
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16860443733617460161&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJwexdM7upQjQRf0WRN0zBdc4",
+    "name": "臭老闆現蒸臭豆腐 二店",
+    "addr": "100臺北市中正區忠勤里中華路二段309巷46號",
+    "ll": [
+     25.0292489,
+     121.5066447
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=14877009477182244223&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 67,
+  "n": "Musa’’穆薩‘’咖喱餅（休假會於臉書粉絲團公告）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ3VAja9qpQjQR9ztWCoF5gK0",
+   "name": "Musa’’穆薩‘’咖喱餅（休假會於臉書粉絲團公告）",
+   "addr": "100臺北市中正區忠勤里中華路二段313巷22號70號攤位",
+   "ll": [
+    25.0284639,
+    121.50673870000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12502126160711662583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 68,
+  "n": "曉迪筒仔米糕",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJy5-CzqSpQjQR0m1XOVI8Mjk",
+   "name": "曉迪筒仔米糕",
+   "addr": "100臺北市中正區忠勤里中華路二段307巷22號",
+   "ll": [
+    25.0291952,
+    121.50607350000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4121422932844441042&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 69,
+  "n": "阿男麻油雞",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ52GpOrupQjQRRULWQ4q1t9M",
+   "name": "阿男麻油雞",
+   "addr": "100臺北市中正區忠勤里中華路二段311巷34號",
+   "ll": [
+    25.028881,
+    121.5066339
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15255861868189073989&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 70,
+  "n": "洪家蒜味肉羹麻醬涼麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ_9s4KEO5bzQRfTsd9_xyVlM",
+   "name": "洪家蒜味肉羹麻醬涼麵",
+   "addr": "950臺東縣臺東市仁和里更生路778號",
+   "ll": [
+    22.7684895,
+    121.1360571
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6005113583948348285&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台東縣",
+   "region": "east-taitung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 71,
+  "n": "高工肉燥飯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJWwthT3C5bzQRLHtvQtGigwQ",
+   "name": "高工肉燥飯",
+   "addr": "950臺東縣臺東市馬蘭里更生路803號",
+   "ll": [
+    22.769399,
+    121.13477499999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=325282617747274540&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台東縣",
+   "region": "east-taitung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 72,
+  "n": "漁采時令料理．更生店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ83NX2m25bzQR3b9LkQGs1K8",
+   "name": "漁采時令料理．更生店",
+   "addr": "950臺東縣臺東市更生路573巷40號四維路與洛陽街口",
+   "ll": [
+    22.7643585,
+    121.13809769999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12669940774432653277&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台東縣",
+   "region": "east-taitung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 73,
+  "n": "低調十三香專業牛肉麵 汐止小吃美食 推薦午餐晚餐麵館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJtQGQ0mqtQjQROjOATseXkdE",
+   "name": "低調十三香專業牛肉麵 汐止小吃美食 推薦午餐晚餐麵館",
+   "addr": "221011新北市汐止區福德二路229號",
+   "ll": [
+    25.0644885,
+    121.6270421
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15101017907821294394&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 74,
+  "n": "百匯窯烤雞餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJuQsijU7lZzQRNLm-vJTi8YY",
+   "name": "百匯窯烤雞餐廳",
+   "addr": "268宜蘭縣五結鄉福興村五結路三段171號",
+   "ll": [
+    24.683329699999998,
+    121.78978409999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9723802198919264564&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 75,
+  "n": "福鼎冰淇淋廠",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJMZA9WoDnZzQRGswVqNyvc8c",
+   "name": "福鼎冰淇淋廠",
+   "addr": "265宜蘭縣羅東鎮東安里光榮路230巷80號",
+   "ll": [
+    24.675282499999998,
+    121.779265
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14372024198117051418&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 76,
+  "n": "阿灶伯當歸羊肉湯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJPT_HnH7mZzQRur4mazzs0Vw",
+   "name": "阿灶伯當歸羊肉湯",
+   "addr": "265宜蘭縣羅東鎮信義里",
+   "ll": [
+    24.6759746,
+    121.76829500000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6688386665861791418&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 77,
+  "n": "安德睿 食代義廊 Andrea STYLE (全預約制 Reservations Required)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJpRLLouusQjQRJgJVeLEO0CU",
+   "name": "安德睿 食代義廊 Andrea STYLE (全預約制 Reservations Required)",
+   "addr": "104臺北市中山區力行里遼寧街63巷15號1樓",
+   "ll": [
+    25.0492386,
+    121.54283980000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2724693929949987366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 78,
+  "n": "佐佧義式窯烤披薩屋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJOWhYlsyrQjQRS0-iAS4qi2k",
+   "name": "佐佧義式窯烤披薩屋",
+   "addr": "106臺北市大安區通安里安和路二段69巷3號",
+   "ll": [
+    25.030584899999997,
+    121.5527076
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7605218772829491019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 79,
+  "n": "The Slice Shop 天母",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJo4TiZQCvQjQRlRSg866Y08U",
+   "name": "The Slice Shop 天母",
+   "addr": "111臺北市士林區蘭興里德行西路19號",
+   "ll": [
+    25.1061749,
+    121.52402579999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14254905122736837781&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 80,
+  "n": "The Slice Shop 信義安和",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJtTwLeLOrQjQRgenTgQDPgvM",
+   "name": "The Slice Shop 信義安和",
+   "addr": "106臺北市大安區通安里安和路二段69巷18號一樓",
+   "ll": [
+    25.0303893,
+    121.55289509999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17546814699273972097&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 81,
+  "n": "Solo Pizza Napoletana 台北店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJLYtm72upQjQRyfkzTzy4Gsk",
+   "name": "Solo Pizza Napoletana 台北店",
+   "addr": "103臺北市大同區至聖里酒泉街10巷9號",
+   "ll": [
+    25.0703395,
+    121.51976280000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14491097320184347081&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 82,
+  "n": "GiraPizza 旋轉披薩",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJkwhy1ZKrQjQR7TwgoE858CE",
+   "name": "GiraPizza 旋轉披薩",
+   "addr": "105臺北市松山區中華里敦化北路165巷6號",
+   "ll": [
+    25.0546099,
+    121.55030950000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2445517611813846253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 83,
+  "n": "春山茶水舖",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJhffc2i6qQjQRcEMd2wIyjGc",
+   "name": "春山茶水舖",
+   "addr": "106臺北市大安區臥龍里復興南路二段323號",
+   "ll": [
+    25.0238974,
+    121.54356729999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7461393670493520752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 84,
+  "n": "Three Pugs 三巴漢堡 by 巴巴餐車",
+  "c": "美食",
+  "status": "closed",
+  "match": {
+   "pid": "ChIJf7PK6oCrQjQR4BRr-YzavRU",
+   "name": "Three Pugs 三巴漢堡 by 巴巴餐車",
+   "addr": "106臺北市大安區復興南路一段107巷5弄15-2號1樓",
+   "ll": [
+    25.044331500000002,
+    121.54490299999999
+   ],
+   "business": "CLOSED_PERMANENTLY",
+   "gurl": "https://maps.google.com/?cid=1566648544409621728&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 85,
+  "n": "人生豆腐",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ698HYOWrQjQR0afkmI2P-4o",
+   "name": "人生豆腐",
+   "addr": "106臺北市大安區復興南路一段107巷34號",
+   "ll": [
+    25.0434227,
+    121.5458713
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10014756034706712529&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 86,
+  "n": "好吃食堂海鮮鍋燒 大安店",
+  "c": "美食",
+  "status": "closed",
+  "match": {
+   "pid": "ChIJM31cRAmrQjQR_nkNjCOALqA",
+   "name": "好吃食堂海鮮鍋燒 大安店",
+   "addr": "106臺北市大安區光武里大安路一段8號",
+   "ll": [
+    25.0446679,
+    121.54613020000001
+   ],
+   "business": "CLOSED_PERMANENTLY",
+   "gurl": "https://maps.google.com/?cid=11542303785159064062&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 87,
+  "n": "金沐子健康餐盒",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJe1VX2_ypQjQRLR7FNYEQwJA",
+   "name": "金沐子健康餐盒",
+   "addr": "104臺北市中山區集英里民生西路45巷3弄21號1樓",
+   "ll": [
+    25.0580377,
+    121.52152660000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10430354884129005101&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 88,
+  "n": "藍象廷泰式火鍋 行天宮店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ1xd-0l6pQjQRFE1XGDg_dBc",
+   "name": "藍象廷泰式火鍋 行天宮店",
+   "addr": "104臺北市中山區松江里松江路275號",
+   "ll": [
+    25.0599848,
+    121.53344870000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1690045270329871636&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 89,
+  "n": "芯浪國際滑板衝浪水公園 Xin Flow Surfing Park",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJt2QbRkybbjQRxvI0BuqbIUs",
+   "name": "芯浪國際滑板衝浪水公園 Xin Flow Surfing Park",
+   "addr": "612嘉義縣太保市故宮東路30號東勢里015鄰",
+   "ll": [
+    23.4701052,
+    120.29658620000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5413779656504832710&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義縣",
+   "region": "south-chiayi-county"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 90,
+  "n": "拉丁碳烤牛排 LATINO GRILL",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJjZbDDjw9aTQR-4CVX09nF_k",
+   "name": "拉丁碳烤牛排 LATINO GRILL",
+   "addr": "之1, 巷子裡面, No. 150號忠孝路城隍里南區臺中市402",
+   "ll": [
+    24.129492199999998,
+    120.68216620000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17948928430512111867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 91,
+  "n": "清真館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ2WBxYwM9aTQRiCZQ4ltzf0U",
+   "name": "清真館",
+   "addr": "402臺中市南區城隍里忠孝路165巷12號",
+   "ll": [
+    24.131062699999998,
+    120.68289920000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5007848149135402632&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 92,
+  "n": "AOZA熬咋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJMzmAPys9aTQRkb1Is-dAxhU",
+   "name": "AOZA熬咋",
+   "addr": "403臺中市西區中興里中興街81號",
+   "ll": [
+    24.1473123,
+    120.66298889999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1569012884074708369&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 93,
+  "n": "有沒有牛肉麵台中西屯店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJz5DdEvs9aTQRdTun9l7UmJY",
+   "name": "有沒有牛肉麵台中西屯店",
+   "addr": "407臺中市西屯區何德里西屯路二段90-20號",
+   "ll": [
+    24.1655445,
+    120.6562881
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10851656806479379317&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 94,
+  "n": "流明拉麵《鴨湯專門》",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJiRu91as9aTQRfkXXB9MIPWo",
+   "name": "流明拉麵《鴨湯專門》",
+   "addr": "403臺中市西區昇平里美村路一段428號",
+   "ll": [
+    24.1433473,
+    120.66153299999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7655284644062381438&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 95,
+  "n": "范記金之園草袋飯 總店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJAQAAABM9aTQRZdROGV5yztA",
+   "name": "范記金之園草袋飯 總店",
+   "addr": "400臺中市中區公園里成功路170號",
+   "ll": [
+    24.1413509,
+    120.6824544
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15046089153568494693&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 96,
+  "n": "主觀廚房.Subjective taste",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJl9yq9j09aTQRqvKVqEHpEj0",
+   "name": "主觀廚房.Subjective taste",
+   "addr": "403臺中市西區中興里公正路126號",
+   "ll": [
+    24.149093699999998,
+    120.66221949999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4400836254104941226&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 97,
+  "n": "發愣吃 VARMT (勤美店)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJdQq_tDw9aTQR_LmXBczMgc0",
+   "name": "發愣吃 VARMT (勤美店)",
+   "addr": "403臺中市西區中興里公正路133號",
+   "ll": [
+    24.148871099999997,
+    120.6619371
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14808342226410125820&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 98,
+  "n": "新月梧桐(國美館)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJE4nqX6g9aTQRwt53EVDtESg",
+   "name": "新月梧桐(國美館)",
+   "addr": "403臺中市西區公舘里五權西三街123號",
+   "ll": [
+    24.13354,
+    120.6631439
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2887349764267433666&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 99,
+  "n": "滿堂 Le plein",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJX-eo5X49aTQR8Yl4ntpOWrE",
+   "name": "滿堂 Le plein",
+   "addr": "40347臺中市西區土庫里存中街39巷3號",
+   "ll": [
+    24.140940399999998,
+    120.65975680000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12779613593485740529&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 100,
+  "n": "饕之鄉李姐的店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJoYQ2mqI9aTQREdSkjl2fyus",
+   "name": "饕之鄉李姐的店",
+   "addr": "403臺中市西區公德里向上路一段353號",
+   "ll": [
+    24.146606799999997,
+    120.65620390000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16990567768382559249&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 101,
+  "n": "京華煙雲",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJWdNC1ac9aTQRnMuPKtuVFMg",
+   "name": "京華煙雲",
+   "addr": "403臺中市西區吉龍里五權七街57號",
+   "ll": [
+    24.135016,
+    120.66320850000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14417313075664243612&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 102,
+  "n": "MEN EIJI 北海道鴨白湯拉麵-台中勤美店",
+  "match": {
+   "pid": "ChIJ62RBOaE9aTQR2TI1bM1Wgr0",
+   "name": "MEN EIJI 北海道鴨白湯拉麵-台中勤美店 | 米其林必比登推薦",
+   "addr": "40350臺中市西區中興里中興街130號",
+   "ll": [
+    24.1486786,
+    120.6632167
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13655572460424475353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 103,
+  "n": "MEN EIJI 北海道鴨清湯拉麵-台中精誠店",
+  "match": {
+   "pid": "ChIJGWQhAaU9aTQRmyfIVGH_pBI",
+   "name": "MEN EIJI 北海道鴨清湯拉麵-台中精誠店 | 米其林必比登推薦",
+   "addr": "403臺中市西區忠誠里精誠路5-3號",
+   "ll": [
+    24.156567,
+    120.65706999999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1343479382362564507&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 104,
+  "n": "台中南屯-小初店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJXQ9dYuE9aTQRbumiVRTA-gg",
+   "name": "台中南屯-小初店",
+   "addr": "408臺中市南屯區溝墘里大業路243號",
+   "ll": [
+    24.1534941,
+    120.64892230000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=647040690049706350&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 105,
+  "n": "膳馨民間創作料理-創始店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJS5F3U6E9aTQRutznLW2_oIg",
+   "name": "膳馨民間創作料理-創始店",
+   "addr": "403臺中市西區存中街21號",
+   "ll": [
+    24.141101799999998,
+    120.66061889999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9845079261074414778&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 106,
+  "n": "NK.Restaurant 餐廳 - 亞洲風味料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJCenoSv09aTQRk5aEwIdAOkY",
+   "name": "NK.Restaurant 餐廳 - 亞洲風味料理",
+   "addr": "407臺中市西屯區何成里大容東街66號",
+   "ll": [
+    24.156661699999997,
+    120.6480505
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5060428083098850963&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 107,
+  "n": "吃茶三千台灣概念店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJozg3GH09aTQRHxI49LJIkkg",
+   "name": "吃茶三千台灣概念店",
+   "addr": "408臺中市南屯區溝墘里大英街607號",
+   "ll": [
+    24.1545622,
+    120.6485239
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5229322050769261087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 108,
+  "n": "Will’s Teppanyaki",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJef0UxL-rQjQRW41KWa030Qw",
+   "name": "Will’s Teppanyaki",
+   "addr": "105臺北市松山區中華里敦化北路165巷10號",
+   "ll": [
+    25.054707300000004,
+    121.55044720000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=923580616254590299&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 109,
+  "n": "T+T",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJvYnBtBF3o1QRR-Vbk4v2uXI",
+   "name": "T T Nails",
+   "addr": "108 Depot St, La Grande, OR 97850美國",
+   "ll": [
+    45.328355099999996,
+    -118.09513109999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8266909670348416327&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "Oregon",
+   "region": null
+  },
+  "alts": [],
+  "ok": false
+ },
+ {
+  "i": 110,
+  "n": "阿斗伯冷凍芋",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJZ2Ekgm09aTQRULD2n6eWBds",
+   "name": "阿斗伯冷凍芋",
+   "addr": "400臺中市中區成功路356號",
+   "ll": [
+    24.1452633,
+    120.6779695
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15782186115877220432&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 111,
+  "n": "翁記泡沫廣場",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJzyEf_Gs9aTQRuYzgkYcFKYI",
+   "name": "翁記泡沫廣場",
+   "addr": "404臺中市北區新興里精武路326號",
+   "ll": [
+    24.146243000000002,
+    120.68333360000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9379033778801904825&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 112,
+  "n": "橋下披薩 Under the Bridge",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJHSvYz4qpQjQRxmj420nOmtc",
+   "name": "橋下披薩 Under the Bridge",
+   "addr": "10491臺北市中山區正守里新生北路一段62巷16號",
+   "ll": [
+    25.0463195,
+    121.5306454
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15535956681186371782&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 113,
+  "n": "NARA泰式養生館 NARA Thai Massage & Spa",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJqXZnwc-rQjQRiLk8gCxsB0M",
+   "name": "NARA泰式養生館 NARA Thai Massage & Spa",
+   "addr": "106臺北市大安區建倫里仁愛路四段345巷4弄19號",
+   "ll": [
+    25.039106,
+    121.55255100000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4829948063763970440&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 114,
+  "n": "隨野家農場",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJZZrAfwCvQjQRxrzz-wQkPCk",
+   "name": "隨野家農場",
+   "addr": "112臺北市北投區豐年里大業路517巷80號",
+   "ll": [
+    25.1330059,
+    121.4926795
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2971289457983208646&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 115,
+  "n": "五府夢想黑輪",
+  "c": "美食",
+  "note": "雞排好像很強",
+  "match": {
+   "pid": "ChIJW0rMjyw9aTQRkX6GKvdCMY4",
+   "name": "五府夢想黑輪",
+   "addr": "404台中市北区六合里篤行路47號",
+   "ll": [
+    24.147244,
+    120.67699289999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10246044256582401681&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 116,
+  "n": "麵屋聚",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJqckodaI9aTQR9ysU3eycKGE",
+   "name": "麵屋聚",
+   "addr": "400臺中市中區中華里成功路404號",
+   "ll": [
+    24.146096099999998,
+    120.67686409999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7001018161882737655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 117,
+  "n": "阿洪快餐(休假日以IG為主)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJHTmDsIw9aTQRQfzsVMJYG4Q",
+   "name": "阿洪快餐(休假日以IG為主)",
+   "addr": "403臺中市西區昇平街143號1樓",
+   "ll": [
+    24.145381,
+    120.65951760000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9519299829049392193&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 118,
+  "n": "coffee stopover",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJS7cspXU9aTQRkAbuBxBKg8Q",
+   "name": "coffee stopover",
+   "addr": "403臺中市西區後龍里民權路217巷24號",
+   "ll": [
+    24.1479617,
+    120.6680133
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14160243086095943312&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [
+   {
+    "pid": "ChIJETLw9RA9aTQR1cvQ0_tjubc",
+    "name": "coffee stopover black",
+    "addr": "403臺中市西區後龍里福龍街7號1樓",
+    "ll": [
+     24.1454638,
+     120.67186799999998
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=13238722512873901013&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 119,
+  "n": "coffee stopover black",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJETLw9RA9aTQR1cvQ0_tjubc",
+   "name": "coffee stopover black",
+   "addr": "403臺中市西區後龍里福龍街7號1樓",
+   "ll": [
+    24.1454638,
+    120.67186799999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13238722512873901013&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 120,
+  "n": "好菜KÜISINE模範總店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJt3xYknU9aTQRkFvjUeAZLaM",
+   "name": "好菜KÜISINE模範總店",
+   "addr": "403臺中市西區雙龍里模範街24巷1號",
+   "ll": [
+    24.1486767,
+    120.6667655
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11758082653371456400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 121,
+  "n": "桂蘭麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJI-GVUfsXaTQRUE7a-X2vbOk",
+   "name": "桂蘭麵",
+   "addr": "404臺中市北區頂厝里崇德路一段503巷49號",
+   "ll": [
+    24.164405499999997,
+    120.68267039999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16820011663919566416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 122,
+  "n": "采•寓halo house",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJDXh6TgA9aTQReIHRin7QeeA",
+   "name": "采•寓halo house",
+   "addr": "407臺中市西屯區惠來里市政北七路189號",
+   "ll": [
+    24.1654524,
+    120.6398745
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16175188778591289720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 123,
+  "n": "徐大姊炸香香",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJUx7q_hk9aTQRTAh3OjODP38",
+   "name": "徐大姊炸香香",
+   "addr": "402臺中市南區城隍里忠孝路181號",
+   "ll": [
+    24.130351299999997,
+    120.6834017
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9169191622397069388&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 124,
+  "n": "第一豆花店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJIaDR_xo9aTQRgISEOKY0f6w",
+   "name": "第一豆花店",
+   "addr": "402臺中市南區城隍里忠孝路98號",
+   "ll": [
+    24.128759700000003,
+    120.6801444
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12429711385083282560&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 125,
+  "n": "土耳其卡霸捲",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ7dEl_xk9aTQRegUs4Wk6qPE",
+   "name": "土耳其卡霸捲",
+   "addr": "402臺中市南區城隍里忠孝路198號",
+   "ll": [
+    24.1301931,
+    120.6836416
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17413232185651758458&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 126,
+  "n": "正老牌臭豆腐麵線糊",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJjeHhaRo9aTQRZHefm38fAQs",
+   "name": "正老牌臭豆腐麵線糊",
+   "addr": "402臺中市南區城隍里合作街70之2號",
+   "ll": [
+    24.1295547,
+    120.6814063
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=792949642326144868&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 127,
+  "n": "茗陽甘蔗牛奶大王",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJg733Qxo9aTQRnIWTqpOU3es",
+   "name": "茗陽甘蔗牛奶大王",
+   "addr": "402臺中市南區忠孝路與合作街交叉口",
+   "ll": [
+    24.1294771,
+    120.68144790000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16995903930709018012&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 128,
+  "n": "小漁兒",
+  "c": "美食",
+  "note": "蒜頭雞",
+  "match": {
+   "pid": "ChIJnz9Ed3E9aTQRpFzjyx0eks4",
+   "name": "小漁兒",
+   "addr": "403台中市西区和龙里篤行路151號",
+   "ll": [
+    24.1494,
+    120.67441439999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14884992831736470692&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 129,
+  "n": "潮州羅燒酒雞",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJWY5qOXc9aTQRPVsJzRMrcgU",
+   "name": "潮州羅燒酒雞",
+   "addr": "403臺中市西區民龍里西屯路一段202號",
+   "ll": [
+    24.1532101,
+    120.6708848
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=392423481578969917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [
+   {
+    "pid": "ChIJ5x37uJQXaTQRZMzHYFh9Hsw",
+    "name": "潮州羅燒酒雞 松竹店",
+    "addr": "406臺中市北屯區松安里松和街296號",
+    "ll": [
+     24.1826679,
+     120.69344650000001
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=14708331251572919396&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   },
+   {
+    "pid": "ChIJX-yrRQAaaTQRUJ9-QMXnXjI",
+    "name": "潮州羅",
+    "addr": "420臺中市豐原區田心里中山路260號",
+    "ll": [
+     24.2431053,
+     120.71389599999998
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=3629593184083812176&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 130,
+  "n": "東興市魯肉有限公司（魯肉義）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ33GSd9cXaTQRHz9FnXo4UD4",
+   "name": "東興市魯肉有限公司（魯肉義）",
+   "addr": "404臺中市北區賴厝里漢口路四段88號",
+   "ll": [
+    24.1669031,
+    120.67702290000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4490150927764111135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 131,
+  "n": "激旨燒鳥 美村加盟店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJOQdaFpw9aTQRTokfmyMz7zw",
+   "name": "激旨燒鳥 美村加盟店",
+   "addr": "403臺中市西區忠明里美村路一段86號",
+   "ll": [
+    24.152312499999997,
+    120.66153749999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4390784389728930126&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 132,
+  "n": "激旨燒き鳥Gekiuma Yakitori 台灣總店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJhYGC5TwWaTQRtFw0QBzL44s",
+   "name": "激旨燒き鳥Gekiuma Yakitori 台灣總店",
+   "addr": "18號 No. 150巷, 文華路西平里西屯區臺中市407",
+   "ll": [
+    24.1831207,
+    120.64636309999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10080123713181998260&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 133,
+  "n": "勇記蒸餃館（總店）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJySEr9Ak9aTQRwjxQ0yEFT2s",
+   "name": "勇記蒸餃館（總店）",
+   "addr": "403台中市西区和龙里篤行路178-1號",
+   "ll": [
+    24.150295999999997,
+    120.67374219999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7732404728055741634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 134,
+  "n": "醉月樓台灣菜",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJKwprdxQ9aTQR9MjfBgkoKDE",
+   "name": "醉月樓台灣菜",
+   "addr": "400台中市中区绿川里中山路20號2樓",
+   "ll": [
+    24.137835,
+    120.6835591
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3542125126162041076&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 135,
+  "n": "馨苑台菜咖啡※松竹店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ56KzxpgXaTQRqC8iJ0Ba2hw",
+   "name": "馨苑台菜咖啡※松竹店",
+   "addr": "406臺中市北屯區舊社里敦富路68號",
+   "ll": [
+    24.181654899999998,
+    120.708023
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2079073409565863848&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 136,
+  "n": "馨苑台菜咖啡※西區店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ5XBhggg9aTQRw_Ywe0gD8ac",
+   "name": "馨苑台菜咖啡※西區店",
+   "addr": "403臺中市西區後龍里民生北路106號",
+   "ll": [
+    24.1481891,
+    120.6683889
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12101457283560568515&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 137,
+  "n": "沁園春 創始店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJc6j3ZBM9aTQRe4uIUepPgok",
+   "name": "沁園春 創始店",
+   "addr": "400臺中市中區繼光里臺灣大道一段129號&137號",
+   "ll": [
+    24.1395525,
+    120.6826383
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9908569997977357179&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [
+   {
+    "pid": "ChIJszjsSzg9aTQRaMmgtYfBu5o",
+    "name": "沁園春 LaLaport台中店",
+    "addr": "401004臺中市東區泉源里進德路600號5樓 (北館",
+    "ll": [
+     24.1357637,
+     120.69255319999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=11149718091097753960&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 138,
+  "n": "金格觀光工廠｜卡司·蒂菈樂園",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJHRfjcqsfaDQR_VUwjusS5UM",
+   "name": "金格觀光工廠｜卡司·蒂菈樂園",
+   "addr": "338桃園市蘆竹區宏竹里大竹北路90之66號",
+   "ll": [
+    25.0317622,
+    121.2534171
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4892337373120058877&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [
+   {
+    "pid": "ChIJWzIjLwAhaDQR8isA2KWS_jA",
+    "name": "金格丨卡司‧蒂菈樂園",
+    "addr": "338桃園市蘆竹區宏竹里大竹北路90-66號",
+    "ll": [
+     25.0311013,
+     121.25337549999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=3530420398896196594&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "桃園市",
+    "region": "north-taoyuan"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 139,
+  "n": "J’adore pasta",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJv2EeWrGvQjQRN758oKP7KUg",
+   "name": "J’adore pasta",
+   "addr": "111臺北市士林區前港里後港街177號1樓",
+   "ll": [
+    25.087733999999998,
+    121.52107299999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5199963924966719031&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 140,
+  "n": "PRESERVE LaLaport 南港店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJkxT1bgCtQjQROnIN-CoDhYg",
+   "name": "PRESERVE LaLaport 南港店",
+   "addr": "115臺北市南港區環河里經貿二路131號1樓",
+   "ll": [
+    25.0593449,
+    121.61758249999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9837272444145857082&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 141,
+  "n": "頂粵吉品",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJm4uYPaM9aTQRNsXtOD3XA9k",
+   "name": "頂粵吉品",
+   "addr": "407臺中市西屯區龍潭里市政南一路288號",
+   "ll": [
+    24.1584979,
+    120.6310839
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15637578989108577590&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 142,
+  "n": "鮨 緣",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJM834Jc6tQjQRT3zMtLAQtn4",
+   "name": "鮨 緣",
+   "addr": "114臺北市內湖區紫星里康寧路一段48巷10號",
+   "ll": [
+    25.07998,
+    121.5918599
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9130503645673847887&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 143,
+  "n": "新光黃昏市場",
+  "c": "購物市集",
+  "match": {
+   "pid": "ChIJQx1a1rI9aTQRUij1vGzoZh8",
+   "name": "新光黃昏市場",
+   "addr": "401臺中市東區東英里十甲路470號",
+   "ll": [
+    24.1442989,
+    120.71020639999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2262751416524548178&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [
+   {
+    "pid": "ChIJ2-3U1qsiaTQR2BzSYgeAIyI",
+    "name": "友善農產 新光黃昏市場",
+    "addr": "401臺中市東區宜昌里十甲路600號",
+    "ll": [
+     24.144208199999998,
+     120.7108973
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=2459950590685486296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 144,
+  "n": "萬華刈包吉-四神湯-板橋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ5_YwHXEDaDQRXmZUfuA3dUE",
+   "name": "萬華刈包吉-四神湯-板橋",
+   "addr": "220新北市板橋區新興里新興路2之3號",
+   "ll": [
+    25.0073631,
+    121.45641859999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4716737622072125022&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 145,
+  "n": "實話咖哩 日式熟成咖哩專賣 板橋店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyZwgYACpQjQRZ-3XY2iRv8Q",
+   "name": "實話咖哩 日式熟成咖哩專賣 板橋店",
+   "addr": "220071新北市板橋區長安里漢生東路193巷25號",
+   "ll": [
+    25.012321699999998,
+    121.47112100000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14177210029523332455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 146,
+  "n": "Buon Pasta & Bar - 現代義式料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJS12xK2QDaDQRa2_nWGk3JOA",
+   "name": "Buon Pasta & Bar - 現代義式料理",
+   "addr": "220新北市板橋區重慶路12巷9號",
+   "ll": [
+    25.0075775,
+    121.46067079999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16151095089260097387&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 147,
+  "n": "Bianca pizza napoletana 比安卡披薩",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJp9Fz5RkDaDQRyQdGqEWh-ms",
+   "name": "Bianca pizza napoletana 比安卡披薩",
+   "addr": "220新北市板桥区汉生里光正街67號1樓",
+   "ll": [
+    25.0182985,
+    121.4616155
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7780708626783930313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 148,
+  "n": "阿達師牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJoYrB_j6oQjQRRCoXYzYyQ2U",
+   "name": "阿達師牛肉麵",
+   "addr": "220新北市板橋區華翠里莒光路80號",
+   "ll": [
+    25.024011200000004,
+    121.47154490000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7296731030442420804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 149,
+  "n": "樂漢堡美式餐廳 新北板橋店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJvdIA7x2oQjQR2pY5GgGs-IQ",
+   "name": "樂漢堡美式餐廳 新北板橋店",
+   "addr": "220新北市板橋區香丘里漢生東路133號",
+   "ll": [
+    25.0142505,
+    121.46802339999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9581597327965656794&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 150,
+  "n": "BRUN不然-板橋店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJuXVOh-CpQjQR003e_kcRyVE",
+   "name": "BRUN不然-板橋店",
+   "addr": "220新北市板橋區福丘里縣民大道二段80-1號",
+   "ll": [
+    25.0146877,
+    121.46616730000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5893260588307336659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 151,
+  "n": "BEGINAGAIN起點咖啡",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJv4W9bheoQjQRdCA90AJdlBo",
+   "name": "BEGINAGAIN起點咖啡",
+   "addr": "220新北市板橋區公舘里文化路一段285巷2弄2號",
+   "ll": [
+    25.0188986,
+    121.4645807
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1915258008204288116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 152,
+  "n": "悠悠U Brunch",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJE_V0BACpQjQRij61GBHWcjU",
+   "name": "悠悠U Brunch",
+   "addr": "22047新北市板橋區文化里文化路二段125巷15號",
+   "ll": [
+    25.027066200000004,
+    121.46947349999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3851376000272514698&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 153,
+  "n": "56巷口湯包",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ05FiNxOoQjQR0Y2ptufW0-U",
+   "name": "56巷口湯包",
+   "addr": "220新北市板橋區仁翠里裕民街56巷1號",
+   "ll": [
+    25.0287018,
+    121.4613211
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16560816545461800401&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 154,
+  "n": "林員肉圓",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJIQ8hoQKoQjQRUmS6_NMVoeI",
+   "name": "林員肉圓",
+   "addr": "220新北市板橋區赤松里府中路104號",
+   "ll": [
+    25.0097222,
+    121.45583330000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16330357724044485714&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 155,
+  "n": "特香齋西餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ2Qlwhx2oQjQRJ5_cYW7kQ5k",
+   "name": "特香齋西餐廳",
+   "addr": "220新北市板橋區景星里中山路一段26號2樓",
+   "ll": [
+    25.0084689,
+    121.46050009999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11043921873981972263&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 156,
+  "n": "Asia49亞洲料理及酒廊",
+  "c": "美食",
+  "status": "closed",
+  "match": {
+   "pid": "ChIJuaevwBioQjQReh0h1TCH0BQ",
+   "name": "Asia49亞洲料理及酒廊",
+   "addr": "220新北市板橋區福丘里新站路16號百揚大樓49樓",
+   "ll": [
+    25.013132,
+    121.4670082
+   ],
+   "business": "CLOSED_PERMANENTLY",
+   "gurl": "https://maps.google.com/?cid=1499847319718272378&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 157,
+  "n": "呷雞啦餐館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJW--rGACpQjQRxSZZIV2SlC0",
+   "name": "呷雞啦餐館",
+   "addr": "220新北市板橋區西安里縣民大道二段178號",
+   "ll": [
+    25.0167306,
+    121.4686753
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3284410956949038789&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 158,
+  "n": "辣蜀麻辣燙",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNSQBYKGpQjQRxWyrw5rAZhA",
+   "name": "辣蜀麻辣燙",
+   "addr": "22070新北市板橋區玉光里民生路二段101號",
+   "ll": [
+    25.017751999999998,
+    121.47133989999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1181843723171622085&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 159,
+  "n": "麵や壹ラーメン專門店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJv9MX9DqpQjQRx8prCoUjp7c",
+   "name": "麵や壹ラーメン專門店",
+   "addr": "220新北市板橋區漢生里文化路一段237號",
+   "ll": [
+    25.0177466,
+    121.46394260000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13233585084363950791&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 160,
+  "n": "丹生炊事｜板橋傑仕堡門市",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJG5tTUlGpQjQR_95fmyfDxrw",
+   "name": "丹生炊事｜板橋傑仕堡門市",
+   "addr": "220新北市板橋區介壽里縣民大道二段275號2樓",
+   "ll": [
+    25.017722799999998,
+    121.46931389999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13602774299397054207&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 161,
+  "n": "布娜飛比利時餐酒館板橋新埔店Bravo Beer",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJUWXuQBmoQjQREB1H5QfTvr0",
+   "name": "布娜飛比利時餐酒館板橋新埔店Bravo Beer",
+   "addr": "220新北市板橋區介壽里縣民大道二段273號",
+   "ll": [
+    25.017592099999998,
+    121.46929159999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13672597549608279312&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 162,
+  "n": "源慶鮮蚵(YuanQingOyster)—鮮蚵/小卷/藥膳滷味｜台灣500碗推薦",
+  "match": {
+   "pid": "ChIJJZrgIakCaDQR5Ap6KBelNDg",
+   "name": "​源慶鮮蚵(YuanQingOyster)—鮮蚵/小卷/藥膳滷味｜台灣500碗推薦 | 板橋60年老店",
+   "addr": "220新北市板橋區湳興里南雅東路29巷2弄1號",
+   "ll": [
+    25.005843199999997,
+    121.45402410000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4050043483794836196&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJpX5kbACpQjQRlandO7Y8u7k",
+    "name": "​源慶鮮蚵(YuanQingOyster)—鮮蚵/小卷/藥膳滷味｜台灣500碗推薦 | 台北信陽店",
+    "addr": "10047臺北市中正區黎明里信陽街10號",
+    "ll": [
+     25.0445232,
+     121.5158926
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=13383357471047657877&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   },
+   {
+    "pid": "ChIJ2Q4jMACpQjQRYB_q2IABRhA",
+    "name": "​源慶鮮蚵(YuanQingOyster)—鮮蚵/小卷/藥膳滷味｜台灣500碗推薦 | 台北迪化店",
+    "addr": "103臺北市大同區永樂里迪化街一段28號",
+    "ll": [
+     25.0544464,
+     121.50998969999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=1172626405883256672&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 163,
+  "n": "青雅中餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJW4kbrzCpQjQRxxBtWAsngfI",
+   "name": "青雅中餐廳",
+   "addr": "22050新北市板橋區福丘里民權路88號",
+   "ll": [
+    25.011393599999998,
+    121.46249050000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17474290958855901383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 164,
+  "n": "吾時•食 5 10 10 牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJS0egat2pQjQR8V-QnGbi_YU",
+   "name": "吾時•食 5 10 10 牛肉麵",
+   "addr": "22052新北市板橋區漢生里公館街58號",
+   "ll": [
+    25.013856,
+    121.46012729999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9655122106493460465&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 165,
+  "n": "早喚 Morning Call",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJMT-cYcapQjQRMeWCxH-lcpg",
+   "name": "早喚 Morning Call",
+   "addr": "220新北市板橋區民安里民權路202巷8弄6號",
+   "ll": [
+    25.0146141,
+    121.46029820000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10985024409286403377&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 166,
+  "n": "來得福川菜客家菜餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ1SfuiA-oQjQRXMtjmDhkzkc",
+   "name": "來得福川菜客家菜餐廳",
+   "addr": "220新北市板橋區港尾里金華街9巷6號",
+   "ll": [
+    25.0204544,
+    121.4554227
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5174183216132901724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 167,
+  "n": "吃貨の燒味",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ4xyOm62pQjQR3TwUXEJwjlw",
+   "name": "吃貨の燒味",
+   "addr": "220新北市板橋區社後里中正路135巷11-4號",
+   "ll": [
+    25.015439399999998,
+    121.45588439999997
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6669391528497265885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 168,
+  "n": "板橋正宗老張牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ1Volj2epQjQR6H8o7ffX1ZM",
+   "name": "板橋正宗老張牛肉麵",
+   "addr": "220新北市板橋區社後里中正路136號",
+   "ll": [
+    25.01598,
+    121.456807
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10652657953450524648&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 169,
+  "n": "大庭牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJR5A_zhqoQjQRZ8use6ah4GU",
+   "name": "大庭牛肉麵",
+   "addr": "220新北市板橋區國光里國光路39號",
+   "ll": [
+    25.017794,
+    121.457455
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7341045129025473383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 170,
+  "n": "海山魯肉飯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJw6KX44OpQjQRtWPLqArlFlc",
+   "name": "海山魯肉飯",
+   "addr": "220新北市板橋區深丘里海山路43號",
+   "ll": [
+    25.0097785,
+    121.46694919999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6275454964731700149&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 171,
+  "n": "小喬新疆羊肉串",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJA52WAkSoQjQRGMDppAf0vko",
+   "name": "小喬新疆羊肉串",
+   "addr": "220新北市板橋區嵐翠里仁化街84號",
+   "ll": [
+    25.0318194,
+    121.47633060000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5386010518050422808&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 172,
+  "n": "板橋湳雅夜市",
+  "c": "小吃夜市",
+  "status": "closed",
+  "match": {
+   "pid": "ChIJH2PGWAADaDQR_o0syTFmchc",
+   "name": "板橋湳雅夜市",
+   "addr": "220新北市板橋區新興里南雅東路",
+   "ll": [
+    25.005718899999998,
+    121.4555556
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1689525174231928318&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJf2Q6B6kCaDQRECSep98LyXQ",
+    "name": "王記好吃麻油雞 湳雅夜市總店",
+    "addr": "220新北市板橋區湳興里南雅東路11號喫尤鐵板燒（前",
+    "ll": [
+     25.005798499999997,
+     121.4553068
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=8415270433936253968&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "新北市",
+    "region": "north-newtaipei"
+   },
+   {
+    "pid": "ChIJC1SkRMUDaDQRXxlSj2Bg2u4",
+    "name": "韓式泡菜湳雅店/板橋湳雅夜市",
+    "addr": "220新北市板橋區新興里南雅東路56號",
+    "ll": [
+     25.006824299999998,
+     121.45410709999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=17211174893787421023&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "新北市",
+    "region": "north-newtaipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 173,
+  "n": "樂華夜市",
+  "c": "小吃夜市",
+  "match": {
+   "pid": "ChIJDdo_4cKpQjQRb4wdglMtMYc",
+   "name": "樂華夜市",
+   "addr": "234新北市永和區永平路",
+   "ll": [
+    25.008415600000003,
+    121.51172709999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9741617305667603567&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJc3H2KQupQjQRHPCTyiPlVHY",
+    "name": "樂華觀光夜市",
+    "addr": "234新北市永和區協和里永平路2-1號",
+    "ll": [
+     25.0086951,
+     121.513949
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=8526691936404500508&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "新北市",
+    "region": "north-newtaipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 174,
+  "n": "Smokin' BBQ 德州燒烤在嘉義（街邊外帶店）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJpc6ETUGVbjQRmVT1N9i9mL0",
+   "name": "Smokin' BBQ 德州燒烤在嘉義（街邊外帶店）",
+   "addr": "600嘉義市東區中央里成仁街102號",
+   "ll": [
+    23.4785026,
+    120.4523769
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13661878205977810073&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 175,
+  "n": "阿焜早點",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJicDtTi-UbjQRGHaAmhWkue4",
+   "name": "阿焜早點",
+   "addr": "600嘉義市西區書院里仁愛路536號",
+   "ll": [
+    23.477539099999998,
+    120.44204339999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17201960664411698712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 176,
+  "n": "TUTTO BELLO",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJW-a6S0WpQjQR-1hgfvsXaZo",
+   "name": "TUTTO BELLO",
+   "addr": "104台北市中山区晴光里双城街25巷15號1樓",
+   "ll": [
+    25.066292699999998,
+    121.5253518
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11126450723319994619&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 177,
+  "n": "海園活海鮮餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJu5bB_Y9DXTQRe-XsyLuTc-o",
+   "name": "海園活海鮮餐廳",
+   "addr": "224新北市瑞芳區鼻頭里鼻頭路245號",
+   "ll": [
+    25.1241757,
+    121.91316090000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16894009061935998331&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 178,
+  "n": "阿里山英迪格酒店",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJcWwVCgLpbjQRba0dmCmc8qI",
+   "name": "阿里山英迪格酒店",
+   "addr": "602嘉義縣番路鄉公田村龍頭20號",
+   "ll": [
+    23.4440557,
+    120.67257920000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11741618880967978349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義縣",
+   "region": "south-chiayi-county"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 179,
+  "n": "Housebistro好適廚坊",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ7wHLoAWsQjQRSAO5dEd3Yw4",
+   "name": "Housebistro好適廚坊",
+   "addr": "10463臺北市中山區大直里大直街9巷1號",
+   "ll": [
+    25.0808064,
+    121.54661639999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1036803488010011464&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 180,
+  "n": "明明MingMing(休假日於IG、FB專頁為主）",
+  "c": "咖啡甜點",
+  "note": "一粒推薦 芭樂調酒",
+  "match": {
+   "pid": "ChIJmaNUYxCVbjQRcsMfz48_EAw",
+   "name": "明明MingMing(休假日於IG、FB專頁為主）",
+   "addr": "600嘉義市西區文化路432巷1號1樓",
+   "ll": [
+    23.4885442,
+    120.4470375
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=869264614970344306&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 181,
+  "n": "榮興茶行",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJsRFlYSWUbjQRV1bEUxAymXk",
+   "name": "榮興茶行",
+   "addr": "600嘉義市西區新富里民族路601號",
+   "ll": [
+    23.475569099999998,
+    120.44578709999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8762089595732252247&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 182,
+  "n": "煙拉麵けむり",
+  "c": "美食",
+  "note": "一粒推薦",
+  "match": {
+   "pid": "ChIJ0UuwxaWVbjQR0f9x1-MC-s0",
+   "name": "煙拉麵けむり",
+   "addr": "600嘉義市西區西榮里蘭井街363號",
+   "ll": [
+    23.4769321,
+    120.4449844
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14842178699548295121&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 183,
+  "n": "貓尾巴麵包店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJqe8TmkmUbjQR8SkX6QNKmJw",
+   "name": "貓尾巴麵包店",
+   "addr": "600嘉義市東區朝陽里民族路25號",
+   "ll": [
+    23.4769005,
+    120.4610605
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11283850247032744433&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 184,
+  "n": "スピード Supiido",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJ1ZOOqX-VbjQRBzTpPcVZlCE",
+   "name": "スピード Supiido",
+   "addr": "600嘉義市東區中央里北榮街50號",
+   "ll": [
+    23.4814766,
+    120.4509278
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2419657603486921735&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 185,
+  "n": "嘉義新庄紅茶",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJw1bAQpqVbjQRIUKWptiBsQU",
+   "name": "嘉義新庄紅茶",
+   "addr": "600嘉義市西區美源里新庄街98號",
+   "ll": [
+    23.464821,
+    120.44647450000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=410251808575210017&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 186,
+  "n": "鄒記食舖",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ79pSRvmrQjQRBBnOshiQjqk",
+   "name": "鄒記食舖",
+   "addr": "105臺北市松山區民有里復興北路313巷43號",
+   "ll": [
+    25.0590427,
+    121.5469307
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12217861274856200452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 187,
+  "n": "Sky Lab",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJx2ll6EKrQjQR-MdHgT4je-4",
+   "name": "Sky Lab",
+   "addr": "106臺北市大安區敦化南路二段63巷24號",
+   "ll": [
+    25.030876499999998,
+    121.5504864
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17184367554526169080&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJIdmQDwCpQjQRuU-c5fA6rzM",
+    "name": "Sky lab express",
+    "addr": "103臺北市大同區雙連里萬全街22號",
+    "ll": [
+     25.058269199999998,
+     121.5204982
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=3724260223177478073&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 188,
+  "n": "松築和洋私廚料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJBcAeFYKWbjQR49m4d7xtccc",
+   "name": "松築和洋私廚料理",
+   "addr": "600嘉義市西區福全里中興路221號",
+   "ll": [
+    23.4822561,
+    120.4348489
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14371388542145845731&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 189,
+  "n": "二屾 Ershen",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJwRoQVZGVbjQRgRGtwS3kBi0",
+   "name": "二屾 Ershen",
+   "addr": "600嘉義市東區過溝里成仁街70號",
+   "ll": [
+    23.4774668,
+    120.45253369999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3244531466741027201&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 190,
+  "n": "福粵樓粵式餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJYeXQRwCXbjQRMjbsaGpMpYs",
+   "name": "福粵樓粵式餐廳",
+   "addr": "600嘉義市西區福安里世賢路一段789號32 樓",
+   "ll": [
+    23.4868198,
+    120.42575659999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10062532962339796530&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 191,
+  "n": "劉里長火雞肉飯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJeRx_YACVbjQRMTG8o9SGREk",
+   "name": "劉里長火雞肉飯",
+   "addr": "600嘉義市東區中央里光彩街414號",
+   "ll": [
+    23.4783309,
+    120.4501841
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5279492911023272241&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 192,
+  "n": "光華阿宏火雞肉飯總店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ5wJfhyWUbjQRG_DhFBgvW7g",
+   "name": "光華阿宏火雞肉飯總店",
+   "addr": "600嘉義市東區中央里光華路108號",
+   "ll": [
+    23.4785816,
+    120.45222959999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13284263306335481883&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 193,
+  "n": "承億文旅 桃城茶樣子",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJhfaFvcWVbjQRlQ2O3OiCa3M",
+   "name": "承億文旅 桃城茶樣子",
+   "addr": "600嘉義市東區仁義里忠孝路516號",
+   "ll": [
+    23.4936439,
+    120.45301789999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8316885073514073493&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 194,
+  "n": "卉羚綠豆沙牛乳專賣店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJ7zuypoI1aDQRoSBGVDERvv0",
+   "name": "卉羚綠豆沙牛乳專賣店",
+   "addr": "300新竹市北區西門里中山路118號",
+   "ll": [
+    24.8043607,
+    120.9649249
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18284070440735744161&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新竹市",
+   "region": "north-hsinchu-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 195,
+  "n": "大裕米糕",
+  "c": "美食",
+  "note": "瘦肉米糕",
+  "match": {
+   "pid": "ChIJPbq31SSUbjQROrPfN7uk0AQ",
+   "name": "大裕米糕",
+   "addr": "600嘉義市西區導明里成功東街53號",
+   "ll": [
+    23.4725477,
+    120.44776850000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=346958295310775098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 196,
+  "n": "A.D. 1977",
+  "c": "美食",
+  "note": "軟絲、鯖魚",
+  "match": {
+   "pid": "ChIJU8ORxTqUbjQRsBFpy4ku_RQ",
+   "name": "A.D. 1977",
+   "addr": "600嘉義市西區導明里垂楊路289號",
+   "ll": [
+    23.4734274,
+    120.44808830000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1512416219224412592&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 197,
+  "n": "Buttermilk摩登美式餐廳(5F)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJoSkH1gipQjQR9GlRUDB6OgY",
+   "name": "Buttermilk摩登美式餐廳(5F)",
+   "addr": "108臺北市萬華區萬壽里武昌街二段77號5樓",
+   "ll": [
+    25.045161699999998,
+    121.5055717
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=448805460801317364&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 198,
+  "n": "Buttermilk 摩登美式餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJZf_OS2ipQjQRE1H_bmSb708",
+   "name": "Buttermilk 摩登美式餐廳",
+   "addr": "一樓, No. 57-1號中山北路二段中山里中山區臺北市10412",
+   "ll": [
+    25.055704499999997,
+    121.5230059
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5759993304091414803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 199,
+  "n": "里艾廚房&人魚海",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJA_D9flZabzQRabV4UwHedfw",
+   "name": "里艾廚房&人魚海",
+   "addr": "977花蓮縣豐濱鄉靜浦村338-1號",
+   "ll": [
+    23.450181999999998,
+    121.4965929
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18191690367109739881&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "花蓮縣",
+   "region": "east-hualien"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 200,
+  "n": "心潮飯店｜台北微風信義店 SINCHAO RICE SHOPPE",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJI-uHec6rQjQRolls8XbSbdY",
+   "name": "心潮飯店｜台北微風信義店 SINCHAO RICE SHOPPE",
+   "addr": "110臺北市信義區興雅里忠孝東路五段68號2樓",
+   "ll": [
+    25.0405014,
+    121.5665695
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15451237304876423586&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 201,
+  "n": "sunburn.",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ1cK4I8X3ZzQRarX7YbBJ3zM",
+   "name": "sunburn.",
+   "addr": "10491臺北市中山區金泰里樂群三路200號2樓",
+   "ll": [
+    25.0823865,
+    121.5568955
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3737787237647758698&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 202,
+  "n": "斑泊",
+  "c": "美食",
+  "note": "(Google 標示暫時關閉)",
+  "match": {
+   "pid": "ChIJr7Cjk_etQjQRnnTh-ytMJzM",
+   "name": "斑泊",
+   "addr": "104臺北市中山區金泰里樂群二路265巷38號",
+   "ll": [
+    25.0811189,
+    121.5604306
+   ],
+   "business": "CLOSED_TEMPORARILY",
+   "gurl": "https://maps.google.com/?cid=3685998571819201694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 203,
+  "n": "麵屋長樂 台灣本店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJDeyRp-epQjQRmtl3EMHrQdw",
+   "name": "麵屋長樂 台灣本店",
+   "addr": "106臺北市大安區溫州街91號",
+   "ll": [
+    25.018897799999998,
+    121.5329637
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15871225776267843994&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 204,
+  "n": "皇城司 The SPY Bar & Bistro",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJUwJ101WpQjQRwQbP6psc4jQ",
+   "name": "皇城司 The SPY Bar & Bistro",
+   "addr": "104臺北市中山區中山里新生北路二段75號1樓",
+   "ll": [
+    25.056807199999998,
+    121.5278606
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3810639690693805761&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 205,
+  "n": "say when",
+  "c": "美食",
+  "note": "寶寶同學說好吃到發瘋",
+  "match": {
+   "pid": "ChIJ348DhxepQjQRduxd0VlJ6f8",
+   "name": "say when",
+   "addr": "10491臺北市中山區1樓正守里新生北路一段62巷9號",
+   "ll": [
+    25.046479599999998,
+    121.53071639999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18440350799358717046&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 206,
+  "n": "ACME｜Cafe Bar & Restaurant 臺北表演藝術中心",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJw-mPDQmpQjQRw5KgXJsem1Q",
+   "name": "ACME｜Cafe Bar & Restaurant 臺北表演藝術中心",
+   "addr": "111台北市士林区承德里剑潭路1號7樓",
+   "ll": [
+    25.085127399999998,
+    121.52436619999997
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6096500173198889667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 207,
+  "n": "五草車中華食館南昌店 最晚點餐時間20:10",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJlS1DbJCpQjQRjniDanw6900",
+   "name": "五草車中華食館南昌店 最晚點餐時間20:10",
+   "addr": "100臺北市中正區頂東里南昌路二段188號",
+   "ll": [
+    25.024527,
+    121.52377519999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5618023366205339790&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 208,
+  "n": "牛翻天牛肉麵-牛大骨熬牛肉湯-湯頭濃郁 (大安店)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ7ywzDWmrQjQRKInSZ5hF57Y",
+   "name": "牛翻天牛肉麵-牛大骨熬牛肉湯-湯頭濃郁 (大安店)",
+   "addr": "106臺北市大安區光信里信義路四段355號",
+   "ll": [
+    25.0332986,
+    121.5571985
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13179579355402242344&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 209,
+  "n": "M One Cafe 大安",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNfVW_dCrQjQRg9C_qEES1Ak",
+   "name": "M One Cafe 大安",
+   "addr": "106臺北市大安區仁愛里仁愛路四段27巷6-1號",
+   "ll": [
+    25.0388681,
+    121.54506889999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=708211114617327747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 210,
+  "n": "THINKPIZZA",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ0e4jmst3bjQR_Rdhxs_oC8Y",
+   "name": "THINKPIZZA",
+   "addr": "70057臺南市中西區西和里西和路289號",
+   "ll": [
+    23.003266999999997,
+    120.1927672
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14270755823337674749&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 211,
+  "n": "詹記麻辣火鍋 敦南店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJU17RsmGpQjQRcy0N9M5XixY",
+   "name": "詹記麻辣火鍋 敦南店",
+   "addr": "106臺北市大安區虎嘯里和平東路三段60號",
+   "ll": [
+    25.0243099,
+    121.54908420000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1624488636966579571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 212,
+  "n": "小杜麵館 Chapman's Noodles",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJD4PoXACrQjQR87yfLevloss",
+   "name": "小杜麵館 Chapman's Noodles",
+   "addr": "106臺北市大安區光武里復興南路一段107巷5弄15號",
+   "ll": [
+    25.0443407,
+    121.54483160000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14673543334172015859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 213,
+  "n": "溢香園餐廳成功店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJmRW_4b2sQjQRAIM1rYj-bGk",
+   "name": "溢香園餐廳成功店",
+   "addr": "114臺北市內湖區金湖里成功路五段59號",
+   "ll": [
+    25.074206,
+    121.60617400000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7596726534442156800&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 214,
+  "n": "EIKA 盈科",
+  "c": "美食",
+  "note": "米其林二星",
+  "match": {
+   "pid": "ChIJnaykAxWpQjQRnSZt6p0IkUU",
+   "name": "EIKA 盈科",
+   "addr": "103臺北市大同區大有里民樂街58號",
+   "ll": [
+    25.057478699999997,
+    121.51051539999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5012797334575982237&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 215,
+  "n": "牡丹．極上 天ぷら．本店",
+  "c": "美食",
+  "note": "米其林二星",
+  "match": {
+   "pid": "ChIJg91vPgWrQjQRziRWMlNKG-E",
+   "name": "牡丹．極上 天ぷら．本店",
+   "addr": "106臺北市大安區德安里四維路52巷17號",
+   "ll": [
+    25.0351267,
+    121.5471063
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16220640204092220622&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 216,
+  "n": "籌學費餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ0RrGQ8irQjQR3tnVYowd0w8",
+   "name": "籌學費餐廳",
+   "addr": "110臺北市信義區正和里光復南路417巷37號",
+   "ll": [
+    25.0369568,
+    121.55799099999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1140287619445676510&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 217,
+  "n": "UNCLE SHAWN燒肉餐酒館 大安一號店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJx6fq4dqrQjQRLRyEYZvXh-o",
+   "name": "UNCLE SHAWN燒肉餐酒館 大安一號店",
+   "addr": "106臺北市大安區光武里敦化南路一段160巷51號",
+   "ll": [
+    25.043699,
+    121.54673149999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16899713189087026221&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJJ71dZoSrQjQR4Zlwtzllrvs",
+    "name": "UNCLE SHAWN燒肉餐酒館 敦南二號店",
+    "addr": "106臺北市大安區敦化南路一段236巷19號",
+    "ll": [
+     25.040706099999998,
+     121.5468945
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=18135544048032717281&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 218,
+  "n": "GUGU Yakitori 居酒屋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJCVlBiJKrQjQRL3TdKKDq1do",
+   "name": "GUGU Yakitori 居酒屋",
+   "addr": "106臺北市大安區正聲里光復南路290巷41號1樓",
+   "ll": [
+    25.039274799999998,
+    121.5559827
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15768767643908928559&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 219,
+  "n": "東華川府重慶老火鍋 - 台北忠孝店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJC3BCMnyrQjQRYDKF73PVOV8",
+   "name": "東華川府重慶老火鍋 - 台北忠孝店",
+   "addr": "106臺北市大安區建倫里仁愛路四段345巷4弄31號",
+   "ll": [
+    25.0390987,
+    121.55210600000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6861750201192100448&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 220,
+  "n": "台北中山阿城鵝肉吉林總店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJj50p7F2pQjQR4PKzyg50owk",
+   "name": "台北中山阿城鵝肉吉林總店",
+   "addr": "104臺北市中山區吉林路105號",
+   "ll": [
+    25.0564063,
+    121.5303624
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=694526374424343264&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJ-cmCIEapQjQR883q_DER5yA",
+    "name": "台北中山阿城鵝肉 吉林二店",
+    "addr": "10491臺北市中山區吉林路162號",
+    "ll": [
+     25.056621699999997,
+     121.53006669999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=2370882635228171763&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 221,
+  "n": "波 WAVE 鷹嘴豆泥屋 Hummus House",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJechyXk6rQjQRvcivE2lYj6A",
+   "name": "波 WAVE 鷹嘴豆泥屋 Hummus House",
+   "addr": "110臺北市信義區景聯里基隆路二段39巷8弄4號1樓",
+   "ll": [
+    25.0310126,
+    121.5587698
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11569563176063191229&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 222,
+  "n": "李氏咖啡",
+  "c": "咖啡甜點",
+  "note": "聽說義大利麵很好吃",
+  "match": {
+   "pid": "ChIJXS_yRcSrQjQR_GMKPRJ_Hnk",
+   "name": "李氏咖啡",
+   "addr": "106臺北市大安區忠孝東路四段205巷29弄7號",
+   "ll": [
+    25.0431971,
+    121.55236139999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8727552844200829948&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 223,
+  "n": "三明堂",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJYYoUwICuQjQRbmPZbsghWMk",
+   "name": "三明堂",
+   "addr": "111臺北市士林區天山里天母東路49之1號",
+   "ll": [
+    25.1182458,
+    121.5328382
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14508383344310969198&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 224,
+  "n": "蔚南裏 WAYNAN MANSION",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJpxYhe0t3bjQR2j7cn4Kw5Fw",
+   "name": "蔚南裏 WAYNAN MANSION",
+   "addr": "700臺南市中西區中山路22號",
+   "ll": [
+    22.993089899999998,
+    120.20611059999997
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6693669021253648090&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 225,
+  "n": "徐淮人家",
+  "c": "美食",
+  "note": "顏寧說好吃，是無菜單那種，給預算他們幫你配",
+  "match": {
+   "pid": "ChIJr7qMot6rQjQRhcpmY3_C3-Q",
+   "name": "徐淮人家",
+   "addr": "10491臺北市中山區力行里遼寧街45巷2號",
+   "ll": [
+    25.048721,
+    121.54246429999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16492114212838361733&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 226,
+  "n": "京町家日式串燒居酒屋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNx0D1cM1aDQR3valsKsyn84",
+   "name": "京町家日式串燒居酒屋",
+   "addr": "300新竹市北區中正里府後街19巷6號",
+   "ll": [
+    24.805542499999998,
+    120.97029799999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14888674606094612190&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新竹市",
+   "region": "north-hsinchu-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 227,
+  "n": "Reale Cucina Italiana",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJdxDdY6qrQjQRxW6IJhUxUD8",
+   "name": "Reale Cucina Italiana",
+   "addr": "106臺北市大安區仁愛里仁愛路四段91巷17號",
+   "ll": [
+    25.038638199999998,
+    121.5472362
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4562200389436862149&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 228,
+  "n": "Vento Gelato",
+  "c": "咖啡甜點",
+  "note": "世界第一",
+  "match": {
+   "pid": "ChIJR3N8fgAfaDQRddd3sfrhFdA",
+   "name": "Vento Gelato",
+   "addr": "330桃園市桃園區國強十一街123號1樓",
+   "ll": [
+    24.991508,
+    121.2768312
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14994139001235429237&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [
+   {
+    "pid": "ChIJz8CPSwAhaDQRPbwsU0n1jmQ",
+    "name": "Vento Gelato青埔店",
+    "addr": "337桃園市大園區高鐵南路一段98號一樓",
+    "ll": [
+     25.009603799999997,
+     121.21082419999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=7245998545762565181&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "桃園市",
+    "region": "north-taoyuan"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 229,
+  "n": "THE FLOW",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJQ1PE-zWpQjQR5Zub1pjM4eI",
+   "name": "THE FLOW",
+   "addr": "104臺北市中山區正得里中山北路一段49號",
+   "ll": [
+    25.0492904,
+    121.5215697
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16348573079139228645&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 230,
+  "n": "DUO Taipei",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ6_MR_cSrQjQRQQlWkmOyPuU",
+   "name": "DUO Taipei",
+   "addr": "108臺北市萬華區頂碩里艋舺大道86巷42號",
+   "ll": [
+    25.032567399999998,
+    121.503495
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16518836623968176449&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 231,
+  "n": "好嶼",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJwxazX2qrQjQRH-xOKKedrM4",
+   "name": "好嶼",
+   "addr": "106臺北市大安區仁愛路四段300巷20弄17號",
+   "ll": [
+    25.036371499999998,
+    121.55324519999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14892451409068747807&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 232,
+  "n": "阿成炒飯專賣店(大連總店)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJP_VVA_EEbjQRnWaDWT5StH0",
+   "name": "阿成炒飯專賣店(大連總店)",
+   "addr": "807高雄市三民區達明里大連街182號",
+   "ll": [
+    22.644299999999998,
+    120.3052701
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9057955178292143773&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "高雄市",
+   "region": "south-kaohsiung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 233,
+  "n": "台中阿彬爌肉飯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ0aEFBQw9aTQR3O_X_oC3Wf4",
+   "name": "台中阿彬爌肉飯",
+   "addr": "403臺中市西區廣民里樂群街41號",
+   "ll": [
+    24.1388659,
+    120.67233449999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18327881923220205532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 234,
+  "n": "66小吃店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ37RsYOdPXTQREC5BaI1HCsY",
+   "name": "66小吃店 ❗️非當天訂位用餐者請加官方賴預約 ，謝謝❗️",
+   "addr": "224新北市瑞芳區魚桀魚坑路195號",
+   "ll": [
+    25.1071575,
+    121.7879323
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14270297041941900816&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 235,
+  "n": "城裡的小月光 單身雞湯 大中店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJhSxaj3oFbjQRS5xySwImd9o",
+   "name": "城裡的小月光 單身雞湯 大中店",
+   "addr": "813高雄市左營區菜公里大中二路623號",
+   "ll": [
+    22.683460999999998,
+    120.30728200000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15742092813794450507&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "高雄市",
+   "region": "south-kaohsiung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 236,
+  "n": "貳拾貳日甜",
+  "c": "咖啡甜點",
+  "note": "網友說開心果泡芙好吃",
+  "match": {
+   "pid": "ChIJ_wFuNAGpQjQRmeavKvj6Xg0",
+   "name": "貳拾貳日甜",
+   "addr": "106臺北市大安區古莊里師大路126巷7號1 樓",
+   "ll": [
+    25.021675899999998,
+    121.5278441
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=963483314078869145&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 237,
+  "n": "店小二魯肉飯",
+  "c": "美食",
+  "note": "DenQ 說好吃",
+  "match": {
+   "pid": "ChIJD2RRah-pQjQR_kGam6Yv3dQ",
+   "name": "店小二魯肉飯",
+   "addr": "241新北市三重區重新里大同北路27號",
+   "ll": [
+    25.062654499999997,
+    121.4954937
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15338468298515431934&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 238,
+  "n": "泰和樓",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJbyUU8imqQjQRUvC4IivLW4A",
+   "name": "泰和樓",
+   "addr": "106臺北市大安區錦泰里杭州南路二段61-20號",
+   "ll": [
+    25.0302486,
+    121.52226529999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9249209645862023250&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 239,
+  "n": "八和和牛燒肉專門店 敦北二號店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJOw7k4y6rQjQRyc4JtlLbAkQ",
+   "name": "八和和牛燒肉專門店 敦北二號店",
+   "addr": "10547台北市松山區中正里敦化北路100號",
+   "ll": [
+    25.0522431,
+    121.5478913
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4900720492820418249&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 240,
+  "n": "又一間商行SPAGHETTI（無訂位服務，營業時間為最後點餐時間）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJp7WiKXyrQjQRUaxE_f4nw0A",
+   "name": "又一間商行SPAGHETTI（無訂位服務，營業時間為最後點餐時間）",
+   "addr": "105臺北市松山區興安街192號",
+   "ll": [
+    25.0559695,
+    121.54527279999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4666617615010278481&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 241,
+  "n": "夜間部爌肉飯",
+  "c": "美食",
+  "note": "米其林必比登、DenQ 推薦",
+  "match": {
+   "pid": "ChIJXTd00pk9aTQRC1JnKc_ByaI",
+   "name": "夜間部爌肉飯",
+   "addr": "403臺中市西區公德里精誠路109號",
+   "ll": [
+    24.1504265,
+    120.6552365
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11730119799960195595&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 242,
+  "n": "全州喜比食堂 瑪格利酒館 青埔店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJZ_NDEUQhaDQR--NwlT2oAbs",
+   "name": "全州喜比食堂 瑪格利酒館 青埔店",
+   "addr": "320桃园市中坜区青埔里高鐵站前路一段466號",
+   "ll": [
+    25.0161169,
+    121.2186064
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13475236542522909691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃园市",
+   "region": null
+  },
+  "alts": [],
+  "ok": false
+ },
+ {
+  "i": 243,
+  "n": "On the Road 義式手工冰淇淋專賣店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJP8e2WoGuQjQRSLAm1u7AzTs",
+   "name": "On the Road 義式手工冰淇淋專賣店",
+   "addr": "111臺北市士林區天福里忠誠路二段136號",
+   "ll": [
+    25.1143675,
+    121.5322094
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4309312550491041864&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 244,
+  "n": "魚貫鐵板燒",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJW-9WfASpQjQRAX4Fzs6BzN8",
+   "name": "魚貫鐵板燒",
+   "addr": "10491臺北市中山區圓山里林森北路622號",
+   "ll": [
+    25.067229400000002,
+    121.52557510000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16126407090926616065&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 245,
+  "n": "阿西貳店（樂華店）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNWTIYnKpQjQR0hUUkJy281s",
+   "name": "阿西貳店（樂華店）",
+   "addr": "234新北市永和區大新里大新街47號",
+   "ll": [
+    25.0084646,
+    121.51571429999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6625840260340520402&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 246,
+  "n": "阿西燒肉飯（永元店）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJt_dqj8KpQjQRx47800odGVY",
+   "name": "阿西燒肉飯（永元店）",
+   "addr": "234新北市永和區秀元里永元路8號",
+   "ll": [
+    25.0001228,
+    121.52218280000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6204022168900898503&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 247,
+  "n": "宜賓燃麵",
+  "c": "美食",
+  "note": "Brucemaybe 推薦",
+  "match": {
+   "pid": "ChIJacSzlqSpQjQRFkjKvpcmNIU",
+   "name": "宜賓燃麵",
+   "addr": "100臺北市中正區廈安里西藏路18號",
+   "ll": [
+    25.0307206,
+    121.50749669999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9598339139016214550&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 248,
+  "n": "Hook Shisha Lounge (週三小週末95折)",
+  "c": "美食",
+  "note": "(Google 標示暫時關閉)",
+  "match": {
+   "pid": "ChIJ2Ul8PO-rQjQRe93OVWFZG-g",
+   "name": "Hook Shisha Lounge (週三小週末95折)",
+   "addr": "106臺北市大安區光武里敦化南路一段160巷60號",
+   "ll": [
+    25.0434446,
+    121.5467219
+   ],
+   "business": "CLOSED_TEMPORARILY",
+   "gurl": "https://maps.google.com/?cid=16725059915756789115&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 249,
+  "n": "騰鮨",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJf9Jh4MOtQjQR50d2CCup4ao",
+   "name": "騰鮨",
+   "addr": "10462臺北市中山區樂群三路285號一樓",
+   "ll": [
+    25.0830232,
+    121.5588953
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12313308858498303975&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 250,
+  "n": "驢子餐廳 L'IDIOT GRILL&PASTA 春大直店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJP0riSl2pQjQRE2yfU1bcuPY",
+   "name": "驢子餐廳 L'IDIOT GRILL&PASTA 春大直店",
+   "addr": "104臺北市中山區金泰里樂群三路303號3樓",
+   "ll": [
+    25.082762199999998,
+    121.56033540000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17778201792373287955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 251,
+  "n": "九華樓 春大直店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyTnCSl2pQjQRVhNh8ctsJbA",
+   "name": "九華樓 春大直店",
+   "addr": "104臺北市中山區金泰里樂群三路303號3樓",
+   "ll": [
+    25.0827515,
+    121.55992370000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12692670747997442902&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 252,
+  "n": "KOUMA日本料理 小馬",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJn4q0pZetQjQRn5yuIycw8ro",
+   "name": "KOUMA日本料理 小馬",
+   "addr": "104臺北市中山區金泰里樂群二路199號台北萬豪酒店一樓",
+   "ll": [
+    25.080428899999998,
+    121.55929940000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13470882380079078559&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 253,
+  "n": "頁小館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyQU1ZgWsQjQR5kN2WtEzKtU",
+   "name": "頁小館",
+   "addr": "10463臺北市中山區大直里北安路595巷20弄4號1樓",
+   "ll": [
+    25.08184,
+    121.547774
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15360146453359379430&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 254,
+  "n": "鑫花溪牛肉米粉",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ7bo9vBWnQjQRln0DiKXMA18",
+   "name": "鑫花溪牛肉米粉",
+   "addr": "333桃園市龜山區文化里文化一路10巷20號",
+   "ll": [
+    25.0593714,
+    121.37049010000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6846540869856886166&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 255,
+  "n": "Feather 肥的",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJu_Tp4UynQjQRbn2TZdSGZKQ",
+   "name": "Feather 肥的",
+   "addr": "333桃園市龜山區文化里文昌二街34號號旁",
+   "ll": [
+    25.0560592,
+    121.36960570000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11845741166686600558&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 256,
+  "n": "寓曰 Cafe’ Bar Restaurant",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ3dzOKb-rQjQR67kBqHTSWjg",
+   "name": "寓曰 Cafe’ Bar Restaurant",
+   "addr": "106臺北市大安區光武里市民大道四段34號",
+   "ll": [
+    25.0448262,
+    121.54532009999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4060789412504648171&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 257,
+  "n": "義大利餐廳 TRASTEVERE 大安區 忠孝復興站 美食",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ90ln_c-rQjQRp2jywC1baXs",
+   "name": "義大利餐廳 TRASTEVERE 大安區 忠孝復興站 美食",
+   "addr": "106臺北市大安區光武里復興南路一段107巷7號1樓",
+   "ll": [
+    25.0436636,
+    121.54462
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8892739191288522919&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 258,
+  "n": "nabo ulv",
+  "c": "美食",
+  "note": "(Google 標示暫時關閉)",
+  "match": {
+   "pid": "ChIJiS4o2myrQjQRhPILcYg-vtg",
+   "name": "nabo ulv",
+   "addr": "106臺北市大安區光武里敦化南路一段160巷18號",
+   "ll": [
+    25.0434408,
+    121.54764529999999
+   ],
+   "business": "CLOSED_TEMPORARILY",
+   "gurl": "https://maps.google.com/?cid=15617989313500541572&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 259,
+  "n": "川酒.咖啡｜老位",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJZb55kW6rQjQR3vVUh5vYQ9w",
+   "name": "川酒.咖啡｜老位",
+   "addr": "106臺北市大安區忠孝東路四段101巷29號1樓",
+   "ll": [
+    25.0429575,
+    121.5482144
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15871767674285782494&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 260,
+  "n": "大嗑西式餐館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJC8ObMXqpQjQRXnbI0Upn_4Y",
+   "name": "大嗑西式餐館",
+   "addr": "100臺北市中正區濟南路二段18-3號",
+   "ll": [
+    25.0409802,
+    121.52823060000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9727607291188377182&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 261,
+  "n": "山上走走 日式無菜單燒肉專門店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJWwlcyGc1aDQRT2LlsQFWCyw",
+   "name": "山上走走 日式無菜單燒肉專門店",
+   "addr": "300新竹市東區中正里中正路96巷24號",
+   "ll": [
+    24.8057518,
+    120.97035620000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3173724927692202575&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新竹市",
+   "region": "north-hsinchu-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 262,
+  "n": "MASA 手工塔可店 永春店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJzzXdkMarQjQR4Jb1cnl8RJY",
+   "name": "MASA 手工塔可店 永春店",
+   "addr": "110臺北市信義區永春里松山路415號",
+   "ll": [
+    25.0412201,
+    121.5780241
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10827916265167099616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 263,
+  "n": "江牛樓",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJzxNdESWpQjQR3fTbZzBvgF4",
+   "name": "江牛樓",
+   "addr": "103臺北市大同區永樂里民樂街6號",
+   "ll": [
+    25.0557099,
+    121.5107829
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6809564890275771613&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 264,
+  "n": "酉志",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJq4rgS2-pQjQRzp8Det-G2xg",
+   "name": "酉志（任何問題狀況，都可臉書或IG私訊與我們聯繫喔，謝謝）",
+   "addr": "106臺北市大安區永康里愛國東路99號1樓",
+   "ll": [
+    25.031551000000004,
+    121.5284288
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1791173571192790990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 265,
+  "n": "圓鼎鐵板燒",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJb41XI0OpQjQR0vNHp-WCcHk",
+   "name": "圓鼎鐵板燒",
+   "addr": "10491臺北市中山區聚盛里錦州街28號",
+   "ll": [
+    25.0602244,
+    121.524492
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8750637998846505938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 266,
+  "n": "阿堂豬肉麵線",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJgztlfAA9aTQRvnNjiBqAi3k",
+   "name": "阿堂豬肉麵線",
+   "addr": "404臺中市北區新北里一中街112號",
+   "ll": [
+    24.1528337,
+    120.68654449999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8758234751797785534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 267,
+  "n": "CHALET V",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJJ9B5dH6tQjQR3OOyP64Uals",
+   "name": "CHALET V",
+   "addr": "104臺北市中山區成功里植福路8號入口於典華停車場後方木門處",
+   "ll": [
+    25.0837339,
+    121.55505520000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6587100143608325084&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 268,
+  "n": "Butcher by Lanpengyou 忠孝",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJz-oAxDerQjQRW9GdKmZncBE",
+   "name": "Butcher by Lanpengyou 忠孝",
+   "addr": "106臺北市大安區昌隆里忠孝東路三段205-1號",
+   "ll": [
+    25.0418794,
+    121.53925579999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1256617984535679323&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 269,
+  "n": "天玉麵（TianYu Noodles）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJpR3lPQCvQjQRa-a4CnM_N7A",
+   "name": "天玉麵（TianYu Noodles）",
+   "addr": "No. 3, 中山北路七段63巷天玉里士林區臺北市111",
+   "ll": [
+    25.1207,
+    121.53099879999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12697687437728081515&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 270,
+  "n": "REEDS PIZZERIA & BOOKSTORE 民權店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ2ZiXQIWpQjQRJ2xG4_m200o",
+   "name": "REEDS PIZZERIA & BOOKSTORE 民權店",
+   "addr": "104056臺北市中山區新福里民權東路二段107號",
+   "ll": [
+    25.062724799999998,
+    121.5329386
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5391854363268770855&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 271,
+  "n": "山男 現代居酒屋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJQXqlgkWrQjQRD-DgQE_egdk",
+   "name": "山男 現代居酒屋",
+   "addr": "106臺北市大安區義安里敦化南路二段63巷53弄3號一樓",
+   "ll": [
+    25.031122099999997,
+    121.5516882
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15673052610198298639&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 272,
+  "n": "滾麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJrwIfdACpQjQRVVqqFMZlsaQ",
+   "name": "滾麵",
+   "addr": "220新北市板橋區青翠里懷德街65號",
+   "ll": [
+    25.032426299999997,
+    121.47754660000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11867378394522606165&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 273,
+  "n": "琢鮨",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNWx4lXirQjQRSCSWYKIk2aU",
+   "name": "琢鮨",
+   "addr": "105臺北市松山區中華里敦化北路145巷11號",
+   "ll": [
+    25.0537229,
+    121.54980540000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11950623366028076104&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 274,
+  "n": "東輝韓食館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJwQWLK1-pQjQRCtS4HgQ86VE",
+   "name": "東輝韓食館",
+   "addr": "10491臺北市中山區松江里松江路259巷29號1樓",
+   "ll": [
+    25.059630799999997,
+    121.5345902
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5902314775038710794&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 275,
+  "n": "Look Luke（無訂位）",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJvYZFbfWpQjQRo4TnMM3KnPE",
+   "name": "Look Luke（無訂位）",
+   "addr": "10491臺北市中山區中庄里吉林路199巷8號之1",
+   "ll": [
+    25.0597194,
+    121.5309425
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17410013242145080483&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 276,
+  "n": "蜀留香正宗重慶手工酸辣粉",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJayrk4IypQjQRZ_Jn0I2Kdo4",
+   "name": "蜀留香正宗重慶手工酸辣粉",
+   "addr": "10491臺北市中山區新生里民權東路二段92巷6之2號",
+   "ll": [
+    25.060897999999998,
+    121.5315509
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10265544742329119335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 277,
+  "n": "赤牛哥汕頭火鍋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJL10QHFmpQjQRoY_5AKe8UAs",
+   "name": "赤牛哥汕頭火鍋",
+   "addr": "104臺北市中山區松江里松江路313巷2號",
+   "ll": [
+    25.0616874,
+    121.5338476
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=815358958015975329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 278,
+  "n": "夏野豆行 Summer Savage Coffee Roaster",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJK5l2R1mpQjQR4zD198c6jWM",
+   "name": "夏野豆行 Summer Savage Coffee Roaster",
+   "addr": "10491臺北市中山區新生里松江路330巷1號",
+   "ll": [
+    25.0612289,
+    121.53262540000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7173454412004012259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 279,
+  "n": "合江胡椒蝦",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJzwekaKurQjQRPM479n03UB0",
+   "name": "合江胡椒蝦",
+   "addr": "10491臺北市中山區江山里合江街108號",
+   "ll": [
+    25.058909399999997,
+    121.5391277
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2112249239378316860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 280,
+  "n": "楊媽媽小食堂 (阿給&甜不辣)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJGy5j2s2oQjQRfeeIzYktooA",
+   "name": "楊媽媽小食堂 (阿給&甜不辣)",
+   "addr": "247新北市蘆洲區仁德里信義路259巷25號",
+   "ll": [
+    25.0843597,
+    121.47774520000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9269021052963972989&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 281,
+  "n": "LeFe Teppanyaki 樂翡鐵板燒",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJL5XhN02rQjQRgXAcee9biZ0",
+   "name": "LeFe Teppanyaki 樂翡鐵板燒",
+   "addr": "106052臺北市大安區法治里通化街171巷38號",
+   "ll": [
+    25.0274957,
+    121.55536910000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11351705419851264129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 282,
+  "n": "Circum-",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJSR-A2kCpQjQRurjUm98-Rac",
+   "name": "Circum-",
+   "addr": "10491臺北市中山區康樂里中山北路二段39巷3號麗晶精品 B2B2Regent Galleria B2",
+   "ll": [
+    25.0541597,
+    121.5253183
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12053109107840039098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 283,
+  "n": "嶼人漢堡-Islander burger",
+  "c": "美食",
+  "note": "(Google 標示暫時關閉)",
+  "match": {
+   "pid": "ChIJS2sB5XWrQjQRHjXKsPqkJpA",
+   "name": "嶼人漢堡-Islander burger",
+   "addr": "106臺北市大安區光武里大安路一段52巷25號",
+   "ll": [
+    25.0432955,
+    121.54502670000001
+   ],
+   "business": "CLOSED_TEMPORARILY",
+   "gurl": "https://maps.google.com/?cid=10387170987191448862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 284,
+  "n": "Pingburger",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJb-x9n7erQjQRml4I95i_cMg",
+   "name": "Pingburger",
+   "addr": "106臺北市大安區大安路大安路一段51巷28號1樓",
+   "ll": [
+    25.0429961,
+    121.5473547
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14443254668677635738&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 285,
+  "n": "鮨崤",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJS2t4yWCrQjQRGqwaH9GJigI",
+   "name": "鮨崤",
+   "addr": "106臺北市大安區光武里大安路ㄧ段31巷12號1",
+   "ll": [
+    25.0439229,
+    121.5468071
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=183110266124938266&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 286,
+  "n": "東京。烟火気（昭和 酒食）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJr3-X5LurQjQRqjtsguHNAnA",
+   "name": "東京。烟火気（昭和 酒食）",
+   "addr": "106臺北市大安區光武里市民大道四段74號一樓",
+   "ll": [
+    25.044737899999998,
+    121.54757920000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8071239850640817066&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 287,
+  "n": "東京串燒酒場",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJDaL5pgipQjQRmn2HBVKl958",
+   "name": "東京串燒酒場",
+   "addr": "108臺北市萬華區萬壽里康定路18-3號",
+   "ll": [
+    25.045261999999997,
+    121.5029496
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11526863542976740762&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 288,
+  "n": "Alice By Tokyo & 老城西。酒食製作所",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJW521pGmpQjQRMfFwRsRhL_0",
+   "name": "Alice By Tokyo & 老城西。酒食製作所",
+   "addr": "108臺北市萬華區萬壽里康定路18-2號",
+   "ll": [
+    25.0453252,
+    121.5029474
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18243908111124459825&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 289,
+  "n": "東京。酒食製作所",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJYdI6CNurQjQRb5uPfeKc064",
+   "name": "東京。酒食製作所",
+   "addr": "106臺北市大安區光武里市民大道四段86號一樓",
+   "ll": [
+    25.044712099999998,
+    121.5479621
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12597585079268514671&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 290,
+  "n": "離騷 Bar & Bistro",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJcc0pZW-pQjQRaf7D-HXzc98",
+   "name": "離騷 Bar & Bistro",
+   "addr": "100臺北市中正區幸市里新生南路一段52之3號2樓",
+   "ll": [
+    25.041389799999997,
+    121.53242879999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16101480780789972585&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 291,
+  "n": "濟南牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJmwLREXypQjQRzR_a1t8dy6c",
+   "name": "濟南牛肉麵",
+   "addr": "100臺北市中正區幸市里濟南路二段60之3號",
+   "ll": [
+    25.0401243,
+    121.53204749999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12090790471825760205&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 292,
+  "n": "七十二牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJr9eTFHypQjQRw_rOiZtNOAs",
+   "name": "七十二牛肉麵",
+   "addr": "100臺北市中正區幸市里濟南路二段71號",
+   "ll": [
+    25.0402953,
+    121.5324411
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=808481463540316867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 293,
+  "n": "春日好日",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJt2p_0CqqQjQRIMIXpB0kQsI",
+   "name": "春日好日",
+   "addr": "106臺北市大安區龍圖里信義路三段134巷22號",
+   "ll": [
+    25.0315878,
+    121.53933070000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13997790301546594848&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 294,
+  "n": "TAMED FOX 大安店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJcxZJwc2rQjQRfe2e1DlV-ek",
+   "name": "TAMED FOX 大安店",
+   "addr": "106臺北市大安區德安里四維路76巷5號",
+   "ll": [
+    25.034376899999998,
+    121.54764820000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16859600386906844541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 295,
+  "n": "神樂坂割烹",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJTby44zOqQjQRRI_8kXgMIN0",
+   "name": "神樂坂割烹",
+   "addr": "110臺北市信義區黎平里和平東路三段177號",
+   "ll": [
+    25.023997299999998,
+    121.553156
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15933749193621671748&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 296,
+  "n": "羅家古早味",
+  "c": "美食",
+  "note": "米其林必比登",
+  "match": {
+   "pid": "ChIJkWfDesQ9aTQRDbJc944c3nc",
+   "name": "羅家古早味",
+   "addr": "408臺中市南屯區三厝里向上路三段65號",
+   "ll": [
+    24.146224,
+    120.63486879999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8637372535704171021&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 297,
+  "n": "功夫上海手工魚丸",
+  "c": "美食",
+  "note": "米其林必比登",
+  "match": {
+   "pid": "ChIJOXyrAJw9aTQR5x-TDva1zhg",
+   "name": "功夫上海手工魚丸",
+   "addr": "403臺中市西區忠明里中美街380號",
+   "ll": [
+    24.1519346,
+    120.6602712
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1787566170523770855&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 298,
+  "n": "裡小樓小料理",
+  "c": "美食",
+  "note": "米其林必比登",
+  "match": {
+   "pid": "ChIJm-n-bfcXaTQRU_McJ1CBNyI",
+   "name": "裡小樓小料理",
+   "addr": "40747臺中市西屯區至善里西屯路二段293巷50號",
+   "ll": [
+    24.176626499999998,
+    120.64256080000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2465581502262211411&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 299,
+  "n": "可口牛肉麵",
+  "c": "美食",
+  "note": "米其林必比登",
+  "match": {
+   "pid": "ChIJ0QIWopE9aTQRBJ0GEbLQUCs",
+   "name": "可口牛肉麵（必比登推介）",
+   "addr": "407臺中市西屯區何成里大墩路911號",
+   "ll": [
+    24.1569754,
+    120.65044520000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3121224004976155908&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 300,
+  "n": "澀 Sur-",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJN8xZCmc9aTQRvRLjwnUFnKw",
+   "name": "澀 Sur-",
+   "addr": "400臺中市中區綠川里中山路29號3樓",
+   "ll": [
+    24.1376739,
+    120.6832582
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12437822274229441213&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 301,
+  "n": "MO",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJwzUf4i4rv1QR2gC0jG6ZtCo",
+   "name": "Mo's Egg House",
+   "addr": "950 SW Veterans Way, Redmond, OR 97756美國",
+   "ll": [
+    44.267482699999995,
+    -121.1788787
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3077253145486950618&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "Oregon",
+   "region": null
+  },
+  "alts": [
+   {
+    "pid": "ChIJ6QydKFnholQRpgEYiuIAt8s",
+    "name": "Moe Phở - Noodles & Cafe | Vietnamese",
+    "addr": "370 S Main St, Pendleton, OR 97801美國",
+    "ll": [
+     45.6708772,
+     -118.7860969
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=14679202483416859046&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "Oregon",
+    "region": null
+   },
+   {
+    "pid": "ChIJr6mVu4njolQR-DWW99Ag_QI",
+    "name": "MOE PHO - At Wildhorse",
+    "addr": "Food court, 46510 Wildhorse Blvd, Pendleton, OR 97801美國",
+    "ll": [
+     45.647278,
+     -118.67909809999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=215364439062754808&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "Oregon",
+    "region": null
+   }
+  ],
+  "ok": false
+ },
+ {
+  "i": 302,
+  "n": "一村 Tobira Bar & restaurant",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJD0JWR_WpQjQRZ-hd__WFrLE",
+   "name": "一村 Tobira Bar & restaurant",
+   "addr": "104臺北市中山區中山里新生北路二段68巷11-1號",
+   "ll": [
+    25.056497,
+    121.526841
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12802755132305303655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 303,
+  "n": "Birdy Yakitori 燒鳥狂想曲",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJg3O7KNWtQjQRATrIEP1yjkU",
+   "name": "Birdy Yakitori 燒鳥狂想曲",
+   "addr": "10491臺北市中山區金泰里樂群三路303號2F",
+   "ll": [
+    25.082795899999997,
+    121.5603287
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5012069866543790593&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 304,
+  "n": "logy",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNWCqhOGrQjQR_4bJNRZ8uM0",
+   "name": "logy",
+   "addr": "114臺北市內湖區港墘里瑞光路258巷39號1F",
+   "ll": [
+    25.0749007,
+    121.57481539999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14823734608323512063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 305,
+  "n": "Double V",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJRa2rZm-pQjQRLNrUy4M1X5A",
+   "name": "Double V",
+   "addr": "10696臺北市大安區光信里延吉街234號一樓",
+   "ll": [
+    25.036425100000002,
+    121.55551820000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10403092504425847340&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 306,
+  "n": "順柔烏龍麵 (うどん しなやか)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJz8x3W9A9aTQR-dwopF6BpRs",
+   "name": "順柔烏龍麵 (うどん しなやか)飯類/火鍋 美食推薦",
+   "addr": "408臺中市南屯區永定里永春東七路535號",
+   "ll": [
+    24.1390958,
+    120.63282360000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1992140653662362873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 307,
+  "n": "藍鯨早餐店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ38jdEfYEbjQR10p_OZT2pLc",
+   "name": "藍鯨早餐店",
+   "addr": "807高雄市三民區德東里嫩江街111號",
+   "ll": [
+    22.6440774,
+    120.2984014
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13232972721601596119&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "高雄市",
+   "region": "south-kaohsiung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 308,
+  "n": "林家蔬菜羊肉爐",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJx-WJMVqpQjQRW9kBZJUgJss",
+   "name": "林家蔬菜羊肉爐",
+   "addr": "104臺北市中山區新福里吉林路327號",
+   "ll": [
+    25.063855,
+    121.53046199999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14638423464814434651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 309,
+  "n": "協力香雞排板橋三民路店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJFVHVSCWoQjQRyjIALJJqFtI",
+   "name": "協力香雞排板橋三民路店",
+   "addr": "220新北市板橋區正泰里三民路二段202-10號",
+   "ll": [
+    25.0141295,
+    121.47892519999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15138404373488480970&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 310,
+  "n": "竣師父牛肉麵-大安店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJNf5FR9arQjQRc3YndXFK1PI",
+   "name": "竣師父牛肉麵-大安店",
+   "addr": "106台北市大安区光武里大安路一段52巷24號一樓",
+   "ll": [
+    25.042977699999998,
+    121.5451243
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17497692303398499955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 311,
+  "n": "鮨 隆",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJE5O0jWepQjQRhxnXfxL7TeE",
+   "name": "鮨 隆",
+   "addr": "10491臺北市中山區中山里新生北路二段60-5號",
+   "ll": [
+    25.055908799999997,
+    121.5271717
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16234908288613292423&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 312,
+  "n": "300° STEAK 南崁店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJFxYlpIahQjQRmvWgvW9qfLk",
+   "name": "300° STEAK 南崁店",
+   "addr": "464-1號, No. 464-1號仁愛路一段五福里蘆竹區桃園市338",
+   "ll": [
+    25.051053,
+    121.29515599999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13365674822284146074&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 313,
+  "n": "一宗壽司",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJDRy7ouWrQjQRlQA5CLxA6Y0",
+   "name": "一宗壽司",
+   "addr": "10552臺北市松山區民有里復興北路313巷37號",
+   "ll": [
+    25.059047999999997,
+    121.54656580000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10225775605257404565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 314,
+  "n": "有情出包所 / True Bao Maker",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJFaSanUqpQjQRAtCdM0vdS7Q",
+   "name": "有情出包所 / True Bao Maker",
+   "addr": "104臺北市中山區正義里林森北路107巷4號",
+   "ll": [
+    25.0503164,
+    121.5253053
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12991720865138593794&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 315,
+  "n": "福二漢堡製造所",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJtzG55OipQjQRhCHciyEWGIM",
+   "name": "福二漢堡製造所",
+   "addr": "100臺北市中正區水源里汀州路三段229號",
+   "ll": [
+    25.0140145,
+    121.53402630000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9446324551745806724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 316,
+  "n": "Este día 這一天異國廚房 古巴三明治（台北總店）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJfeUCFeSpQjQR9fJzBtezjXI",
+   "name": "Este día 這一天異國廚房 古巴三明治（台北總店）",
+   "addr": "100臺北市中正區文盛里羅斯福路三段244巷15號",
+   "ll": [
+    25.016730799999998,
+    121.53056790000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8254451428147589877&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 317,
+  "n": "饗食星馬",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ-yre--kdaDQRG-EbLT3S9WE",
+   "name": "饗食星馬",
+   "addr": "238新北市樹林區樹德里大安路251號",
+   "ll": [
+    24.9940399,
+    121.41952859999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7058779151164760347&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 318,
+  "n": "西門靖 XimenJimmy",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJMWOjtwipQjQRUOz-BEPE9M0",
+   "name": "西門靖 XimenJimmy",
+   "addr": "108臺北市萬華區萬壽里武昌街二段122號",
+   "ll": [
+    25.0452732,
+    121.5038979
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14840702464218295376&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 319,
+  "n": "西門 梁山泊小籠湯包",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJC6Lg1A6pQjQRJ0_JYfUcqoA",
+   "name": "西門 梁山泊小籠湯包",
+   "addr": "108臺北市萬華區萬壽里漢口街二段54-4號",
+   "ll": [
+    25.0454994,
+    121.50574440000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9271254623128735527&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 320,
+  "n": "麵屋德家",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJsckYCqqpQjQRCI1PN8UrXFY",
+   "name": "麵屋德家",
+   "addr": "104臺北市中山區民權西路70巷41-1號1樓",
+   "ll": [
+    25.0609926,
+    121.5204273
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6222896911155694856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 321,
+  "n": "楊國福麻辣燙 南港首店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJHzOs97OrQjQR6qaACxGErr4",
+   "name": "楊國福麻辣燙 南港首店",
+   "addr": "115臺北市南港區東新里南港路二段280號",
+   "ll": [
+    25.0544653,
+    121.59625609999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13740064721896253162&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 322,
+  "n": "fumée Yakitori",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJPzoQ34GpQjQRqvsYw1SAsZs",
+   "name": "fumée Yakitori",
+   "addr": "10491臺北市中山區康樂里中山北路二段39巷3號B3",
+   "ll": [
+    25.054187400000004,
+    121.52423999999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11218889248295418794&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 323,
+  "n": "蔡家牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ6VWF3wcCaDQRg1JIwfKAxTE",
+   "name": "蔡家牛肉麵",
+   "addr": "235新北市中和區秀景里秀朗路三段153巷16弄12號",
+   "ll": [
+    24.9915596,
+    121.5255837
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3586414458383651459&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 324,
+  "n": "Beau",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJYXw0D6mrQjQRTlkOxu9w07c",
+   "name": "Beau",
+   "addr": "106臺北市大安區光信里仁愛路四段408巷11號",
+   "ll": [
+    25.0371563,
+    121.5570199
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13246055104149084494&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 325,
+  "n": "92k週末食堂",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJJSEr8UtDXTQR9z1MkV51ceo",
+   "name": "92k週末食堂",
+   "addr": "228新北市貢寮區真理里美艷山街70之3號",
+   "ll": [
+    25.0737104,
+    121.9190822
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16893412726268509687&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 326,
+  "n": "The Lookout Bistro & Bar 眺吧餐酒館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJKWT0IoYEbjQR2Euvmr0MfRE",
+   "name": "The Lookout Bistro & Bar 眺吧餐酒館",
+   "addr": "800高雄市新兴区玉衡里中山一路14-26號14樓",
+   "ll": [
+    22.6263576,
+    120.30214959999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1260177479217138648&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "高雄市",
+   "region": "south-kaohsiung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 327,
+  "n": "Burger&co",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ5ZhRj8yrQjQRrIZ7NwlWq4w",
+   "name": "Burger&co",
+   "addr": "No. 49, 通安街 大安區, 臺北市106",
+   "ll": [
+    25.0312548,
+    121.55336609999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10136289983912969900&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 328,
+  "n": "1976道地香港美食 敦南本店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJqYBZYMWrQjQRBzCZlczR8C4",
+   "name": "1976道地香港美食 敦南本店",
+   "addr": "106臺北市大安區建倫里敦化南路一段233巷11號",
+   "ll": [
+    25.0404529,
+    121.54994579999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3382433996768620551&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 329,
+  "n": "極之好味-港式燒臘飯館",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJWwWQnq-rQjQRNSokS-W_jro",
+   "name": "極之好味 港式燒臘飯館｜台北大安店",
+   "addr": "106臺北市大安區光武里大安路一段16巷8號1 樓",
+   "ll": [
+    25.044444499999997,
+    121.5458656
+   ],
+   "business": "CLOSED_TEMPORARILY",
+   "gurl": "https://maps.google.com/?cid=13442892929276586549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 330,
+  "n": "東加炸雞",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJffRdKKKrQjQRLdv8kMn_Ezw",
+   "name": "東加炸雞",
+   "addr": "110臺北市信義區長春里虎林街108巷1號",
+   "ll": [
+    25.042544499999998,
+    121.5768257
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4329084908019178285&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 331,
+  "n": "穆記牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyyPBxLSrQjQRxOYJuEShsKg",
+   "name": "穆記牛肉麵",
+   "addr": "110臺北市信義區三張里吳興街239號",
+   "ll": [
+    25.0274987,
+    121.56347199999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12155392710790473412&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 332,
+  "n": "柑橘Shinn 鴨蔥",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJfUnfqzaqQjQRIbJ5yYmSCz4",
+   "name": "柑橘Shinn 鴨蔥",
+   "addr": "110臺北市信義區黎平里嘉興街315號",
+   "ll": [
+    25.023125200000003,
+    121.55448649999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4470828175583719969&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 333,
+  "n": "樂業麵線",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJwetj6DCqQjQRQ-fkKnXAnYY",
+   "name": "樂業麵線",
+   "addr": "106臺北市大安區芳和里樂業街136號",
+   "ll": [
+    25.0203095,
+    121.55253429999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9700120781889267523&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 334,
+  "n": "寧夏夜市-林振櫂燒麻糬",
+  "c": "小吃夜市",
+  "match": {
+   "pid": "ChIJmxLZ32qpQjQRxb2n_A2XJQY",
+   "name": "寧夏夜市-林振櫂燒麻糬",
+   "addr": "103臺北市大同區星明里寧夏路97號攤位",
+   "ll": [
+    25.0559817,
+    121.5153223
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=442926224695082437&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 335,
+  "n": "Pattie-O 樂緹歐比薩專賣店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJKUFU1vCrQjQRbu8ge9LsIh0",
+   "name": "Pattie-O Detroit Pizza 樂緹歐比薩專賣店",
+   "addr": "116臺北市文山區興得里興隆路三段36巷15弄12號",
+   "ll": [
+    24.999565999999998,
+    121.55552829999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2099500765061115758&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": false
+ },
+ {
+  "i": 336,
+  "n": "WOK by OBOND",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJYSnuobSrQjQRYJh45svt_T8",
+   "name": "WOK by OBOND",
+   "addr": "10491臺北市中山區朱崙里龍江路18號",
+   "ll": [
+    25.04788,
+    121.5402615
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=4611103053498062944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 337,
+  "n": "皇城老媽",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJIzxoocarQjQRONCdaF7cU6A",
+   "name": "皇城老媽",
+   "addr": "106臺北市大安區華聲里延吉街97巷5號",
+   "ll": [
+    25.0432791,
+    121.55527769999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11552819767175663672&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 338,
+  "n": "麵屋壹慶",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJJWD3-tSpQjQRlotB1OTWjdM",
+   "name": "麵屋壹慶",
+   "addr": "10491臺北市中山區晴光里雙城街32巷2號",
+   "ll": [
+    25.066181099999998,
+    121.52423449999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15244076592020949910&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 339,
+  "n": "川渝小吃坊",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJifL3HGypQjQRstzFvsQESx4",
+   "name": "川渝小吃坊",
+   "addr": "103臺北市大同區建泰里南京西路18巷6弄8之1號",
+   "ll": [
+    25.0520067,
+    121.51964199999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2182843687451876530&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 340,
+  "n": "忠誠牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJCZXP75quQjQRQDNxhOfkaPM",
+   "name": "忠誠牛肉麵",
+   "addr": "111臺北市士林區忠誠里德行東路80號",
+   "ll": [
+    25.107327599999998,
+    121.5275642
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17539520431804986176&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 341,
+  "n": "品豪鐵板燒（廣福店）",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJrR3LiPCpQjQRF4OVh19kSEk",
+   "name": "品豪鐵板燒（廣福店）",
+   "addr": "235新北市中和區枋寮里廣福路40號",
+   "ll": [
+    25.0022767,
+    121.5042553
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5280580924551299863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 342,
+  "n": "大胖肉焿光華總店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ12moPtqpQjQRnJG2qhEZQNU",
+   "name": "大胖肉焿光華總店-中和美食 中和小吃 永安市場美食 永安市場小吃 永和美食 永和小吃",
+   "addr": "235新北市中和區瓦磘里光華街13號",
+   "ll": [
+    25.0042413,
+    121.5045689
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15366309492257362332&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 343,
+  "n": "Pizza power",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJW3BnIA6pQjQRR5BYohped7A",
+   "name": "Pizza power",
+   "addr": "235新北市中和區枋寮里廣福路77號71巷口",
+   "ll": [
+    25.0008478,
+    121.5023953
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12715735541389758535&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 344,
+  "n": "C：柒家珈琲",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJJW6UVRmpQjQR2c93wFm4EWs",
+   "name": "C：柒家珈琲（燉飯&義大利麵）",
+   "addr": "106臺北市大安區和安里信義路三段147巷15弄1-1號",
+   "ll": [
+    25.0353013,
+    121.54208399999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7715150332283047897&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 345,
+  "n": "台中順天環匯酒店",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJd2V1WR49aTQR_9LuGusQXdw",
+   "name": "台中順天環匯酒店",
+   "addr": "407臺中市西屯區潮洋里臺灣大道三段818號",
+   "ll": [
+    24.172352399999998,
+    120.63529779999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15878866463133455103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 346,
+  "n": "司旅 chez nous hotel",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJ85OmEdSrQjQRrf-kvU8IsZA",
+   "name": "司旅 chez nous hotel",
+   "addr": "106臺北市大安區和安里信義路三段147巷18號",
+   "ll": [
+    25.0360889,
+    121.5418351
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10426123750916554669&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 347,
+  "n": "辣吉點正宗成都串串香市民二店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJr2TsVZCrQjQRwIk5Td_ebq8",
+   "name": "辣吉點正宗成都串串香市民店",
+   "addr": "105臺北市松山區敦化里市民大道四段151號",
+   "ll": [
+    25.044899899999997,
+    121.55091399999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12641286254730250688&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJy-PzHs2pQjQR7RAE9SRQKOk",
+    "name": "辣吉點正宗成都串串香",
+    "addr": "103臺北市大同區建泰里承德路一段77巷10號",
+    "ll": [
+     25.052162,
+     121.5177941
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=16800766529565364461&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": false
+ },
+ {
+  "i": 348,
+  "n": "禧榕軒大飯店",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJcWJbO3x3bjQRw0psRJrHKUY",
+   "name": "禧榕軒大飯店",
+   "addr": "704003臺南市北區公園里成功路28號",
+   "ll": [
+    22.997998499999998,
+    120.20839279999998
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5055791522086931139&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [
+   {
+    "pid": "ChIJ-QjwYVd3bjQR4fvBXm3LUDg",
+    "name": "禧榕軒大飯店-餐飲部",
+    "addr": "70443臺南市北區公園里成功路28號",
+    "ll": [
+     22.998019499999998,
+     120.20853539999997
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=4057966934862461921&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台南市",
+    "region": "south-tainan"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 349,
+  "n": "三大牛肉火鍋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJiXB-etBwbjQRHGRAV1XfbC4",
+   "name": "三大牛肉火鍋（創始店）",
+   "addr": "710臺南市永康區崑山里國光三街3號",
+   "ll": [
+    23.003393300000003,
+    120.2599434
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3345294180858487836&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 350,
+  "n": "Focus kitchen肯恩廚房",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ8eWRPYKpQjQRuXQ3tGY9wKo",
+   "name": "Focus kitchen肯恩廚房",
+   "addr": "106臺北市大安區福住里信義路二段198巷6號",
+   "ll": [
+    25.033036199999998,
+    121.53036540000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12303901693295686841&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 351,
+  "n": "petit doux 微兜 永康店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJ9Y1eI4KpQjQRO9xqg1e_1oA",
+   "name": "petit doux 微兜 永康店",
+   "addr": "106臺北市大安區福住里信義路二段198巷7之3號",
+   "ll": [
+    25.0326374,
+    121.5306298
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9283818064458734651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 352,
+  "n": "燒肉擔當本店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJJ9WebIOrQjQRv5mjoqFspr4",
+   "name": "燒肉擔當本店 Yakiniku PIC",
+   "addr": "106臺北市大安區建安里敦化南路一段161巷52號",
+   "ll": [
+    25.0433825,
+    121.55160730000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13737787154814441919&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 353,
+  "n": "星曜雞湯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ-aDyDwCpQjQRQeKCmwIJsXw",
+   "name": "星曜雞湯",
+   "addr": "10491臺北市中山區康樂里林森北路247號2樓",
+   "ll": [
+    25.0541679,
+    121.5257142
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8984972638384480833&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 354,
+  "n": "驥園川菜餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ7yfd_82rQjQRFHc6dSL-vVA",
+   "name": "驥園川菜餐廳",
+   "addr": "106臺北市大安區德安里敦化南路1段324號B1",
+   "ll": [
+    25.035319599999998,
+    121.54847570000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5818085717581657876&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 355,
+  "n": "友德南投意麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ-S59pIsxaTQRRpEiriYmFic",
+   "name": "友德南投意麵",
+   "addr": "540南投縣南投市南投里中山街179號",
+   "ll": [
+    23.9091113,
+    120.68561949999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2816480564538937670&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "南投縣",
+   "region": "central-nantou"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 356,
+  "n": "秦味館 Qin Wei Guan",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ0_ua_cWrQjQRIbUBC-UUu_E",
+   "name": "秦味館",
+   "addr": "106臺北市大安區車層里延吉街138巷2號",
+   "ll": [
+    25.0399353,
+    121.55459099999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17418538957750252833&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 357,
+  "n": "六千泓佐土產牛肉",
+  "c": "美食",
+  "note": "2號牛腩湯",
+  "match": {
+   "pid": "ChIJuSIMDFR2bjQRO5xlAsCglKA",
+   "name": "六千泓佐土產牛肉",
+   "addr": "700臺南市中西區南廠里海安路一段63號",
+   "ll": [
+    22.9892199,
+    120.19484779999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11571050089156025403&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 358,
+  "n": "老阿伯現滷豆干",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJuwRV3SEYaDQRiEQnq6NCVw4",
+   "name": "老阿伯現滷豆干",
+   "addr": "335桃園市大溪區興和里中正路37號",
+   "ll": [
+    24.8829454,
+    121.28626570000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=1033367910223398024&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 359,
+  "n": "賴媽媽傳統豆花 體育館本店",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJKyFr8yEYaDQRBl0Q5V97N2Y",
+   "name": "賴媽媽傳統豆花 體育館本店",
+   "addr": "335桃園市大溪區福仁里登龍路22號多目標體育館1樓",
+   "ll": [
+    24.883544699999998,
+    121.2872067
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7365491367382899974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 360,
+  "n": "Baker Street 貝克街早午餐",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJLxUp_RQiaDQRRawfyEa6Qvc",
+   "name": "Baker Street 貝克街早午餐",
+   "addr": "320桃園市中壢區普忠里中北路165巷69號",
+   "ll": [
+    24.9580915,
+    121.23950070000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17817007888999099461&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 361,
+  "n": "三冬麵舖",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJn_46UrofaDQR1Tc2l3rOevA",
+   "name": "三冬麵舖",
+   "addr": "330桃園市桃園區寶安里同德十街5號",
+   "ll": [
+    25.018702299999998,
+    121.2947919
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17328389542179649493&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "桃園市",
+   "region": "north-taoyuan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 362,
+  "n": "今大滷肉飯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJyxws_B-pQjQR-OlL3aVgbIo",
+   "name": "今大魯肉飯",
+   "addr": "241新北市三重區重陽里大仁街40號",
+   "ll": [
+    25.064408999999998,
+    121.4915464
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9974453540217416184&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": false
+ },
+ {
+  "i": 363,
+  "n": "朱記花枝羹",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJDR0YiCGpQjQR5K_rwgoxorY",
+   "name": "朱記花枝羹",
+   "addr": "241新北市三重區文化里正義北路51號右走廊",
+   "ll": [
+    25.064157299999998,
+    121.4974771
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13160134983419670500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 364,
+  "n": "老王紅燒牛肉麵",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ99KeQJupQjQRQA6rr2fzqvo",
+   "name": "老王紅燒牛肉麵",
+   "addr": "106臺北市大安區錦華里潮州街82號",
+   "ll": [
+    25.029080000000004,
+    121.5244318
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=18062516882177199680&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 365,
+  "n": "疍宅Egghost三元店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJc0UfeV6pQjQRA-ILPQBB8pI",
+   "name": "疍宅Egghost三元店",
+   "addr": "100臺北市中正區永功里三元街176號1樓",
+   "ll": [
+    25.0278398,
+    121.5114289
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10588597143181451779&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 366,
+  "n": "抹More",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJq474AvapQjQRVAvo9qpVer0",
+   "name": "抹More",
+   "addr": "100臺北市中正區永昌里寧波西街221號",
+   "ll": [
+    25.0256536,
+    121.5103729
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13653319413102283604&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 367,
+  "n": "黃家香腸",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJdYGKb72pQjQRyzvLDZhuy-s",
+   "name": "黃家香腸",
+   "addr": "100臺北市中正區永功里泉州街32之3號",
+   "ll": [
+    25.0258929,
+    121.513514
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16990795618530835403&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 368,
+  "n": "麵鄉 安徽淮南牛肉湯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJywO-ieapQjQRg27Ko2wSG8k",
+   "name": "麵鄉 安徽淮南牛肉湯",
+   "addr": "108臺北市萬華區青山里華西街167、169號號攤",
+   "ll": [
+    25.0394398,
+    121.49859749999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=14491196483808423555&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 369,
+  "n": "一甲子餐飲",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJT81rBaipQjQR6Jc9USFITI8",
+   "name": "一甲子餐飲",
+   "addr": "108臺北市萬華區新起里康定路79號",
+   "ll": [
+    25.0404022,
+    121.50217110000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10325707353587816424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 370,
+  "n": "BRUN不然-安和店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJF0vFuO2rQjQRWB6d1NTlV_k",
+   "name": "BRUN不然-安和店",
+   "addr": "106臺北市大安區建倫里安和路一段7號",
+   "ll": [
+    25.039759,
+    121.54974299999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17967081940680777304&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 371,
+  "n": "秋田笠",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ93yQTu49aTQRGkYdNJeRv10",
+   "name": "秋田笠",
+   "addr": "403臺中市西區中興里向上北路141號",
+   "ll": [
+    24.147788799999997,
+    120.6628348
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6755278044679456282&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 372,
+  "n": "俺達の肉屋 日本和牛燒肉店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJnUv6vJk9aTQRtCvxAB4mU_Y",
+   "name": "俺達の肉屋 日本和牛燒肉店",
+   "addr": "403臺中市西區公平里公益路194-1號",
+   "ll": [
+    24.1510094,
+    120.65641649999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17749572466703936436&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 373,
+  "n": "復興餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJm51D6pwWaTQRDW4ebTPG7qI",
+   "name": "復興餐廳",
+   "addr": "428臺中市大雅區忠義里月祥路301號",
+   "ll": [
+    24.230800199999997,
+    120.62402159999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11740539202777804301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 374,
+  "n": "虹夕諾雅 谷關",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJt_KWpPblaDQRpYbVhOn4Uno",
+   "name": "虹夕諾雅 谷關",
+   "addr": "424臺中市和平區博愛里東關路一段溫泉巷16號",
+   "ll": [
+    24.205375999999998,
+    121.0104902
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8814381102557136549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 375,
+  "n": "与玥樓頂級粵菜餐廳",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJUT2sqN09aTQR4phfxm0VW4I",
+   "name": "与玥樓頂級粵菜餐廳",
+   "addr": "408臺中市南屯區新生里公益路二段783號",
+   "ll": [
+    24.150923499999998,
+    120.62928649999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9393125009035073762&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 376,
+  "n": "老蔡大麵焿",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ8XO09W09aTQRLxdduWy2Ygc",
+   "name": "老蔡大麵焿",
+   "addr": "400台中市中区中华里篤行路18號",
+   "ll": [
+    24.1468316,
+    120.677653
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=532188284065748783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 377,
+  "n": "Mao king 貓王經典 Restaurant 南屯龍富店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJs_mma7U9aTQRgX1z77sniQc",
+   "name": "Mao king貓王經典Restaurant 南屯店",
+   "addr": "408臺中市南屯區新生里龍富路四段437號",
+   "ll": [
+    24.1478195,
+    120.6258821
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=543008918204546433&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": false
+ },
+ {
+  "i": 378,
+  "n": "十三涮四川料理重慶火鍋-溫體牛麻辣鴛鴦鍋 聚餐特色美食餐廳(平價人氣必吃)",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJq6qqqhEaaTQRrXt2xa-dAp8",
+   "name": "十三涮四川料理重慶火鍋",
+   "addr": "420臺中市豐原區東湳里豐原大道六段469號",
+   "ll": [
+    24.2646101,
+    120.7271048
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11457893780241677229&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 379,
+  "n": "N23.5° Lounge",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJn6CGMs-VbjQRpO330OHCrAA",
+   "name": "N23.5° Lounge",
+   "addr": "600嘉義市東區中庄里忠孝路516號",
+   "ll": [
+    23.493696999999997,
+    120.452888
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=48627971123572132&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 380,
+  "n": "桃城三禾火雞肉飯",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJb_-7NzWUbjQR1cPDwL-uOZQ",
+   "name": "桃城三禾火雞肉飯",
+   "addr": "600嘉義市東區中山里民權路97號",
+   "ll": [
+    23.4838988,
+    120.4614371
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10680760129881883605&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 381,
+  "n": "金牌川菜料理",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJN4g2s9WVbjQR-hQUqO4Ex5U",
+   "name": "金牌川菜料理",
+   "addr": "600嘉義市西區新厝里興達路120號",
+   "ll": [
+    23.4891391,
+    120.442422
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10792600455085298938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 382,
+  "n": "往前咖啡製作所 / Forward Roasters",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJU6G05jKUbjQRKliHNVe0Y-0",
+   "name": "往前咖啡製作所 / Forward roasters",
+   "addr": "600嘉義市東區北門里興中街205號",
+   "ll": [
+    23.4841147,
+    120.4496869
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17105714096336492586&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 383,
+  "n": "富貴亭飲食店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ6euChRI9aTQRFWbtofrK26w",
+   "name": "富貴亭飲食店",
+   "addr": "400臺中市中區大墩里三民路二段18巷31號",
+   "ll": [
+    24.140145699999998,
+    120.67824339999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12455772372230563349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
  }
 ]
