@@ -56,3 +56,25 @@ button:active:not(:disabled):not(.tw-mark-stamp), .tw-nav-item:active, .tw-place
 .tw-empty::before { content: ""; display: block; width: 52px; height: 52px; margin: 0 auto 10px; background: var(--muted); opacity: .75;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z'/%3E%3Ccircle cx='12' cy='9' r='2.6'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z'/%3E%3Ccircle cx='12' cy='9' r='2.6'/%3E%3C/svg%3E") center / contain no-repeat; animation: tw-bob 2.4s ease-in-out infinite; }
 @keyframes tw-bob { 50% { transform: translateY(-6px); } }
+
+/* ── 到站站名牌：切到縣市時從右側滑進、停一下、滑出 ── */
+.tw-station { position: fixed; top: 74px; right: 0; z-index: 70; display: flex; align-items: stretch; background: var(--ink); color: #fff; border: 2px solid #fff; border-right: 0; border-radius: 10px 0 0 10px; box-shadow: 0 8px 24px #0006; animation: tw-station 2.3s cubic-bezier(.25, 1, .5, 1) both; pointer-events: none; }
+.tw-station-n { font: 700 22px/1 var(--f-display); padding: 10px 16px; }
+.tw-station-s { font: 700 13px/1 var(--f-display); padding: 10px 12px; background: var(--rail); color: var(--rail-ink, #fff); display: grid; place-items: center; }
+@keyframes tw-station { 0% { transform: translateX(110%); } 22%, 72% { transform: translateX(0); } 100% { transform: translateX(110%); } }
+
+/* ── 頁首鐵軌條：一列小火車從左開到右（只跑一次） ── */
+.tw-air { position: relative; overflow: hidden; }
+.tw-air::after { content: ""; position: absolute; top: 2px; left: 0; width: 96px; height: 10px; border-radius: 5px 8px 8px 5px; background: linear-gradient(90deg, var(--ink) 0 100%); box-shadow: inset 0 0 0 1px #fff6;
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 22px, transparent 22px 24px); mask: repeating-linear-gradient(90deg, #000 0 22px, transparent 22px 24px);
+  transform: translateX(-120px); animation: tw-train 9s linear 1.2s 1 both; }
+@keyframes tw-train { from { transform: translateX(-120px); } to { transform: translateX(110vw); } }
+
+/* ── 車票紙張質感：淡紙紋、分類色條 ── */
+.tw-place-card { background-image: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--ink) 3%, transparent) 3px 4px); }
+.tw-place-card::marker { content: none; }
+.tw-place-card[data-c="美食"] { --tk: #d9622b; } .tw-place-card[data-c="景點"] { --tk: #2f7d5b; }
+.tw-place-card[data-c="咖啡甜點"] { --tk: #8a5a3c; } .tw-place-card[data-c="小吃夜市"] { --tk: #c9482b; }
+.tw-place-card[data-c="溫泉"] { --tk: #3a7ca5; } .tw-place-card[data-c="住宿"] { --tk: #5b4fa3; } .tw-place-card[data-c="購物市集"] { --tk: #b3398a; }
+.tw-place-card[data-c] { box-shadow: inset 6px 0 0 var(--tk, transparent); }
+.tw-place-card.is-pair[data-c] { box-shadow: inset 6px 0 0 var(--tk, transparent), 0 0 0 3px var(--gold); }

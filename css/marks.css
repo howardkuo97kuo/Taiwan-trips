@@ -83,3 +83,33 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-mark-skip[aria-pressed="true"] { color: var(--stamp); font-weight: 700; }
 .tw-place-card.is-skipped .tw-place-mid, .tw-place-card.is-skipped .tw-place-stub { opacity: .55; }
 @media (pointer: coarse) { .tw-mark-skip { min-height: 40px; padding: 6px 10px; } }
+
+/* ── 想去：愛心按鈕與彈跳（只在卡片／表格列） ── */
+.tw-place-card .tw-mark-dot { width: 40px; height: 40px; border: 0; background: none; border-radius: 0; display: grid; place-items: center; box-shadow: none; position: relative; }
+.tw-place-card .tw-mark-dot::before { content: "♡"; font-size: 34px; line-height: 1; color: var(--ink); transition: color .2s, transform .2s; }
+.tw-place-card .tw-mark-dot.is-on::before { content: "♥"; color: var(--stamp); }
+.tw-place-card .tw-mark-dot.is-ghost::before { font-size: 26px; color: var(--line); }
+.tw-place-card .tw-mark-dot.is-ghost.is-on::before { color: var(--muted); }
+.tw-place-card .tw-mark-dot.is-on, .tw-place-card button.tw-mark-dot:hover { box-shadow: none; transform: none; }
+.tw-place-card button.tw-mark-dot:hover::before { transform: scale(1.15); }
+.tw-place-card .tw-mark-dot.is-pop::before { animation: tw-heart-pop .55s cubic-bezier(.3, 1.8, .5, 1) both; }
+.tw-place-card .tw-mark-dot.is-pop::after { content: "♥ ♥ ♥"; position: absolute; left: 50%; top: 4px; transform: translateX(-50%); font-size: 11px; letter-spacing: 6px; color: var(--stamp); white-space: nowrap; animation: tw-heart-float .9s ease-out both; pointer-events: none; }
+@keyframes tw-heart-pop { 0% { transform: scale(.4); } 55% { transform: scale(1.45); } 100% { transform: scale(1); } }
+@keyframes tw-heart-float { from { opacity: 1; transform: translate(-50%, 0); } to { opacity: 0; transform: translate(-50%, -34px); } }
+
+/* ── 另一方的狀態小章（照片左上角） ── */
+.tw-place-media { position: relative; }
+.tw-peers { position: absolute; left: 20px; top: 20px; display: flex; flex-direction: column; gap: 4px; align-items: flex-start; z-index: 2; pointer-events: none; }
+.tw-peer { font: 700 12px/1.5 var(--f-display); padding: 0 8px; border-radius: 4px; background: var(--card); color: var(--ink); border: 2px solid var(--ink); box-shadow: 0 2px 6px #0005; }
+.tw-peer i { font-style: normal; font-weight: 400; margin-left: 6px; font-size: 11px; }
+.tw-peer.is-been { background: var(--stamp); color: #fff; border-color: #fff; transform: rotate(-3deg); }
+.tw-peer.is-want { color: var(--stamp); border-color: var(--stamp); }
+
+/* ── 蓋郵戳：落下、震一下、擴散一圈 ── */
+.tw-mark-stampzone { position: relative; }
+.tw-mark-stamp.is-slam { animation: tw-stamp-slam2 .65s cubic-bezier(.2, 1.1, .4, 1) both; }
+.tw-mark-stamp.is-slam::after { content: ""; position: absolute; inset: -6px; border: 3px solid var(--stamp); border-radius: 50%; animation: tw-stamp-ring .8s ease-out .15s both; pointer-events: none; }
+.tw-mark-stamp { position: relative; }
+@keyframes tw-stamp-slam2 { 0% { transform: rotate(-34deg) scale(3); opacity: 0; } 45% { transform: rotate(-9deg) scale(.88); opacity: 1; } 62% { transform: rotate(-9deg) scale(1.08); } 80% { transform: translate(2px, -1px) rotate(-9deg) scale(1); } 100% { transform: rotate(-9deg) scale(1); } }
+@keyframes tw-stamp-ring { from { opacity: .8; transform: scale(.6); } to { opacity: 0; transform: scale(1.8); } }
+.tw-place-card .tw-mark-dot.is-on, .tw-place-card .tw-mark-dot.is-ghost, .tw-place-card .tw-mark-dot.is-ghost.is-on { background: none; border: 0; }

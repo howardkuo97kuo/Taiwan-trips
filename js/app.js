@@ -42,6 +42,27 @@ function context() {
   return { store, sync, navigate, h, clear, toast, prefs, config: store.get('config') };
 }
 
+// 切到縣市或區域時，像列車到站一樣滑進站名牌（只在動畫開啟時）
+let lastStation = null;
+function stationSign(id) {
+  if (!id || id === lastStation) return;
+  lastStation = id;
+  if (!prefs.motionOn()) return;
+  let name = '';
+  for (const z of store.get('regions')?.zones ?? []) {
+    if (z.id === id) name = z.n;
+    for (const c of z.counties ?? []) {
+      if (c.id === id) name = c.n;
+      for (const d of c.districts ?? []) if (d.id === id) name = d.n;
+    }
+  }
+  if (!name) return;
+  document.querySelector('.tw-station')?.remove();
+  const el = h('div', { class: 'tw-station', 'aria-hidden': 'true' }, h('span', { class: 'tw-station-n' }, name), h('span', { class: 'tw-station-s' }, '到站'));
+  document.body.append(el);
+  setTimeout(() => el.remove(), 2400);
+}
+
 async function render() {
   const token = ++navToken;
   const { key, params } = parseHash();
@@ -66,6 +87,7 @@ async function render() {
   }
   renderNav();
   window.scrollTo(0, 0);
+  if (route.name === 'region') stationSign(params[0]); else lastStation = null;
 }
 
 // ── 外殼 ──
