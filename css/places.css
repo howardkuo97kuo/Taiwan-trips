@@ -108,3 +108,5 @@
 .tw-review-more > summary { cursor: pointer; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; min-height: 36px; display: flex; align-items: center; }
 .tw-review-more > .tw-review { margin-top: 8px; }
 @media (max-width: 640px) { .tw-place-g { padding: 10px 12px 12px; } }
+
+.tw-live-warn { margin: 0 0 10px; padding: 6px 12px; border-radius: var(--r-sm); background: var(--stamp-soft); color: var(--stamp); font-weight: 700; }
