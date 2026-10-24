@@ -136,11 +136,12 @@ export function carousel(ctx, p, { card = false } = {}) {
     };
     const step = (dir) => track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
     track.addEventListener('scroll', mark, { passive: true });
-    root.replaceChildren(track,
+    const parts = [track,
       list.length > 1 && h('button', { type: 'button', class: 'tw-gallery-nav is-prev', 'aria-label': '上一張', onclick: () => step(-1) }, '‹'),
       list.length > 1 && h('button', { type: 'button', class: 'tw-gallery-nav is-next', 'aria-label': '下一張', onclick: () => step(1) }, '›'),
       list.length > 1 && dots,
-      strip);
+      strip];
+    root.replaceChildren(...parts.filter(Boolean));
     mark();
   }).catch((e) => {
     if (alive) ph.lastChild.textContent = `照片查詢失敗（${e.message}）`;
