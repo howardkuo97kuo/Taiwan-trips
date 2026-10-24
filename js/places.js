@@ -78,7 +78,8 @@ export function michBadge(ctx, p) {
 // ── 卡片：一張鐵路車票 ──
 // 左邊票根（分類、縣市），中間店名與地址，右邊兩人的「想去」圓點與「蓋章」。
 // 兩人都想去時，票上多一個「雙人票」小牌；剛蓋章時蓋章動畫播一次（takeFx）。
-const stampSVG = (ym) => `<svg viewBox="0 0 90 90" aria-hidden="true"><circle cx="45" cy="45" r="41" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="45" cy="45" r="34" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/><text x="45" y="44" text-anchor="middle" font-size="22">去過</text><text x="45" y="62" text-anchor="middle" font-size="12" class="ym">${/^\d{4}-\d{2}$/.test(ym ?? '') ? ym.replace('-', '·') : ''}</text></svg>`;
+// 去過：一張被剪了票孔的車票（左右缺口、虛線切割線、右側剪票孔）
+const stampSVG = (ym) => `<svg viewBox="0 0 120 76" aria-hidden="true"><path d="M10 2H110a8 8 0 0 1 8 8V30a8 8 0 0 0 0 16V66a8 8 0 0 1-8 8H10a8 8 0 0 1-8-8V46a8 8 0 0 0 0-16V10a8 8 0 0 1 8-8Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M86 9V67" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/><text x="44" y="37" text-anchor="middle" font-size="24">去過</text><text x="44" y="57" text-anchor="middle" font-size="11" class="ym">${/^\d{4}-\d{2}$/.test(ym ?? '') ? ym.replace('-', '·') : ''}</text><circle class="hole" cx="103" cy="38" r="9" fill="var(--card)" stroke="currentColor" stroke-width="2.5"/></svg>`;
 
 export function placeCard(ctx, p) {
   const { h, store } = ctx;
@@ -96,15 +97,15 @@ export function placeCard(ctx, p) {
   const dot = (id, mine) => {
     const on = s[id].want;
     return mine
-      ? h('button', { type: 'button', class: `tw-mark-dot${on ? ' is-on' : ''}${on && fx.heart ? ' is-pop' : ''}`, 'aria-pressed': on ? 'true' : 'false',
+      ? h('button', { type: 'button', dataset: { ini: name(id)[0] }, class: `tw-mark-dot${on ? ' is-on' : ''}${on && fx.heart ? ' is-pop' : ''}`, 'aria-pressed': on ? 'true' : 'false',
         'aria-label': `${name(id)}想去：${p.n}`, onclick: () => quickMark(ctx, p.id, 'want') })
-      : h('span', { class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
+      : h('span', { dataset: { ini: name(id)[0] }, class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
   };
   // 沒選身分時兩個都只讀，點了會提示先選身分
   const wantRow = who
     ? [h('span', { class: 'tw-mark-wb' }, dot(who, true), name(who)), h('span', { class: 'tw-mark-wb' }, dot(other, false), name(other))]
     : ['apong', 'baobao'].map((id) => h('span', { class: 'tw-mark-wb' }, h('button', {
-      type: 'button', class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
+      type: 'button', dataset: { ini: name(id)[0] }, class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
       onclick: () => quickMark(ctx, p.id, 'want') }), name(id)));
 
   const beenMark = who ? me.mark : (s.apong.mark?.been ? s.apong.mark : s.baobao.mark);
@@ -159,7 +160,7 @@ function peerBadge(ctx, s, who, other) {
     const m = s[id];
     const nm = store.whoName(id);
     if (m.been) return h('span', { class: 'tw-peer is-been', title: `${nm}去過${m.mark?.ym ? ' ' + m.mark.ym : ''}` }, `${nm} 去過`, m.mark?.ym && h('i', {}, m.mark.ym));
-    if (m.want) return h('span', { class: 'tw-peer is-want', title: `${nm}想去` }, `♥ ${nm} 想去`);
+    if (m.want) return h('span', { class: 'tw-peer is-want', title: `${nm}想去` }, `${nm} 想去`);
     return null;
   }).filter(Boolean);
   return tags.length ? h('div', { class: 'tw-peers' }, tags) : null;
