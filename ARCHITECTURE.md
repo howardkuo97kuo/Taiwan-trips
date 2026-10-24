@@ -123,7 +123,7 @@
 | --- | --- |
 | `read-firebase.yml` | 輸入 `path`（`marks`、`inbox`、`places`、`removed` 或 `all`），把資料放到 `snapshot` 分支的 `live/`，再從該分支讀回 |
 | `write-data.yml` | 輸入 `path`、`expect_ts`、`payload`。只允許約定好的路徑；先備份到 `snapshot` 分支的 `backup/`；現場 `ts` 與 `expect_ts` 不符就拒絕；寫完讀回比對 |
-| `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的縣市、`pid`（不取座標），結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
+| `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
 | `snapshot.yml` | 每天 03:17（台灣時間）把整個資料庫備份到 `snapshot` 分支，也可手動觸發 |
 | `ci.yml` | 每個 PR 與 `main` 推送：資料格式驗證、`node --check`、規則 JSON 檢查、shell 腳本語法 |
 
