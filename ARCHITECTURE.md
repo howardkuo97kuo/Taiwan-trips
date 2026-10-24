@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（骨架 B 已合併；A 已合併暫存清單與 Places 查詢工具，地點尚未進 `places.json`；D 已開 PR；C、E、F 尚未合併）
+最後更新：2026-10-24（骨架 B 已合併；A 已合併暫存清單與 Places 查詢工具，地點尚未進 `places.json`；D 與 C 的首頁、清單、標記樣式已合併，已用真實標記資料驗證；E、F 尚未合併）
 
 ## 一句話
 
@@ -29,7 +29,7 @@
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
 | A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得）暫存在 `data/staging/visited-marks.json`，待寫入 Firebase |
 | C 介面 | `css/*.css` | 進行中：外殼與設計變數已完成（`tokens.css`、`app.css`）；首頁、清單、標記的樣式在後續 PR |
-| D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成第一版（PR 待合併）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
+| D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成並驗證（真實資料：522 筆地點皆有 `ll` 且落在台灣，兩人各 127 筆去過，點亮 10／22 縣市）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |
 | F 行程推薦 | `js/itinerary.js`、`data/itineraries/` | 未開始，導覽列不顯示 |
 
@@ -53,7 +53,7 @@
 | `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js` | 首頁「環島郵路」：用 `data/geo/counties.json` 的真實縣市邊界畫成 SVG，橘線繞一圈串起各縣市，泡泡大小是地點數，去過的縣市蓋郵戳（紅雙圈、邊界塗色），金色小牌是雙人票數；選到縣市後下方出現 Leaflet 縣市地圖（個別地點）與篩選、卡片。只畫有 `ll` 的地點；沒有邊界檔時退回只畫泡泡 | D |
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage` | D |
-| `js/marks.js` | `#/compare` 兩人對照四組與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、心得，寫入走 `sync.setMark`）、`markSummary`、`markCompare`、`statusOf`、`litCounties` | D |
+| `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、心得，寫入走 `sync.setMark`）、`markSummary`、`markCompare`、`statusOf`、`litCounties` | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |
