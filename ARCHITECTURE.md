@@ -47,6 +47,7 @@
 | `data/config.json` | 站名、前綴、時區、身分、分類、Firebase 網址、Google 金鑰欄位、地圖預設視角 | A |
 | `data/regions.json` | 地區樹：大區 → 縣市 → 區域（含中心點與縮放） | A（契約檔，改動先回報總管） |
 | `data/places.json` | 唯一的地點來源 | A |
+| `data/geo/counties.json` | 22 縣市邊界（GeoJSON FeatureCollection，已簡化約 150 KB）；每個 feature 的 `properties.id` 對應 `regions.json` 的縣市 id，`n` 為縣市名；給首頁地圖點亮台灣用 | A |
 | `data/staging/import-list.json` | Google 清單匯入的暫存清單（店名、分類、備註、歇業狀態），查到座標前不進 `places.json` | A |
 | `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js` | 首頁：Leaflet 地圖，每縣市一個計數圓點（點亮的縣市變綠），選到縣市後畫出個別地點；下方接篩選與卡片。只畫有 `ll` 的地點，座標更新後自動套用 | D |
