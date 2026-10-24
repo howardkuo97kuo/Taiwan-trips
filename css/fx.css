@@ -64,11 +64,10 @@ button:active:not(:disabled):not(.tw-mark-stamp), .tw-nav-item:active, .tw-place
 @keyframes tw-station { 0% { transform: translateX(110%); } 22%, 72% { transform: translateX(0); } 100% { transform: translateX(110%); } }
 
 /* ── 頁首鐵軌條：一列小火車從左開到右（只跑一次） ── */
-.tw-air { position: relative; overflow: hidden; }
-.tw-air::after { content: ""; position: absolute; top: 2px; left: 0; width: 96px; height: 10px; border-radius: 5px 8px 8px 5px; background: linear-gradient(90deg, var(--ink) 0 100%); box-shadow: inset 0 0 0 1px #fff6;
-  -webkit-mask: repeating-linear-gradient(90deg, #000 0 22px, transparent 22px 24px); mask: repeating-linear-gradient(90deg, #000 0 22px, transparent 22px 24px);
-  transform: translateX(-120px); animation: tw-train 9s linear 1.2s 1 both; }
-@keyframes tw-train { from { transform: translateX(-120px); } to { transform: translateX(110vw); } }
+.tw-air { position: relative; clip-path: inset(-40px 0 -40px 0); }
+.tw-air::after { content: ""; position: absolute; top: 0; left: 0; width: 300px; height: 30px; z-index: 2; pointer-events: none; mix-blend-mode: multiply;
+  background: url("../img/train.webp") -7px -70px / 313px 171px no-repeat; transform: translateX(-320px); animation: tw-train 14s linear 1.2s 1 both; }
+@keyframes tw-train { from { transform: translateX(-320px); } to { transform: translateX(100vw); } }
 
 /* ── 車票紙張質感：淡紙紋、分類色條 ── */
 .tw-place-card { background-image: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--ink) 3%, transparent) 3px 4px); }
