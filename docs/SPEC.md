@@ -34,7 +34,7 @@
 | 地點照片 | Howard 2026-10-24 新要求：每個地點要讓使用者看到照片。用 Google Places (New) 以 `pid` 即時查 photos，在瀏覽器載入，不把圖片檔或照片參照存進 repo 或 Firebase（只放 `sessionStorage`）；須顯示作者歸屬；用瀏覽器金鑰 `google.placesKey`；只在畫面可見或開啟詳情時才載入；沒有圖時用分類圖示替代 |
 | 不做 | 登入、問 AI 聊天視窗、旅程編輯 |
 | 隱私 | 接受公開但設限：去過只記年月、心得不放個人資訊、不放電話與訂位代號；之後想更私密再加簡單存取密碼 |
-| Google 資料 | **Howard 2026-10-25 決定（已知 Places 條款不允許長期保存評分、評論、營業時間，風險由 Howard 承擔）**：評分、評論數、地址、營業時間、最多 5 則最相關評論，由排程 `refresh-google`（每週一次，可手動觸發；用伺服器端金鑰 `GOOGLE_PLACES_KEY`）寫進 Firebase `/google/{pid}`；網站只讀，不再逐筆即時查。每筆都有更新時間，畫面一定要顯示「上次更新」，超過 10 天加警語「資料可能已變動，以 Google 地圖為準」。不存進 repo（`places.json` 仍禁止 `rt`、`rv`、`h`、`oh`，CI 會擋）；仍要顯示 Google 地圖資料來源與評論作者歸屬；評論數量是 Google API 的上限（最多 5 則）。照片仍即時載入、不存（參照會過期） |
+| Google 資料 | **Howard 2026-10-25 決定（已知 Places 條款不允許長期保存評分、評論、營業時間，風險由 Howard 承擔）**：評分、評論數、地址、營業時間、最多 5 則最相關評論，由排程 `refresh-google`（每週一次，可手動觸發；用伺服器端金鑰 `GOOGLE_PLACES_KEY`）寫進 Firebase `/google/{pid}`；網站只讀，不再逐筆即時查。每筆都有更新時間，畫面一定要顯示「上次更新」，超過 10 天加警語「資料可能已變動，以 Google 地圖為準」。不存進 repo（`places.json` 仍禁止 `rt`、`rv`、`h`、`oh`，CI 會擋）；仍要顯示 Google 地圖資料來源與評論作者歸屬；評論數量是 Google API 的上限（最多 5 則）。照片仍即時載入、不存（參照會過期）。**AI 評語**：卡片不放原始評論，改顯示 `/google/{pid}/ai`——由 Claude 依該筆最相關的 5 則評論整理的一小段評語，以 `write-google-ai` 寫入；畫面須標示「AI 依 Google 最相關的 N 則評論整理」與整理日期，僅供參考；原始評論只在詳情頁收合顯示；評論更新後評語不會自動重寫 |
 | 修正地點 | 網站只改自己的標記；地點本身的修正走收件匣，由 Claude 確認後改 `places.json` |
 | 歇業與搬遷 | 地點有 `status`（`open`、`closed`、`moved`），預設只顯示 `open`，`closed` 保留紀錄但不顯示也不排進行程 |
 | 合併方式 | 每個模組開自己的分支與 PR，CI 全綠、Howard 確認才合併；`main` 設保護規則，不直接推 |
@@ -112,7 +112,7 @@
 | `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, skip?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、不想去 `skip`（與 `want` 互斥，網站寫入時會清掉另一個）、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
 | `/inbox/{id}` | 收件匣：連結或店名、誰送的、時間、狀態 | 網站 |
 | `/places`、`/removed` | 排程查好後的新地點、被移除的地點（定期併回 `places.json`） | 只有排程工具與 write-data |
-| `/google/{pid}` | Google 地點資料：`{u 更新時間 ms, status?, rating?, n 評論數?, addr?, maps?, hours? 七行文字, periods? 營業時段, reviews? 最多 5 則 {r, t, o?, by, uri?, at?}}`；格式與用法見 `js/google.js` 開頭 | 只有排程 `refresh-google`（`tools/google-refresh.mjs`）；網站只讀 |
+| `/google/{pid}` | Google 地點資料：`{u 更新時間 ms, status?, rating?, n 評論數?, addr?, maps?, hours? 七行文字, periods? 營業時段, reviews? 最多 5 則 {r, t, o?, by, uri?, at?}, ai? {t 評語（最多 200 字）, n 整理自幾則評論, at 時間 ms}}`；格式與用法見 `js/google.js` 開頭 | 排程 `refresh-google` 寫其餘欄位（`tools/google-refresh.mjs`，只改自己的欄位、不動 `ai`）；`ai` 只由 `write-google-ai` 工作流程寫（`tools/write-google-ai.mjs`）；網站只讀 |
 | `/trips/` | 預留，現在不寫、規則不開放 | 無 |
 
 - 身分用 `apong`（阿胖）和 `baobao`（寶寶）；第一次進站選身分，記在 localStorage `twWho`，可隨時切換。這只是前端區分，不是安全機制。
