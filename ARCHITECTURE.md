@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（清單加「現在營業」篩選與評分排序；地區樹補上 75 個區域（由地址推出，`regions.json` 的 `districts`）；收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
+最後更新：2026-10-24（刪除已匯入的 `data/staging/visited-*.json`；清單加「現在營業」篩選與評分排序；地區樹補上 75 個區域（由地址推出，`regions.json` 的 `districts`）；收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
 
 ## 一句話
 
@@ -27,7 +27,7 @@
 | 模組 | 範圍 | 狀態 |
 | --- | --- | --- |
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
-| A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得）暫存在 `data/staging/visited-marks.json`，待寫入 Firebase |
+| A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得、喜歡程度）已寫入 Firebase，暫存檔 `visited-*.json` 已刪除（git 歷史找得回） |
 | C 介面 | `css/*.css` | 已完成：設計變數、外殼、首頁、清單、標記樣式（`tokens.css`、`app.css`、`home.css`、`places.css`、`marks.css`），手機與電腦版、深淺色已驗證；E、F 模組上線時再補 `tw-inbox-`、`tw-trip-` 樣式 |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成並驗證（真實資料：522 筆地點皆有 `ll` 且落在台灣，兩人各 127 筆去過，點亮 10／22 縣市）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 第一版已合併：收件匣頁、離線補送、Service Worker、加到主畫面、收件匣轉查詢清單與上架工具；`index.html`、`js/app.js` 各加了幾行接線（B 的檔案，已在 PR 說明） |
