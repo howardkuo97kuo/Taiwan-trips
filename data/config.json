@@ -25,7 +25,7 @@
     "dbUrl": "https://taiwan-trips-default-rtdb.asia-southeast1.firebasedatabase.app"
   },
   "google": {
-    "placesKey": ""
+    "placesKey": "AIzaSyAKbagsWC1b6rf-3QWFmc-XfN4RtyeAjXo"
   },
   "map": {
     "center": [
