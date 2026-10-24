@@ -305,6 +305,7 @@ function liveContent(ctx, p, g, { compact = false } = {}) {
   const rest = compact ? revs.slice(2) : [];
 
   return [
+    closed && h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`),
     h('div', { class: 'tw-live-grid' }, rating, address, hours),
     revs.length ? h('div', { class: 'tw-reviews' }, h('h3', { class: 'tw-live-h3' }, '大家怎麼說'), first.map(review),
       rest.length > 0 && h('details', { class: 'tw-review-more' }, h('summary', {}, `更多評論（${rest.length}）`), rest.map(review)))
