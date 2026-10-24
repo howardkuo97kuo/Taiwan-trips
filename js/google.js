@@ -6,7 +6,8 @@
 //   u: 更新時間（ms）, status?: 'OPERATIONAL'|'CLOSED_TEMPORARILY'|'CLOSED_PERMANENTLY'|'NOT_FOUND',
 //   rating?, n?（評論數）, addr?, maps?,
 //   hours?: ['星期一: …', …共 7 行], periods?: [{ o:{d,h,m}, c:{d,h,m} }]（d: 0=週日）,
-//   reviews?: [{ r, t, o?, by, uri?, at? }]（at = 發表時間 ISO；Google 只給最相關的最多 5 則）
+//   reviews?: [{ r, t, o?, by, uri?, at? }]（at = 發表時間 ISO；Google 只給最相關的最多 5 則）,
+//   ai?: { t: AI 整理的一小段評語, n: 整理自幾則評論, at: 整理時間（ms） }（由 write-google-ai 工作流程另外寫入，每週更新不會蓋掉）
 // }
 import { fbGet } from './sync.js';
 
@@ -61,6 +62,8 @@ export function updatedLabel(g) {
   const f = new Intl.DateTimeFormat('sv-SE', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
   return f.format(new Date(g.u));
 }
+// 「2026-10-25」
+export const dateLabel = (ms) => (ms ? new Intl.DateTimeFormat('sv-SE', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(ms)) : '');
 export const staleDays = (g) => (g?.u ? Math.floor((Date.now() - g.u) / 86400000) : null);
 export const STALE_AFTER_DAYS = 10;
 

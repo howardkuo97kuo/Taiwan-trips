@@ -120,3 +120,10 @@
 .tw-mich-ico.is-bib { width: 24px; -webkit-mask-image: url(../img/michelin/bib.svg); mask-image: url(../img/michelin/bib.svg); margin-right: 0; }
 .tw-mich-t { margin-left: 6px; }
 .tw-place-cats + .tw-mich { margin-bottom: 8px; }
+
+/* ── AI 評語：卡片只放這一小段 ── */
+.tw-ai { margin-top: 12px; padding: 10px 14px; border-radius: var(--r-md); background: color-mix(in srgb, var(--blue) 8%, var(--card)); border: 1.5px solid color-mix(in srgb, var(--blue) 30%, transparent); }
+.tw-ai-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 0 8px; border-radius: 99px; background: var(--blue); color: var(--paper); margin-bottom: 4px; }
+.tw-ai-text { margin: 2px 0 4px; line-height: 1.7; overflow-wrap: anywhere; }
+.tw-ai .tw-hint { margin: 0; }
+.tw-review-original { margin-top: 12px; }

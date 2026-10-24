@@ -3,7 +3,7 @@
 import { catIcon } from './icons.js';
 import { thumb, carousel } from './photos.js';
 import { markBar, markCompare, statusOf, quickMark, takeFx, likeOf } from './marks.js';
-import { loadGoogle, googleOf, googleReady, onGoogle, isOpenNow, todayZh, updatedLabel, staleDays, STALE_AFTER_DAYS, ago } from './google.js';
+import { loadGoogle, googleOf, googleReady, onGoogle, isOpenNow, todayZh, updatedLabel, dateLabel, staleDays, STALE_AFTER_DAYS, ago } from './google.js';
 
 // ── 地區工具 ──
 // 回傳 { level:'zone'|'county'|'district', node, zone, county, trail:[{id,n}] }；找不到回 null
@@ -313,17 +313,22 @@ function liveContent(ctx, p, g, { compact = false } = {}) {
       body, h('div', { class: 'tw-review-acts' }, more, origBtn), origEl);
   };
   const revs = g.reviews ?? [];
-  const first = compact ? revs.slice(0, 2) : revs;
-  const rest = compact ? revs.slice(2) : [];
+  // AI 評語：把 Google 最相關的幾則評論整理成一小段；卡片只放這個，詳情頁另外收著原始評論
+  const ai = g.ai?.t && h('div', { class: 'tw-ai' },
+    h('span', { class: 'tw-ai-tag' }, 'AI 評語'),
+    h('p', { class: 'tw-ai-text' }, g.ai.t),
+    h('p', { class: 'tw-hint' }, `AI 依 Google 最相關的 ${g.ai.n || revs.length} 則評論整理（${dateLabel(g.ai.at)}），僅供參考`));
+  const aiOrHint = ai || (revs.length ? h('p', { class: 'tw-hint' }, 'AI 評語整理中，下次更新後會出現。') : h('p', { class: 'tw-hint' }, 'Google 沒有提供這個地點的評論文字。'));
+  const original = !compact && revs.length > 0 && h('details', { class: 'tw-review-more tw-review-original' },
+    h('summary', {}, `看 Google 原始評論（${revs.length} 則）`), h('div', { class: 'tw-reviews' }, revs.map(review)));
 
   return [
     closed && h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`),
     h('div', { class: 'tw-live-grid' }, rating, address, hours),
-    revs.length ? h('div', { class: 'tw-reviews' }, h('h3', { class: 'tw-live-h3' }, '大家怎麼說'), first.map(review),
-      rest.length > 0 && h('details', { class: 'tw-review-more' }, h('summary', {}, `更多評論（${rest.length}）`), rest.map(review)))
-      : h('p', { class: 'tw-hint' }, 'Google 沒有提供這個地點的評論文字。'),
+    aiOrHint,
+    original,
     note,
-    h('p', { class: 'tw-hint' }, 'Google 只提供最相關的最多 5 則評論，想看全部請', h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '到 Google 地圖'), '。資料來自 Google 地圖。'),
+    h('p', { class: 'tw-hint' }, '想看全部評論請', h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '到 Google 地圖'), '。資料來自 Google 地圖。'),
   ];
 }
 

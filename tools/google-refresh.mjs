@@ -77,6 +77,15 @@ function shape(d) {
   return out;
 }
 
+// 逐欄位寫入（多路徑更新），這樣 /google/{pid}/ai（AI 評語，另外寫入）不會被每週更新蓋掉；
+// 這次沒有的欄位明確設成 null，避免留下過期資料。
+const FIELDS = ['u', 'status', 'rating', 'n', 'addr', 'maps', 'hours', 'periods', 'reviews'];
+function flatten(result) {
+  const out = {};
+  for (const [pid, rec] of Object.entries(result)) for (const f of FIELDS) out[`${pid}/${f}`] = rec[f] ?? null;
+  return out;
+}
+
 async function patch(batch) {
   const r = await fetch(`${DB}/google.json?auth=${encodeURIComponent(SECRET)}`, {
     method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(batch),
@@ -105,7 +114,7 @@ await Promise.all(Array.from({ length: PARALLEL }, async () => {
 const keys = Object.keys(result);
 if (!DRY) {
   for (let i = 0; i < keys.length; i += 100) {
-    await patch(Object.fromEntries(keys.slice(i, i + 100).map((k) => [k, result[k]])));
+    await patch(flatten(Object.fromEntries(keys.slice(i, i + 100).map((k) => [k, result[k]]))));
   }
 }
 console.log(`完成：成功 ${ok}、查無 ${notFound}、失敗 ${fail}${DRY ? '' : `；已寫入 ${keys.length} 筆`}`);
