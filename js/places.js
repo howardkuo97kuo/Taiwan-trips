@@ -89,25 +89,20 @@ const zhYM = (ym) => {
   return ['民', '國', ...y, '年', ...mm, '月'];
 };
 const stampSVG = (ym, place = '', again = false, seat = '', full = false) => {
-  const col = zhYM(ym).map((c, i) => '<text x="30" y="' + (50 + i * 22) + '" text-anchor="middle" font-size="19" fill="#2a2118">' + c + '</text>').join('');
-  return '<svg viewBox="0 0 460 250" aria-hidden="true">'
-    + '<path d="M14 10L120 6L250 12L380 7L446 12Q452 14 452 22L449 90L455 150L450 236Q448 244 440 244L300 248L170 243L40 247L12 242Q6 240 7 232L10 150L5 90L8 24Q8 12 14 10Z" fill="#efd9a6" stroke="#8a6a3c" stroke-width="3"/>'
-    + '<path d="M54 26V224" stroke="#8a6a3c" stroke-width="2"/>' + col
-    + '<circle class="hole" cx="262" cy="44" r="18" fill="var(--card)" stroke="#c4a45e" stroke-width="3"/>'
-    + '<text x="72" y="70" font-size="36" font-weight="700" fill="#2a2118">臺灣鐵路局</text>'
-    + '<text x="110" y="102" font-size="24" font-weight="700" fill="#2a2118">車票<tspan font-size="16" font-weight="400"> (Ticket)</tspan></text>'
-    + '<text x="72" y="146" font-size="17" fill="#2a2118">從</text><text x="96" y="148" font-size="28" font-weight="700" fill="#2a2118">臺灣</text>'
-    + '<text x="168" y="146" font-size="17" fill="#2a2118">To</text><text x="198" y="148" font-size="28" font-weight="700" fill="#2a2118">' + place + '</text>'
-    + '<text x="72" y="196" font-size="19" fill="#2a2118">座位：' + seat + '</text>'
-    + '<g><path d="M298 70Q330 40 360 66Q385 44 410 66L440 82V90H298Z" fill="#7fb06b" stroke="#4d6b3c" stroke-width="2"/><circle cx="395" cy="40" r="9" fill="none" stroke="#d99a2b" stroke-width="2"/>'
-    + '<svg x="296" y="80" width="150" height="15" viewBox="30 315 1350 135"><image href="img/train.webp" width="1408" height="768"/></svg></g>'
-    + '<rect x="290" y="122" width="156" height="100" rx="8" fill="none" stroke="#6b4a2a" stroke-width="3"/><rect x="297" y="129" width="142" height="86" rx="5" fill="none" stroke="#6b4a2a" stroke-width="1.2"/>'
-    + '<text x="368" y="168" text-anchor="middle" font-size="30" font-weight="700" fill="#2a2118">' + (full ? '全票' : '半票') + '</text>'
-    + '<text x="368" y="192" text-anchor="middle" font-size="11" letter-spacing="1" fill="#2a2118">VALID FOR 1 DAY</text><text x="368" y="208" text-anchor="middle" font-size="10" fill="#6b4a2a">' + (ym ?? '').replace('-', ' · ') + '</text>'
-    + (again ? '<g class="again" transform="rotate(-12 340 112)"><rect x="296" y="94" width="88" height="40" rx="6" fill="#efd9a6cc" stroke="#c4352b" stroke-width="3.5"/><text x="340" y="123" text-anchor="middle" font-size="26" font-weight="700" fill="#c4352b">再訪</text></g>' : '')
+  const col = zhYM(ym).map((c, i, a) => '<text x="25" y="' + (90 + (i - (a.length - 1) / 2) * 17) + '" text-anchor="middle" font-size="14" fill="#fff6dc">' + c + '</text>').join('');
+  return '<svg viewBox="0 0 400 180" aria-hidden="true"><defs><linearGradient id="tkp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9edcc"/><stop offset="1" stop-color="#ecd7a2"/></linearGradient><clipPath id="tkc"><path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z"/></clipPath></defs>'
+    + '<path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z" fill="url(#tkp)" stroke="#8a6a3c" stroke-width="2.5"/>'
+    + '<rect clip-path="url(#tkc)" x="0" y="0" width="48" height="180" fill="#1f6f78"/>' + col
+    + '<path d="M56 14V166" stroke="#8a6a3c" stroke-width="1.6" stroke-dasharray="4 5"/>'
+    + '<text x="70" y="42" font-size="25" font-weight="700" fill="#2a2118">臺灣鐵路局</text><text x="72" y="60" font-size="11" letter-spacing="2.5" fill="#6b4a2a">車票 · TICKET</text>'
+    + '<text x="70" y="108" font-size="30" font-weight="700" fill="#2a2118">臺灣</text><path d="M142 98H186M176 90L188 98L176 106" fill="none" stroke="#c4352b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><text x="198" y="108" font-size="30" font-weight="700" fill="#2a2118">' + place + '</text>'
+    + '<text x="70" y="146" font-size="12" fill="#6b4a2a">座位</text><text x="104" y="147" font-size="16" font-weight="700" fill="#2a2118">' + seat + '</text>'
+    + '<rect x="262" y="64" width="124" height="68" rx="8" fill="#dff0d2" stroke="#6b4a2a" stroke-width="1.6"/><path d="M263 112Q290 76 316 102Q340 78 385 108V131H263Z" fill="#7fb06b"/><circle cx="364" cy="82" r="7" fill="#f2b84b"/><image href="img/train-cut.webp" x="268" y="116" width="112" height="12"/>'
+    + '<circle class="hole" cx="352" cy="32" r="12" fill="var(--card)" stroke="#c4a45e" stroke-width="2.5"/>'
+    + '<rect x="296" y="142" width="90" height="30" rx="6" fill="none" stroke="#c4352b" stroke-width="2.5"/><text x="341" y="164" text-anchor="middle" font-size="19" font-weight="700" fill="#c4352b">' + (full ? '全票' : '半票') + '</text>'
+    + (again ? '<g class="again" transform="rotate(-10 200 140)"><rect x="150" y="124" width="100" height="40" rx="7" fill="#f6e8c3d0" stroke="#c4352b" stroke-width="3.5"/><text x="200" y="154" text-anchor="middle" font-size="26" font-weight="700" fill="#c4352b">再訪</text></g>' : '')
     + '</svg>';
 };
-
 
 export function placeCard(ctx, p) {
   const { h, store } = ctx;
