@@ -24,7 +24,7 @@
 | 分類 | 景點、美食、小吃夜市、咖啡甜點、溫泉、住宿、購物市集；一個主分類加最多兩個副分類 |
 | 地區 | 五大區 → 22 縣市 → 區域；區域等地點進來再補，沒有地點的縣市不顯示 |
 | 個人標記 | 想去（愛心）、去過、想再去、1 到 5 顆星、一句心得；兩人各一份，互相看得到 |
-| 地點資料 | 名稱、分類、縣市、地址、座標、Google 連結、備註；不存照片檔，不存評分／評論數／營業時間（照片見「地點照片」列） |
+| 地點資料 | 名稱、分類、縣市、地址、座標、Google 連結、備註；`places.json` 不存照片檔，也不存評分／評論／營業時間（這些存在 Firebase `/google`，見「Google 資料」列；照片見「地點照片」列） |
 | 共用資料 | Firebase Realtime DB，規則存在 repo；唯一的地點來源是 `data/places.json` |
 | 新增地點 | 先匯入 Google 地圖清單；之後從收件匣新增，或直接請 Claude 加；收件匣的地點先放 Firebase，再併回 `places.json` |
 | Claude 讀寫 | GitHub Actions：`read-firebase`、`write-data`（寫前備份、比對時間戳、讀回確認），`FIREBASE_SECRET` 由 Howard 自己放進 Secrets |
@@ -34,7 +34,7 @@
 | 地點照片 | Howard 2026-10-24 新要求：每個地點要讓使用者看到照片。用 Google Places (New) 以 `pid` 即時查 photos，在瀏覽器載入，不把圖片檔或照片參照存進 repo 或 Firebase（只放 `sessionStorage`）；須顯示作者歸屬；用瀏覽器金鑰 `google.placesKey`；只在畫面可見或開啟詳情時才載入；沒有圖時用分類圖示替代 |
 | 不做 | 登入、問 AI 聊天視窗、旅程編輯 |
 | 隱私 | 接受公開但設限：去過只記年月、心得不放個人資訊、不放電話與訂位代號；之後想更私密再加簡單存取密碼 |
-| Google 資料 | repo 不存評分、評論數、營業時間（Places 條款限制長期保存）；打開地點時即時查詢，只放瀏覽器暫存；行程驗證時由 Claude 當下查 |
+| Google 資料 | **Howard 2026-10-25 決定（已知 Places 條款不允許長期保存評分、評論、營業時間，風險由 Howard 承擔）**：評分、評論數、地址、營業時間、最多 5 則最相關評論，由排程 `refresh-google`（每週一次，可手動觸發；用伺服器端金鑰 `GOOGLE_PLACES_KEY`）寫進 Firebase `/google/{pid}`；網站只讀，不再逐筆即時查。每筆都有更新時間，畫面一定要顯示「上次更新」，超過 10 天加警語「資料可能已變動，以 Google 地圖為準」。不存進 repo（`places.json` 仍禁止 `rt`、`rv`、`h`、`oh`，CI 會擋）；仍要顯示 Google 地圖資料來源與評論作者歸屬；評論數量是 Google API 的上限（最多 5 則）。照片仍即時載入、不存（參照會過期） |
 | 修正地點 | 網站只改自己的標記；地點本身的修正走收件匣，由 Claude 確認後改 `places.json` |
 | 歇業與搬遷 | 地點有 `status`（`open`、`closed`、`moved`），預設只顯示 `open`，`closed` 保留紀錄但不顯示也不排進行程 |
 | 合併方式 | 每個模組開自己的分支與 PR，CI 全綠、Howard 確認才合併；`main` 設保護規則，不直接推 |
@@ -96,8 +96,7 @@
 | `region` | 最底層的地區 id |
 | `a`、`ll` | 地址、座標 `[緯度, 經度]`。座標可取自 Google Places 回傳的位置（Places 條款只明確允許長期保存 `place_id`，座標有快取期限；Howard 已知此風險後決定存入，2026-10-24），查不到時用 OSM（Nominatim）或由 Howard 手動點位置 |
 | `llsrc` | 座標來源：`google`、`osm` 或 `manual`（選填） |
-| `h`、`oh` | 不存入 repo：營業時間由網站即時向 Places API 查詢，只放瀏覽器暫存 |
-| `rt`、`rv` | 不存入 repo：評分與評論數同樣即時查詢 |
+| `h`、`oh`、`rt`、`rv` | 不存入 `places.json`：營業時間、評分、評論數存在 Firebase `/google/{pid}`（見下方「Firebase 路徑」） |
 | `pid`、`gurl` | Google Place ID、Google 地圖連結 |
 | `note` | 備註 |
 | `src` | 來源：清單、收件匣、去過、手動 |
@@ -112,11 +111,12 @@
 | `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, skip?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、不想去 `skip`（與 `want` 互斥，網站寫入時會清掉另一個）、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
 | `/inbox/{id}` | 收件匣：連結或店名、誰送的、時間、狀態 | 網站 |
 | `/places`、`/removed` | 排程查好後的新地點、被移除的地點（定期併回 `places.json`） | 只有排程工具與 write-data |
+| `/google/{pid}` | Google 地點資料：`{u 更新時間 ms, status?, rating?, n 評論數?, addr?, maps?, hours? 七行文字, periods? 營業時段, reviews? 最多 5 則 {r, t, o?, by, uri?, at?}}`；格式與用法見 `js/google.js` 開頭 | 只有排程 `refresh-google`（`tools/google-refresh.mjs`）；網站只讀 |
 | `/trips/` | 預留，現在不寫、規則不開放 | 無 |
 
 - 身分用 `apong`（阿胖）和 `baobao`（寶寶）；第一次進站選身分，記在 localStorage `twWho`，可隨時切換。這只是前端區分，不是安全機制。
 - `firebase-rules.json` 存在 repo，限制可寫路徑與欄位型別、大小（星等 1 到 5、備註 ≤ 200 字、好吃與雷點各 ≤ 300 字、喜歡程度只能是 love｜ok｜meh），其餘一律拒絕；需由 Howard 手動貼到主控台。
-- 即時連線數：網站只用 2 條串流（兩人的 `/marks`），其餘（`/places`、`/inbox`）用輪詢。
+- 即時連線數：網站只用 2 條串流（兩人的 `/marks`），其餘（`/places`、`/inbox`、`/google`）用輪詢或進站時抓一次。
 - 快照：排程用 Actions 把 Firebase 備份到 `snapshot` 分支，被亂寫或誤刪可以還原。
 - 「只有擁有者能同意」這類限制不做；兩人皆平等。
 

@@ -63,6 +63,8 @@
 | `js/inbox.js` | `#/inbox`：新增／修正兩種送件（寫 `/inbox`，≤ 500 字），每 30 秒輪詢 `/inbox` 與 `/places`（頁面隱藏時暫停），顯示處理狀態與「已查好、等併回」的地點；自己送的待處理項目可收回；離線送件先存 localStorage `twInboxQueue`，連上網路後補送。狀態：`new` 待處理、`done` 已上架、`dup` 已經有了、`skip` 不收錄 | E |
 | `sw.js`、`manifest.webmanifest`、`img/icons/` | Service Worker：快取名 `tw-v2`（圖磚 `tw-tiles-v1`，最多 400 張）；同網域檔案網路優先（3 秒逾時退回快取），離線也能開；Leaflet、字型、OSM 圖磚先用快取再背景更新；Firebase 與 Places API 不攔截。`SHELL` 列出要預先快取的檔案，新增同網域檔案要加進去。manifest 與圖示供加到主畫面（`start_url` 與 `scope` 用相對路徑，Pages 子路徑也能用） | E |
 | `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
+| `js/google.js` | Google 地點資料（預存版）：進站時從 Firebase `/google` 抓一次（讀進記憶體），提供 `googleOf(pid)`、`isOpenNow`（用預存的營業時段算）、`updatedLabel`、`staleDays`、`ago`；畫面一定要顯示「上次更新」，超過 10 天加警語 | D |
+| `tools/google-refresh.mjs`、`.github/workflows/refresh-google.yml` | 每週一凌晨（台北 03:00）也可手動：用伺服器端金鑰 `GOOGLE_PLACES_KEY` 向 Places API 查全部地點的評分、評論數、地址、營業時間、最多 5 則評論，PATCH 進 Firebase `/google/{pid}`；失敗的保留舊資料；需 secret `GOOGLE_PLACES_KEY`、`FIREBASE_SECRET` | E |
 | `tools/merge-places.mjs` | 把 `lookup-places` 的結果併進 `data/places.json`（只收吻合的、pid 重複的略過、id 規則同 A），並印出要把收件匣標成 `done`／`dup` 的 id | E |
 | `css/inbox.css` | 收件匣的基本樣式（E 先放一份，只用 `tw-inbox-` class，C 可接手調整） | E（C 可改） |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
@@ -123,6 +125,7 @@
 | `/marks/{apong\|baobao}/{placeId}` | 網站（各寫自己那條）、Claude（write-data） | `{want?, been?, again?, skip?, ym?, stars?, like?, good?, avoid?, note?, ts}` |
 | `/inbox/{id}` | 網站（只能新增，或收回狀態仍是 `new` 的項目；不能覆寫）、Claude（write-data 改狀態） | `{text, by, ts, status}` |
 | `/places`、`/removed` | 只有排程工具與 write-data | 新增的地點、被移除的地點（定期併回 `places.json`） |
+| `/google/{pid}` | 只有 `refresh-google` 排程（網站只讀） | Google 評分、評論數、地址、營業時間、最多 5 則評論與更新時間 `u`；Howard 2026-10-25 決定存入，需手動把 `firebase-rules.json` 貼到主控台才讀得到 |
 | `/trips/` | 無 | 預留，規則不開放 |
 
 規則存在 `firebase-rules.json`：預設全部不可讀寫，只開放上表的路徑，並檢查欄位型別與大小（星等 1 到 5、心得 ≤ 200 字、`ym` 為 `YYYY-MM`、不允許多餘欄位）。身分只是前端區分，不是安全機制。
@@ -143,6 +146,7 @@
 | `write-data.yml` | 輸入 `path`、`expect_ts`、`payload`。只允許約定好的路徑；先備份到 `snapshot` 分支的 `backup/`；現場 `ts` 與 `expect_ts` 不符就拒絕；寫完讀回比對 |
 | `write-marks-batch.yml` | 批次合併寫入 `/marks/{apong\|baobao}`（模組 A 匯入「去過」用）。輸入 `file`（`data/staging/*.json`）或 `payload`，形狀 `{apong:{placeId:mark}, baobao:{…}}`，加 `mode`：`skip`（預設，現場已有的 placeId 不動）或 `overwrite`。邏輯在 `scripts/write-marks-batch.sh`：先驗每筆欄位（同 `firebase-rules.json`），備份現場到 `snapshot` 分支的 `backup/`，PATCH，讀回確認寫入的與沒動的都正確 |
 | `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
+| `refresh-google.yml` | 每週更新 Firebase `/google`（見 `tools/google-refresh.mjs`），可輸入 `limit`、`offset` 手動分批 |
 | `snapshot.yml` | 每天 03:17（台灣時間）把整個資料庫備份到 `snapshot` 分支，也可手動觸發 |
 | `ci.yml` | 每個 PR 與 `main` 推送：資料格式驗證、`node --check`、規則 JSON 檢查、shell 腳本語法 |
 
@@ -162,7 +166,7 @@
 | Firebase 密鑰 | GitHub Secret `FIREBASE_SECRET` | 由 Howard 自己放進 Settings；不 commit、不印出、不貼聊天 |
 | Firebase 規則 | repo 的 `firebase-rules.json` 存檔，主控台才是生效的那份 | 改了要由 Howard 手動貼上 |
 | Google Places 金鑰（瀏覽器用） | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；已填並運作（評分、營業時間、地點照片都用它）；建議在 Google Cloud 設每日配額與預算警示 |
-| Google Places 金鑰（匯入工具用） | GitHub Secret `GOOGLE_PLACES_KEY` | 只給 `lookup-places` workflow 用；由 Howard 自己放進 Settings，不 commit、不印出、不貼聊天 |
+| Google Places 金鑰（伺服器端） | GitHub Secret `GOOGLE_PLACES_KEY` | 給 `lookup-places`（匯入）與 `refresh-google`（每週更新 Firebase `/google`）用；由 Howard 自己放進 Settings，不 commit、不印出、不貼聊天 |
 
 ## 已知限制與取捨
 

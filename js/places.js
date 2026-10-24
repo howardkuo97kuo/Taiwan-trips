@@ -3,6 +3,7 @@
 import { catIcon } from './icons.js';
 import { thumb, carousel } from './photos.js';
 import { markBar, markCompare, statusOf, quickMark, takeFx, likeOf } from './marks.js';
+import { loadGoogle, googleOf, googleReady, onGoogle, isOpenNow, todayZh, updatedLabel, staleDays, STALE_AFTER_DAYS, ago } from './google.js';
 
 // ── 地區工具 ──
 // 回傳 { level:'zone'|'county'|'district', node, zone, county, trail:[{id,n}] }；找不到回 null
@@ -39,11 +40,6 @@ const MARK_FILTERS = [
 // 篩選條件在換頁時保留（只存記憶體）
 const filters = { cats: new Set(), mark: 'all', q: '', live: 'all', sort: 'default' };
 
-// 一次最多替目前清單查幾筆 Google 即時資料（控制 Places 費用）、同時幾個請求
-const LIVE_BATCH = 40;
-const LIVE_PARALLEL = 4;
-const LIVE_TTL = 30 * 60 * 1000; // 營業中會隨時間變，超過 30 分鐘就當沒查過
-
 function passMark(store, p) {
   if (filters.mark === 'all') return true;
   const me = store.get('who');
@@ -59,10 +55,10 @@ function passMark(store, p) {
   }
 }
 
-function passFilters(store, p, { skipLive = false } = {}) {
+function passFilters(store, p) {
   if (filters.cats.size && ![p.c, p.c2].flat().some((c) => c && filters.cats.has(c))) return false;
   if (!passMark(store, p)) return false;
-  if (!skipLive && filters.live === 'open' && cachedLive(p.pid)?.currentOpeningHours?.openNow !== true) return false;
+  if (filters.live === 'open' && isOpenNow(googleOf(p.pid)) !== true) return false;
   const q = filters.q.trim().toLowerCase();
   if (q && !`${p.n} ${p.a ?? ''} ${p.note ?? ''}`.toLowerCase().includes(q)) return false;
   return true;
@@ -135,33 +131,19 @@ export function placeCard(ctx, p) {
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')),
     (media = thumb(ctx, p, { count: 3 })) && h('div', { class: 'tw-place-media' }, media),
-    googleDetails(ctx, p));
+    googleBlock(ctx, p));
 }
 
-// 卡片上的「Google 地址・評分・評論」：點開才查（一次一個地點，不佔批次額度），開著的會在清單重畫時保持開著
-const openG = new Set();
-function googleDetails(ctx, p) {
-  const key = ctx.config?.google?.placesKey;
-  if (!key || !p.pid) return null;
+// 卡片上直接顯示 Google 地址、評分、今天營業時間與評論（資料由排程預存在 Firebase /google，見 js/google.js）
+function googleBlock(ctx, p) {
+  if (!p.pid) return null;
   const { h } = ctx;
-  const cached = cachedDetail(p.pid);
-  const sum = h('summary', {}, h('span', { class: 'tw-gd-title' }, 'Google 地址・評分・評論'),
-    cached?.rating && h('span', { class: 'tw-gd-rating' }, `★ ${cached.rating.toFixed(1)}（${(cached.userRatingCount ?? 0).toLocaleString('zh-TW')}）`));
-  const body = h('div', { class: 'tw-gd-body' });
-  const det = h('details', { class: 'tw-place-gd' }, sum, body);
-  let loaded = false;
-  const load = () => {
-    if (loaded) return;
-    loaded = true;
-    body.append(h('p', { class: 'tw-hint' }, '查詢 Google 地址、評分與評論…'));
-    liveDetail(p.pid, key).then((d) => {
-      ctx.clear(body).append(...liveContent(ctx, p, d));
-      if (d.rating && !sum.querySelector('.tw-gd-rating')) sum.append(h('span', { class: 'tw-gd-rating' }, `★ ${d.rating.toFixed(1)}（${(d.userRatingCount ?? 0).toLocaleString('zh-TW')}）`));
-    }).catch((e) => { loaded = false; ctx.clear(body).append(h('p', { class: 'tw-hint' }, `暫時查不到 Google 資料（${e.message}），再按一次收合後展開試試。`)); });
-  };
-  det.addEventListener('toggle', () => { if (det.open) { openG.add(p.id); load(); } else openG.delete(p.id); });
-  if (openG.has(p.id)) { det.open = true; load(); }
-  return det;
+  const box = h('div', { class: 'tw-place-g' });
+  if (!googleReady()) { box.append(h('p', { class: 'tw-hint' }, '載入 Google 資料…')); return box; }
+  const g = googleOf(p.pid);
+  if (!g) { box.append(h('p', { class: 'tw-hint' }, '還沒有這個地點的 Google 資料（每週更新一次）。')); return box; }
+  box.append(...liveContent(ctx, p, g, { compact: true }));
+  return box;
 }
 
 // 篩選列＋清單。places 是已限定地區的可見地點。
@@ -177,7 +159,7 @@ export function listView(ctx, places, { limit = 60 } = {}) {
     clear(listEl);
     const rows = places.filter((p) => passFilters(store, p));
     if (filters.sort === 'rating') {
-      const r = (p) => cachedLive(p.pid)?.rating ?? -1;
+      const r = (p) => googleOf(p.pid)?.rating ?? -1;
       rows.sort((a, b) => r(b) - r(a));
     }
     const head = h('p', { class: 'tw-hint tw-place-count' }, `${rows.length} 個地點`);
@@ -214,43 +196,19 @@ export function listView(ctx, places, { limit = 60 } = {}) {
   markSel.addEventListener('change', () => { filters.mark = markSel.value; shown = limit; drawList(); });
 
   const liveSel = h('select', { class: 'tw-place-mark-filter', 'aria-label': '營業狀態篩選' },
-    [['all', '不限營業'], ['open', '現在營業（已查詢的）']].map(([v, label]) => h('option', { value: v, selected: v === filters.live }, label)));
+    [['all', '不限營業'], ['open', '現在營業（依預存時段推算）']].map(([v, label]) => h('option', { value: v, selected: v === filters.live }, label)));
   liveSel.addEventListener('change', () => { filters.live = liveSel.value; shown = limit; drawList(); });
   const sortSel = h('select', { class: 'tw-place-mark-filter', 'aria-label': '排序' },
-    [['default', '預設排序'], ['rating', '評分高到低（已查詢的）']].map(([v, label]) => h('option', { value: v, selected: v === filters.sort }, label)));
+    [['default', '預設排序'], ['rating', 'Google 評分高到低']].map(([v, label]) => h('option', { value: v, selected: v === filters.sort }, label)));
   sortSel.addEventListener('change', () => { filters.sort = sortSel.value; shown = limit; drawList(); });
 
-  // 營業中與評分要向 Google 即時查；不自動全查，按了才替目前清單前 LIVE_BATCH 筆查（只放這次瀏覽）
-  const key = ctx.config?.google?.placesKey;
-  const liveBtn = key && h('button', { type: 'button', class: 'tw-place-more tw-place-livebtn' }, '查詢這批的營業狀態與評分');
-  let busy = false;
-  if (liveBtn) liveBtn.addEventListener('click', async () => {
-    if (busy) return;
-    const todo = places.filter((p) => p.pid && passFilters(store, p, { skipLive: true }) && !cachedLive(p.pid)).slice(0, LIVE_BATCH);
-    if (!todo.length) { liveBtn.textContent = '這批都查過了'; return; }
-    busy = true;
-    let done = 0;
-    const tick = () => { liveBtn.textContent = `查詢中 ${done}／${todo.length}…`; };
-    tick();
-    const queue = [...todo];
-    await Promise.all(Array.from({ length: LIVE_PARALLEL }, async () => {
-      while (queue.length) {
-        const p = queue.shift();
-        try { await livePlace(p.pid, key); } catch { /* 單筆失敗略過 */ }
-        done++; tick();
-      }
-    }));
-    busy = false;
-    liveBtn.textContent = `已查 ${todo.length} 筆，可用「現在營業」篩選或評分排序（最多一次 ${LIVE_BATCH} 筆，會用到 Google 查詢額度）`;
-    drawList();
-  });
-  if (liveBtn) liveBtn.textContent = `查詢這批的營業狀態與評分（一次最多 ${LIVE_BATCH} 筆，會用到 Google 查詢額度）`;
-
-  root.append(h('div', { class: 'tw-place-filters' }, search, markSel, liveSel, sortSel), catRow, liveBtn || '', listEl);
+  root.append(h('div', { class: 'tw-place-filters' }, search, markSel, liveSel, sortSel), catRow, listEl);
   drawCats();
   drawList();
-  const off = store.subscribe('marks', drawList);
-  return { el: root, destroy: off };
+  // Google 資料進站抓一次，到了就重畫（評分排序與營業篩選才有資料）
+  loadGoogle();
+  const offs = [store.subscribe('marks', drawList), onGoogle(drawList)];
+  return { el: root, destroy: () => offs.forEach((off) => off()) };
 }
 
 // ── 地區頁 ──
@@ -287,142 +245,91 @@ function mountRegion(el, ctx) {
   return lv.destroy;
 }
 
-// ── Google 即時資料（評分、營業時間）──
-// 條款不允許長期保存，只放 sessionStorage；沒填瀏覽器用金鑰就只給 Google 地圖連結。
-// 讀已查過且還新鮮的結果（沒有就回 null）；清單的「現在營業」篩選與評分排序只看這些。
-function cachedLive(pid) {
-  if (!pid) return null;
-  try {
-    const hit = JSON.parse(sessionStorage.getItem(`twLive:${pid}`) ?? 'null');
-    return hit && Date.now() - (hit._t ?? 0) < LIVE_TTL ? hit : null;
-  } catch { return null; }
-}
-
-async function livePlace(pid, key) {
-  const ck = `twLive:${pid}`;
-  try {
-    const hit = cachedLive(pid);
-    if (hit) return hit;
-  } catch { /* 無痕模式等 */ }
-  const r = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(pid)}?languageCode=zh-TW`, {
-    headers: {
-      'X-Goog-Api-Key': key,
-      'X-Goog-FieldMask': 'rating,userRatingCount,currentOpeningHours.openNow,regularOpeningHours.weekdayDescriptions',
-    },
-  });
-  if (!r.ok) throw new Error(`places ${r.status}`);
-  const d = await r.json();
-  d._t = Date.now();
-  try { sessionStorage.setItem(ck, JSON.stringify(d)); } catch { /* 略過 */ }
-  return d;
-}
-
-// 詳情頁用的完整即時資料：地址、營業時間、評分、評論。
-// Google 只提供「最相關的最多 5 則」評論，看全部要開 Google 地圖；全部只放 sessionStorage，不存進 repo。
-const DETAIL_MASK = ['rating', 'userRatingCount', 'formattedAddress', 'googleMapsUri', 'currentOpeningHours.openNow',
-  'regularOpeningHours.weekdayDescriptions', 'reviews.rating', 'reviews.text', 'reviews.originalText',
-  'reviews.relativePublishTimeDescription', 'reviews.authorAttribution'].join(',');
-
-function cachedDetail(pid) {
-  try {
-    const hit = JSON.parse(sessionStorage.getItem(`twLiveD:${pid}`) ?? 'null');
-    return hit && Date.now() - (hit._t ?? 0) < LIVE_TTL ? hit : cachedLive(pid);
-  } catch { return null; }
-}
-
-async function liveDetail(pid, key) {
-  const ck = `twLiveD:${pid}`;
-  try {
-    const hit = JSON.parse(sessionStorage.getItem(ck) ?? 'null');
-    if (hit && Date.now() - (hit._t ?? 0) < LIVE_TTL) return hit;
-  } catch { /* 無痕模式等 */ }
-  const r = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(pid)}?languageCode=zh-TW`, {
-    headers: { 'X-Goog-Api-Key': key, 'X-Goog-FieldMask': DETAIL_MASK },
-  });
-  if (!r.ok) throw new Error(`places ${r.status}`);
-  const d = await r.json();
-  d._t = Date.now();
-  try { sessionStorage.setItem(ck, JSON.stringify(d)); } catch { /* 略過 */ }
-  return d;
-}
-
-const DAY_ZH = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
-const todayZh = () => {
-  const w = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Taipei', weekday: 'short' }).format(new Date());
-  return DAY_ZH[['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(w)];
-};
+// ── Google 資料（預存版）──
+// 評分、地址、營業時間、評論由排程寫進 Firebase /google/{pid}（js/google.js）；這裡只負責顯示，並標出上次更新時間。
 const starText = (n) => '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n));
 
-// 評分、地址、營業時間、評論的內容（詳情頁與卡片展開共用）。回傳元素陣列。
-function liveContent(ctx, p, d) {
+// 內容：回傳元素陣列。compact（卡片）只先顯示 2 則評論，其餘收進「更多評論」
+function liveContent(ctx, p, g, { compact = false } = {}) {
   const { h } = ctx;
-  const open = d.currentOpeningHours?.openNow;
+  const days = staleDays(g);
+  const stale = days != null && days >= STALE_AFTER_DAYS;
+  const note = h('p', { class: `tw-gd-updated${stale ? ' is-stale' : ''}` },
+    `上次更新：${updatedLabel(g)}`,
+    stale ? `（已 ${days} 天沒更新，營業時間與評論可能已變動，請以 Google 地圖為準）` : '（資料可能已變動，請以 Google 地圖為準）');
+  const gmap = g.maps ?? `https://www.google.com/maps/place/?q=place_id:${p.pid}`;
+  if (g.status === 'NOT_FOUND') return [h('p', { class: 'tw-hint' }, 'Google 找不到這個地點，可能已搬遷或歇業。'), note];
+
+  const open = isOpenNow(g);
   const today = todayZh();
-  const gmap = d.googleMapsUri ?? (p.pid ? `https://www.google.com/maps/place/?q=place_id:${p.pid}` : null);
-  const addr = d.formattedAddress ?? '';
+  const addr = g.addr ?? '';
   const copy = h('button', { type: 'button', class: 'tw-live-copy', onclick: async () => {
     try { await navigator.clipboard.writeText(addr); copy.textContent = '已複製'; } catch { copy.textContent = '複製失敗'; }
     setTimeout(() => { copy.textContent = '複製地址'; }, 1800);
   } }, '複製地址');
+  const closed = g.status === 'CLOSED_PERMANENTLY' ? '已永久歇業' : g.status === 'CLOSED_TEMPORARILY' ? '暫時休息' : '';
 
-  const rating = d.rating && h('div', { class: 'tw-live-card tw-live-rating' },
-    h('div', { class: 'tw-live-big' }, d.rating.toFixed(1)),
-    h('div', {}, h('div', { class: 'tw-live-stars', role: 'img', 'aria-label': `${d.rating} 顆星` }, starText(d.rating)),
-      h('div', { class: 'tw-hint' }, `${(d.userRatingCount ?? 0).toLocaleString('zh-TW')} 則 Google 評論`)));
+  const rating = g.rating && h('div', { class: 'tw-live-card tw-live-rating' },
+    h('div', { class: 'tw-live-big' }, g.rating.toFixed(1)),
+    h('div', {}, h('div', { class: 'tw-live-stars', role: 'img', 'aria-label': `${g.rating} 顆星` }, starText(g.rating)),
+      h('div', { class: 'tw-hint' }, `${(g.n ?? 0).toLocaleString('zh-TW')} 則 Google 評論`)));
   const address = addr && h('div', { class: 'tw-live-card' },
     h('h3', {}, '地址'), h('p', {}, addr),
-    h('p', { class: 'tw-live-actions' }, copy, gmap && h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '在 Google 地圖開啟')));
-  const hours = d.regularOpeningHours?.weekdayDescriptions && h('div', { class: 'tw-live-card' },
-    h('h3', {}, '營業時間', open != null && h('span', { class: `tw-live-open${open ? ' is-open' : ''}` }, open ? '現在營業中' : '現在休息中')),
-    h('ul', { class: 'tw-place-hours' }, d.regularOpeningHours.weekdayDescriptions.map((t) =>
-      h('li', { class: t.startsWith(today) ? 'is-today' : '' }, t))));
+    h('p', { class: 'tw-live-actions' }, copy, h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '在 Google 地圖開啟')));
+  const hours = g.hours?.length && h('div', { class: 'tw-live-card' },
+    h('h3', {}, '營業時間',
+      closed ? h('span', { class: 'tw-live-open' }, closed)
+        : open != null && h('span', { class: `tw-live-open${open ? ' is-open' : ''}`, title: '依預存的營業時段推算，沒有計入國定假日與臨時公休' }, open ? '現在營業中' : '現在休息中')),
+    h('ul', { class: 'tw-place-hours' }, g.hours.map((t) => h('li', { class: t.startsWith(today) ? 'is-today' : '' }, t))));
 
-  const reviews = d.reviews ?? [];
-  const revEls = reviews.map((r) => {
-    const text = r.text?.text ?? r.originalText?.text ?? '';
-    const orig = r.originalText?.text && r.originalText.text !== text ? r.originalText.text : '';
-    const body = h('p', { class: `tw-review-text${text.length > 140 ? ' is-clamped' : ''}` }, text || '（這則評論沒有文字）');
+  const review = (r) => {
+    const text = r.t || '（這則評論沒有文字）';
+    const body = h('p', { class: `tw-review-text${text.length > 140 ? ' is-clamped' : ''}` }, text);
     const more = text.length > 140 && h('button', { type: 'button', class: 'tw-live-link', onclick: () => {
       const on = body.classList.toggle('is-clamped'); more.textContent = on ? '展開' : '收合';
     } }, '展開');
-    const origEl = orig && h('p', { class: 'tw-review-orig', hidden: true }, orig);
-    const origBtn = orig && h('button', { type: 'button', class: 'tw-live-link', onclick: () => {
+    const origEl = r.o && h('p', { class: 'tw-review-orig', hidden: true }, r.o);
+    const origBtn = r.o && h('button', { type: 'button', class: 'tw-live-link', onclick: () => {
       origEl.hidden = !origEl.hidden; origBtn.textContent = origEl.hidden ? '看原文' : '隱藏原文';
     } }, '看原文');
-    const who = r.authorAttribution?.displayName ?? 'Google 使用者';
+    const who = r.by || 'Google 使用者';
     return h('article', { class: 'tw-review' },
       h('header', {},
-        r.authorAttribution?.uri ? h('a', { href: r.authorAttribution.uri, target: '_blank', rel: 'noopener', class: 'tw-review-by' }, who) : h('span', { class: 'tw-review-by' }, who),
-        r.rating && h('span', { class: 'tw-live-stars', role: 'img', 'aria-label': `${r.rating} 顆星` }, starText(r.rating)),
-        r.relativePublishTimeDescription && h('span', { class: 'tw-hint' }, r.relativePublishTimeDescription)),
+        r.uri ? h('a', { href: r.uri, target: '_blank', rel: 'noopener', class: 'tw-review-by' }, who) : h('span', { class: 'tw-review-by' }, who),
+        r.r && h('span', { class: 'tw-live-stars', role: 'img', 'aria-label': `${r.r} 顆星` }, starText(r.r)),
+        r.at && h('span', { class: 'tw-hint' }, ago(r.at))),
       body, h('div', { class: 'tw-review-acts' }, more, origBtn), origEl);
-  });
+  };
+  const revs = g.reviews ?? [];
+  const first = compact ? revs.slice(0, 2) : revs;
+  const rest = compact ? revs.slice(2) : [];
 
   return [
     h('div', { class: 'tw-live-grid' }, rating, address, hours),
-    h('h3', { class: 'tw-live-h3' }, '大家怎麼說'),
-    revEls.length ? h('div', { class: 'tw-reviews' }, revEls) : h('p', { class: 'tw-hint' }, 'Google 沒有提供這個地點的評論文字。'),
-    h('p', { class: 'tw-hint' }, 'Google 只提供最相關的最多 5 則評論，想看全部請', gmap ? h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '到 Google 地圖') : '到 Google 地圖', '。'),
-    h('p', { class: 'tw-hint' }, '資料來自 Google 地圖，即時查詢，只存在這次瀏覽，不寫進網站資料。'),
+    revs.length ? h('div', { class: 'tw-reviews' }, h('h3', { class: 'tw-live-h3' }, '大家怎麼說'), first.map(review),
+      rest.length > 0 && h('details', { class: 'tw-review-more' }, h('summary', {}, `更多評論（${rest.length}）`), rest.map(review)))
+      : h('p', { class: 'tw-hint' }, 'Google 沒有提供這個地點的評論文字。'),
+    note,
+    h('p', { class: 'tw-hint' }, 'Google 只提供最相關的最多 5 則評論，想看全部請', h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '到 Google 地圖'), '。資料來自 Google 地圖。'),
   ];
 }
 
+// 詳情頁：完整顯示
 function liveBox(ctx, p) {
   const { h, clear } = ctx;
-  const key = ctx.config?.google?.placesKey;
-  const box = h('section', { class: 'tw-place-live', 'aria-label': 'Google 即時資料' });
-  if (!p.pid || !key) return box;
-  box.append(h('p', { class: 'tw-hint' }, '查詢 Google 評分、營業時間與評論…'));
-  let alive = true;
-  liveDetail(p.pid, key).then((d) => {
-    if (!alive) return;
+  const box = h('section', { class: 'tw-place-live', 'aria-label': 'Google 資料' });
+  if (!p.pid) return box;
+  const draw = () => {
     clear(box);
-    box.append(h('h2', {}, 'Google 即時資料'), ...liveContent(ctx, p, d));
-  }).catch((e) => {
-    if (!alive) return;
-    clear(box).append(h('p', { class: 'tw-hint' }, `暫時查不到 Google 資料（${e.message}），請用上面的連結看。`));
-  });
-  box.destroy = () => { alive = false; };
+    if (!googleReady()) { box.append(h('p', { class: 'tw-hint' }, '載入 Google 資料…')); return; }
+    const g = googleOf(p.pid);
+    if (!g) { box.append(h('p', { class: 'tw-hint' }, '還沒有這個地點的 Google 資料（每週更新一次），可先用上面的連結看。')); return; }
+    box.append(h('h2', {}, 'Google 資料'), ...liveContent(ctx, p, g));
+  };
+  draw();
+  loadGoogle();
+  const off = onGoogle(draw);
+  box.destroy = off;
   return box;
 }
 

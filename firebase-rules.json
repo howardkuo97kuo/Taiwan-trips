@@ -78,6 +78,10 @@
       ".write": false,
       ".read": true
     },
+    "google": {
+      ".write": false,
+      ".read": true
+    },
     "trips": {
       ".read": false,
       ".write": false
