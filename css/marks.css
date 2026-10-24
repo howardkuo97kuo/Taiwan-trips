@@ -136,7 +136,7 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-place-card .tw-mark-stamp .again { animation: tw-again-in .35s cubic-bezier(.2, 1.1, .4, 1) .5s both; }
 @keyframes tw-again-in { from { opacity: 0; transform: rotate(-12deg) scale(2); } }
 
-.tw-place-card .tw-mark-stamp { width: 240px; height: auto; aspect-ratio: 460 / 250; transform: rotate(-3deg); filter: drop-shadow(0 2px 3px #0005); }
+.tw-place-card .tw-mark-stamp { width: 250px; height: auto; aspect-ratio: 400 / 180; transform: none; filter: drop-shadow(0 2px 3px #0005); }
 .tw-place-card .tw-mark-stamp svg { width: 100%; height: 100%; }
 .tw-place-card .tw-mark-stamp .ym, .tw-place-card .tw-mark-stamp text { font-family: var(--f-display); }
 .tw-place-card .tw-mark-stamp-empty { width: 210px; height: 112px; border-radius: 16px; }
