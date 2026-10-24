@@ -191,7 +191,13 @@ export function markCompare(ctx, placeId) {
 export async function mount(el, ctx) {
   const { h, clear, store } = ctx;
   const { placeCard } = await import('./places.js');
-  let group = 'both-want';
+  // 預設停在第一個有地點的分組，不要一進來就是空的
+  const countOf = (g) => store.get('places').filter((p) => {
+    if (!store.isVisible(p)) return false;
+    const s = statusOf(store, p.id);
+    return g.test(s.apong, s.baobao);
+  }).length;
+  let group = (GROUPS.find((g) => countOf(g) > 0) ?? GROUPS[0]).id;
 
   const render = () => {
     clear(el);
