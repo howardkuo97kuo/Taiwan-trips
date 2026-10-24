@@ -190,3 +190,11 @@
   .tw-place-card .tw-mark-want { padding: 10px 4px; }
   .tw-place-card .tw-place-g { display: flex; flex-direction: column; justify-content: center; }
 }
+
+/* 分類：加粗色條＋頂端小圖示標籤（電腦表格列） */
+.tw-place-tab { display: none; }
+@media (min-width: 900px) {
+  .tw-place-card .tw-place-tab { display: grid; place-items: center; position: absolute; left: -2px; top: 14px; width: 40px; height: 32px; background: var(--tk, var(--ink)); color: #fff; border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px #0004; z-index: 3; }
+  .tw-place-card .tw-place-tab .tw-ico { width: 20px; height: 20px; color: #fff; margin: 0; }
+  .tw-place-card .tw-mark-want { padding-left: 22px; }
+}

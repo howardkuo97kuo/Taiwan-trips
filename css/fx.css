@@ -76,5 +76,5 @@ button:active:not(:disabled):not(.tw-mark-stamp), .tw-nav-item:active, .tw-place
 .tw-place-card[data-c="美食"] { --tk: #d9622b; } .tw-place-card[data-c="景點"] { --tk: #2f7d5b; }
 .tw-place-card[data-c="咖啡甜點"] { --tk: #8a5a3c; } .tw-place-card[data-c="小吃夜市"] { --tk: #c9482b; }
 .tw-place-card[data-c="溫泉"] { --tk: #3a7ca5; } .tw-place-card[data-c="住宿"] { --tk: #5b4fa3; } .tw-place-card[data-c="購物市集"] { --tk: #b3398a; }
-.tw-place-card[data-c] { box-shadow: inset 6px 0 0 var(--tk, transparent); }
-.tw-place-card.is-pair[data-c] { box-shadow: inset 6px 0 0 var(--tk, transparent), 0 0 0 3px var(--gold); }
+.tw-place-card[data-c] { box-shadow: inset 12px 0 0 var(--tk, transparent); }
+.tw-place-card.is-pair[data-c] { box-shadow: inset 12px 0 0 var(--tk, transparent), 0 0 0 3px var(--gold); }
