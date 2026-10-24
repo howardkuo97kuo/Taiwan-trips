@@ -78,8 +78,8 @@ export function michBadge(ctx, p) {
 // ── 卡片：一張鐵路車票 ──
 // 左邊票根（分類、縣市），中間店名與地址，右邊兩人的「想去」圓點與「蓋章」。
 // 兩人都想去時，票上多一個「雙人票」小牌；剛蓋章時蓋章動畫播一次（takeFx）。
-// 去過：一張被剪了票孔的車票（左右缺口、虛線切割線、右側剪票孔）
-const stampSVG = (ym) => `<svg viewBox="0 0 120 76" aria-hidden="true"><path d="M10 2H110a8 8 0 0 1 8 8V30a8 8 0 0 0 0 16V66a8 8 0 0 1-8 8H10a8 8 0 0 1-8-8V46a8 8 0 0 0 0-16V10a8 8 0 0 1 8-8Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M86 9V67" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/><text x="44" y="37" text-anchor="middle" font-size="24">去過</text><text x="44" y="57" text-anchor="middle" font-size="11" class="ym">${/^\d{4}-\d{2}$/.test(ym ?? '') ? ym.replace('-', '·') : ''}</text><circle class="hole" cx="103" cy="38" r="9" fill="var(--card)" stroke="currentColor" stroke-width="2.5"/></svg>`;
+// 去過：台鐵硬紙卡票（米黃底、藍綠色票頭、紅字「去過」、日期戳、剪票缺口與票孔；想再去就蓋紅色「再訪」）
+const stampSVG = (ym, place = '', again = false) => `<svg viewBox="0 0 132 84" aria-hidden="true"><path d="M7 2H125a5 5 0 0 1 5 5V34l-8 8 8 8V77a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" fill="#f3e7c6" stroke="#7a5c2e" stroke-width="1.6"/><path d="M7 2H125a5 5 0 0 1 5 5V19H2V7a5 5 0 0 1 5-5Z" fill="#1f6f78"/><text x="66" y="14" text-anchor="middle" font-size="10" letter-spacing="3" fill="#fff6dc" class="tk">臺灣鐵路</text><text x="14" y="55" font-size="28" font-weight="700" fill="#c4352b">去過</text><text x="14" y="73" font-size="11" class="ym" fill="#233a56" letter-spacing="1">${/^\d{4}-\d{2}$/.test(ym ?? '') ? ym.replace('-', '.') : ''}</text><text x="118" y="31" text-anchor="end" font-size="9" fill="#7a5c2e">${place ? `${place} →` : ''}</text><circle class="hole" cx="108" cy="66" r="5.5" fill="var(--card)" stroke="#7a5c2e" stroke-width="1"/>${again ? '<g class="again" transform="rotate(-12 96 52)"><rect x="74" y="40" width="44" height="20" rx="3" fill="none" stroke="#c4352b" stroke-width="2"/><text x="96" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#c4352b">再訪</text></g>' : ''}</svg>`;
 
 export function placeCard(ctx, p) {
   const { h, store } = ctx;
@@ -97,15 +97,15 @@ export function placeCard(ctx, p) {
   const dot = (id, mine) => {
     const on = s[id].want;
     return mine
-      ? h('button', { type: 'button', dataset: { ini: name(id)[0] }, class: `tw-mark-dot${on ? ' is-on' : ''}${on && fx.heart ? ' is-pop' : ''}`, 'aria-pressed': on ? 'true' : 'false',
+      ? h('button', { type: 'button', dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot${on ? ' is-on' : ''}${on && fx.heart ? ' is-pop' : ''}`, 'aria-pressed': on ? 'true' : 'false',
         'aria-label': `${name(id)}想去：${p.n}`, onclick: () => quickMark(ctx, p.id, 'want') })
-      : h('span', { dataset: { ini: name(id)[0] }, class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
+      : h('span', { dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
   };
   // 沒選身分時兩個都只讀，點了會提示先選身分
   const wantRow = who
     ? [h('span', { class: 'tw-mark-wb' }, dot(who, true), name(who)), h('span', { class: 'tw-mark-wb' }, dot(other, false), name(other))]
     : ['apong', 'baobao'].map((id) => h('span', { class: 'tw-mark-wb' }, h('button', {
-      type: 'button', dataset: { ini: name(id)[0] }, class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
+      type: 'button', dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
       onclick: () => quickMark(ctx, p.id, 'want') }), name(id)));
 
   const beenMark = who ? me.mark : (s.apong.mark?.been ? s.apong.mark : s.baobao.mark);
@@ -115,7 +115,7 @@ export function placeCard(ctx, p) {
       'aria-label': `取消蓋章：${p.n}`, onclick: () => quickMark(ctx, p.id, 'been') })
     : h('button', { type: 'button', class: 'tw-mark-stamp-empty', 'aria-pressed': 'false', 'aria-label': `蓋章去過：${p.n}`,
       onclick: () => quickMark(ctx, p.id, 'been') }, '標去過');
-  if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym);
+  if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym, county.replace(/[縣市]$/, ''), who ? !!me.again : !!(s.apong.again || s.baobao.again));
 
   const ghostBits = (id, m) => [name(id), m.want && '想去', m.skip && '不想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
   // 卡片上簡短顯示兩人的喜歡程度（只有去過且有填才出現）
@@ -130,6 +130,7 @@ export function placeCard(ctx, p) {
     : '';
 
   return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}${me?.skip ? ' is-skipped' : ''}${hasMedia ? ' has-media' : ''}`, dataset: { pid: p.id, c: p.c } },
+    h('span', { class: 'tw-place-tab', title: p.c, 'aria-hidden': 'true' }, catIcon(p.c)),
     pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '兩人都想去'),
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
       catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
