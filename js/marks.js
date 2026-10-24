@@ -66,7 +66,7 @@ export function takeFx(placeId) {
   return out;
 }
 
-const KEY_LABEL = { want: '想去', been: '去過', again: '想再去' };
+const KEY_LABEL = { want: '想去', been: '去過', again: '想再去', skip: '不想去' };
 
 export async function quickMark(ctx, placeId, key) {
   const { store, sync, toast } = ctx;
@@ -82,6 +82,7 @@ export async function quickMark(ctx, placeId, key) {
   else if (key === 'again') patch = on ? { again: null } : { again: true, been: true, ym: prev?.ym ?? ymNow() };
   else patch = { [key]: on ? null : true };
   if (key === 'want' && !on) patch.skip = null; // 想去與不想去互斥
+  if (key === 'skip' && !on) patch.want = null;
 
   // 動畫旗標要在寫入前設好：setMark 會先更新畫面
   if (key === 'been' && !on) fx.slam = placeId;

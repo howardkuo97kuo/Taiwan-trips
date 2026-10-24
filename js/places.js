@@ -108,7 +108,7 @@ export function placeCard(ctx, p) {
       onclick: () => quickMark(ctx, p.id, 'been') }, '標去過');
   if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym);
 
-  const ghostBits = (id, m) => [name(id), m.want && '想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
+  const ghostBits = (id, m) => [name(id), m.want && '想去', m.skip && '不想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
   // 卡片上簡短顯示兩人的喜歡程度（只有去過且有填才出現）
   const likeTags = ['apong', 'baobao'].map((id) => {
     const lk = likeOf(s[id].mark?.like);
@@ -118,7 +118,7 @@ export function placeCard(ctx, p) {
     ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' 還沒標' : ''}`
     : '';
 
-  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}`, dataset: { pid: p.id } },
+  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}${me?.skip ? ' is-skipped' : ''}`, dataset: { pid: p.id } },
     pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '兩人都想去'),
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
       catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
@@ -128,7 +128,9 @@ export function placeCard(ctx, p) {
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
       who && ghost && h('div', { class: 'tw-place-ghost' }, ghost),
       likeTags.length > 0 && h('div', { class: 'tw-place-likes' }, likeTags)),
-    h('div', { class: 'tw-mark-want', role: 'group', 'aria-label': `${p.n}的想去` }, h('div', { class: 'tw-mark-wrow' }, wantRow), h('span', { class: 'tw-mark-wl' }, '標想去')),
+    h('div', { class: 'tw-mark-want', role: 'group', 'aria-label': `${p.n}的想去` }, h('div', { class: 'tw-mark-wrow' }, wantRow), h('span', { class: 'tw-mark-wl' }, '標想去'),
+      h('button', { type: 'button', class: 'tw-mark-skip', 'aria-pressed': me?.skip ? 'true' : 'false', 'aria-label': `不想去：${p.n}`,
+        onclick: () => quickMark(ctx, p.id, 'skip') }, me?.skip ? '已標：不想去' : '不想去')),
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')));

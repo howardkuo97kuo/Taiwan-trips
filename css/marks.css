@@ -77,3 +77,9 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-mark-good, .tw-mark-avoid { font-size: 14px; padding: 6px 10px; border-radius: var(--r-sm); white-space: pre-wrap; overflow-wrap: anywhere; }
 .tw-mark-good { background: color-mix(in srgb, var(--gold) 22%, var(--card)); }
 .tw-mark-avoid { background: var(--stamp-soft); }
+
+/* 卡片上的「不想去」：跟想去互斥，標了整張票淡一點（不隱藏，隨時能改回來） */
+.tw-mark-skip { border: 0; background: none; color: var(--muted); font-size: 12.5px; padding: 2px 4px; text-decoration: underline; min-height: 28px; }
+.tw-mark-skip[aria-pressed="true"] { color: var(--stamp); font-weight: 700; }
+.tw-place-card.is-skipped .tw-place-mid, .tw-place-card.is-skipped .tw-place-stub { opacity: .55; }
+@media (pointer: coarse) { .tw-mark-skip { min-height: 40px; padding: 6px 10px; } }
