@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（地區樹補上 75 個區域（由地址推出，`regions.json` 的 `districts`）；收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
+最後更新：2026-10-24（清單加「現在營業」篩選與評分排序；地區樹補上 75 個區域（由地址推出，`regions.json` 的 `districts`）；收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
 
 ## 一句話
 
@@ -52,7 +52,7 @@
 | `data/staging/import-list.json` | Google 清單匯入的暫存清單（店名、分類、備註、歇業狀態），查到座標前不進 `places.json` | A |
 | `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js` | 首頁「環島郵路」：用 `data/geo/counties.json` 的真實縣市邊界畫成 SVG，橘線繞一圈串起各縣市，泡泡大小是地點數，去過的縣市蓋郵戳（紅雙圈、邊界塗色），金色小牌是雙人票數；選到縣市後下方出現 Leaflet 縣市地圖（個別地點）與篩選、卡片。只畫有 `ll` 的地點；沒有邊界檔時退回只畫泡泡 | D |
-| `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage` | D |
+| `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage`（30 分鐘內有效）；清單的「現在營業」篩選與評分排序只看已查過的地點，按「查詢這批」才替目前清單前 40 筆查（同時 4 個請求，控制 Places 費用） | D |
 | `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、喜歡程度 `like`、好吃 `good`、雷點 `avoid`、備註 `note`，寫入走 `sync.setMark`）、`markSummary`、`markCompare`（兩人並排顯示全部欄位）、`LIKES`／`likeOf`、`statusOf`、`litCounties`；地點卡片上顯示兩人的喜歡程度 | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
 | `js/photos.js`、`css/photos.css` | 地點照片（Howard 2026-10-24 要求）：`google.placesKey` 有填且地點有 `pid` 時，Places (New) 即時查 `photos`，卡片縮圖進入畫面才載（同時最多 4 個請求）、詳情頁橫向輪播（最多 6 張）並顯示作者；照片參照只放 `sessionStorage` 鍵 `tw-photos:<pid>`，不存檔；沒有金鑰或沒圖就留分類圖示。輸出 `thumb`、`carousel` | 新增（D 的 `places.js` 呼叫） |
