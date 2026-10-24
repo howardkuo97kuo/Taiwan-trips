@@ -108,23 +108,24 @@ export function thumb(ctx, p, { count = 1 } = {}) {
 }
 
 // 詳情輪播：橫向捲動貼齊，附左右鈕、頁點與作者歸屬
-export function carousel(ctx, p) {
+// card = true：列表卡片用，進入畫面才載入，不放縮圖列，圖較矮
+export function carousel(ctx, p, { card = false } = {}) {
   const key = ctx.config?.google?.placesKey;
   const { h } = ctx;
-  const root = h('section', { class: 'tw-gallery', 'aria-label': `${p.n}的照片` });
+  const root = h('section', { class: `tw-gallery${card ? ' is-card' : ''}`, 'aria-label': `${p.n}的照片` });
   const ph = h('div', { class: 'tw-gallery-empty' }, catIcon(p.c), h('span', {}, key ? (p.pid ? '照片載入中…' : '這個地點沒有 Google 地點代碼') : '尚未設定 Google 金鑰'));
   root.append(ph);
   if (!key || !p.pid) return root;
   let alive = true;
-  placePhotos(p.pid, key, { strict: true }).then((list) => {
+  const load = () => placePhotos(p.pid, key, { strict: !card }).then((list) => {
     if (!alive) return;
     if (!list.length) { ph.lastChild.textContent = '這個地點沒有 Google 照片'; return; }
     const track = h('div', { class: 'tw-gallery-track', tabindex: '0' }, list.map((x, i) =>
       h('figure', { class: 'tw-gallery-item' },
         h('button', { type: 'button', class: 'tw-gallery-zoom', 'aria-label': `放大看第 ${i + 1} 張照片`, onclick: () => openLightbox(ctx, p, list, key, i) },
-          h('img', { alt: `${p.n} 照片 ${i + 1}`, loading: i ? 'lazy' : 'eager', decoding: 'async', src: src(x.name, key, 1600) })),
+          h('img', { alt: `${p.n} 照片 ${i + 1}`, loading: i ? 'lazy' : 'eager', decoding: 'async', src: src(x.name, key, card ? 960 : 1600) })),
         x.by && h('figcaption', {}, '照片：', x.uri ? h('a', { href: x.uri, target: '_blank', rel: 'noopener' }, x.by) : x.by))));
-    const strip = list.length > 1 && h('div', { class: 'tw-gallery-strip', role: 'group', 'aria-label': '照片縮圖' }, list.map((x, i) =>
+    const strip = !card && list.length > 1 && h('div', { class: 'tw-gallery-strip', role: 'group', 'aria-label': '照片縮圖' }, list.map((x, i) =>
       h('button', { type: 'button', class: 'tw-gallery-chip', 'aria-label': `看第 ${i + 1} 張`, onclick: () => track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }) },
         h('img', { alt: '', loading: 'lazy', decoding: 'async', src: src(x.name, key, 240) }))));
     const dots = h('div', { class: 'tw-gallery-dots', 'aria-hidden': 'true' }, list.map(() => h('i', {})));
@@ -144,6 +145,15 @@ export function carousel(ctx, p) {
   }).catch((e) => {
     if (alive) ph.lastChild.textContent = `照片查詢失敗（${e.message}）`;
   });
-  root.destroy = () => { alive = false; };
+  if (card && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => {
+      if (es.some((e) => e.isIntersecting)) { io.disconnect(); load(); }
+    }, { rootMargin: '200px' });
+    io.observe(root);
+    root.destroy = () => { alive = false; io.disconnect(); };
+  } else {
+    load();
+    root.destroy = () => { alive = false; };
+  }
   return root;
 }
