@@ -1,1 +1,55 @@
-/* 地點清單、車票、地點詳情。模組 C。內容在後續 PR 補上。 */
+/* 地點清單、車票、地區頁與地點詳情。模組 C。結構見 js/places.js。 */
+
+/* ── 篩選 ── */
+.tw-place-browser { margin-top: 8px; }
+.tw-place-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.tw-place-search, .tw-place-mark-filter { border: 2px solid var(--ink); background: var(--card); color: var(--ink); border-radius: var(--r-sm); padding: 6px 12px; min-height: 42px; }
+.tw-place-search { flex: 1 1 220px; max-width: 360px; }
+.tw-place-filter-cats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.tw-place-chip { border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 88%, transparent); border-radius: 99px; padding: 1px 14px; min-height: 36px; font-size: 15px; transition: background .2s, color .2s; }
+.tw-place-chip.is-on { background: var(--ink); color: var(--paper); }
+.tw-place-count { margin: 0 0 12px; }
+.tw-place-list { max-width: 880px; }
+.tw-place-more { display: block; margin: 8px 0 0; border: 2px solid var(--ink); background: var(--card); border-radius: var(--r-sm); padding: 8px 26px; min-height: 44px; }
+
+/* ── 車票 ── */
+.tw-place-card { position: relative; display: grid; grid-template-columns: 84px minmax(0, 1fr) auto auto; background: var(--card); border: 2px solid var(--ink); border-radius: var(--r-md); margin: 0 0 16px; }
+.tw-place-card::before, .tw-place-card::after { content: ""; position: absolute; left: 73px; width: 22px; height: 22px; border-radius: 50%; background: var(--paper); border: 2px solid var(--ink); }
+.tw-place-card::before { top: -12px; clip-path: inset(50% 0 0 0); }
+.tw-place-card::after { bottom: -12px; clip-path: inset(0 0 50% 0); }
+.tw-place-card.is-pair { border-color: var(--gold-ink); box-shadow: 0 0 0 3px var(--gold); }
+:root[data-theme="dark"] .tw-place-card.is-pair { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tw-place-card.is-pair { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold); } }
+.tw-place-stub { border-right: 2px dashed var(--muted); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 8px 4px; text-align: center; text-decoration: none; color: var(--ink); }
+.tw-place-c { font: 700 15px/1.2 var(--f-display); }
+.tw-place-z { font: 700 12px var(--f-num); color: var(--muted); letter-spacing: .06em; }
+.tw-place-mid { padding: 12px 16px; min-width: 0; }
+.tw-place-name { display: inline; font: 700 18px/1.4 var(--f-display); color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.tw-place-name:hover { text-decoration: underline; text-decoration-color: var(--rail); text-underline-offset: 3px; }
+.tw-place-addr { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.tw-place-ghost { margin-top: 6px; font-size: 13px; color: var(--muted); }
+.tw-place-pair { position: absolute; top: -13px; right: 22px; background: var(--gold); color: var(--gold-ink); font: 700 13px/1.6 var(--f-display); padding: 0 12px; border-radius: 4px; }
+.tw-place-pair.is-fresh { animation: tw-tab .5s cubic-bezier(.25, 1, .5, 1); }
+@keyframes tw-tab { from { transform: translateY(14px); opacity: 0; } }
+
+@media (max-width: 640px) {
+  .tw-place-card { grid-template-columns: 62px minmax(0, 1fr); }
+  .tw-place-card::before, .tw-place-card::after { left: 51px; }
+}
+
+/* ── 地區頁與詳情 ── */
+.tw-place-view { max-width: 880px; }
+.tw-place-view h1 { margin: 6px 0 4px; font-size: clamp(26px, 4vw, 38px); }
+.tw-place-crumbs { font-size: 14px; color: var(--muted); }
+.tw-place-crumbs a { color: var(--blue); }
+.tw-place-kids { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 6px; }
+.tw-place-kid { border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 90%, transparent); border-radius: var(--r-sm); padding: 4px 14px; color: var(--ink); text-decoration: none; min-height: 40px; display: inline-flex; align-items: center; }
+.tw-place-kid:hover { border-color: var(--rail); }
+.tw-place-cats { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.tw-place-cat { background: var(--ink); color: var(--paper); border-radius: 99px; padding: 0 12px; font-size: 14px; }
+.tw-place-status { color: var(--stamp); font-weight: 700; }
+.tw-place-note { background: color-mix(in srgb, var(--gold) 26%, var(--card)); border-radius: var(--r-sm); padding: 8px 12px; }
+.tw-place-links a { color: var(--blue); }
+.tw-place-live { margin-top: 18px; padding: 14px 16px; border: 2px dashed var(--line); border-radius: var(--r-md); background: color-mix(in srgb, var(--card) 80%, transparent); }
+.tw-place-live h2 { margin: 0 0 6px; font-size: 20px; }
+.tw-place-hours { margin: 6px 0; padding-left: 20px; color: var(--muted); font-size: 14px; }

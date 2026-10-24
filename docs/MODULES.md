@@ -67,6 +67,11 @@ export function mount(el, ctx) {
 
 模組自己的 class 請用模組前綴（D：`tw-map-`、`tw-place-`、`tw-mark-`；E：`tw-inbox-`；F：`tw-trip-`），避免撞名。
 
+## 卡片與快速標記（D）
+
+- `placeCard(ctx, p)`（`js/places.js`）是一張車票：票根（分類、縣市）、店名地址、兩人「想去」圓點、蓋章區。標記走 `quickMark(ctx, placeId, key)`（`js/marks.js`），會跳帶「復原」的 Toast；沒選身分時提示先選身分。
+- `takeFx(placeId)` 回傳這張卡這一次重畫要不要播蓋章或雙人票動畫（播過就清掉）。
+
 ## Toast 與偏好（`ctx.toast`、`ctx.prefs`）
 
 - `ctx.toast(訊息, { action: '復原', onAction, tone: 'bad', ms })`：底部提示，回傳關閉函式。標記與蓋章請用它提供「復原」。

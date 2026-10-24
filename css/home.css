@@ -1,1 +1,106 @@
-/* 首頁（環島郵路地圖）。模組 C。內容在後續 PR 補上。 */
+/* 首頁：環島郵路地圖。模組 C。結構見 js/map.js。 */
+
+.tw-map-hero { display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr); gap: 16px 28px; align-items: center; min-height: min(78vh, 720px); padding-block: 4px 18px; }
+.tw-map-panel { display: grid; gap: 14px; align-content: center; }
+.tw-map-panel.is-right { justify-items: end; text-align: right; }
+
+/* 郵戳 */
+.tw-postmark { width: clamp(140px, 14vw, 190px); color: var(--stamp); transform: rotate(-9deg); }
+.tw-postmark text { font-family: var(--f-display); fill: currentColor; font-weight: 700; }
+.tw-postmark .n { transform-box: fill-box; transform-origin: center; }
+.tw-postmark.is-slam { animation: tw-slam .55s cubic-bezier(.25, 1, .5, 1) both; }
+.tw-postmark.is-bump .n { animation: tw-bump .5s cubic-bezier(.25, 1, .5, 1); }
+@keyframes tw-slam { 0% { transform: rotate(-30deg) scale(2.6); opacity: 0; } 60% { opacity: 1; } 100% { transform: rotate(-9deg) scale(1); } }
+@keyframes tw-bump { 40% { transform: scale(1.35); } }
+.tw-map-facts, .tw-map-pair, .tw-map-legend { background: color-mix(in srgb, var(--card) 84%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: var(--r-md); padding: 12px 16px; margin: 0; }
+.tw-map-facts { color: var(--muted); font-size: 15px; line-height: 1.7; }
+.tw-map-facts strong { display: block; color: var(--ink); font: 700 22px/1.4 var(--f-display); }
+.tw-map-facts b { color: var(--ink); }
+
+/* 雙人票 */
+.tw-map-pair { background: var(--gold); color: var(--gold-ink); backdrop-filter: none; text-align: right; box-shadow: 0 2px 0 rgba(0, 0, 0, .12); }
+.tw-map-pair b { display: block; font: 700 58px/1 var(--f-num); }
+.tw-map-pair span { font-weight: 700; }
+.tw-map-pair a { display: inline-block; margin-top: 8px; border: 2px solid var(--gold-ink); color: var(--gold-ink); border-radius: 99px; padding: 2px 16px; text-decoration: none; font-weight: 700; }
+.tw-map-pair a:hover { background: var(--gold-ink); color: var(--gold); }
+.tw-map-legend { list-style: none; font-size: 13.5px; color: var(--muted); display: grid; gap: 4px; }
+.tw-map-legend i { display: inline-block; vertical-align: -3px; margin-right: 8px; }
+.lg-b { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--ink); background: var(--card); }
+.lg-s { width: 16px; height: 16px; border-radius: 50%; border: 3px double var(--stamp); background: var(--stamp-soft); }
+.lg-g { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); }
+.lg-l { width: 22px; height: 5px; border-radius: 3px; background: var(--rail); vertical-align: 3px !important; }
+
+/* 地圖 */
+.tw-map-box { position: relative; }
+.tw-map-svg { height: min(78vh, 740px); width: auto; max-width: 100%; display: block; overflow: visible; }
+.tw-land { fill: color-mix(in srgb, var(--card) 78%, var(--paper)); stroke: var(--muted); stroke-width: 1; stroke-linejoin: round; transition: fill .25s; }
+.tw-land[data-county] { cursor: pointer; }
+.tw-land[data-county]:hover { fill: color-mix(in srgb, var(--gold) 38%, var(--card)); }
+.tw-land.is-lit { fill: var(--stamp-soft); stroke: var(--stamp); }
+.tw-land.is-empty { fill: color-mix(in srgb, var(--paper) 70%, transparent); stroke-dasharray: 3 3; }
+.tw-land.is-sel { stroke: var(--ink); stroke-width: 2.5; }
+.tw-land.is-dim { opacity: .45; }
+.tw-leads line { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 3 3; }
+.tw-leads circle { fill: var(--ink); }
+.tw-seg { fill: none; stroke-linecap: round; }
+.tw-seg.is-off { stroke: var(--muted); stroke-width: 2.5; stroke-dasharray: 2 7; opacity: .7; }
+.tw-seg.is-half { stroke: var(--rail); stroke-width: 3; stroke-dasharray: 9 7; opacity: .8; }
+.tw-seg.is-on { stroke: var(--rail); stroke-width: 7; }
+.tw-seg.is-br { stroke: var(--blue); stroke-width: 2.5; stroke-dasharray: 1 6; opacity: .8; }
+.tw-stn { cursor: pointer; }
+.tw-stn .tw-body { fill: var(--card); stroke: var(--ink); stroke-width: 3; transition: fill .25s, stroke .25s; }
+.tw-stn:hover .tw-body, .tw-stn:focus-visible .tw-body { stroke: var(--rail); }
+.tw-stn:focus-visible { outline: none; }
+.tw-stn:focus-visible .tw-body { stroke-width: 6; }
+.tw-stn.is-sel .tw-body { stroke: var(--rail); stroke-width: 6; }
+.tw-stn.is-lit .tw-body { fill: var(--stamp-soft); stroke: var(--stamp); }
+.tw-stn .tw-ring { fill: none; stroke: var(--stamp); stroke-width: 1.6; stroke-dasharray: 2 3; opacity: 0; transition: opacity .3s; }
+.tw-stn.is-lit .tw-ring { opacity: 1; }
+.tw-stn text { font: 700 13px var(--f-display); fill: var(--ink); text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: var(--card); stroke-width: 3px; stroke-linejoin: round; }
+.tw-stn text.n { font: 700 17px var(--f-num); }
+.tw-stn.is-dim { opacity: .4; }
+.tw-tag circle { fill: var(--gold); }
+.tw-tag text { font: 700 12px var(--f-num); fill: var(--gold-ink); stroke: none; }
+.tw-dot0 { fill: var(--card); stroke: var(--muted); stroke-width: 2; }
+.tw-pulse { fill: none; stroke: var(--stamp); stroke-width: 3; opacity: 0; transform-box: fill-box; transform-origin: center; }
+
+/* 開場：橘線依序畫出、站點依序彈出（只在第一次進站） */
+@keyframes tw-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes tw-fade { from { opacity: 0; } }
+@keyframes tw-pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes tw-stamp-in { 0% { transform: scale(1.9) rotate(-18deg); } 100% { transform: none; } }
+@keyframes tw-pulse { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+.is-intro .tw-seg.is-on { stroke-dasharray: 1; animation: tw-draw .5s cubic-bezier(.25, 1, .5, 1) both; animation-delay: calc(var(--i) * 90ms); }
+.is-intro .tw-seg.is-half, .is-intro .tw-seg.is-off, .is-intro .tw-seg.is-br { animation: tw-fade .5s ease-out both; animation-delay: calc(var(--i) * 90ms); }
+.is-intro .tw-stn { animation: tw-pop .45s cubic-bezier(.25, 1, .5, 1) both; animation-delay: calc(var(--i) * 90ms + 120ms); transform-box: fill-box; transform-origin: center; }
+.tw-seg.is-lay { stroke-dasharray: 1 !important; animation: tw-draw .7s cubic-bezier(.25, 1, .5, 1) both; }
+.tw-stn.is-new .tw-body, .tw-stn.is-new .tw-ring { transform-box: fill-box; transform-origin: center; animation: tw-stamp-in .55s cubic-bezier(.25, 1, .5, 1); }
+.tw-stn.is-new .tw-pulse { animation: tw-pulse .9s ease-out; }
+
+/* 大區與縣市清單 */
+.tw-map-zones { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 18px; }
+.tw-map-zone { border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 88%, transparent); border-radius: var(--r-sm); padding: 3px 18px; min-height: 40px; transition: background .2s, color .2s; }
+.tw-map-zone.is-active { background: var(--ink); color: var(--paper); }
+.tw-map-below { scroll-margin-top: 12px; }
+.tw-map-below h2 { margin: 0 0 10px; font-size: 26px; }
+.tw-map-counties { display: flex; flex-wrap: wrap; gap: 8px; }
+.tw-map-county { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 90%, transparent); border-radius: var(--r-sm); padding: 4px 14px; min-height: 40px; }
+.tw-map-county span { font: 700 15px var(--f-num); color: var(--rail-ink); }
+.tw-map-county:hover { background: var(--card); border-color: var(--rail); }
+.tw-map-back { border: 0; background: none; color: var(--blue); text-decoration: underline; padding: 0; }
+.tw-map-canvas { height: min(42vh, 420px); min-height: 280px; border: 2px solid var(--ink); border-radius: var(--r-md); margin: 10px 0 18px; z-index: 0; }
+.tw-map-pop a { color: var(--blue); }
+
+@media (max-width: 1000px) {
+  .tw-map-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; justify-items: center; }
+  .tw-map-panel, .tw-map-panel.is-right { justify-items: center; text-align: center; }
+  .tw-map-panel:first-child { grid-template-columns: auto 1fr; align-items: center; gap: 16px; text-align: left; justify-items: start; }
+  .tw-map-svg { height: min(60vh, 540px); }
+  .tw-map-pair { text-align: center; }
+}
+@media (max-width: 640px) {
+  .tw-map-panel:first-child { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+}
+
+/* 首屏下方：清單落在半透明面板上，照片再亮也讀得清楚 */
+.tw-map-below { background: color-mix(in srgb, var(--paper) 82%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: var(--r-lg); padding: 18px 20px 24px; }

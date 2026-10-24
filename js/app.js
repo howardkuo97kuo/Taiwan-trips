@@ -46,6 +46,7 @@ async function render() {
   const { key, params } = parseHash();
   const route = ROUTES[key];
   store.set('route', { name: route.name, params });
+  document.body.dataset.route = route.name; // CSS 用：首頁以外的頁面把背景照片壓淡，文字才清楚
   if (typeof cleanup === 'function') { try { cleanup(); } catch (e) { console.warn(e); } }
   cleanup = null;
   clear(viewEl);
