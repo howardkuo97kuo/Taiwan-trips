@@ -10,7 +10,9 @@ if (!key) {
   console.error('::error::repo secret GOOGLE_PLACES_KEY 尚未設定（Settings > Secrets and variables > Actions）');
   process.exit(1);
 }
-const offset = Number(process.argv[2] ?? 0);
+// offset 可以是逗號分隔的筆數編號（例如 43,109,301），只查那幾筆
+const pick = String(process.argv[2] ?? '0').includes(',') ? process.argv[2].split(',').map(Number) : null;
+const offset = pick ? 0 : Number(process.argv[2] ?? 0);
 const limit = Number(process.argv[3] ?? 50);
 const outFile = process.argv[4] ?? 'out/lookup/result.json';
 
@@ -71,11 +73,12 @@ async function search(q) {
 }
 
 const results = [];
-const slice = list.slice(offset, offset + limit);
-for (const [k, item] of slice.entries()) {
-  const i = offset + k;
+const idx = pick ?? list.slice(offset, offset + limit).map((_, k) => offset + k);
+const slice = idx;
+for (const i of idx) {
+  const item = list[i];
   try {
-    const found = (await search(item.n)).map(summarize);
+    const found = (await search(item.q ?? item.n)).map(summarize);
     const top = found[0] ?? null;
     results.push({
       i,
@@ -98,4 +101,4 @@ mkdirSync(dirname(outFile), { recursive: true });
 writeFileSync(outFile, JSON.stringify(results, null, 1) + '\n');
 const okN = results.filter((r) => r.ok).length;
 const errN = results.filter((r) => r.error).length;
-console.log(`已查 ${results.length} 筆（第 ${offset} 到 ${offset + slice.length - 1} 筆）：吻合 ${okN}、待確認 ${results.length - okN - errN}、錯誤 ${errN}`);
+console.log(`已查 ${results.length} 筆（${pick ? '指定 ' + pick.join('、') : `第 ${offset} 到 ${offset + slice.length - 1}`} 筆）：吻合 ${okN}、待確認 ${results.length - okN - errN}、錯誤 ${errN}`);
