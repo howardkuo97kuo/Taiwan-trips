@@ -88,18 +88,22 @@ const zhYM = (ym) => {
   const mm = mo < 10 ? NUM[mo] : mo === 10 ? '十' : '十' + NUM[mo - 10];
   return ['民', '國', ...y, '年', ...mm, '月'];
 };
+const TK_FULL = 'M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z';
+const TK_HALF = 'M12 2H352L398 48V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z';
 const stampSVG = (ym, place = '', again = false, seat = '', full = false) => {
+  const T = full ? { d: TK_FULL, a: '#f9edcc', b: '#ecd7a2', band: '#1f6f78', edge: '#8a6a3c', hole: [352, 32], chip: '#c4352b' } : { d: TK_HALF, a: '#eef5fc', b: '#c9ddf0', band: '#2b5f8a', edge: '#4f7aa3', hole: [322, 30], chip: '#2b5f8a' };
   const col = zhYM(ym).map((c, i, a) => '<text x="25" y="' + (90 + (i - (a.length - 1) / 2) * 17) + '" text-anchor="middle" font-size="14" fill="#fff6dc">' + c + '</text>').join('');
-  return '<svg class="tk" viewBox="0 0 400 180" aria-hidden="true"><defs><linearGradient id="tkp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9edcc"/><stop offset="1" stop-color="#ecd7a2"/></linearGradient><clipPath id="tkc"><path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z"/></clipPath></defs>'
-    + '<path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z" fill="url(#tkp)" stroke="#8a6a3c" stroke-width="2.5"/>'
-    + '<rect clip-path="url(#tkc)" x="0" y="0" width="48" height="180" fill="#1f6f78"/>' + col
+  return '<svg class="tk" viewBox="0 0 400 180" aria-hidden="true"><defs><linearGradient id="tkp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + T.a + '"/><stop offset="1" stop-color="' + T.b + '"/></linearGradient><clipPath id="tkc"><path d="' + T.d + '"/></clipPath></defs>'
+    + '<path d="' + T.d + '" fill="url(#tkp)" stroke="' + T.edge + '" stroke-width="2.5"/>'
+    + '<rect clip-path="url(#tkc)" x="0" y="0" width="48" height="180" fill="' + T.band + '"/>' + col
     + '<path d="M56 14V166" stroke="#8a6a3c" stroke-width="1.6" stroke-dasharray="4 5"/>'
     + '<text x="70" y="42" font-size="25" font-weight="700" fill="#2a2118">臺灣鐵路局</text><text x="72" y="60" font-size="11" letter-spacing="2.5" fill="#6b4a2a">車票 · TICKET</text>'
     + '<text x="70" y="108" font-size="30" font-weight="700" fill="#2a2118">臺灣</text><path d="M142 98H186M176 90L188 98L176 106" fill="none" stroke="#c4352b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><text x="198" y="108" font-size="30" font-weight="700" fill="#2a2118">' + place + '</text>'
     + '<text x="70" y="146" font-size="12" fill="#6b4a2a">座位</text><text x="104" y="147" font-size="16" font-weight="700" fill="#2a2118">' + seat + '</text>'
     + '<rect x="262" y="64" width="124" height="68" rx="8" fill="#dff0d2" stroke="#6b4a2a" stroke-width="1.6"/><path d="M263 112Q290 76 316 102Q340 78 385 108V131H263Z" fill="#7fb06b"/><circle cx="364" cy="82" r="7" fill="#f2b84b"/><image href="img/train-cut.webp" x="268" y="116" width="112" height="12"/>'
-    + '<circle class="hole" cx="352" cy="32" r="12" fill="var(--card)" stroke="#c4a45e" stroke-width="2.5"/>'
-    + '<rect x="296" y="142" width="90" height="30" rx="6" fill="none" stroke="#c4352b" stroke-width="2.5"/><text x="341" y="164" text-anchor="middle" font-size="19" font-weight="700" fill="#c4352b">' + (full ? '全票' : '半票') + '</text>'
+    + '<circle class="hole" cx="' + T.hole[0] + '" cy="' + T.hole[1] + '" r="12" fill="var(--card)" stroke="' + (full ? '#c4a45e' : '#8fb0d0') + '" stroke-width="2.5"/>'
+    + '<rect x="296" y="142" width="90" height="30" rx="6" fill="none" stroke="' + T.chip + '" stroke-width="2.5"/><text x="341" y="164" text-anchor="middle" font-size="19" font-weight="700" fill="' + T.chip + '">' + (full ? '全票' : '半票') + '</text>'
+    + (full ? '' : '<path d="M352 2L398 48" stroke="#4f7aa3" stroke-width="1.6" stroke-dasharray="4 4"/>')
     + (again ? '<g class="again" transform="rotate(-10 200 140)"><rect x="150" y="124" width="100" height="40" rx="7" fill="#f6e8c3d0" stroke="#c4352b" stroke-width="3.5"/><text x="200" y="154" text-anchor="middle" font-size="26" font-weight="700" fill="#c4352b">再訪</text></g>' : '')
     + '</svg>';
 };
