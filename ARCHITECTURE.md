@@ -48,7 +48,7 @@
 | `data/regions.json` | 地區樹：大區 → 縣市 → 區域（含中心點與縮放） | A（契約檔，改動先回報總管） |
 | `data/places.json` | 唯一的地點來源 | A |
 | `data/staging/import-list.json` | Google 清單匯入的暫存清單（店名、分類、備註、歇業狀態），查到座標前不進 `places.json` | A |
-| `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
+| `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的縣市、`pid`（不取座標；座標改走 OSM），結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js`、`js/places.js`、`js/marks.js` | 首頁地圖、地區瀏覽與篩選、地點詳情、個人標記、兩人對照、點亮台灣 | D |
 | `css/*.css` | 樣式；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |
@@ -91,7 +91,7 @@
 `data/places.json` 是唯一來源，隨網站一起發佈，啟動時載入。評分、評論數、營業時間**不存進 repo**（Places 條款限制長期保存，CI 會擋 `rt`、`rv`、`h`、`oh`），打開地點時由瀏覽器向 Places API 即時查詢，結果只放瀏覽器暫存。
 
 ### 新增與修正地點
-- 初次匯入：Google 地圖清單先放進 `data/staging/import-list.json`（只有店名、分類、備註、歇業標記），由 `lookup-places` 向 Places API 查出座標、縣市、`pid`，A 確認後轉成統一格式寫進 `places.json`；「去過」紀錄同樣由 A 轉入。
+- 初次匯入：Google 地圖清單先放進 `data/staging/import-list.json`（只有店名、分類、備註、歇業標記），由 `lookup-places` 向 Places API 查出縣市、`pid`，座標用 OSM（Nominatim）查，查不到的由 Howard 手動點位置，A 確認後轉成統一格式寫進 `places.json`；「去過」紀錄同樣由 A 轉入。
 - 之後新增：網站的收件匣把連結或店名寫到 Firebase `/inbox`；排程工具查好資料後寫入 `/places`（網站輪詢後合併顯示）；Claude 定期把 `/places` 併回 `places.json`（走 PR）並清掉 Firebase 那份。
 - 修正地點本身（分類、縣市、備註）：走收件匣的「修正」，由 Claude 確認後改 `places.json`；網站只能改自己的標記。
 - 歇業或搬遷：`status` 設為 `closed` 或 `moved`，保留紀錄但預設不顯示、不排進行程。
@@ -121,7 +121,7 @@
 | --- | --- |
 | `read-firebase.yml` | 輸入 `path`（`marks`、`inbox`、`places`、`removed` 或 `all`），把資料放到 `snapshot` 分支的 `live/`，再從該分支讀回 |
 | `write-data.yml` | 輸入 `path`、`expect_ts`、`payload`。只允許約定好的路徑；先備份到 `snapshot` 分支的 `backup/`；現場 `ts` 與 `expect_ts` 不符就拒絕；寫完讀回比對 |
-| `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
+| `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的縣市、`pid`（不取座標），結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
 | `snapshot.yml` | 每天 03:17（台灣時間）把整個資料庫備份到 `snapshot` 分支，也可手動觸發 |
 | `ci.yml` | 每個 PR 與 `main` 推送：資料格式驗證、`node --check`、規則 JSON 檢查、shell 腳本語法 |
 
