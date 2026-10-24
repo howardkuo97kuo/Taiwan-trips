@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（骨架 B 已合併；A 已合併暫存清單與 Places 查詢工具，地點尚未進 `places.json`；D 已開 PR；C、E、F 尚未合併）
+最後更新：2026-10-24（B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除；A 資料進行中；E、F 尚未開始）
 
 ## 一句話
 
@@ -28,8 +28,8 @@
 | --- | --- | --- |
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
 | A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得）暫存在 `data/staging/visited-marks.json`，待寫入 Firebase |
-| C 介面 | `css/*.css` | 進行中：外殼與設計變數已完成（`tokens.css`、`app.css`）；首頁、清單、標記的樣式在後續 PR |
-| D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成第一版（PR 待合併）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
+| C 介面 | `css/*.css` | 已完成：設計變數、外殼、首頁、清單、標記樣式（`tokens.css`、`app.css`、`home.css`、`places.css`、`marks.css`），手機與電腦版、深淺色已驗證；E、F 模組上線時再補 `tw-inbox-`、`tw-trip-` 樣式 |
+| D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已合併：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |
 | F 行程推薦 | `js/itinerary.js`、`data/itineraries/` | 未開始，導覽列不顯示 |
 
@@ -58,7 +58,6 @@
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
-| `demos/*.html` | 首頁風格小樣（A 郵戳集、B 路標、C 點菜單、D 環島鐵路線圖、E 手帳貼紙、F 撕下日曆、G 紅白藍帆布、Mix 環島郵路）：各自單檔、內嵌 `places.json` 與 `regions.json` 的內容、示意標記只存瀏覽器 localStorage（`twDemo-*`），不連 Firebase、不進 `sw.js`；選定風格後會被正式的 `css/*.css` 取代並移除 | C |
 | `scripts/validate.mjs` | 資料格式驗證（CI 守門員，契約檔） | B |
 | `scripts/fb-env.sh`、`scripts/snapshot-commit.sh` | workflow 共用：讀資料庫網址與密鑰、提交到 `snapshot` 分支 | B |
 | `.github/workflows/` | `ci`、`read-firebase`、`write-data`、`snapshot` | B |
