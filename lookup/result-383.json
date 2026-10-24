@@ -1,0 +1,310 @@
+[
+ {
+  "i": 383,
+  "n": "百齡左岸籃球場",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJ_en2hjCvQjQRfrdoktwmXH0",
+   "name": "百齡左岸籃球場",
+   "addr": "111臺北市士林區葫東里",
+   "ll": [
+    25.0847031,
+    121.5131683
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9033137681389369214&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJxU5DFLauQjQRBJqZ0nwSRLo",
+    "name": "百齡籃球場",
+    "addr": "111臺北市士林區福中里通河東街一段125號",
+    "ll": [
+     25.0865121,
+     121.51510370000001
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=13421873116789447172&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   },
+   {
+    "pid": "ChIJV_LH3rWuQjQRcJZh4Auo38s",
+    "name": "百齡左岸河濱公園",
+    "addr": "111臺北市士林區通河東街二段",
+    "ll": [
+     25.087481000000004,
+     121.512733
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=14690645278468445808&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 384,
+  "n": "機車練習",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJu5HcU_qpQjQRgC4lpsvZWC4",
+   "name": "永和機車考照免費練習場",
+   "addr": "234新北市永和區民樂里民樂街39巷23號",
+   "ll": [
+    25.0000181,
+    121.52957300000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3339658592384265856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJP849zKOvQjQRiR5BBNVI6_M",
+    "name": "士林機車練習場",
+    "addr": "111臺北市士林區葫東里通河西街一段76號",
+    "ll": [
+     25.0832864,
+     121.5135341
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=17576222050480103049&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   },
+   {
+    "pid": "ChIJtQgMQx08aTQR9EiaqMy9A0M",
+    "name": "烏日區機車考照練習場",
+    "addr": "414臺中市烏日區湖日里",
+    "ll": [
+     24.1026308,
+     120.62094710000001
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=4828911912170965236&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台中市",
+    "region": "central-taichung"
+   }
+  ],
+  "ok": false
+ },
+ {
+  "i": 385,
+  "n": "蔣老爹愛吃鍋 市民店｜台北東區｜麻辣火鍋",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJXcdndiCrQjQRJ-mlW24VJYU",
+   "name": "蔣老爹愛吃鍋 市民店｜台北東區｜麻辣火鍋",
+   "addr": "106臺北市大安區建安里市民大道四段124號",
+   "ll": [
+    25.0443391,
+    121.55125100000001
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=9594098144910895399&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 386,
+  "n": "萬華世界下午酒場",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ_xa109-pQjQRJqn0isZwWqc",
+   "name": "萬華世界下午酒場",
+   "addr": "108臺北市萬華區福音里三水街70號",
+   "ll": [
+    25.035775100000002,
+    121.50192059999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12059074950275049766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 387,
+  "n": "尋覓蜜烘焙工作室",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJgdo1niatQjQRaoMQ3wb2N9o",
+   "name": "尋覓蜜烘焙工作室",
+   "addr": "114臺北市內湖區麗山街348巷8號右側",
+   "ll": [
+    25.0821875,
+    121.5734123
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15724307133360014186&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 388,
+  "n": "小慧涼麵店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJa0JahjqqQjQRfN2M6PMUG5w",
+   "name": "小慧涼麵店",
+   "addr": "106臺北市大安區芳和里臥龍街151巷10號",
+   "ll": [
+    25.018701099999998,
+    121.5511428
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=11248607532099100028&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 389,
+  "n": "LOST and Found 內湖",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ9XjUMP2tQjQRXVUhaiaZ9u0",
+   "name": "LOST and Found 內湖",
+   "addr": "114臺北市內湖區基湖路3巷11號",
+   "ll": [
+    25.0811533,
+    121.56638179999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=17147061021528118621&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 390,
+  "n": "Supranormal Bakery Cafe 瑞光",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJyyaouZmtQjQRNxjbt8FCH2s",
+   "name": "Supranormal Bakery Cafe 瑞光",
+   "addr": "114臺北市內湖區西湖里瑞光路583巷26號",
+   "ll": [
+    25.080609199999998,
+    121.5682549
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=7718961686117029943&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 391,
+  "n": "福州山公園",
+  "c": "景點",
+  "match": {
+   "pid": "ChIJ-2iGHziqQjQRtIxo8kzMOl8",
+   "name": "福州山公園",
+   "addr": "116臺北市大安區臥龍街195巷",
+   "ll": [
+    25.0160102,
+    121.55484
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=6862021613108890804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 392,
+  "n": "NoneLeft Taichung 台中餐酒館 義式餐廳 Wine Bar",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJq1SLISE9aTQRUvicsvfbgio",
+   "name": "NoneLeft Taichung 台中餐酒館 義式餐廳 Wine Bar",
+   "addr": "403臺中市西區忠誠里精誠八街10巷4號1樓",
+   "ll": [
+    24.1541726,
+    120.6560397
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=3063252553465395282&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台中市",
+   "region": "central-taichung"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 393,
+  "n": "饗宴鐵板燒",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJAQ0fCYTlZzQRF2mnED8WCek",
+   "name": "饗宴鐵板燒",
+   "addr": "268宜蘭縣五結鄉大吉村溪濱路二段263號",
+   "ll": [
+    24.7097995,
+    121.8040448
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=16791977145745762583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "宜蘭縣",
+   "region": "east-yilan"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 394,
+  "n": "黃小妹地攤火鍋－市民店",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJ574rWaurQjQRu6ikD7bEFI4",
+   "name": "黃小妹地攤火鍋－市民店",
+   "addr": "106臺北市大安區光武里市民大道四段12號",
+   "ll": [
+    25.0446428,
+    121.5444543
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=10238024139145521339&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJfdF4YaipQjQRWCwFI3Gde1I",
+    "name": "黃小妹地攤火鍋－四川重慶火鍋店｜麻辣鍋推薦｜宵夜｜開到凌晨｜台北中山區｜捷運中山站",
+    "addr": "10491臺北市中山區正得里中山北路一段105巷16-1號",
+    "ll": [
+     25.0504631,
+     121.5241751
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=5943517242489908312&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "台北市",
+    "region": "north-taipei"
+   }
+  ],
+  "ok": true
+ }
+]
