@@ -37,7 +37,12 @@ const MARK_FILTERS = [
 ];
 
 // 篩選條件在換頁時保留（只存記憶體）
-const filters = { cats: new Set(), mark: 'all', q: '' };
+const filters = { cats: new Set(), mark: 'all', q: '', live: 'all', sort: 'default' };
+
+// 一次最多替目前清單查幾筆 Google 即時資料（控制 Places 費用）、同時幾個請求
+const LIVE_BATCH = 40;
+const LIVE_PARALLEL = 4;
+const LIVE_TTL = 30 * 60 * 1000; // 營業中會隨時間變，超過 30 分鐘就當沒查過
 
 function passMark(store, p) {
   if (filters.mark === 'all') return true;
@@ -54,9 +59,10 @@ function passMark(store, p) {
   }
 }
 
-function passFilters(store, p) {
+function passFilters(store, p, { skipLive = false } = {}) {
   if (filters.cats.size && ![p.c, p.c2].flat().some((c) => c && filters.cats.has(c))) return false;
   if (!passMark(store, p)) return false;
+  if (!skipLive && filters.live === 'open' && cachedLive(p.pid)?.currentOpeningHours?.openNow !== true) return false;
   const q = filters.q.trim().toLowerCase();
   if (q && !`${p.n} ${p.a ?? ''} ${p.note ?? ''}`.toLowerCase().includes(q)) return false;
   return true;
@@ -140,6 +146,10 @@ export function listView(ctx, places, { limit = 60 } = {}) {
   const drawList = () => {
     clear(listEl);
     const rows = places.filter((p) => passFilters(store, p));
+    if (filters.sort === 'rating') {
+      const r = (p) => cachedLive(p.pid)?.rating ?? -1;
+      rows.sort((a, b) => r(b) - r(a));
+    }
     const head = h('p', { class: 'tw-hint tw-place-count' }, `${rows.length} 個地點`);
     if (!rows.length) {
       listEl.append(head, h('p', { class: 'tw-empty' }, '沒有符合的地點，換個篩選看看。'));
@@ -173,7 +183,40 @@ export function listView(ctx, places, { limit = 60 } = {}) {
     MARK_FILTERS.map(([v, label]) => h('option', { value: v, selected: v === filters.mark }, label)));
   markSel.addEventListener('change', () => { filters.mark = markSel.value; shown = limit; drawList(); });
 
-  root.append(h('div', { class: 'tw-place-filters' }, search, markSel), catRow, listEl);
+  const liveSel = h('select', { class: 'tw-place-mark-filter', 'aria-label': '營業狀態篩選' },
+    [['all', '不限營業'], ['open', '現在營業（已查詢的）']].map(([v, label]) => h('option', { value: v, selected: v === filters.live }, label)));
+  liveSel.addEventListener('change', () => { filters.live = liveSel.value; shown = limit; drawList(); });
+  const sortSel = h('select', { class: 'tw-place-mark-filter', 'aria-label': '排序' },
+    [['default', '預設排序'], ['rating', '評分高到低（已查詢的）']].map(([v, label]) => h('option', { value: v, selected: v === filters.sort }, label)));
+  sortSel.addEventListener('change', () => { filters.sort = sortSel.value; shown = limit; drawList(); });
+
+  // 營業中與評分要向 Google 即時查；不自動全查，按了才替目前清單前 LIVE_BATCH 筆查（只放這次瀏覽）
+  const key = ctx.config?.google?.placesKey;
+  const liveBtn = key && h('button', { type: 'button', class: 'tw-place-more tw-place-livebtn' }, '查詢這批的營業狀態與評分');
+  let busy = false;
+  if (liveBtn) liveBtn.addEventListener('click', async () => {
+    if (busy) return;
+    const todo = places.filter((p) => p.pid && passFilters(store, p, { skipLive: true }) && !cachedLive(p.pid)).slice(0, LIVE_BATCH);
+    if (!todo.length) { liveBtn.textContent = '這批都查過了'; return; }
+    busy = true;
+    let done = 0;
+    const tick = () => { liveBtn.textContent = `查詢中 ${done}／${todo.length}…`; };
+    tick();
+    const queue = [...todo];
+    await Promise.all(Array.from({ length: LIVE_PARALLEL }, async () => {
+      while (queue.length) {
+        const p = queue.shift();
+        try { await livePlace(p.pid, key); } catch { /* 單筆失敗略過 */ }
+        done++; tick();
+      }
+    }));
+    busy = false;
+    liveBtn.textContent = `已查 ${todo.length} 筆，可用「現在營業」篩選或評分排序（最多一次 ${LIVE_BATCH} 筆，會用到 Google 查詢額度）`;
+    drawList();
+  });
+  if (liveBtn) liveBtn.textContent = `查詢這批的營業狀態與評分（一次最多 ${LIVE_BATCH} 筆，會用到 Google 查詢額度）`;
+
+  root.append(h('div', { class: 'tw-place-filters' }, search, markSel, liveSel, sortSel), catRow, liveBtn || '', listEl);
   drawCats();
   drawList();
   const off = store.subscribe('marks', drawList);
@@ -216,10 +259,19 @@ function mountRegion(el, ctx) {
 
 // ── Google 即時資料（評分、營業時間）──
 // 條款不允許長期保存，只放 sessionStorage；沒填瀏覽器用金鑰就只給 Google 地圖連結。
+// 讀已查過且還新鮮的結果（沒有就回 null）；清單的「現在營業」篩選與評分排序只看這些。
+function cachedLive(pid) {
+  if (!pid) return null;
+  try {
+    const hit = JSON.parse(sessionStorage.getItem(`twLive:${pid}`) ?? 'null');
+    return hit && Date.now() - (hit._t ?? 0) < LIVE_TTL ? hit : null;
+  } catch { return null; }
+}
+
 async function livePlace(pid, key) {
   const ck = `twLive:${pid}`;
   try {
-    const hit = JSON.parse(sessionStorage.getItem(ck) ?? 'null');
+    const hit = cachedLive(pid);
     if (hit) return hit;
   } catch { /* 無痕模式等 */ }
   const r = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(pid)}?languageCode=zh-TW`, {
@@ -230,6 +282,7 @@ async function livePlace(pid, key) {
   });
   if (!r.ok) throw new Error(`places ${r.status}`);
   const d = await r.json();
+  d._t = Date.now();
   try { sessionStorage.setItem(ck, JSON.stringify(d)); } catch { /* 略過 */ }
   return d;
 }
