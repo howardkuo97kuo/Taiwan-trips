@@ -42,3 +42,10 @@
 @media (prefers-reduced-motion: reduce) { .tw-thumb img { animation: none; } }
 @media (max-width: 900px) { .tw-thumbs .tw-thumb:nth-child(n+3) { display: none; } }
 @media (max-width: 640px) { .tw-thumb { width: 72px; height: 54px; } .tw-thumbs .tw-thumb { width: 92px; height: 69px; } .tw-gallery-nav { display: none; } .tw-gallery-chip { width: 76px; height: 52px; } .tw-lightbox-nav { width: 44px; height: 44px; } }
+
+/* 卡片上的輪播：比詳情矮、不放縮圖列 */
+.tw-gallery.is-card { margin: 0; border-width: 2px; }
+.tw-gallery.is-card .tw-gallery-item { height: clamp(150px, 18vw, 220px); }
+.tw-gallery.is-card .tw-gallery-empty { aspect-ratio: auto; height: clamp(150px, 18vw, 220px); }
+.tw-gallery.is-card .tw-gallery-nav { width: 34px; height: 34px; font-size: 20px; }
+@media (max-width: 640px) { .tw-gallery.is-card .tw-gallery-nav { display: grid; place-items: center; width: 30px; height: 30px; } }

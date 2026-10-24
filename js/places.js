@@ -1,7 +1,7 @@
 // 地區瀏覽、篩選、地點詳情（路由 #/r/<regionId>、#/p/<placeId>）。模組 D。
 // 輸出 placeCard、listView、findRegion、inRegion 給 map.js 用。
 import { catIcon } from './icons.js';
-import { thumb, carousel } from './photos.js';
+import { carousel } from './photos.js';
 import { markBar, markCompare, statusOf, quickMark, takeFx, likeOf } from './marks.js';
 import { loadGoogle, googleOf, googleReady, onGoogle, isOpenNow, todayZh, updatedLabel, dateLabel, staleDays, STALE_AFTER_DAYS, ago } from './google.js';
 
@@ -90,7 +90,6 @@ export function placeCard(ctx, p) {
   const county = findRegion(store.get('regions'), p.region)?.county?.n ?? '';
   const pair = s.apong.want && s.baobao.want;
   const fx = takeFx(p.id);
-  let media;
   const name = (id) => store.whoName(id);
 
   const dot = (id, mine) => {
@@ -142,7 +141,7 @@ export function placeCard(ctx, p) {
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')),
-    (media = thumb(ctx, p, { count: 3 })) && h('div', { class: 'tw-place-media' }, media),
+    p.pid && ctx.config?.google?.placesKey && h('div', { class: 'tw-place-media' }, carousel(ctx, p, { card: true })),
     googleBlock(ctx, p));
 }
 
@@ -154,7 +153,7 @@ function googleBlock(ctx, p) {
   if (!googleReady()) { box.append(h('p', { class: 'tw-hint' }, '載入 Google 資料…')); return box; }
   const g = googleOf(p.pid);
   if (!g) { box.append(h('p', { class: 'tw-hint' }, '還沒有這個地點的 Google 資料（每週更新一次）。')); return box; }
-  box.append(...liveContent(ctx, p, g, { compact: true }));
+  box.append(...liveContent(ctx, p, g, { compact: true }).filter(Boolean));
   return box;
 }
 
@@ -322,6 +321,8 @@ function liveContent(ctx, p, g, { compact = false } = {}) {
   const original = !compact && revs.length > 0 ? h('section', { class: 'tw-review-original' },
     h('h3', {}, `Google 實際評論（${revs.length} 則）`), h('div', { class: 'tw-reviews' }, revs.map(review))) : null;
 
+  if (compact) return compactContent(ctx, { g, closed, open, rating, address, hours, aiOrHint, note, gmap });
+
   return [
     closed ? h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`) : null,
     h('div', { class: 'tw-live-grid' }, rating, address, hours),
@@ -330,6 +331,28 @@ function liveContent(ctx, p, g, { compact = false } = {}) {
     note,
     h('p', { class: 'tw-hint' }, '想看全部評論請', h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '到 Google 地圖'), '。資料來自 Google 地圖。'),
   ];
+}
+
+// 卡片版三層：第一層（評分、營業狀態、兩行評語）永遠顯示，其餘點「更多資訊」就地展開
+function compactContent(ctx, { g, closed, open, rating, address, hours, aiOrHint, note, gmap }) {
+  const { h } = ctx;
+  const state = closed ? h('span', { class: 'tw-live-open' }, closed)
+    : open != null && h('span', { class: `tw-live-open${open ? ' is-open' : ''}`, title: '依預存的營業時段推算，沒有計入國定假日與臨時公休' }, open ? '現在營業中' : '現在休息中');
+  const sum = g.rating ? h('div', { class: 'tw-live-sum' },
+    h('strong', { class: 'tw-live-sum-n' }, g.rating.toFixed(1)),
+    h('span', { class: 'tw-live-stars', role: 'img', 'aria-label': `${g.rating} 顆星` }, starText(g.rating)),
+    h('span', { class: 'tw-hint' }, `${(g.n ?? 0).toLocaleString('zh-TW')} 則`), state)
+    : state && h('div', { class: 'tw-live-sum' }, state);
+  const more = h('div', { class: 'tw-live-more', hidden: true },
+    h('div', { class: 'tw-live-grid' }, address, hours), note,
+    h('p', { class: 'tw-hint' }, '想看全部評論請', h('a', { href: gmap, target: '_blank', rel: 'noopener' }, '到 Google 地圖'), '。資料來自 Google 地圖。'));
+  const ai = aiOrHint.classList?.contains('tw-ai') ? aiOrHint : null;
+  if (ai) ai.classList.add('is-clamp');
+  const btn = h('button', { type: 'button', class: 'tw-live-link tw-live-toggle', 'aria-expanded': 'false', onclick: () => {
+    const on = more.hidden; more.hidden = !on; ai?.classList.toggle('is-clamp', !on);
+    btn.textContent = on ? '收合' : '更多資訊'; btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  } }, '更多資訊');
+  return [closed ? h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`) : null, sum, aiOrHint, btn, more];
 }
 
 // 詳情頁：完整顯示
@@ -342,7 +365,7 @@ function liveBox(ctx, p) {
     if (!googleReady()) { box.append(h('p', { class: 'tw-hint' }, '載入 Google 資料…')); return; }
     const g = googleOf(p.pid);
     if (!g) { box.append(h('p', { class: 'tw-hint' }, '還沒有這個地點的 Google 資料（每週更新一次），可先用上面的連結看。')); return; }
-    box.append(h('h2', {}, 'Google 資料'), ...liveContent(ctx, p, g));
+    box.append(h('h2', {}, 'Google 資料'), ...liveContent(ctx, p, g).filter(Boolean));
   };
   draw();
   loadGoogle();

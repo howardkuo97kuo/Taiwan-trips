@@ -127,3 +127,13 @@
 .tw-ai-text { margin: 2px 0 4px; line-height: 1.7; overflow-wrap: anywhere; }
 .tw-ai .tw-hint { margin: 0; }
 .tw-review-original { margin-top: 12px; }
+
+/* ── 卡片精簡：第一層一行、其餘點「更多資訊」展開 ── */
+.tw-live-sum { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin-bottom: 8px; }
+.tw-live-sum-n { font: 700 24px/1 var(--f-num); }
+.tw-place-g .tw-ai.is-clamp .tw-ai-text { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.tw-place-g .tw-ai.is-clamp .tw-hint { display: none; }
+.tw-live-toggle { display: block; margin-top: 4px; }
+.tw-live-more { margin-top: 8px; }
+.tw-live-more[hidden] { display: none; }
+.tw-place-g { padding: 10px 16px 12px; }
