@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-23（骨架 B 已合併；A、C、D、E、F 尚未合併）
+最後更新：2026-10-24（骨架 B 已合併；A 已合併暫存清單與 Places 查詢工具，地點尚未進 `places.json`；C、D、E、F 尚未合併）
 
 ## 一句話
 
@@ -91,7 +91,7 @@
 `data/places.json` 是唯一來源，隨網站一起發佈，啟動時載入。評分、評論數、營業時間**不存進 repo**（Places 條款限制長期保存，CI 會擋 `rt`、`rv`、`h`、`oh`），打開地點時由瀏覽器向 Places API 即時查詢，結果只放瀏覽器暫存。
 
 ### 新增與修正地點
-- 初次匯入：Google 地圖清單與「去過」紀錄由 A 轉成統一格式寫進 `places.json`。
+- 初次匯入：Google 地圖清單先放進 `data/staging/import-list.json`（只有店名、分類、備註、歇業標記），由 `lookup-places` 向 Places API 查出座標、縣市、`pid`，A 確認後轉成統一格式寫進 `places.json`；「去過」紀錄同樣由 A 轉入。
 - 之後新增：網站的收件匣把連結或店名寫到 Firebase `/inbox`；排程工具查好資料後寫入 `/places`（網站輪詢後合併顯示）；Claude 定期把 `/places` 併回 `places.json`（走 PR）並清掉 Firebase 那份。
 - 修正地點本身（分類、縣市、備註）：走收件匣的「修正」，由 Claude 確認後改 `places.json`；網站只能改自己的標記。
 - 歇業或搬遷：`status` 設為 `closed` 或 `moved`，保留紀錄但預設不顯示、不排進行程。
@@ -121,6 +121,7 @@
 | --- | --- |
 | `read-firebase.yml` | 輸入 `path`（`marks`、`inbox`、`places`、`removed` 或 `all`），把資料放到 `snapshot` 分支的 `live/`，再從該分支讀回 |
 | `write-data.yml` | 輸入 `path`、`expect_ts`、`payload`。只允許約定好的路徑；先備份到 `snapshot` 分支的 `backup/`；現場 `ts` 與 `expect_ts` 不符就拒絕；寫完讀回比對 |
+| `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
 | `snapshot.yml` | 每天 03:17（台灣時間）把整個資料庫備份到 `snapshot` 分支，也可手動觸發 |
 | `ci.yml` | 每個 PR 與 `main` 推送：資料格式驗證、`node --check`、規則 JSON 檢查、shell 腳本語法 |
 
@@ -139,7 +140,8 @@
 | Firebase 資料庫網址 | `data/config.json` 的 `firebase.dbUrl` | 公開 |
 | Firebase 密鑰 | GitHub Secret `FIREBASE_SECRET` | 由 Howard 自己放進 Settings；不 commit、不印出、不貼聊天 |
 | Firebase 規則 | repo 的 `firebase-rules.json` 存檔，主控台才是生效的那份 | 改了要由 Howard 手動貼上 |
-| Google Places 金鑰 | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；目前尚未填 |
+| Google Places 金鑰（瀏覽器用） | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；目前尚未填 |
+| Google Places 金鑰（匯入工具用） | GitHub Secret `GOOGLE_PLACES_KEY` | 只給 `lookup-places` workflow 用；由 Howard 自己放進 Settings，不 commit、不印出、不貼聊天 |
 
 ## 已知限制與取捨
 
