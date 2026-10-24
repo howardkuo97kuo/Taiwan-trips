@@ -18,14 +18,15 @@ function throttle(fn) {
   });
 }
 
-export function placePhotos(pid, key) {
+// opts.strict：失敗時丟錯（詳情頁要顯示原因）；預設失敗回空陣列（縮圖安靜略過）
+export function placePhotos(pid, key, { strict = false } = {}) {
   if (!pid || !key) return Promise.resolve([]);
   const ck = `tw-photos:${pid}`;
   try {
     const hit = sessionStorage.getItem(ck);
     if (hit) return Promise.resolve(JSON.parse(hit));
   } catch { /* 無痕模式等 */ }
-  if (pending.has(pid)) return pending.get(pid);
+  if (pending.has(pid)) return strict ? pending.get(pid) : pending.get(pid).catch(() => []);
   const req = throttle(async () => {
     const r = await fetch(`${API}/places/${encodeURIComponent(pid)}?languageCode=zh-TW`, {
       headers: { 'X-Goog-Api-Key': key, 'X-Goog-FieldMask': 'photos.name,photos.authorAttributions' },
@@ -36,9 +37,9 @@ export function placePhotos(pid, key) {
     }));
     try { sessionStorage.setItem(ck, JSON.stringify(list)); } catch { /* 略過 */ }
     return list;
-  }).catch(() => []).finally(() => pending.delete(pid));
+  }).finally(() => pending.delete(pid));
   pending.set(pid, req);
-  return req;
+  return strict ? req : req.catch(() => []);
 }
 
 const src = (name, key, w) => `${API}/${name}/media?maxWidthPx=${w}&key=${encodeURIComponent(key)}`;
@@ -67,11 +68,11 @@ export function carousel(ctx, p) {
   const key = ctx.config?.google?.placesKey;
   const { h } = ctx;
   const root = h('section', { class: 'tw-gallery', 'aria-label': `${p.n}的照片` });
-  const ph = h('div', { class: 'tw-gallery-empty' }, catIcon(p.c), h('span', {}, key && p.pid ? '照片載入中…' : '還沒有照片'));
+  const ph = h('div', { class: 'tw-gallery-empty' }, catIcon(p.c), h('span', {}, key ? (p.pid ? '照片載入中…' : '這個地點沒有 Google 地點代碼') : '尚未設定 Google 金鑰'));
   root.append(ph);
   if (!key || !p.pid) return root;
   let alive = true;
-  placePhotos(p.pid, key).then((list) => {
+  placePhotos(p.pid, key, { strict: true }).then((list) => {
     if (!alive) return;
     if (!list.length) { ph.lastChild.textContent = '這個地點沒有 Google 照片'; return; }
     const track = h('div', { class: 'tw-gallery-track', tabindex: '0' }, list.map((x, i) =>
@@ -90,6 +91,8 @@ export function carousel(ctx, p) {
       list.length > 1 && h('button', { type: 'button', class: 'tw-gallery-nav is-next', 'aria-label': '下一張', onclick: () => step(1) }, '›'),
       list.length > 1 && dots);
     mark();
+  }).catch((e) => {
+    if (alive) ph.lastChild.textContent = `照片查詢失敗（${e.message}）`;
   });
   root.destroy = () => { alive = false; };
   return root;
