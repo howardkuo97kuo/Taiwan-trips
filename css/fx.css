@@ -1,0 +1,58 @@
+/* 圖示、進場動畫、回饋、空狀態插圖。模組 C。
+   圖示用 CSS mask（導覽、空狀態、載入）與 js/icons.js 的內嵌 SVG（分類）。動態全部尊重 app.css 的減少動態規則。 */
+
+/* ── 分類圖示 ── */
+.tw-ico { display: inline-flex; width: 1.15em; height: 1.15em; flex: none; vertical-align: -.2em; }
+.tw-ico svg { width: 100%; height: 100%; }
+.tw-place-chip, .tw-place-cat { display: inline-flex; align-items: center; gap: 6px; }
+.tw-place-chip .tw-ico { color: var(--rail-ink); transition: transform .25s cubic-bezier(.25, 1, .5, 1); }
+.tw-place-chip:hover .tw-ico { transform: rotate(-8deg) scale(1.15); }
+.tw-place-chip.is-on .tw-ico { color: inherit; }
+.tw-place-stub .tw-ico { width: 26px; height: 26px; color: var(--rail-ink); margin-bottom: 2px; }
+
+/* ── 導覽圖示 ── */
+.tw-nav-item::before { content: ""; width: 1.15em; height: 1.15em; margin-right: 6px; flex: none; background: currentColor;
+  -webkit-mask: var(--ico) center / contain no-repeat; mask: var(--ico) center / contain no-repeat; }
+.tw-nav-item[href="#/"] { --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4 3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14'/%3E%3C/svg%3E"); }
+.tw-nav-item[href="#/compare"] { --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3Ccircle cx='16' cy='8' r='3'/%3E%3Cpath d='M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5'/%3E%3C/svg%3E"); }
+.tw-nav-item[href="#/inbox"] { --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 13l3-8h12l3 8v6H3zM3 13h5l1 3h6l1-3h5'/%3E%3C/svg%3E"); }
+@media (max-width: 760px) {
+  .tw-nav-item { flex-direction: column; gap: 2px; font-size: 13px; }
+  .tw-nav-item::before { margin: 0; width: 22px; height: 22px; }
+}
+
+/* ── 進場：換頁淡入上滑、清單車票依序出現 ── */
+@keyframes tw-rise { from { opacity: 0; transform: translateY(14px); } }
+.tw-view > * { animation: tw-rise .4s cubic-bezier(.25, 1, .5, 1) both; }
+.tw-place-list > .tw-place-card { animation: tw-rise .45s cubic-bezier(.25, 1, .5, 1) both; }
+.tw-place-list > .tw-place-card:nth-child(2) { animation-delay: 40ms; }
+.tw-place-list > .tw-place-card:nth-child(3) { animation-delay: 80ms; }
+.tw-place-list > .tw-place-card:nth-child(4) { animation-delay: 120ms; }
+.tw-place-list > .tw-place-card:nth-child(5) { animation-delay: 160ms; }
+.tw-place-list > .tw-place-card:nth-child(n+6) { animation-delay: 200ms; }
+
+/* ── 回饋：車票浮起、按鈕按下、雙人票閃光 ── */
+.tw-place-card { transition: transform .25s cubic-bezier(.25, 1, .5, 1), box-shadow .25s; }
+@media (hover: hover) {
+  .tw-place-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px -12px #0007; }
+  .tw-place-card.is-pair:hover { box-shadow: 0 0 0 3px var(--gold), 0 10px 22px -12px #0007; }
+  .tw-map-county:hover, .tw-place-kid:hover, .tw-map-zone:hover, .tw-place-chip:hover { transform: translateY(-1px); }
+}
+.tw-map-county, .tw-place-kid, .tw-map-zone, .tw-place-chip, .tw-mark-toggle, .tw-nav-item { transition: transform .15s, background .2s, color .2s, border-color .2s; }
+button:active:not(:disabled):not(.tw-mark-stamp), .tw-nav-item:active, .tw-place-kid:active { transform: scale(.95); }
+.tw-mark-dot.is-on { box-shadow: 0 0 0 4px color-mix(in srgb, var(--rail) 25%, transparent); }
+.tw-mark-dot { transition: background .2s, transform .2s cubic-bezier(.3, 1.8, .5, 1), box-shadow .3s; }
+.tw-mark-star { transition: transform .2s cubic-bezier(.3, 1.8, .5, 1), color .2s; }
+.tw-mark-star:hover { transform: scale(1.25) rotate(-8deg); }
+.tw-place-pair { background-image: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .65) 50%, transparent 65%); background-size: 250% 100%; background-repeat: no-repeat;
+  background-color: var(--gold); animation: tw-sheen 3.5s ease-in-out 1s infinite; }
+@keyframes tw-sheen { from { background-position: 130% 0; } 40%, to { background-position: -60% 0; } }
+.tw-place-pair.is-fresh { animation: tw-tab .5s cubic-bezier(.25, 1, .5, 1), tw-sheen 3.5s ease-in-out 1s infinite; }
+
+/* ── 載入與空狀態插圖 ── */
+.tw-loading::before { width: 40px; height: 40px; border: 0; border-radius: 0; background: var(--rail);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 3 3 10.5l7 2.5 2.5 7zM10 13l11-10'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 3 3 10.5l7 2.5 2.5 7zM10 13l11-10'/%3E%3C/svg%3E") center / contain no-repeat; animation: tw-fly 1.6s ease-in-out infinite; }
+@keyframes tw-fly { 0%, 100% { transform: translate(-14px, 4px) rotate(-6deg); } 50% { transform: translate(14px, -6px) rotate(6deg); } }
+.tw-empty::before { content: ""; display: block; width: 52px; height: 52px; margin: 0 auto 10px; background: var(--muted); opacity: .75;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z'/%3E%3Ccircle cx='12' cy='9' r='2.6'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z'/%3E%3Ccircle cx='12' cy='9' r='2.6'/%3E%3C/svg%3E") center / contain no-repeat; animation: tw-bob 2.4s ease-in-out infinite; }
+@keyframes tw-bob { 50% { transform: translateY(-6px); } }
