@@ -27,7 +27,7 @@
 | 模組 | 範圍 | 狀態 |
 | --- | --- | --- |
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
-| A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 目前是空的 |
+| A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 目前是空的，等 Places 查詢補座標後匯入 |
 | C 介面 | `css/*.css` | 未開始（`index.html` 已預留 `css/app.css`） |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 未開始，畫面顯示「尚未完成」 |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |
@@ -47,6 +47,8 @@
 | `data/config.json` | 站名、前綴、時區、身分、分類、Firebase 網址、Google 金鑰欄位、地圖預設視角 | A |
 | `data/regions.json` | 地區樹：大區 → 縣市 → 區域（含中心點與縮放） | A（契約檔，改動先回報總管） |
 | `data/places.json` | 唯一的地點來源 | A |
+| `data/staging/import-list.json` | Google 清單匯入的暫存清單（店名、分類、備註、歇業狀態），查到座標前不進 `places.json` | A |
+| `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js`、`js/places.js`、`js/marks.js` | 首頁地圖、地區瀏覽與篩選、地點詳情、個人標記、兩人對照、點亮台灣 | D |
 | `css/*.css` | 樣式；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |

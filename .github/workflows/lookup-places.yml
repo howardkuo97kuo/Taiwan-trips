@@ -1,0 +1,34 @@
+name: lookup-places
+
+on:
+  workflow_dispatch:
+    inputs:
+      offset:
+        description: 從暫存清單第幾筆開始（從 0 算）
+        default: '0'
+      limit:
+        description: 這次查幾筆
+        default: '50'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lookup-places
+
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 用 Places API 查地點，存到 snapshot 分支的 lookup/
+        env:
+          GOOGLE_PLACES_KEY: ${{ secrets.GOOGLE_PLACES_KEY }}
+          INPUT_OFFSET: ${{ inputs.offset }}
+          INPUT_LIMIT: ${{ inputs.limit }}
+        run: |
+          node tools/places-lookup.mjs "$INPUT_OFFSET" "$INPUT_LIMIT" "out/lookup/result-$INPUT_OFFSET.json"
+          bash scripts/snapshot-commit.sh out "lookup-places: $INPUT_OFFSET + $INPUT_LIMIT"
