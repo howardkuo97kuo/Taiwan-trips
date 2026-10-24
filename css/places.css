@@ -137,3 +137,35 @@
 .tw-live-more { margin-top: 8px; }
 .tw-live-more[hidden] { display: none; }
 .tw-place-g { padding: 10px 16px 12px; }
+
+/* ── 卡片緊湊版型：左圖右文 ──
+   電腦單欄：車票 ｜ 照片 ｜ 資訊 ｜ 想去 ｜ 去過；窄螢幕與雙欄：照片在左、資訊在右，標記按鈕在下一列 */
+.tw-place-card { grid-template-columns: 84px minmax(0, 1fr) auto auto; grid-template-areas: "stub mid want stamp" "g g g g"; }
+.tw-place-card.has-media { grid-template-columns: 84px 148px minmax(0, 1fr) auto auto; grid-template-areas: "stub media mid want stamp" "g g g g g"; }
+.tw-place-card .tw-place-stub { grid-area: stub; }
+.tw-place-card .tw-place-media { grid-area: media; padding: 12px 0 12px 12px; }
+.tw-place-card .tw-place-mid { grid-area: mid; }
+.tw-place-card .tw-mark-want { grid-area: want; }
+.tw-place-card .tw-mark-stampzone { grid-area: stamp; }
+.tw-place-card .tw-place-g { grid-area: g; }
+.tw-place-card .tw-place-media .tw-gallery { height: 100%; min-height: 124px; }
+.tw-place-card .tw-gallery.is-card .tw-gallery-track, .tw-place-card .tw-gallery.is-card .tw-gallery-item, .tw-place-card .tw-gallery.is-card .tw-gallery-empty { height: 100%; min-height: 124px; aspect-ratio: auto; }
+.tw-place-card .tw-gallery.is-card .tw-gallery-item figcaption { font-size: 10px; padding: 8px 6px 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tw-place-card .tw-gallery.is-card .tw-gallery-nav { width: 26px; height: 26px; font-size: 16px; }
+.tw-place-card .tw-gallery.is-card .tw-gallery-dots { top: 5px; gap: 3px; }
+.tw-place-card .tw-gallery.is-card .tw-gallery-dots i { width: 5px; height: 5px; }
+@media (max-width: 640px), (min-width: 1100px) {
+  .tw-place-card { grid-template-columns: 62px minmax(0, 1fr) auto; grid-template-areas: "stub mid mid" "g g g" "want want stamp"; }
+  .tw-place-card.has-media { grid-template-columns: 62px 112px minmax(0, 1fr) auto; grid-template-areas: "stub media mid mid" "g g g g" "want want want stamp"; }
+  .tw-place-card::before, .tw-place-card::after { left: 51px; }
+  .tw-place-card .tw-place-media { padding: 10px 0 10px 10px; }
+  .tw-place-card .tw-place-mid { padding: 10px 12px; }
+  .tw-place-card .tw-mark-want { flex-direction: row; justify-content: space-between; border-top: 2px dashed var(--line); padding: 6px 14px; }
+  .tw-place-card .tw-mark-stampzone { width: auto; flex-direction: row; gap: 8px; border-left: 2px dashed var(--line); border-top: 2px dashed var(--line); padding: 6px 12px; }
+  .tw-place-card .tw-mark-stamp, .tw-place-card .tw-mark-stamp-empty { width: 56px; height: 56px; }
+}
+/* 電腦寬螢幕：一列放兩張卡 */
+@media (min-width: 1100px) {
+  .tw-place-list { max-width: 1240px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; align-items: start; }
+  .tw-place-list > :not(.tw-place-card) { grid-column: 1 / -1; }
+}
