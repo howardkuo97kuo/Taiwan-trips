@@ -1,0 +1,31 @@
+name: write-google-ai
+
+# 把 AI 整理的評語寫進 Firebase /google/{pid}/ai（只寫這一個欄位）。
+# payload 範例：{"ChIJxxxx": {"t": "一小段評語", "n": 5}}；一次建議不超過 100 筆。
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: 'JSON：{"<pid>": {"t": "評語（最多 200 字）", "n": 整理自幾則評論}, ...}'
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firebase-io
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 寫入 AI 評語
+        env:
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+          INPUT_PAYLOAD: ${{ inputs.payload }}
+        run: node tools/write-google-ai.mjs

@@ -65,6 +65,7 @@
 | `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
 | `js/google.js` | Google 地點資料（預存版）：進站時從 Firebase `/google` 抓一次（讀進記憶體），提供 `googleOf(pid)`、`isOpenNow`（用預存的營業時段算）、`updatedLabel`、`staleDays`、`ago`；畫面一定要顯示「上次更新」，超過 10 天加警語 | D |
 | `tools/google-refresh.mjs`、`.github/workflows/refresh-google.yml` | 每週一凌晨（台北 03:00）也可手動：用伺服器端金鑰 `GOOGLE_PLACES_KEY` 向 Places API 查全部地點的評分、評論數、地址、營業時間、最多 5 則評論，PATCH 進 Firebase `/google/{pid}`；失敗的保留舊資料；需 secret `GOOGLE_PLACES_KEY`、`FIREBASE_SECRET` | E |
+| `tools/write-google-ai.mjs`、`.github/workflows/write-google-ai.yml` | 把 AI 整理的一小段評語寫進 Firebase `/google/{pid}/ai`（`{t, n, at}`，只寫這個欄位、每筆最多 200 字、pid 必須在 `places.json`）；`refresh-google` 改成逐欄位更新，所以每週更新不會蓋掉評語；網站卡片只顯示這段評語，詳情頁才收著 Google 原始評論 | E |
 | `tools/merge-places.mjs` | 把 `lookup-places` 的結果併進 `data/places.json`（只收吻合的、pid 重複的略過、id 規則同 A），並印出要把收件匣標成 `done`／`dup` 的 id | E |
 | `css/inbox.css` | 收件匣的基本樣式（E 先放一份，只用 `tw-inbox-` class，C 可接手調整） | E（C 可改） |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
@@ -146,6 +147,7 @@
 | `write-data.yml` | 輸入 `path`、`expect_ts`、`payload`。只允許約定好的路徑；先備份到 `snapshot` 分支的 `backup/`；現場 `ts` 與 `expect_ts` 不符就拒絕；寫完讀回比對 |
 | `write-marks-batch.yml` | 批次合併寫入 `/marks/{apong\|baobao}`（模組 A 匯入「去過」用）。輸入 `file`（`data/staging/*.json`）或 `payload`，形狀 `{apong:{placeId:mark}, baobao:{…}}`，加 `mode`：`skip`（預設，現場已有的 placeId 不動）或 `overwrite`。邏輯在 `scripts/write-marks-batch.sh`：先驗每筆欄位（同 `firebase-rules.json`），備份現場到 `snapshot` 分支的 `backup/`，PATCH，讀回確認寫入的與沒動的都正確 |
 | `lookup-places.yml` | 模組 A 的一次性匯入工具：用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`（需 repo secret `GOOGLE_PLACES_KEY`） |
+| `write-google-ai.yml` | 輸入 `payload`（`{pid: {t, n}}`），只寫 `/google/{pid}/ai` |
 | `refresh-google.yml` | 每週更新 Firebase `/google`（見 `tools/google-refresh.mjs`），可輸入 `limit`、`offset` 手動分批 |
 | `snapshot.yml` | 每天 03:17（台灣時間）把整個資料庫備份到 `snapshot` 分支，也可手動觸發 |
 | `ci.yml` | 每個 PR 與 `main` 推送：資料格式驗證、`node --check`、規則 JSON 檢查、shell 腳本語法 |
