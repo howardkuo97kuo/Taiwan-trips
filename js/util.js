@@ -48,3 +48,18 @@ export async function loadJson(url, fallback = null) {
     return fallback;
   }
 }
+
+// 底部提示：toast('已標想去', { action: '復原', onAction: fn, tone: 'bad', ms: 5000 })
+// 回傳關閉函式。沒有 #tw-toast 容器（例如測試頁）就什麼都不做。
+export function toast(message, { action, onAction, tone, ms = 5000 } = {}) {
+  const host = document.getElementById('tw-toast');
+  if (!host) return () => {};
+  const el = h('div', { class: `tw-toast${tone === 'bad' ? ' is-bad' : ''}` }, h('span', {}, message));
+  let timer;
+  const close = () => { clearTimeout(timer); el.remove(); };
+  if (action) el.append(h('button', { type: 'button', onclick: () => { close(); onAction?.(); } }, action));
+  host.append(el);
+  while (host.children.length > 3) host.firstChild.remove();
+  timer = setTimeout(close, ms);
+  return close;
+}

@@ -1,0 +1,65 @@
+/* 設計變數與基礎重設。模組 C。
+   方向「環島郵路」：航空信紙的底、郵戳藍墨、鐵道橘線、戳記紅、雙人金。
+   深色用 data-theme="dark"，沒設定就跟系統。字體用粉圓體（Huninn），數字用 Varela Round。 */
+:root {
+  color-scheme: light dark;
+
+  --paper: #f3f6fb;      /* 頁面底色 */
+  --card: #fcfdff;       /* 車票、面板 */
+  --ink: #13264b;        /* 主要文字與外框（郵戳藍墨） */
+  --muted: #566785;      /* 次要文字（對淺底約 5:1） */
+  --line: #cdd7e8;       /* 細線 */
+  --rail: #f26a1b;       /* 鐵道橘：線、想去圓點 */
+  --rail-ink: #b5440a;   /* 橘色小字用的深色版（對淺底約 5:1） */
+  --stamp: #d8333a;      /* 戳記紅：只給郵戳與「已蓋章」 */
+  --stamp-soft: #fbe9ea;
+  --gold: #ffc24a;       /* 雙人金：兩人都想去 */
+  --gold-ink: #3a2a05;
+  --blue: #2d63c8;       /* 連結、焦點 */
+  --ok: #2f7a4f;
+  --veil: 0.28;          /* 背景照片上的遮罩，捲動時由 js/prefs.js 調整 */
+
+  --f-display: "Huninn", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --f-body: "Huninn", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --f-num: "Varela Round", "Huninn", system-ui, sans-serif;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --wrap: 1260px;
+  --nav-h: 0px;          /* 手機底部導覽的高度，app.css 在窄螢幕設定 */
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b1630; --card: #14224a; --ink: #e8eefb; --muted: #a3b3d6; --line: #2a3c6b;
+    --rail: #ff8a3d; --rail-ink: #ff9a5c; --stamp: #ff6b70; --stamp-soft: #3a2038;
+    --gold: #ffc24a; --gold-ink: #2a1d03; --blue: #7fa8ff; --ok: #6fc791; --veil: 0.4;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0b1630; --card: #14224a; --ink: #e8eefb; --muted: #a3b3d6; --line: #2a3c6b;
+  --rail: #ff8a3d; --rail-ink: #ff9a5c; --stamp: #ff6b70; --stamp-soft: #3a2038;
+  --gold: #ffc24a; --gold-ink: #2a1d03; --blue: #7fa8ff; --ok: #6fc791; --veil: 0.4;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scrollbar-color: var(--line) transparent; }
+body {
+  margin: 0; min-height: 100dvh;
+  background: var(--paper); color: var(--ink);
+  font: 400 16px/1.65 var(--f-body);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--blue); }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+input, textarea { cursor: text; }
+::selection { background: var(--gold); color: var(--gold-ink); }
+::placeholder { color: var(--muted); opacity: 1; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--f-display); line-height: 1.3; text-wrap: balance; }
+.tw-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

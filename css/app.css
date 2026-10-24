@@ -1,0 +1,96 @@
+/* 外殼：背景照片、頂列、導覽、身分選擇、Toast、空狀態。模組 C。
+   結構與 class 見 docs/MODULES.md「外殼的 class 與結構」。 */
+
+/* ── 背景：台灣風景照，交叉淡入、緩慢推拉，上面飄雲霧；捲動時照片較慢、遮罩變深 ── */
+.tw-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: var(--paper); }
+.tw-slide { position: absolute; inset: -4%; opacity: 0; animation: tw-show 44s infinite; }
+.tw-slide:nth-child(2) { animation-delay: -22s; }
+.tw-px { position: absolute; inset: 0; transform: translate3d(0, calc(var(--sy, 0) * -.12px), 0); }
+.tw-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transform-origin: 40% 60%; animation: tw-kb 44s ease-in-out infinite alternate; }
+.tw-slide:nth-child(1) img { object-position: 50% 62%; }
+.tw-slide:nth-child(2) img { animation-name: tw-pan; filter: blur(3px) saturate(.75); }
+.tw-slide:nth-child(2)::after { content: ""; position: absolute; inset: 0; background: var(--paper); opacity: .32; }
+.tw-mist { position: absolute; inset: -10% -30%; filter: blur(14px); animation: tw-drift 70s ease-in-out infinite alternate;
+  background: radial-gradient(ellipse 38% 22% at 25% 62%, rgba(255, 255, 255, .34), transparent 70%), radial-gradient(ellipse 30% 18% at 70% 45%, rgba(255, 255, 255, .26), transparent 70%); }
+.tw-mist.b { animation-duration: 95s; animation-direction: alternate-reverse;
+  background: radial-gradient(ellipse 34% 20% at 60% 78%, rgba(255, 255, 255, .3), transparent 70%), radial-gradient(ellipse 26% 16% at 15% 38%, rgba(255, 255, 255, .2), transparent 70%); }
+.tw-veil { position: absolute; inset: 0; background: var(--paper); opacity: var(--veil); }
+:root[data-theme="dark"] .tw-mist { filter: blur(14px) brightness(.5); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tw-mist { filter: blur(14px) brightness(.5); } }
+@keyframes tw-show { 0% { opacity: 1; } 46% { opacity: 1; } 50% { opacity: 0; } 96% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes tw-kb { from { transform: scale(1); } to { transform: scale(1.14) translate3d(-2.5%, -1.5%, 0); } }
+@keyframes tw-pan { from { transform: scale(1.25) translate3d(5%, 0, 0); } to { transform: scale(1.25) translate3d(-5%, 0, 0); } }
+@keyframes tw-drift { from { transform: translate3d(-9%, 0, 0); } to { transform: translate3d(9%, -2%, 0); } }
+
+/* ── 版面骨架 ── */
+body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) + var(--safe-b)); }
+.tw-air { height: 14px; flex: none; background: repeating-linear-gradient(-45deg, var(--stamp) 0 18px, var(--card) 18px 30px, var(--blue) 30px 48px, var(--card) 48px 60px); }
+.tw-header, .tw-view { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 28px; }
+.tw-header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding-block: 16px 6px; }
+.tw-title { font: 700 clamp(26px, 3.4vw, 40px)/1.2 var(--f-display); letter-spacing: .08em; color: var(--ink); text-decoration: none; margin-right: auto;
+  text-shadow: 0 0 16px var(--paper), 0 0 5px var(--paper); }
+.tw-sync { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.tw-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+.is-online .tw-dot { background: var(--ok); }
+.is-offline { color: var(--stamp); }
+.is-offline .tw-dot { background: var(--stamp); }
+.tw-pill { border: 1.5px solid var(--line); background: color-mix(in srgb, var(--card) 80%, transparent); color: var(--muted); border-radius: 99px; padding: 3px 14px; font-size: 14px; min-height: 34px; }
+.tw-pill:hover { border-color: var(--ink); color: var(--ink); }
+.tw-who-btn { border: 2px solid var(--ink); background: var(--ink); color: var(--paper); border-radius: var(--r-sm); padding: 4px 20px; font: 400 17px var(--f-display); min-height: 38px; }
+.tw-view { flex: 1; padding-block: 8px 80px; min-width: 0; isolation: isolate; } /* Leaflet 的圖層 z-index 很高，關在這裡才不會蓋過對話框與 Toast */
+
+/* ── 導覽：桌面在頂列下方，手機固定在底部 ── */
+.tw-nav { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 28px; display: flex; gap: 8px; order: 1; }
+.tw-header { order: 0; } .tw-air { order: -1; } .tw-view { order: 2; }
+.tw-nav-item { text-decoration: none; color: var(--ink); border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 85%, transparent); border-radius: var(--r-sm); padding: 4px 20px; font-size: 16px; min-height: 40px; display: inline-flex; align-items: center; transition: background .2s, color .2s; }
+.tw-nav-item:hover { background: var(--card); }
+.tw-nav-item.is-active { background: var(--ink); color: var(--paper); }
+@media (max-width: 760px) {
+  :root { --nav-h: 62px; }
+  .tw-header, .tw-view, .tw-nav { padding-inline: 14px; }
+  .tw-nav { position: fixed; left: 0; right: 0; bottom: 0; max-width: none; margin: 0; padding: 6px 10px calc(6px + var(--safe-b)); gap: 6px; z-index: 20;
+    background: color-mix(in srgb, var(--card) 94%, transparent); backdrop-filter: blur(10px); border-top: 2px solid var(--ink); }
+  .tw-nav-item { flex: 1; justify-content: center; padding: 6px 4px; min-height: 48px; border-width: 0; background: transparent; font-size: 15px; }
+  .tw-nav-item.is-active { background: var(--ink); }
+}
+@media (pointer: coarse) { .tw-pill, .tw-who-btn { min-height: 44px; } }
+
+/* ── 身分選擇 ── */
+.tw-overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 20px; background: color-mix(in srgb, var(--paper) 70%, transparent); backdrop-filter: blur(6px); }
+.tw-dialog { width: min(420px, 100%); background: var(--card); border: 2px solid var(--ink); border-radius: var(--r-lg); padding: 24px 24px 20px; box-shadow: 0 18px 40px -14px #0009; text-align: center; }
+.tw-dialog h2 { margin: 0 0 6px; font-size: 26px; }
+.tw-hint { color: var(--muted); font-size: 14px; margin: 4px 0; }
+.tw-who-choices { display: flex; gap: 12px; justify-content: center; margin: 18px 0 8px; flex-wrap: wrap; }
+.tw-who-choice { min-width: 120px; border: 2px solid var(--ink); background: var(--card); border-radius: var(--r-md); padding: 14px 22px; font: 400 22px var(--f-display); transition: background .2s, color .2s, transform .15s; }
+.tw-who-choice:hover { transform: translateY(-2px); }
+.tw-who-choice:first-child:hover, .tw-who-choice.is-current:first-child { background: var(--rail); color: #fff; border-color: var(--rail); }
+.tw-who-choice:last-child:hover, .tw-who-choice.is-current:last-child { background: var(--blue); color: #fff; border-color: var(--blue); }
+.tw-cancel { border: 0; background: none; color: var(--muted); text-decoration: underline; margin-top: 8px; padding: 6px; }
+
+/* ── 狀態與 Toast ── */
+.tw-loading, .tw-empty { color: var(--muted); text-align: center; padding: 40px 12px; font: 400 18px var(--f-display); border: 2px dashed var(--line); border-radius: var(--r-lg); background: color-mix(in srgb, var(--card) 70%, transparent); }
+.tw-loading::before { content: ""; display: block; width: 28px; height: 28px; margin: 0 auto 10px; border-radius: 50%; border: 3px solid var(--line); border-top-color: var(--rail); animation: tw-spin .9s linear infinite; }
+@keyframes tw-spin { to { transform: rotate(360deg); } }
+.tw-toast-host { position: fixed; left: 50%; bottom: calc(var(--nav-h) + var(--safe-b) + 16px); transform: translateX(-50%); z-index: 60; display: grid; gap: 8px; width: max-content; max-width: calc(100vw - 28px); pointer-events: none; }
+.tw-toast { pointer-events: auto; display: flex; align-items: center; gap: 12px; background: var(--ink); color: var(--paper); border-radius: 99px; padding: 8px 10px 8px 18px; font-size: 15px; box-shadow: 0 10px 24px -8px #000a; animation: tw-toast-in .3s cubic-bezier(.25, 1, .5, 1); }
+.tw-toast.is-bad { background: var(--stamp); color: #fff; }
+.tw-toast button { border: 0; background: color-mix(in srgb, var(--paper) 18%, transparent); color: inherit; font-weight: 700; border-radius: 99px; padding: 4px 14px; min-height: 36px; }
+@keyframes tw-toast-in { from { transform: translateY(14px) scale(.96); opacity: 0; } }
+
+/* ── 頁尾（照片授權） ── */
+.tw-foot { max-width: var(--wrap); margin: 0 auto; padding: 0 28px calc(24px + var(--nav-h) + var(--safe-b)); color: var(--muted); font-size: 12.5px; order: 3; }
+.tw-foot a { color: inherit; }
+
+/* ── 動態：預設跟系統的「減少動態」；js/prefs.js 的 data-motion 可手動覆蓋 ── */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="on"]) *, :root:not([data-motion="on"]) *::before, :root:not([data-motion="on"]) *::after { animation: none !important; transition: none !important; }
+  :root:not([data-motion="on"]) { scroll-behavior: auto; }
+  :root:not([data-motion="on"]) .tw-slide:nth-child(1) { opacity: 1; }
+  :root:not([data-motion="on"]) .tw-mist { display: none; }
+}
+:root[data-motion="off"] *, :root[data-motion="off"] *::before, :root[data-motion="off"] *::after { animation: none !important; transition: none !important; }
+:root[data-motion="off"] { scroll-behavior: auto; }
+:root[data-motion="off"] .tw-slide:nth-child(1) { opacity: 1; }
+:root[data-motion="off"] .tw-mist { display: none; }
+.tw-sync.is-pending .tw-dot { background: var(--gold); animation: tw-blink 1.2s ease-in-out infinite; }
+@keyframes tw-blink { 50% { opacity: .3; } }

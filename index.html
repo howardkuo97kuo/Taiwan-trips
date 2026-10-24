@@ -3,25 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fff8f0">
+<meta name="theme-color" content="#f3f6fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1630" media="(prefers-color-scheme: dark)">
 <title>胖寶寶台灣行</title>
+<meta name="description" content="阿胖和寶寶的台灣地點庫：依地區瀏覽，各自標想去、去過，一眼看出兩人都想去，蓋滿 22 個縣市的郵戳。">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="胖寶寶台灣行">
+<meta property="og:description" content="阿胖和寶寶的台灣地點庫：各自標想去、去過，蓋滿 22 個縣市的郵戳。">
+<meta property="og:url" content="https://howardkuo97kuo.github.io/Taiwan-trips/">
+<meta property="og:image" content="https://howardkuo97kuo.github.io/Taiwan-trips/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2313264b'/%3E%3Cpath d='M16 7c5.5 0 9 3.6 9 9s-3.5 9-9 9-9-3.6-9-9 3.5-9 9-9z' fill='none' stroke='%23f26a1b' stroke-width='3'/%3E%3Ccircle cx='16' cy='7' r='3.4' fill='%23d8333a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;700&family=Varela+Round&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<!-- 樣式由 C 模組負責（css/*.css）；下面只留骨架能用的最小樣式 -->
-<style>
-  :root { color-scheme: light dark; }
-  body { margin: 0; font-family: system-ui, sans-serif; background: #fff8f0; color: #3a2a1a; }
-  @media (prefers-color-scheme: dark) { body { background: #1c1712; color: #f2e6d8; } }
-  [hidden] { display: none !important; }
-</style>
+<link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/places.css">
+<link rel="stylesheet" href="css/marks.css">
 </head>
 <body>
+<div class="tw-bg" id="tw-bg" aria-hidden="true">
+  <div class="tw-slide"><div class="tw-px"><img src="img/bg/alishan.jpg" alt="" decoding="async"></div></div>
+  <div class="tw-slide"><div class="tw-px"><img src="img/bg/jiufen.jpg" alt="" decoding="async" loading="lazy"></div></div>
+  <div class="tw-mist"></div><div class="tw-mist b"></div>
+  <div class="tw-veil"></div>
+</div>
+<div class="tw-air" aria-hidden="true"></div>
 <header id="tw-header" class="tw-header"></header>
 <main id="tw-view" class="tw-view" aria-live="polite">
   <p class="tw-loading">載入中…</p>
 </main>
 <nav id="tw-nav" class="tw-nav" aria-label="主選單"></nav>
+<footer class="tw-foot">
+  背景照片來自 Wikimedia Commons：<a href="https://commons.wikimedia.org/wiki/File:Alishan_Mountain_Range,_Taiwan.jpg" target="_blank" rel="noopener">阿里山山脈</a>，Jirka Matousek，<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>；<a href="https://commons.wikimedia.org/wiki/File:180124_Jiufen,_Taiwan_%E4%B9%9D%E4%BB%BD.jpg" target="_blank" rel="noopener">九份</a>，Gregg Tavares，<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>。已縮小尺寸並降低亮度。縣市邊界來自 taiwan-atlas（MIT）。
+</footer>
 <div id="tw-overlay" class="tw-overlay" hidden></div>
+<div id="tw-toast" class="tw-toast-host" role="status" aria-live="polite"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script type="module" src="js/app.js"></script>
