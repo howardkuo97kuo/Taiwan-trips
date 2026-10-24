@@ -1,6 +1,6 @@
 // 用 Google Places API (New) 查 data/staging/import-list.json 的地點，輸出座標、縣市、pid 與營業狀態。
 // 只在 GitHub Actions 跑（lookup-places.yml）；金鑰讀自環境變數 GOOGLE_PLACES_KEY，不印出。
-// 用法：node tools/places-lookup.mjs <offset> <limit> <輸出檔>
+// 用法：node tools/places-lookup.mjs <offset> <limit> <輸出檔> [暫存清單檔]
 // 不取評分、評論數、營業時間（SPEC：Google 資料不存進 repo）。
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
@@ -16,7 +16,8 @@ const offset = pick ? 0 : Number(process.argv[2] ?? 0);
 const limit = Number(process.argv[3] ?? 50);
 const outFile = process.argv[4] ?? 'out/lookup/result.json';
 
-const list = JSON.parse(readFileSync('data/staging/import-list.json', 'utf8'));
+const listFile = process.argv[5] ?? 'data/staging/import-list.json';
+const list = JSON.parse(readFileSync(listFile, 'utf8'));
 const regions = JSON.parse(readFileSync('data/regions.json', 'utf8'));
 
 // 縣市名稱（台／臺不分）對應到縣市 id
