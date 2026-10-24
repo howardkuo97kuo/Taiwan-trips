@@ -169,7 +169,7 @@
 .tw-place-thead { display: none; }
 @media (min-width: 900px) {
   .tw-place-list { max-width: 1280px; }
-  .tw-place-thead, .tw-place-card, .tw-place-card.has-media { grid-template-columns: 124px 236px minmax(0, 1fr) minmax(0, 1.4fr) 116px; }
+  .tw-place-thead, .tw-place-card, .tw-place-card.has-media { grid-template-columns: 96px 292px minmax(0, 1.15fr) minmax(0, 1fr) 108px; }
   .tw-place-thead { display: grid; padding: 0 0 6px; font: 700 13px var(--f-body); color: var(--muted); border-bottom: 2px solid var(--ink); margin-bottom: 12px; }
   .tw-place-thead span { padding: 0 12px; }
   .tw-place-thead span:first-child { text-align: center; }
@@ -177,10 +177,16 @@
   .tw-place-card::before, .tw-place-card::after, .tw-place-card .tw-place-stub { display: none; }
   .tw-place-card .tw-mark-want { border-right: 2px dashed var(--line); padding: 10px 8px; }
   .tw-place-card .tw-place-media { padding: 12px 12px 12px 12px; }
-  .tw-place-card .tw-place-media .tw-gallery, .tw-place-card .tw-gallery.is-card .tw-gallery-track, .tw-place-card .tw-gallery.is-card .tw-gallery-item, .tw-place-card .tw-gallery.is-card .tw-gallery-empty { height: 136px; min-height: 0; }
+  .tw-place-card .tw-place-media .tw-gallery, .tw-place-card .tw-gallery.is-card .tw-gallery-track, .tw-place-card .tw-gallery.is-card .tw-gallery-item, .tw-place-card .tw-gallery.is-card .tw-gallery-empty { height: 172px; min-height: 0; }
   .tw-place-card .tw-gallery.is-card .tw-gallery-nav { width: 30px; height: 30px; font-size: 18px; }
   .tw-place-card .tw-place-mid { padding: 12px 14px; }
   .tw-place-card .tw-place-g { border-top: 0; border-left: 2px dashed var(--line); padding: 12px 16px; }
   .tw-place-card .tw-mark-stampzone { border-left: 2px dashed var(--line); padding: 8px; }
   .tw-place-card .tw-place-pair { top: -11px; left: 140px; right: auto; }
+}
+.tw-place-sumslot { margin: 6px 0 2px; }
+.tw-place-sumslot .tw-live-sum { margin-bottom: 4px; }
+@media (min-width: 900px) {
+  .tw-place-card .tw-mark-want { padding: 10px 4px; }
+  .tw-place-card .tw-place-g { display: flex; flex-direction: column; justify-content: center; }
 }

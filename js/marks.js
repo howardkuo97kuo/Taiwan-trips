@@ -58,11 +58,12 @@ export function countyIdOf(counties, regionId) {
 
 // ── 卡片上的快速標記：想去、蓋章（去過）、想再去 ──
 // 標完會跳 Toast 並提供「復原」；剛蓋章或剛變成雙人票時，卡片下一次重畫會播一次動畫（takeFx）。
-const fx = { slam: null, pair: null };
+const fx = { slam: null, pair: null, heart: null };
 export function takeFx(placeId) {
-  const out = { slam: fx.slam === placeId, pair: fx.pair === placeId };
+  const out = { slam: fx.slam === placeId, pair: fx.pair === placeId, heart: fx.heart === placeId };
   if (out.slam) fx.slam = null;
   if (out.pair) fx.pair = null;
+  if (out.heart) fx.heart = null;
   return out;
 }
 
@@ -86,6 +87,7 @@ export async function quickMark(ctx, placeId, key) {
 
   // 動畫旗標要在寫入前設好：setMark 會先更新畫面
   if (key === 'been' && !on) fx.slam = placeId;
+  if (key === 'want' && !on) fx.heart = placeId;
   if (key === 'want' && !on && statusOf(store, placeId)[store.otherWho(who)]?.want) fx.pair = placeId;
 
   const name = store.placeById(placeId)?.n ?? '';
@@ -98,7 +100,7 @@ export async function quickMark(ctx, placeId, key) {
     await sync.setMark(placeId, patch);
   } catch (e) {
     console.warn(e);
-    fx.slam = fx.pair = null;
+    fx.slam = fx.pair = fx.heart = null;
     toast('沒存成功，網路好了再試一次。', { tone: 'bad' });
     return;
   }

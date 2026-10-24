@@ -96,7 +96,7 @@ export function placeCard(ctx, p) {
   const dot = (id, mine) => {
     const on = s[id].want;
     return mine
-      ? h('button', { type: 'button', class: `tw-mark-dot${on ? ' is-on' : ''}`, 'aria-pressed': on ? 'true' : 'false',
+      ? h('button', { type: 'button', class: `tw-mark-dot${on ? ' is-on' : ''}${on && fx.heart ? ' is-pop' : ''}`, 'aria-pressed': on ? 'true' : 'false',
         'aria-label': `${name(id)}想去：${p.n}`, onclick: () => quickMark(ctx, p.id, 'want') })
       : h('span', { class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
   };
@@ -122,17 +122,20 @@ export function placeCard(ctx, p) {
     const lk = likeOf(s[id].mark?.like);
     return lk && h('span', { class: `tw-place-like is-${lk.id}`, title: `${name(id)}：${lk.label}` }, `${lk.icon} ${name(id)}`);
   }).filter(Boolean);
+  const sumSlot = h('div', { class: 'tw-place-sumslot' });
+  const peer = peerBadge(ctx, s, who, other);
   const ghost = who
     ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' 還沒標' : ''}`
     : '';
 
-  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}${me?.skip ? ' is-skipped' : ''}${hasMedia ? ' has-media' : ''}`, dataset: { pid: p.id } },
+  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}${me?.skip ? ' is-skipped' : ''}${hasMedia ? ' has-media' : ''}`, dataset: { pid: p.id, c: p.c } },
     pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '兩人都想去'),
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
       catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
     h('div', { class: 'tw-place-mid' },
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
       michBadge(ctx, p),
+      sumSlot,
       h('div', { class: 'tw-place-sub' }, `${p.c}${county ? ' · ' + county : ''}`),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
       who && ghost && h('div', { class: 'tw-place-ghost' }, ghost),
@@ -143,19 +146,35 @@ export function placeCard(ctx, p) {
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')),
-    hasMedia && h('div', { class: 'tw-place-media' }, carousel(ctx, p, { card: true })),
-    googleBlock(ctx, p));
+    hasMedia && h('div', { class: 'tw-place-media' }, carousel(ctx, p, { card: true }), peer),
+    googleBlock(ctx, p, sumSlot));
 }
 
 // 卡片上直接顯示 Google 地址、評分、今天營業時間與評論（資料由排程預存在 Firebase /google，見 js/google.js）
-function googleBlock(ctx, p) {
+// 另一方（沒選身分時兩個人）已經去過或想去：貼在照片左上角的小章
+function peerBadge(ctx, s, who, other) {
+  const { h, store } = ctx;
+  const ids = who ? [other] : ['apong', 'baobao'];
+  const tags = ids.map((id) => {
+    const m = s[id];
+    const nm = store.whoName(id);
+    if (m.been) return h('span', { class: 'tw-peer is-been', title: `${nm}去過${m.mark?.ym ? ' ' + m.mark.ym : ''}` }, `${nm} 去過`, m.mark?.ym && h('i', {}, m.mark.ym));
+    if (m.want) return h('span', { class: 'tw-peer is-want', title: `${nm}想去` }, `♥ ${nm} 想去`);
+    return null;
+  }).filter(Boolean);
+  return tags.length ? h('div', { class: 'tw-peers' }, tags) : null;
+}
+
+function googleBlock(ctx, p, sumSlot) {
   if (!p.pid) return null;
   const { h } = ctx;
   const box = h('div', { class: 'tw-place-g' });
   if (!googleReady()) { box.append(h('p', { class: 'tw-hint' }, '載入 Google 資料…')); return box; }
   const g = googleOf(p.pid);
   if (!g) { box.append(h('p', { class: 'tw-hint' }, '還沒有這個地點的 Google 資料（每週更新一次）。')); return box; }
-  box.append(...liveContent(ctx, p, g, { compact: true }).filter(Boolean));
+  const parts = liveContent(ctx, p, g, { compact: true });
+  if (parts.sum && sumSlot) sumSlot.append(parts.sum);
+  box.append(...parts.filter(Boolean));
   return box;
 }
 
@@ -180,7 +199,7 @@ export function listView(ctx, places, { limit = 60 } = {}) {
       listEl.append(head, h('p', { class: 'tw-empty' }, '沒有符合的地點，換個篩選看看。'));
       return;
     }
-    const thead = h('div', { class: 'tw-place-thead', 'aria-hidden': 'true' }, ['想去', '照片', '名稱', '評分與評語', '去過'].map((t) => h('span', {}, t)));
+    const thead = h('div', { class: 'tw-place-thead', 'aria-hidden': 'true' }, ['想去', '照片', '名稱與評分', 'AI 評語', '去過'].map((t) => h('span', {}, t)));
     listEl.append(head, thead, ...rows.slice(0, shown).map((p) => placeCard(ctx, p)));
     if (rows.length > shown) {
       listEl.append(h('button', { type: 'button', class: 'tw-place-more', onclick: () => { shown += limit; drawList(); } },
@@ -355,7 +374,9 @@ function compactContent(ctx, { g, closed, open, rating, address, hours, aiOrHint
     const on = more.hidden; more.hidden = !on; ai?.classList.toggle('is-clamp', !on);
     btn.textContent = on ? '收合' : '更多資訊'; btn.setAttribute('aria-expanded', on ? 'true' : 'false');
   } }, '更多資訊');
-  return [closed ? h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`) : null, sum, aiOrHint, btn, more];
+  const out = [closed ? h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`) : null, aiOrHint, btn, more];
+  out.sum = sum || null;
+  return out;
 }
 
 // 詳情頁：完整顯示
