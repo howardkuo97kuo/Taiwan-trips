@@ -19,10 +19,13 @@ jq -e '
   and ([.[] | to_entries[]] | all(
     (.key | test("^[A-Za-z0-9_-]+$")) and
     (.value | type == "object" and (.ts | type == "number")
-      and (keys | all(IN("want","been","again","ym","stars","note","ts")))
+      and (keys | all(IN("want","been","again","ym","stars","like","good","avoid","note","ts")))
       and ((.want // false) | type == "boolean") and ((.been // false) | type == "boolean") and ((.again // false) | type == "boolean")
       and ((.ym // "0000-01") | type == "string" and test("^[0-9]{4}-(0[1-9]|1[0-2])$"))
       and ((.stars // 1) | type == "number" and . >= 1 and . <= 5 and . == floor)
+      and ((.like // "love") | IN("love","ok","meh"))
+      and ((.good // "") | type == "string" and length <= 300)
+      and ((.avoid // "") | type == "string" and length <= 300)
       and ((.note // "") | type == "string" and length <= 200))
   ))
 ' "$payload" > /dev/null || { echo "::error::payload 格式不符（只能有 apong／baobao，每筆欄位須符合 firebase-rules.json）"; exit 1; }
