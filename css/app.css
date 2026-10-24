@@ -97,3 +97,7 @@ body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) 
 
 /* 首頁以外的頁面：照片只留淡淡的氛圍，文字清楚優先 */
 body[data-route]:not([data-route="home"]) .tw-veil { opacity: max(var(--veil), .84); }
+
+/* 首次進站的三步說明 */
+.tw-guide { margin: 0 0 14px; padding-left: 22px; text-align: left; line-height: 1.8; color: var(--ink); }
+.tw-guide li::marker { color: var(--rail); font-weight: 700; }

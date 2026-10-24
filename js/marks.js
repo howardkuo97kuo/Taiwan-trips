@@ -232,7 +232,7 @@ export async function mount(el, ctx) {
       h('p', { class: 'tw-hint' }, `${g.label}：${list.length} 個`),
       list.length
         ? h('div', { class: 'tw-place-list' }, list.map((p) => placeCard(ctx, p)))
-        : h('p', { class: 'tw-empty' }, '這一類目前沒有地點。'),
+        : h('p', { class: 'tw-empty' }, '這一類還沒有地點。到', h('a', { href: '#/' }, '地圖'), '點縣市，幫地點標「想去」或「去過」，就會出現在這裡。'),
       litBox);
   };
 

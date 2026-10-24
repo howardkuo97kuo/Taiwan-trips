@@ -26,7 +26,7 @@ export const countIn = (store, regionId) =>
 
 // ── 篩選 ──
 const MARK_FILTERS = [
-  ['all', '全部'],
+  ['all', '不限標記'],
   ['mine-want', '我想去'],
   ['both-want', '兩人都想去'],
   ['one-want', '只有一人想去'],
@@ -97,23 +97,23 @@ export function placeCard(ctx, p) {
     ? h('button', { type: 'button', class: `tw-mark-stamp${fx.slam ? ' is-slam' : ''}`, 'aria-pressed': 'true',
       'aria-label': `取消蓋章：${p.n}`, onclick: () => quickMark(ctx, p.id, 'been') })
     : h('button', { type: 'button', class: 'tw-mark-stamp-empty', 'aria-pressed': 'false', 'aria-label': `蓋章去過：${p.n}`,
-      onclick: () => quickMark(ctx, p.id, 'been') }, '蓋章');
+      onclick: () => quickMark(ctx, p.id, 'been') }, '標去過');
   if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym);
 
   const ghostBits = (id, m) => [name(id), m.want && '想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
   const ghost = who
-    ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' －' : ''}`
+    ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' 還沒標' : ''}`
     : '';
 
   return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}`, dataset: { pid: p.id } },
-    pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '雙人票'),
+    pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '兩人都想去'),
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
       h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
     h('div', { class: 'tw-place-mid' },
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
       who && ghost && h('div', { class: 'tw-place-ghost' }, ghost)),
-    h('div', { class: 'tw-mark-want', role: 'group', 'aria-label': `${p.n}的想去` }, h('div', { class: 'tw-mark-wrow' }, wantRow), h('span', { class: 'tw-mark-wl' }, '想去')),
+    h('div', { class: 'tw-mark-want', role: 'group', 'aria-label': `${p.n}的想去` }, h('div', { class: 'tw-mark-wrow' }, wantRow), h('span', { class: 'tw-mark-wl' }, '標想去')),
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')));
@@ -269,7 +269,10 @@ function mountPlace(el, ctx) {
   const compareEl = h('div', {});
   const barEl = h('div', {});
   const drawCompare = () => clear(compareEl).append(markCompare(ctx, p.id));
-  const drawBar = () => clear(barEl).append(markBar(ctx, p.id));
+  const drawBar = () => {
+    const me = store.get('who');
+    clear(barEl).append(h('h2', { class: 'tw-place-h2' }, me ? `${store.whoName(me)}的標記` : '標記'), markBar(ctx, p.id));
+  };
   drawCompare();
   drawBar();
   const live = liveBox(ctx, p);
