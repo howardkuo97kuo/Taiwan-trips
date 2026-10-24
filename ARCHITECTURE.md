@@ -29,7 +29,7 @@
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
 | A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得）暫存在 `data/staging/visited-marks.json`，待寫入 Firebase |
 | C 介面 | `css/*.css` | 進行中：外殼與設計變數已完成（`tokens.css`、`app.css`）；首頁、清單、標記的樣式在後續 PR |
-| D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成第一版（PR 待合併）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；沒有樣式（等 C），只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
+| D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成第一版（PR 待合併）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |
 | F 行程推薦 | `js/itinerary.js`、`data/itineraries/` | 未開始，導覽列不顯示 |
 

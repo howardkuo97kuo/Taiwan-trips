@@ -1,6 +1,6 @@
 // 地區瀏覽、篩選、地點詳情（路由 #/r/<regionId>、#/p/<placeId>）。模組 D。
 // 輸出 placeCard、listView、findRegion、inRegion 給 map.js 用。
-import { markSummary, markBar, markCompare, statusOf } from './marks.js';
+import { markBar, markCompare, statusOf, quickMark, takeFx } from './marks.js';
 
 // ── 地區工具 ──
 // 回傳 { level:'zone'|'county'|'district', node, zone, county, trail:[{id,n}] }；找不到回 null
@@ -60,15 +60,63 @@ function passFilters(store, p) {
   return true;
 }
 
-// ── 卡片 ──
+// ── 卡片：一張鐵路車票 ──
+// 左邊票根（分類、縣市），中間店名與地址，右邊兩人的「想去」圓點與「蓋章」。
+// 兩人都想去時，票上多一個「雙人票」小牌；剛蓋章時蓋章動畫播一次（takeFx）。
+const stampSVG = (ym) => `<svg viewBox="0 0 90 90" aria-hidden="true"><circle cx="45" cy="45" r="41" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="45" cy="45" r="34" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/><text x="45" y="44" text-anchor="middle" font-size="22">去過</text><text x="45" y="62" text-anchor="middle" font-size="12" class="ym">${/^\d{4}-\d{2}$/.test(ym ?? '') ? ym.replace('-', '·') : ''}</text></svg>`;
+
 export function placeCard(ctx, p) {
   const { h, store } = ctx;
-  const cats = [p.c, ...(Array.isArray(p.c2) ? p.c2 : [p.c2])].filter(Boolean);
-  return h('a', { class: 'tw-place-card', href: `#/p/${p.id}` },
-    h('div', { class: 'tw-place-name' }, p.n),
-    h('div', { class: 'tw-place-cats' }, cats.map((c) => h('span', { class: 'tw-place-cat' }, c))),
-    p.a && h('div', { class: 'tw-place-addr' }, p.a),
-    markSummary({ h, store }, p.id));
+  const who = store.get('who');
+  const other = store.otherWho(who);
+  const s = statusOf(store, p.id);
+  const me = who ? s[who] : null;
+  const ot = who ? s[other] : null;
+  const county = findRegion(store.get('regions'), p.region)?.county?.n ?? '';
+  const pair = s.apong.want && s.baobao.want;
+  const fx = takeFx(p.id);
+  const name = (id) => store.whoName(id);
+
+  const dot = (id, mine) => {
+    const on = s[id].want;
+    return mine
+      ? h('button', { type: 'button', class: `tw-mark-dot${on ? ' is-on' : ''}`, 'aria-pressed': on ? 'true' : 'false',
+        'aria-label': `${name(id)}想去：${p.n}`, onclick: () => quickMark(ctx, p.id, 'want') })
+      : h('span', { class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
+  };
+  // 沒選身分時兩個都只讀，點了會提示先選身分
+  const wantRow = who
+    ? [h('span', { class: 'tw-mark-wb' }, dot(who, true), name(who)), h('span', { class: 'tw-mark-wb' }, dot(other, false), name(other))]
+    : ['apong', 'baobao'].map((id) => h('span', { class: 'tw-mark-wb' }, h('button', {
+      type: 'button', class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
+      onclick: () => quickMark(ctx, p.id, 'want') }), name(id)));
+
+  const beenMark = who ? me.mark : (s.apong.mark?.been ? s.apong.mark : s.baobao.mark);
+  const stamped = who ? me.been : (s.apong.been || s.baobao.been);
+  const stampBtn = stamped
+    ? h('button', { type: 'button', class: `tw-mark-stamp${fx.slam ? ' is-slam' : ''}`, 'aria-pressed': 'true',
+      'aria-label': `取消蓋章：${p.n}`, onclick: () => quickMark(ctx, p.id, 'been') })
+    : h('button', { type: 'button', class: 'tw-mark-stamp-empty', 'aria-pressed': 'false', 'aria-label': `蓋章去過：${p.n}`,
+      onclick: () => quickMark(ctx, p.id, 'been') }, '蓋章');
+  if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym);
+
+  const ghostBits = (id, m) => [name(id), m.want && '想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
+  const ghost = who
+    ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' －' : ''}`
+    : '';
+
+  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}`, dataset: { pid: p.id } },
+    pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '雙人票'),
+    h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
+      h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
+    h('div', { class: 'tw-place-mid' },
+      h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
+      p.a && h('div', { class: 'tw-place-addr' }, p.a),
+      who && ghost && h('div', { class: 'tw-place-ghost' }, ghost)),
+    h('div', { class: 'tw-mark-want', role: 'group', 'aria-label': `${p.n}的想去` }, h('div', { class: 'tw-mark-wrow' }, wantRow), h('span', { class: 'tw-mark-wl' }, '想去')),
+    h('div', { class: 'tw-mark-stampzone' }, stampBtn,
+      stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
+        onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')));
 }
 
 // 篩選列＋清單。places 是已限定地區的可見地點。
