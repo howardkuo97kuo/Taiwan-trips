@@ -3,7 +3,7 @@
   "id": "p38528439bd",
   "n": "文德海鮮羹",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區瑞陽里文德路22巷29弄1號",
   "ll": [
    25.076453,
@@ -18,7 +18,7 @@
   "id": "p3b1c0fefc5",
   "n": "米半 鐵板料理",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區國華里文化路297巷1號",
   "ll": [
    23.484988,
@@ -34,7 +34,7 @@
   "id": "pecc161e5d0",
   "n": "馬納蒂",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-ruifang",
   "a": "新北市瑞芳區深澳里建基路二段55號",
   "ll": [
    25.133542,
@@ -49,7 +49,7 @@
   "id": "pb7d8c4e673",
   "n": "輝葉放空站",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區松基里復興北路193號",
   "ll": [
    25.055296,
@@ -64,7 +64,7 @@
   "id": "p090f0ae4d1",
   "n": "澎澄飯店 Discovery Hotel",
   "c": "住宿",
-  "region": "island-penghu",
+  "region": "island-penghu-magong",
   "a": "澎湖縣馬公市陽明里同和路168號",
   "ll": [
    23.566846,
@@ -79,7 +79,7 @@
   "id": "p9b168c1764",
   "n": "軟食力 行天宮店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區民權東路二段135巷30弄21號",
   "ll": [
    25.0643,
@@ -94,7 +94,7 @@
   "id": "pea41b4c072",
   "n": "So Taipei 趖 宵夜專門",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區景聯里基隆路二段71號",
   "ll": [
    25.030519,
@@ -109,7 +109,7 @@
   "id": "pb4a7ff2e66",
   "n": "樸食間（最後收客午餐13:30｜晚餐19:30）",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮國華里培英路88號",
   "ll": [
    24.678215,
@@ -124,7 +124,7 @@
   "id": "pb250749ba5",
   "n": "拌伴健康韓食-中山旗艦店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區松江里錦州街298號",
   "ll": [
    25.060213,
@@ -139,7 +139,7 @@
   "id": "pe0da84b2d1",
   "n": "FRASSI",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路299號1樓",
   "ll": [
    25.082844,
@@ -154,7 +154,7 @@
   "id": "p9a17e8b456",
   "n": "亘一郎 KOICHIRO",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路301號5F",
   "ll": [
    25.082863,
@@ -169,7 +169,7 @@
   "id": "p4d735e9e0d",
   "n": "茹絲葵經典牛排館 大直店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路301號3樓",
   "ll": [
    25.082928,
@@ -184,7 +184,7 @@
   "id": "p2f9a982631",
   "n": "USHIGORO S. TAIWAN",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路299號2樓",
   "ll": [
    25.082893,
@@ -199,7 +199,7 @@
   "id": "p77e279670f",
   "n": "麒麟閣沙茶火鍋",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-yonghe",
   "a": "新北市永和區信義里永和路二段57號2樓",
   "ll": [
    25.011065,
@@ -214,7 +214,7 @@
   "id": "p6ee1b630a6",
   "n": "榕樹下綿綿冰",
   "c": "咖啡甜點",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-zhongli",
   "a": "桃園市中壢區石頭里中山路83號",
   "ll": [
    24.955158,
@@ -229,7 +229,7 @@
   "id": "pfe341f79b9",
   "n": "雅香石頭火鍋(西門總店)",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區西門里成都路159號",
   "ll": [
    25.043826,
@@ -244,7 +244,7 @@
   "id": "p4f597f7eb6",
   "n": "boon現代韓式餐酒館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信义区西村里松智路17號微風南山48 樓",
   "ll": [
    25.034405,
@@ -259,7 +259,7 @@
   "id": "p8f08d3ef90",
   "n": "Les tables歐陸料理",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區永樂里貴德街75-2號1樓",
   "ll": [
    25.056259,
@@ -274,7 +274,7 @@
   "id": "p0d90078a0f",
   "n": "NOBUO",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區文北里泰安街8號",
   "ll": [
    25.039959,
@@ -289,7 +289,7 @@
   "id": "p149d3dd692",
   "n": "Restaurant A",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安区义村里忠孝东路三段282號新光三越Diamond Towers 二館4樓四樓",
   "ll": [
    25.041422,
@@ -304,7 +304,7 @@
   "id": "p70a96e5c9e",
   "n": "咿品 香雞排-台中霧峰中正店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-wufeng",
   "a": "台中市霧峰區本堂里中正路767之13號",
   "ll": [
    24.061357,
@@ -319,7 +319,7 @@
   "id": "pf0b6c2cf8b",
   "n": "咿品 香雞排-台中南屯嶺東店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區文山里嶺東路782號",
   "ll": [
    24.14951,
@@ -334,7 +334,7 @@
   "id": "paa2373c308",
   "n": "咿品 香雞排-台南永康大仁店",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-yongkang",
   "a": "台南市永康區崑山里大仁街197之1號",
   "ll": [
    23.005139,
@@ -349,7 +349,7 @@
   "id": "pde102ecb3c",
   "n": "雅朵義大利餐館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光復南路260巷5號",
   "ll": [
    25.040076,
@@ -364,7 +364,7 @@
   "id": "pb6eaf67585",
   "n": "半島牛肉麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區敦厚里忠孝東路五段215巷23號",
   "ll": [
    25.041925,
@@ -379,7 +379,7 @@
   "id": "p96d4def2e9",
   "n": "銘記越南文化美食 Ming Jih - Vietnamese Culture Restaurant",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xizhi",
   "a": "新北市汐止區湖光里康寧街536-1號",
   "ll": [
    25.069622,
@@ -394,7 +394,7 @@
   "id": "pa8326c2386",
   "n": "賴山嶼 麻辣燙內湖旗艦店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "1樓, No. 22號瑞光路583巷西湖里內湖區台北市114",
   "ll": [
    25.080596,
@@ -409,7 +409,7 @@
   "id": "p2956c22cd2",
   "n": "鳥力",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區江山里建國北路二段125號",
   "ll": [
    25.059833,
@@ -424,7 +424,7 @@
   "id": "p028ddceb7d",
   "n": "聖瑪莉丹麥麵包莊園&親子樂園",
   "c": "咖啡甜點",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-tucheng",
   "a": "新北市土城區沛陂里中山路21號",
   "ll": [
    24.962949,
@@ -439,7 +439,7 @@
   "id": "p7540f76018",
   "n": "武田咖哩食堂",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區富錦里三民路146號",
   "ll": [
    25.060825,
@@ -454,7 +454,7 @@
   "id": "pfd4fd4af47",
   "n": "NARA Thai Cuisine 泰式料理 台北南港CITYLINK店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-nangang",
   "a": "台北市南港區新光里忠孝東路七段299號7樓C棟",
   "ll": [
    25.052558,
@@ -469,7 +469,7 @@
   "id": "pfbc45f2224",
   "n": "Pasta Notte夜義",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區黎明里懷寧街100號",
   "ll": [
    25.042058,
@@ -484,7 +484,7 @@
   "id": "pce909fe3a1",
   "n": "2 in one 冰淇淋專賣店",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區大業里大墩十四街170號",
   "ll": [
    24.152429,
@@ -499,7 +499,7 @@
   "id": "p6ea7807073",
   "n": "一麵之椒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區大道里林口街105號1",
   "ll": [
    25.040117,
@@ -514,7 +514,7 @@
   "id": "p0b421d9a22",
   "n": "CAFÉ PADRINO教父咖啡",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區光復北路175號1F",
   "ll": [
    25.057837,
@@ -529,7 +529,7 @@
   "id": "p4679b5ee53",
   "n": "Pastaio Noodle cafe 敦北",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中華里敦化北路199巷2弄19號",
   "ll": [
    25.055004,
@@ -544,7 +544,7 @@
   "id": "p783f422db4",
   "n": "PATTIE-O DINER 中山店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區光能里赤峰街8巷20-1號",
   "ll": [
    25.053788,
@@ -559,7 +559,7 @@
   "id": "p77dfd59e62",
   "n": "了了 礁溪",
   "c": "住宿",
-  "region": "east-yilan",
+  "region": "east-yilan-jiaoxi",
   "a": "宜蘭縣礁溪鄉玉石村公園路70巷39弄30號",
   "ll": [
    24.832359,
@@ -574,7 +574,7 @@
   "id": "p8e8f41b7b6",
   "n": "復興路炸醬麵 宜蘭",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-yilan",
   "a": "宜蘭縣宜蘭市文化里復興路二段65號",
   "ll": [
    24.748793,
@@ -589,7 +589,7 @@
   "id": "pba3c9c3504",
   "n": "蔡叔叔比薩屋",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-linkou",
   "a": "新北市林口區南勢里文化三路一段408號",
   "ll": [
    25.074251,
@@ -604,7 +604,7 @@
   "id": "p0d9c03b63d",
   "n": "BURNT BURGER SOCIAL CLUB",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區興雅里基隆路一段147巷54號",
   "ll": [
    25.042293,
@@ -619,7 +619,7 @@
   "id": "p550249053f",
   "n": "清河鵝肉",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區三玉里德行東路129巷10號",
   "ll": [
    25.10845,
@@ -634,7 +634,7 @@
   "id": "p12877ee1e3",
   "n": "初芽 Sprout",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區天福里忠誠路二段166巷7號1樓",
   "ll": [
    25.115539,
@@ -649,7 +649,7 @@
   "id": "p365aaf76d3",
   "n": "Tony’s BBQ Smokehouse",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區中央里伊通街106巷5之一號",
   "ll": [
    25.054064,
@@ -664,7 +664,7 @@
   "id": "p201752ca30",
   "n": "台灣手作水果冰淇淋",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區臨江里臨江街64號",
   "ll": [
    25.029719,
@@ -679,7 +679,7 @@
   "id": "p317ff99035",
   "n": "塔吉摩洛哥料理",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區臨江里基隆路二段144巷3號",
   "ll": [
    25.028254,
@@ -694,7 +694,7 @@
   "id": "pbb1c3f7c77",
   "n": "曹料理",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區景聯里基隆路二段39巷16號",
   "ll": [
    25.030717,
@@ -709,7 +709,7 @@
   "id": "pe4b4399e24",
   "n": "週末炸雞俱樂部 信義店 / WEEKEND CHICKEN CLUB & BAR",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區中興里基隆路二段74號",
   "ll": [
    25.030753,
@@ -724,7 +724,7 @@
   "id": "p4949f94c20",
   "n": "77opèt Restaurant",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區仁慈里復興南路一段279巷30弄3號1樓",
   "ll": [
    25.035437,
@@ -739,7 +739,7 @@
   "id": "pbe7910e0e7",
   "n": "燒肉三六苑｜40年正宗日本魂/美食/餐廳/燒肉",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里通安街84號",
   "ll": [
    25.030257,
@@ -754,7 +754,7 @@
   "id": "pbfa586fb84",
   "n": "龍洞海鮮餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里安和路二段69巷2號",
   "ll": [
    25.030302,
@@ -769,7 +769,7 @@
   "id": "pcbe2bf1f77",
   "n": "泡泡Spumoni",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里安和路二段71巷7號1樓",
   "ll": [
    25.0302,
@@ -784,7 +784,7 @@
   "id": "p81139f7cdf",
   "n": "Divino Taipei",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里安和路二段71巷15號",
   "ll": [
    25.030027,
@@ -799,7 +799,7 @@
   "id": "p2c9af72360",
   "n": "阿文米粿",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-zhongxi",
   "a": "台南市中西區府前里保安路74號",
   "ll": [
    22.990478,
@@ -814,7 +814,7 @@
   "id": "p5250205011",
   "n": "宜大蔥油餅",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-yilan",
   "a": "宜蘭縣宜蘭市進士里女中路二段533號",
   "ll": [
    24.744683,
@@ -829,7 +829,7 @@
   "id": "pb848776016",
   "n": "大仁哥蔗香脆皮桶仔雞-宜蘭旗艦店",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-zhuangwei",
   "a": "宜蘭縣壯圍鄉美城村大福路三段232巷20號",
   "ll": [
    24.776238,
@@ -844,7 +844,7 @@
   "id": "pd706b7a445",
   "n": "四海居小吃部",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-yilan",
   "a": "宜蘭縣宜蘭市新民里康樂路137巷9號",
   "ll": [
    24.756181,
@@ -859,7 +859,7 @@
   "id": "p7450c07feb",
   "n": "涼心冰店",
   "c": "咖啡甜點",
-  "region": "east-yilan",
+  "region": "east-yilan-yilan",
   "a": "宜蘭縣宜蘭市民族里神農路二段63號",
   "ll": [
    24.752181,
@@ -874,7 +874,7 @@
   "id": "p6a427fb333",
   "n": "財記臭豆腐",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮公正里公正路110號",
   "ll": [
    24.678582,
@@ -889,7 +889,7 @@
   "id": "p197f140741",
   "n": "麵魂家-真。濃厚豚骨拉麵",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮漢民里南門路140號",
   "ll": [
    24.673108,
@@ -904,7 +904,7 @@
   "id": "pe39b093e4c",
   "n": "日嚐こんばんは - 羅東店",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮仁和里康樂巷38之8號",
   "ll": [
    24.67381,
@@ -919,7 +919,7 @@
   "id": "p5cdb7cc91a",
   "n": "福緣火鍋",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-jinshan",
   "a": "新北市金山區環金路466號",
   "ll": [
    25.225039,
@@ -934,7 +934,7 @@
   "id": "p080525d265",
   "n": "陶意蘋串燒小酒館",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-dongshan",
   "a": "宜蘭縣冬山鄉柯林村柯林路317號",
   "ll": [
    24.67955,
@@ -949,7 +949,7 @@
   "id": "pd42e98f28d",
   "n": "羅東帝爺廟口喥咕麵",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮中山里中山路三段242號",
   "ll": [
    24.675181,
@@ -964,7 +964,7 @@
   "id": "p00823d3194",
   "n": "猿燒 季節料理-羅東店",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮信義里復興路一段115號",
   "ll": [
    24.683458,
@@ -979,7 +979,7 @@
   "id": "pda62e12c35",
   "n": "臭老闆現蒸臭豆腐",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區忠勤里中華路二段313巷6號",
   "ll": [
    25.028128,
@@ -994,7 +994,7 @@
   "id": "p234af4d8c1",
   "n": "Musa’’穆薩‘’咖喱餅（休假會於臉書粉絲團公告）",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區忠勤里中華路二段313巷22號70號攤位",
   "ll": [
    25.028464,
@@ -1009,7 +1009,7 @@
   "id": "p23a1f58956",
   "n": "曉迪筒仔米糕",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區忠勤里中華路二段307巷22號",
   "ll": [
    25.029195,
@@ -1024,7 +1024,7 @@
   "id": "pfaf0c2c437",
   "n": "阿男麻油雞",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區忠勤里中華路二段311巷34號",
   "ll": [
    25.028881,
@@ -1039,7 +1039,7 @@
   "id": "pa991db51ef",
   "n": "洪家蒜味肉羹麻醬涼麵",
   "c": "美食",
-  "region": "east-taitung",
+  "region": "east-taitung-taidong",
   "a": "台東縣台東市仁和里更生路778號",
   "ll": [
    22.76849,
@@ -1054,7 +1054,7 @@
   "id": "pb5014d0e15",
   "n": "高工肉燥飯",
   "c": "美食",
-  "region": "east-taitung",
+  "region": "east-taitung-taidong",
   "a": "台東縣台東市馬蘭里更生路803號",
   "ll": [
    22.769399,
@@ -1069,7 +1069,7 @@
   "id": "p9ae9115647",
   "n": "漁采時令料理．更生店",
   "c": "美食",
-  "region": "east-taitung",
+  "region": "east-taitung-taidong",
   "a": "台東縣台東市更生路573巷40號四維路與洛陽街口",
   "ll": [
    22.764359,
@@ -1084,7 +1084,7 @@
   "id": "p6787978683",
   "n": "低調十三香專業牛肉麵 汐止小吃美食 推薦午餐晚餐麵館",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xizhi",
   "a": "新北市汐止區福德二路229號",
   "ll": [
    25.064489,
@@ -1099,7 +1099,7 @@
   "id": "pa35c5d2daf",
   "n": "百匯窯烤雞餐廳",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-wujie",
   "a": "宜蘭縣五結鄉福興村五結路三段171號",
   "ll": [
    24.68333,
@@ -1114,7 +1114,7 @@
   "id": "p6a4a9c538f",
   "n": "福鼎冰淇淋廠",
   "c": "咖啡甜點",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮東安里光榮路230巷80號",
   "ll": [
    24.675282,
@@ -1129,7 +1129,7 @@
   "id": "p805b53f7e8",
   "n": "阿灶伯當歸羊肉湯",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮信義里",
   "ll": [
    24.675975,
@@ -1144,7 +1144,7 @@
   "id": "p427e15ce79",
   "n": "安德睿 食代義廊 Andrea STYLE (全預約制 Reservations Required)",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區力行里遼寧街63巷15號1樓",
   "ll": [
    25.049239,
@@ -1159,7 +1159,7 @@
   "id": "p6fa2bbb6c6",
   "n": "佐佧義式窯烤披薩屋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里安和路二段69巷3號",
   "ll": [
    25.030585,
@@ -1174,7 +1174,7 @@
   "id": "pff09432f4f",
   "n": "The Slice Shop 天母",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區蘭興里德行西路19號",
   "ll": [
    25.106175,
@@ -1189,7 +1189,7 @@
   "id": "p12ec6f2dc8",
   "n": "The Slice Shop 信義安和",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里安和路二段69巷18號一樓",
   "ll": [
    25.030389,
@@ -1204,7 +1204,7 @@
   "id": "p2558458a61",
   "n": "Solo Pizza Napoletana 台北店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區至聖里酒泉街10巷9號",
   "ll": [
    25.07034,
@@ -1219,7 +1219,7 @@
   "id": "pf8ee68fc2e",
   "n": "GiraPizza 旋轉披薩",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中華里敦化北路165巷6號",
   "ll": [
    25.05461,
@@ -1234,7 +1234,7 @@
   "id": "pbf2c4fa32b",
   "n": "春山茶水舖",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區臥龍里復興南路二段323號",
   "ll": [
    25.023897,
@@ -1249,7 +1249,7 @@
   "id": "p47001eb6a4",
   "n": "Three Pugs 三巴漢堡 by 巴巴餐車",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區復興南路一段107巷5弄15-2號1樓",
   "ll": [
    25.044332,
@@ -1265,7 +1265,7 @@
   "id": "pcfd465b24c",
   "n": "人生豆腐",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區復興南路一段107巷34號",
   "ll": [
    25.043423,
@@ -1280,7 +1280,7 @@
   "id": "pd8f65939c1",
   "n": "好吃食堂海鮮鍋燒 大安店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里大安路一段8號",
   "ll": [
    25.044668,
@@ -1296,7 +1296,7 @@
   "id": "p54f3feff64",
   "n": "金沐子健康餐盒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區集英里民生西路45巷3弄21號1樓",
   "ll": [
    25.058038,
@@ -1311,7 +1311,7 @@
   "id": "pd60c0885f1",
   "n": "藍象廷泰式火鍋 行天宮店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區松江里松江路275號",
   "ll": [
    25.059985,
@@ -1326,7 +1326,7 @@
   "id": "p6e7c2722bc",
   "n": "芯浪國際滑板衝浪水公園 Xin Flow Surfing Park",
   "c": "景點",
-  "region": "south-chiayi-county",
+  "region": "south-chiayi-county-taibao",
   "a": "嘉義縣太保市故宮東路30號東勢里015鄰",
   "ll": [
    23.470105,
@@ -1341,7 +1341,7 @@
   "id": "p13b6bdf8ae",
   "n": "拉丁碳烤牛排 LATINO GRILL",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "之1, 巷子裡面, No. 150號忠孝路城隍里南區台中市402",
   "ll": [
    24.129492,
@@ -1356,7 +1356,7 @@
   "id": "pbd31080e7d",
   "n": "清真館",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里忠孝路165巷12號",
   "ll": [
    24.131063,
@@ -1371,7 +1371,7 @@
   "id": "pa7d06bd4f3",
   "n": "AOZA熬咋",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區中興里中興街81號",
   "ll": [
    24.147312,
@@ -1386,7 +1386,7 @@
   "id": "p9e84bcc4f8",
   "n": "有沒有牛肉麵台中西屯店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區何德里西屯路二段90-20號",
   "ll": [
    24.165545,
@@ -1401,7 +1401,7 @@
   "id": "p4d52028174",
   "n": "流明拉麵《鴨湯專門》",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區昇平里美村路一段428號",
   "ll": [
    24.143347,
@@ -1416,7 +1416,7 @@
   "id": "p31353ea33f",
   "n": "范記金之園草袋飯 總店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區公園里成功路170號",
   "ll": [
    24.141351,
@@ -1431,7 +1431,7 @@
   "id": "pc7303fa307",
   "n": "主觀廚房.Subjective taste",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區中興里公正路126號",
   "ll": [
    24.149094,
@@ -1446,7 +1446,7 @@
   "id": "p57486386fa",
   "n": "發愣吃 VARMT (勤美店)",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區中興里公正路133號",
   "ll": [
    24.148871,
@@ -1461,7 +1461,7 @@
   "id": "p359a67b411",
   "n": "新月梧桐(國美館)",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區公舘里五權西三街123號",
   "ll": [
    24.13354,
@@ -1476,7 +1476,7 @@
   "id": "p8c9a83a637",
   "n": "滿堂 Le plein",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區土庫里存中街39巷3號",
   "ll": [
    24.14094,
@@ -1491,7 +1491,7 @@
   "id": "pa7c3f39cdc",
   "n": "饕之鄉李姐的店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區公德里向上路一段353號",
   "ll": [
    24.146607,
@@ -1506,7 +1506,7 @@
   "id": "p110307dc2b",
   "n": "京華煙雲",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區吉龍里五權七街57號",
   "ll": [
    24.135016,
@@ -1521,7 +1521,7 @@
   "id": "p178af73696",
   "n": "MEN EIJI 北海道鴨白湯拉麵-台中勤美店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區中興里中興街130號",
   "ll": [
    24.148679,
@@ -1537,7 +1537,7 @@
   "id": "p46ca7a88c7",
   "n": "MEN EIJI 北海道鴨清湯拉麵-台中精誠店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區忠誠里精誠路5-3號",
   "ll": [
    24.156567,
@@ -1553,7 +1553,7 @@
   "id": "p17f195e36a",
   "n": "台中南屯-小初店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區溝墘里大業路243號",
   "ll": [
    24.153494,
@@ -1568,7 +1568,7 @@
   "id": "p155bea98bc",
   "n": "膳馨民間創作料理-創始店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區存中街21號",
   "ll": [
    24.141102,
@@ -1583,7 +1583,7 @@
   "id": "p1087eb7df8",
   "n": "NK.Restaurant 餐廳 - 亞洲風味料理",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區何成里大容東街66號",
   "ll": [
    24.156662,
@@ -1598,7 +1598,7 @@
   "id": "p62148c2457",
   "n": "吃茶三千台灣概念店",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區溝墘里大英街607號",
   "ll": [
    24.154562,
@@ -1613,7 +1613,7 @@
   "id": "p9ee1420823",
   "n": "Will’s Teppanyaki",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中華里敦化北路165巷10號",
   "ll": [
    25.054707,
@@ -1628,7 +1628,7 @@
   "id": "pba51066903",
   "n": "阿斗伯冷凍芋",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區成功路356號",
   "ll": [
    24.145263,
@@ -1643,7 +1643,7 @@
   "id": "p92f108a254",
   "n": "翁記泡沫廣場",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北區新興里精武路326號",
   "ll": [
    24.146243,
@@ -1658,7 +1658,7 @@
   "id": "pab222593bd",
   "n": "橋下披薩 Under the Bridge",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區正守里新生北路一段62巷16號",
   "ll": [
    25.04632,
@@ -1673,7 +1673,7 @@
   "id": "pae348c7185",
   "n": "NARA泰式養生館 NARA Thai Massage & Spa",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建倫里仁愛路四段345巷4弄19號",
   "ll": [
    25.039106,
@@ -1688,7 +1688,7 @@
   "id": "p568824f4ca",
   "n": "隨野家農場",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-beitou",
   "a": "台北市北投區豐年里大業路517巷80號",
   "ll": [
    25.133006,
@@ -1703,7 +1703,7 @@
   "id": "p67b57e269c",
   "n": "五府夢想黑輪",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北区六合里篤行路47號",
   "ll": [
    24.147244,
@@ -1719,7 +1719,7 @@
   "id": "pe0a6a9cb2b",
   "n": "麵屋聚",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區中華里成功路404號",
   "ll": [
    24.146096,
@@ -1734,7 +1734,7 @@
   "id": "p2fb2974eca",
   "n": "阿洪快餐(休假日以IG為主)",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區昇平街143號1樓",
   "ll": [
    24.145381,
@@ -1749,7 +1749,7 @@
   "id": "pd9444c249e",
   "n": "coffee stopover",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區後龍里民權路217巷24號",
   "ll": [
    24.147962,
@@ -1764,7 +1764,7 @@
   "id": "p49fa710466",
   "n": "coffee stopover black",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區後龍里福龍街7號1樓",
   "ll": [
    24.145464,
@@ -1779,7 +1779,7 @@
   "id": "pc504a02725",
   "n": "好菜KÜISINE模範總店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區雙龍里模範街24巷1號",
   "ll": [
    24.148677,
@@ -1794,7 +1794,7 @@
   "id": "pc3d349214f",
   "n": "桂蘭麵",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北區頂厝里崇德路一段503巷49號",
   "ll": [
    24.164405,
@@ -1809,7 +1809,7 @@
   "id": "p0302869158",
   "n": "采•寓halo house",
   "c": "住宿",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區惠來里市政北七路189號",
   "ll": [
    24.165452,
@@ -1824,7 +1824,7 @@
   "id": "p99ee2c6f24",
   "n": "徐大姊炸香香",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里忠孝路181號",
   "ll": [
    24.130351,
@@ -1839,7 +1839,7 @@
   "id": "p72920e1dfa",
   "n": "第一豆花店",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里忠孝路98號",
   "ll": [
    24.12876,
@@ -1854,7 +1854,7 @@
   "id": "p601b03a59e",
   "n": "土耳其卡霸捲",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里忠孝路198號",
   "ll": [
    24.130193,
@@ -1869,7 +1869,7 @@
   "id": "pe68ae89c76",
   "n": "正老牌臭豆腐麵線糊",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里合作街70之2號",
   "ll": [
    24.129555,
@@ -1884,7 +1884,7 @@
   "id": "p7b67bce987",
   "n": "茗陽甘蔗牛奶大王",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區忠孝路與合作街交叉口",
   "ll": [
    24.129477,
@@ -1899,7 +1899,7 @@
   "id": "p0e45a686a1",
   "n": "小漁兒",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西区和龙里篤行路151號",
   "ll": [
    24.1494,
@@ -1915,7 +1915,7 @@
   "id": "p09d4733d60",
   "n": "潮州羅燒酒雞",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區民龍里西屯路一段202號",
   "ll": [
    24.15321,
@@ -1930,7 +1930,7 @@
   "id": "pb82099db76",
   "n": "東興市魯肉有限公司（魯肉義）",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北區賴厝里漢口路四段88號",
   "ll": [
    24.166903,
@@ -1945,7 +1945,7 @@
   "id": "p86c704d390",
   "n": "激旨燒鳥 美村加盟店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區忠明里美村路一段86號",
   "ll": [
    24.152312,
@@ -1960,7 +1960,7 @@
   "id": "p33b8f704d3",
   "n": "激旨燒き鳥Gekiuma Yakitori 台灣總店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "18號 No. 150巷, 文華路西平里西屯區台中市407",
   "ll": [
    24.183121,
@@ -1975,7 +1975,7 @@
   "id": "p0c433fd939",
   "n": "勇記蒸餃館（總店）",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西区和龙里篤行路178-1號",
   "ll": [
    24.150296,
@@ -1990,7 +1990,7 @@
   "id": "p8dd2eb84e6",
   "n": "醉月樓台灣菜",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中区绿川里中山路20號2樓",
   "ll": [
    24.137835,
@@ -2005,7 +2005,7 @@
   "id": "p1d47a68cfc",
   "n": "馨苑台菜咖啡※松竹店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-beitun",
   "a": "台中市北屯區舊社里敦富路68號",
   "ll": [
    24.181655,
@@ -2020,7 +2020,7 @@
   "id": "p90a9035153",
   "n": "馨苑台菜咖啡※西區店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區後龍里民生北路106號",
   "ll": [
    24.148189,
@@ -2035,7 +2035,7 @@
   "id": "p68b07a6ace",
   "n": "沁園春 創始店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區繼光里台灣大道一段129號&137號",
   "ll": [
    24.139553,
@@ -2050,7 +2050,7 @@
   "id": "p2357181417",
   "n": "金格觀光工廠｜卡司·蒂菈樂園",
   "c": "景點",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-luzhu",
   "a": "桃園市蘆竹區宏竹里大竹北路90之66號",
   "ll": [
    25.031762,
@@ -2065,7 +2065,7 @@
   "id": "p7083266c30",
   "n": "J’adore pasta",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區前港里後港街177號1樓",
   "ll": [
    25.087734,
@@ -2080,7 +2080,7 @@
   "id": "pbf5171463a",
   "n": "PRESERVE LaLaport 南港店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-nangang",
   "a": "台北市南港區環河里經貿二路131號1樓",
   "ll": [
    25.059345,
@@ -2095,7 +2095,7 @@
   "id": "pe45e1f7ddf",
   "n": "頂粵吉品",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區龍潭里市政南一路288號",
   "ll": [
    24.158498,
@@ -2110,7 +2110,7 @@
   "id": "p5037f44dfa",
   "n": "鮨 緣",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區紫星里康寧路一段48巷10號",
   "ll": [
    25.07998,
@@ -2125,7 +2125,7 @@
   "id": "p2db1bcc9c0",
   "n": "新光黃昏市場",
   "c": "購物市集",
-  "region": "central-taichung",
+  "region": "central-taichung-dongqu",
   "a": "台中市東區東英里十甲路470號",
   "ll": [
    24.144299,
@@ -2140,7 +2140,7 @@
   "id": "p7768b1555c",
   "n": "萬華刈包吉-四神湯-板橋",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區新興里新興路2之3號",
   "ll": [
    25.007363,
@@ -2155,7 +2155,7 @@
   "id": "p554499fe51",
   "n": "實話咖哩 日式熟成咖哩專賣 板橋店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區長安里漢生東路193巷25號",
   "ll": [
    25.012322,
@@ -2170,7 +2170,7 @@
   "id": "p4cf5e5bec3",
   "n": "Buon Pasta & Bar - 現代義式料理",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區重慶路12巷9號",
   "ll": [
    25.007578,
@@ -2185,7 +2185,7 @@
   "id": "pa972242767",
   "n": "Bianca pizza napoletana 比安卡披薩",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板桥区汉生里光正街67號1樓",
   "ll": [
    25.018299,
@@ -2200,7 +2200,7 @@
   "id": "p1029c8be5a",
   "n": "阿達師牛肉麵",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區華翠里莒光路80號",
   "ll": [
    25.024011,
@@ -2215,7 +2215,7 @@
   "id": "p24b68514ac",
   "n": "樂漢堡美式餐廳 新北板橋店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區香丘里漢生東路133號",
   "ll": [
    25.014251,
@@ -2230,7 +2230,7 @@
   "id": "p78a5b6f1d4",
   "n": "BRUN不然-板橋店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區福丘里縣民大道二段80-1號",
   "ll": [
    25.014688,
@@ -2245,7 +2245,7 @@
   "id": "pe0db16ceb0",
   "n": "BEGINAGAIN起點咖啡",
   "c": "咖啡甜點",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區公舘里文化路一段285巷2弄2號",
   "ll": [
    25.018899,
@@ -2260,7 +2260,7 @@
   "id": "pab694218da",
   "n": "悠悠U Brunch",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區文化里文化路二段125巷15號",
   "ll": [
    25.027066,
@@ -2275,7 +2275,7 @@
   "id": "pc88ef686be",
   "n": "56巷口湯包",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區仁翠里裕民街56巷1號",
   "ll": [
    25.028702,
@@ -2290,7 +2290,7 @@
   "id": "p80c67f1374",
   "n": "林員肉圓",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區赤松里府中路104號",
   "ll": [
    25.009722,
@@ -2305,7 +2305,7 @@
   "id": "p9560c6c031",
   "n": "特香齋西餐廳",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區景星里中山路一段26號2樓",
   "ll": [
    25.008469,
@@ -2320,7 +2320,7 @@
   "id": "p9cfd09fd9d",
   "n": "Asia49亞洲料理及酒廊",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區福丘里新站路16號百揚大樓49樓",
   "ll": [
    25.013132,
@@ -2336,7 +2336,7 @@
   "id": "p0b2ae356cf",
   "n": "呷雞啦餐館",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區西安里縣民大道二段178號",
   "ll": [
    25.016731,
@@ -2351,7 +2351,7 @@
   "id": "p60d82e0821",
   "n": "辣蜀麻辣燙",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區玉光里民生路二段101號",
   "ll": [
    25.017752,
@@ -2366,7 +2366,7 @@
   "id": "p9a996e02bb",
   "n": "麵や壹ラーメン專門店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區漢生里文化路一段237號",
   "ll": [
    25.017747,
@@ -2381,7 +2381,7 @@
   "id": "p47fc22a65e",
   "n": "丹生炊事｜板橋傑仕堡門市",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區介壽里縣民大道二段275號2樓",
   "ll": [
    25.017723,
@@ -2396,7 +2396,7 @@
   "id": "pd7d304a341",
   "n": "布娜飛比利時餐酒館板橋新埔店Bravo Beer",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區介壽里縣民大道二段273號",
   "ll": [
    25.017592,
@@ -2411,7 +2411,7 @@
   "id": "p4e3d06e307",
   "n": "源慶鮮蚵(YuanQingOyster)—鮮蚵/小卷/藥膳滷味｜台灣500碗推薦",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區湳興里南雅東路29巷2弄1號",
   "ll": [
    25.005843,
@@ -2426,7 +2426,7 @@
   "id": "pf1618949b8",
   "n": "青雅中餐廳",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區福丘里民權路88號",
   "ll": [
    25.011394,
@@ -2441,7 +2441,7 @@
   "id": "p36fce6c100",
   "n": "吾時•食 5 10 10 牛肉麵",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區漢生里公館街58號",
   "ll": [
    25.013856,
@@ -2456,7 +2456,7 @@
   "id": "p19d382bfca",
   "n": "早喚 Morning Call",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區民安里民權路202巷8弄6號",
   "ll": [
    25.014614,
@@ -2471,7 +2471,7 @@
   "id": "pcca3bae1f6",
   "n": "來得福川菜客家菜餐廳",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區港尾里金華街9巷6號",
   "ll": [
    25.020454,
@@ -2486,7 +2486,7 @@
   "id": "pae8226170f",
   "n": "吃貨の燒味",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區社後里中正路135巷11-4號",
   "ll": [
    25.015439,
@@ -2501,7 +2501,7 @@
   "id": "p560e11799c",
   "n": "板橋正宗老張牛肉麵",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區社後里中正路136號",
   "ll": [
    25.01598,
@@ -2516,7 +2516,7 @@
   "id": "pb734f72e9f",
   "n": "大庭牛肉麵",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區國光里國光路39號",
   "ll": [
    25.017794,
@@ -2531,7 +2531,7 @@
   "id": "p54f7dd4e66",
   "n": "海山魯肉飯",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區深丘里海山路43號",
   "ll": [
    25.009779,
@@ -2546,7 +2546,7 @@
   "id": "p339843602c",
   "n": "小喬新疆羊肉串",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區嵐翠里仁化街84號",
   "ll": [
    25.031819,
@@ -2561,7 +2561,7 @@
   "id": "p3ce2676c25",
   "n": "板橋湳雅夜市",
   "c": "小吃夜市",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區新興里南雅東路",
   "ll": [
    25.005719,
@@ -2576,7 +2576,7 @@
   "id": "p4008894f58",
   "n": "樂華夜市",
   "c": "小吃夜市",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-yonghe",
   "a": "新北市永和區永平路",
   "ll": [
    25.008416,
@@ -2591,7 +2591,7 @@
   "id": "p6d3925c5bb",
   "n": "Smokin' BBQ 德州燒烤在嘉義（街邊外帶店）",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中央里成仁街102號",
   "ll": [
    23.478503,
@@ -2606,7 +2606,7 @@
   "id": "pb479377060",
   "n": "阿焜早點",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區書院里仁愛路536號",
   "ll": [
    23.477539,
@@ -2621,7 +2621,7 @@
   "id": "pcaa0889a69",
   "n": "TUTTO BELLO",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山区晴光里双城街25巷15號1樓",
   "ll": [
    25.066293,
@@ -2636,7 +2636,7 @@
   "id": "pdf1c8888cc",
   "n": "海園活海鮮餐廳",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-ruifang",
   "a": "新北市瑞芳區鼻頭里鼻頭路245號",
   "ll": [
    25.124176,
@@ -2651,7 +2651,7 @@
   "id": "pde85dc0107",
   "n": "阿里山英迪格酒店",
   "c": "住宿",
-  "region": "south-chiayi-county",
+  "region": "south-chiayi-county-fanlu",
   "a": "嘉義縣番路鄉公田村龍頭20號",
   "ll": [
    23.444056,
@@ -2666,7 +2666,7 @@
   "id": "pfae6f74ee7",
   "n": "Housebistro好適廚坊",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區大直里大直街9巷1號",
   "ll": [
    25.080806,
@@ -2681,7 +2681,7 @@
   "id": "pdd199fdc32",
   "n": "明明MingMing(休假日於IG、FB專頁為主）",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區文化路432巷1號1樓",
   "ll": [
    23.488544,
@@ -2697,7 +2697,7 @@
   "id": "pb068c0df80",
   "n": "榮興茶行",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區新富里民族路601號",
   "ll": [
    23.475569,
@@ -2712,7 +2712,7 @@
   "id": "p6cbfd483c3",
   "n": "煙拉麵けむり",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區西榮里蘭井街363號",
   "ll": [
    23.476932,
@@ -2728,7 +2728,7 @@
   "id": "p5395642af4",
   "n": "貓尾巴麵包店",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區朝陽里民族路25號",
   "ll": [
    23.476901,
@@ -2743,7 +2743,7 @@
   "id": "p7a3a8bce02",
   "n": "スピード Supiido",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中央里北榮街50號",
   "ll": [
    23.481477,
@@ -2758,7 +2758,7 @@
   "id": "pc556f3fc7b",
   "n": "嘉義新庄紅茶",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區美源里新庄街98號",
   "ll": [
    23.464821,
@@ -2773,7 +2773,7 @@
   "id": "p3bce6049c8",
   "n": "鄒記食舖",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區民有里復興北路313巷43號",
   "ll": [
    25.059043,
@@ -2788,7 +2788,7 @@
   "id": "p6bd5a1401f",
   "n": "Sky Lab",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區敦化南路二段63巷24號",
   "ll": [
    25.030876,
@@ -2803,7 +2803,7 @@
   "id": "p7ea569f383",
   "n": "松築和洋私廚料理",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區福全里中興路221號",
   "ll": [
    23.482256,
@@ -2818,7 +2818,7 @@
   "id": "p294d749c26",
   "n": "二屾 Ershen",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區過溝里成仁街70號",
   "ll": [
    23.477467,
@@ -2833,7 +2833,7 @@
   "id": "p990a71306a",
   "n": "福粵樓粵式餐廳",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區福安里世賢路一段789號32 樓",
   "ll": [
    23.48682,
@@ -2848,7 +2848,7 @@
   "id": "pe0c20141c6",
   "n": "劉里長火雞肉飯",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中央里光彩街414號",
   "ll": [
    23.478331,
@@ -2863,7 +2863,7 @@
   "id": "p2e6e90116c",
   "n": "光華阿宏火雞肉飯總店",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中央里光華路108號",
   "ll": [
    23.478582,
@@ -2878,7 +2878,7 @@
   "id": "p18558a1760",
   "n": "承億文旅 桃城茶樣子",
   "c": "住宿",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區仁義里忠孝路516號",
   "ll": [
    23.493644,
@@ -2893,7 +2893,7 @@
   "id": "p801d6bb366",
   "n": "卉羚綠豆沙牛乳專賣店",
   "c": "咖啡甜點",
-  "region": "north-hsinchu-city",
+  "region": "north-hsinchu-city-beiqu",
   "a": "新竹市北區西門里中山路118號",
   "ll": [
    24.804361,
@@ -2908,7 +2908,7 @@
   "id": "pafcedbe5e7",
   "n": "大裕米糕",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區導明里成功東街53號",
   "ll": [
    23.472548,
@@ -2924,7 +2924,7 @@
   "id": "p9d0bfc1e37",
   "n": "A.D. 1977",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區導明里垂楊路289號",
   "ll": [
    23.473427,
@@ -2940,7 +2940,7 @@
   "id": "p39b3510cab",
   "n": "Buttermilk摩登美式餐廳(5F)",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區萬壽里武昌街二段77號5樓",
   "ll": [
    25.045162,
@@ -2955,7 +2955,7 @@
   "id": "pdf718a5bfa",
   "n": "Buttermilk 摩登美式餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "一樓, No. 57-1號中山北路二段中山里中山區台北市10412",
   "ll": [
    25.055704,
@@ -2970,7 +2970,7 @@
   "id": "pa002a8af3b",
   "n": "里艾廚房&人魚海",
   "c": "美食",
-  "region": "east-hualien",
+  "region": "east-hualien-fengbin",
   "a": "花蓮縣豐濱鄉靜浦村338-1號",
   "ll": [
    23.450182,
@@ -2985,7 +2985,7 @@
   "id": "p42b78de34b",
   "n": "心潮飯店｜台北微風信義店 SINCHAO RICE SHOPPE",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區興雅里忠孝東路五段68號2樓",
   "ll": [
    25.040501,
@@ -3000,7 +3000,7 @@
   "id": "p0c812b8f0c",
   "n": "sunburn.",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路200號2樓",
   "ll": [
    25.082387,
@@ -3015,7 +3015,7 @@
   "id": "p38d485cff5",
   "n": "斑泊",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群二路265巷38號",
   "ll": [
    25.081119,
@@ -3031,7 +3031,7 @@
   "id": "p46c6c71a82",
   "n": "麵屋長樂 台灣本店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區溫州街91號",
   "ll": [
    25.018898,
@@ -3046,7 +3046,7 @@
   "id": "p4868e4deff",
   "n": "皇城司 The SPY Bar & Bistro",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區中山里新生北路二段75號1樓",
   "ll": [
    25.056807,
@@ -3061,7 +3061,7 @@
   "id": "p33e99afbab",
   "n": "say when",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區1樓正守里新生北路一段62巷9號",
   "ll": [
    25.04648,
@@ -3077,7 +3077,7 @@
   "id": "p081cfd1168",
   "n": "ACME｜Cafe Bar & Restaurant 臺北表演藝術中心",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林区承德里剑潭路1號7樓",
   "ll": [
    25.085127,
@@ -3092,7 +3092,7 @@
   "id": "p1d878e6b4d",
   "n": "五草車中華食館南昌店 最晚點餐時間20:10",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區頂東里南昌路二段188號",
   "ll": [
    25.024527,
@@ -3107,7 +3107,7 @@
   "id": "p2089b95af1",
   "n": "牛翻天牛肉麵-牛大骨熬牛肉湯-湯頭濃郁 (大安店)",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光信里信義路四段355號",
   "ll": [
    25.033299,
@@ -3122,7 +3122,7 @@
   "id": "p4161b90492",
   "n": "M One Cafe 大安",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區仁愛里仁愛路四段27巷6-1號",
   "ll": [
    25.038868,
@@ -3137,7 +3137,7 @@
   "id": "p74259de243",
   "n": "THINKPIZZA",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-zhongxi",
   "a": "台南市中西區西和里西和路289號",
   "ll": [
    23.003267,
@@ -3152,7 +3152,7 @@
   "id": "pa749e5d672",
   "n": "詹記麻辣火鍋 敦南店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區虎嘯里和平東路三段60號",
   "ll": [
    25.02431,
@@ -3167,7 +3167,7 @@
   "id": "p855043fcac",
   "n": "小杜麵館 Chapman's Noodles",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里復興南路一段107巷5弄15號",
   "ll": [
    25.044341,
@@ -3182,7 +3182,7 @@
   "id": "p9cf6fd9e79",
   "n": "溢香園餐廳成功店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區金湖里成功路五段59號",
   "ll": [
    25.074206,
@@ -3197,7 +3197,7 @@
   "id": "p5f276c5c74",
   "n": "EIKA 盈科",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區大有里民樂街58號",
   "ll": [
    25.057479,
@@ -3213,7 +3213,7 @@
   "id": "p583653751c",
   "n": "牡丹．極上 天ぷら．本店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區德安里四維路52巷17號",
   "ll": [
    25.035127,
@@ -3229,7 +3229,7 @@
   "id": "p2ed65b04ae",
   "n": "籌學費餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區正和里光復南路417巷37號",
   "ll": [
    25.036957,
@@ -3244,7 +3244,7 @@
   "id": "pdbbb95ef5c",
   "n": "UNCLE SHAWN燒肉餐酒館 大安一號店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里敦化南路一段160巷51號",
   "ll": [
    25.043699,
@@ -3259,7 +3259,7 @@
   "id": "pab54b6e255",
   "n": "GUGU Yakitori 居酒屋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區正聲里光復南路290巷41號1樓",
   "ll": [
    25.039275,
@@ -3274,7 +3274,7 @@
   "id": "pd4a24844b6",
   "n": "東華川府重慶老火鍋 - 台北忠孝店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建倫里仁愛路四段345巷4弄31號",
   "ll": [
    25.039099,
@@ -3289,7 +3289,7 @@
   "id": "p5ec6bde337",
   "n": "台北中山阿城鵝肉吉林總店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區吉林路105號",
   "ll": [
    25.056406,
@@ -3304,7 +3304,7 @@
   "id": "pb029c6c1af",
   "n": "波 WAVE 鷹嘴豆泥屋 Hummus House",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區景聯里基隆路二段39巷8弄4號1樓",
   "ll": [
    25.031013,
@@ -3319,7 +3319,7 @@
   "id": "p4343da5a81",
   "n": "李氏咖啡",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區忠孝東路四段205巷29弄7號",
   "ll": [
    25.043197,
@@ -3335,7 +3335,7 @@
   "id": "p248e933981",
   "n": "三明堂",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區天山里天母東路49之1號",
   "ll": [
    25.118246,
@@ -3350,7 +3350,7 @@
   "id": "pc921c53db2",
   "n": "蔚南裏 WAYNAN MANSION",
   "c": "住宿",
-  "region": "south-tainan",
+  "region": "south-tainan-zhongxi",
   "a": "台南市中西區中山路22號",
   "ll": [
    22.99309,
@@ -3365,7 +3365,7 @@
   "id": "p784a88e7c7",
   "n": "徐淮人家",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區力行里遼寧街45巷2號",
   "ll": [
    25.048721,
@@ -3381,7 +3381,7 @@
   "id": "pd25038b355",
   "n": "京町家日式串燒居酒屋",
   "c": "美食",
-  "region": "north-hsinchu-city",
+  "region": "north-hsinchu-city-beiqu",
   "a": "新竹市北區中正里府後街19巷6號",
   "ll": [
    24.805542,
@@ -3396,7 +3396,7 @@
   "id": "p5c42f91ea6",
   "n": "Reale Cucina Italiana",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區仁愛里仁愛路四段91巷17號",
   "ll": [
    25.038638,
@@ -3411,7 +3411,7 @@
   "id": "pca5f2d3fc8",
   "n": "Vento Gelato",
   "c": "咖啡甜點",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-taoyuan",
   "a": "桃園市桃園區國強十一街123號1樓",
   "ll": [
    24.991508,
@@ -3427,7 +3427,7 @@
   "id": "p17cccc7495",
   "n": "THE FLOW",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區正得里中山北路一段49號",
   "ll": [
    25.04929,
@@ -3442,7 +3442,7 @@
   "id": "p192ca13930",
   "n": "DUO Taipei",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區頂碩里艋舺大道86巷42號",
   "ll": [
    25.032567,
@@ -3457,7 +3457,7 @@
   "id": "pd3a356c3e5",
   "n": "好嶼",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區仁愛路四段300巷20弄17號",
   "ll": [
    25.036371,
@@ -3472,7 +3472,7 @@
   "id": "p9b5bfb797e",
   "n": "阿成炒飯專賣店(大連總店)",
   "c": "美食",
-  "region": "south-kaohsiung",
+  "region": "south-kaohsiung-sanmin",
   "a": "高雄市三民區達明里大連街182號",
   "ll": [
    22.6443,
@@ -3487,7 +3487,7 @@
   "id": "pcca2e2a08d",
   "n": "台中阿彬爌肉飯",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區廣民里樂群街41號",
   "ll": [
    24.138866,
@@ -3502,7 +3502,7 @@
   "id": "pd4bd2c5ded",
   "n": "66小吃店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-ruifang",
   "a": "新北市瑞芳區魚桀魚坑路195號",
   "ll": [
    25.107158,
@@ -3517,7 +3517,7 @@
   "id": "p553cd6ccc7",
   "n": "城裡的小月光 單身雞湯 大中店",
   "c": "美食",
-  "region": "south-kaohsiung",
+  "region": "south-kaohsiung-zuoying",
   "a": "高雄市左營區菜公里大中二路623號",
   "ll": [
    22.683461,
@@ -3532,7 +3532,7 @@
   "id": "pc6b4509104",
   "n": "貳拾貳日甜",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區古莊里師大路126巷7號1 樓",
   "ll": [
    25.021676,
@@ -3548,7 +3548,7 @@
   "id": "p844499b790",
   "n": "店小二魯肉飯",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-sanchong",
   "a": "新北市三重區重新里大同北路27號",
   "ll": [
    25.062654,
@@ -3564,7 +3564,7 @@
   "id": "p7d123f027b",
   "n": "泰和樓",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區錦泰里杭州南路二段61-20號",
   "ll": [
    25.030249,
@@ -3579,7 +3579,7 @@
   "id": "p38bd642712",
   "n": "八和和牛燒肉專門店 敦北二號店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中正里敦化北路100號",
   "ll": [
    25.052243,
@@ -3594,7 +3594,7 @@
   "id": "pdcc2d3793a",
   "n": "又一間商行SPAGHETTI（無訂位服務，營業時間為最後點餐時間）",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區興安街192號",
   "ll": [
    25.05597,
@@ -3609,7 +3609,7 @@
   "id": "p39b27914d6",
   "n": "夜間部爌肉飯",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區公德里精誠路109號",
   "ll": [
    24.150427,
@@ -3625,7 +3625,7 @@
   "id": "pf4959afd8a",
   "n": "全州喜比食堂 瑪格利酒館 青埔店",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-zhongli",
   "a": "桃園市中坜区青埔里高鐵站前路一段466號",
   "ll": [
    25.016117,
@@ -3640,7 +3640,7 @@
   "id": "p8e16711e5f",
   "n": "On the Road 義式手工冰淇淋專賣店",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區天福里忠誠路二段136號",
   "ll": [
    25.114368,
@@ -3655,7 +3655,7 @@
   "id": "p501d0942ff",
   "n": "魚貫鐵板燒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區圓山里林森北路622號",
   "ll": [
    25.067229,
@@ -3670,7 +3670,7 @@
   "id": "p62f4cc6407",
   "n": "阿西貳店（樂華店）",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-yonghe",
   "a": "新北市永和區大新里大新街47號",
   "ll": [
    25.008465,
@@ -3685,7 +3685,7 @@
   "id": "pb406dc298a",
   "n": "阿西燒肉飯（永元店）",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-yonghe",
   "a": "新北市永和區秀元里永元路8號",
   "ll": [
    25.000123,
@@ -3700,7 +3700,7 @@
   "id": "p79f0cd22a0",
   "n": "宜賓燃麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區廈安里西藏路18號",
   "ll": [
    25.030721,
@@ -3716,7 +3716,7 @@
   "id": "pa0e06dbbf2",
   "n": "Hook Shisha Lounge (週三小週末95折)",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里敦化南路一段160巷60號",
   "ll": [
    25.043445,
@@ -3732,7 +3732,7 @@
   "id": "p424e40f08f",
   "n": "騰鮨",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區樂群三路285號一樓",
   "ll": [
    25.083023,
@@ -3747,7 +3747,7 @@
   "id": "p88a0f3a6ce",
   "n": "驢子餐廳 L'IDIOT GRILL&PASTA 春大直店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路303號3樓",
   "ll": [
    25.082762,
@@ -3762,7 +3762,7 @@
   "id": "p3238402c2b",
   "n": "九華樓 春大直店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路303號3樓",
   "ll": [
    25.082752,
@@ -3777,7 +3777,7 @@
   "id": "p9dce46efd5",
   "n": "KOUMA日本料理 小馬",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群二路199號台北萬豪酒店一樓",
   "ll": [
    25.080429,
@@ -3792,7 +3792,7 @@
   "id": "pd6f1340edb",
   "n": "頁小館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區大直里北安路595巷20弄4號1樓",
   "ll": [
    25.08184,
@@ -3807,7 +3807,7 @@
   "id": "pd09a2f4d2a",
   "n": "鑫花溪牛肉米粉",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-guishan",
   "a": "桃園市龜山區文化里文化一路10巷20號",
   "ll": [
    25.059371,
@@ -3822,7 +3822,7 @@
   "id": "p087a96d023",
   "n": "Feather 肥的",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-guishan",
   "a": "桃園市龜山區文化里文昌二街34號號旁",
   "ll": [
    25.056059,
@@ -3837,7 +3837,7 @@
   "id": "pc280a894f7",
   "n": "寓曰 Cafe’ Bar Restaurant",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里市民大道四段34號",
   "ll": [
    25.044826,
@@ -3852,7 +3852,7 @@
   "id": "pa1df2fba05",
   "n": "義大利餐廳 TRASTEVERE 大安區 忠孝復興站 美食",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里復興南路一段107巷7號1樓",
   "ll": [
    25.043664,
@@ -3867,7 +3867,7 @@
   "id": "p2d45f9373f",
   "n": "nabo ulv",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里敦化南路一段160巷18號",
   "ll": [
    25.043441,
@@ -3883,7 +3883,7 @@
   "id": "p1b07135581",
   "n": "川酒.咖啡｜老位",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區忠孝東路四段101巷29號1樓",
   "ll": [
    25.042958,
@@ -3898,7 +3898,7 @@
   "id": "p16ff65fa2a",
   "n": "大嗑西式餐館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區濟南路二段18-3號",
   "ll": [
    25.04098,
@@ -3913,7 +3913,7 @@
   "id": "pcf2ac3f93c",
   "n": "山上走走 日式無菜單燒肉專門店",
   "c": "美食",
-  "region": "north-hsinchu-city",
+  "region": "north-hsinchu-city-dongqu",
   "a": "新竹市東區中正里中正路96巷24號",
   "ll": [
    24.805752,
@@ -3928,7 +3928,7 @@
   "id": "pe91d7f0dc7",
   "n": "MASA 手工塔可店 永春店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區永春里松山路415號",
   "ll": [
    25.04122,
@@ -3943,7 +3943,7 @@
   "id": "p0a2f207716",
   "n": "江牛樓",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區永樂里民樂街6號",
   "ll": [
    25.05571,
@@ -3958,7 +3958,7 @@
   "id": "p4cfff0c3f4",
   "n": "酉志",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區永康里愛國東路99號1樓",
   "ll": [
    25.031551,
@@ -3973,7 +3973,7 @@
   "id": "pee9ea79ba7",
   "n": "圓鼎鐵板燒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區聚盛里錦州街28號",
   "ll": [
    25.060224,
@@ -3988,7 +3988,7 @@
   "id": "p4669a343f8",
   "n": "阿堂豬肉麵線",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北區新北里一中街112號",
   "ll": [
    24.152834,
@@ -4003,7 +4003,7 @@
   "id": "p28b493ec8c",
   "n": "CHALET V",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區成功里植福路8號入口於典華停車場後方木門處",
   "ll": [
    25.083734,
@@ -4018,7 +4018,7 @@
   "id": "pe3ced8427e",
   "n": "Butcher by Lanpengyou 忠孝",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區昌隆里忠孝東路三段205-1號",
   "ll": [
    25.041879,
@@ -4033,7 +4033,7 @@
   "id": "pc2a498f7b7",
   "n": "天玉麵（TianYu Noodles）",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "No. 3, 中山北路七段63巷天玉里士林區台北市111",
   "ll": [
    25.1207,
@@ -4048,7 +4048,7 @@
   "id": "p5208c87de5",
   "n": "REEDS PIZZERIA & BOOKSTORE 民權店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區新福里民權東路二段107號",
   "ll": [
    25.062725,
@@ -4063,7 +4063,7 @@
   "id": "pa4a5965a23",
   "n": "山男 現代居酒屋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區義安里敦化南路二段63巷53弄3號一樓",
   "ll": [
    25.031122,
@@ -4078,7 +4078,7 @@
   "id": "pfbdc0923d4",
   "n": "滾麵",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區青翠里懷德街65號",
   "ll": [
    25.032426,
@@ -4093,7 +4093,7 @@
   "id": "pdb49146a3d",
   "n": "琢鮨",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中華里敦化北路145巷11號",
   "ll": [
    25.053723,
@@ -4108,7 +4108,7 @@
   "id": "p1973fa4263",
   "n": "東輝韓食館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區松江里松江路259巷29號1樓",
   "ll": [
    25.059631,
@@ -4123,7 +4123,7 @@
   "id": "pa8bfaa9a10",
   "n": "Look Luke（無訂位）",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區中庄里吉林路199巷8號之1",
   "ll": [
    25.059719,
@@ -4138,7 +4138,7 @@
   "id": "p2cb08ac7f7",
   "n": "蜀留香正宗重慶手工酸辣粉",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區新生里民權東路二段92巷6之2號",
   "ll": [
    25.060898,
@@ -4153,7 +4153,7 @@
   "id": "p4a9d8ce408",
   "n": "赤牛哥汕頭火鍋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區松江里松江路313巷2號",
   "ll": [
    25.061687,
@@ -4168,7 +4168,7 @@
   "id": "pc74aa6dc04",
   "n": "夏野豆行 Summer Savage Coffee Roaster",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區新生里松江路330巷1號",
   "ll": [
    25.061229,
@@ -4183,7 +4183,7 @@
   "id": "p6d4f6b26f2",
   "n": "合江胡椒蝦",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區江山里合江街108號",
   "ll": [
    25.058909,
@@ -4198,7 +4198,7 @@
   "id": "pbf2c7a3a4f",
   "n": "楊媽媽小食堂 (阿給&甜不辣)",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-luzhou",
   "a": "新北市蘆洲區仁德里信義路259巷25號",
   "ll": [
    25.08436,
@@ -4213,7 +4213,7 @@
   "id": "pd5e88855fd",
   "n": "LeFe Teppanyaki 樂翡鐵板燒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區法治里通化街171巷38號",
   "ll": [
    25.027496,
@@ -4228,7 +4228,7 @@
   "id": "p9ff78f27af",
   "n": "Circum-",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區康樂里中山北路二段39巷3號麗晶精品 B2B2Regent Galleria B2",
   "ll": [
    25.05416,
@@ -4243,7 +4243,7 @@
   "id": "p94e7b28aa8",
   "n": "嶼人漢堡-Islander burger",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里大安路一段52巷25號",
   "ll": [
    25.043296,
@@ -4259,7 +4259,7 @@
   "id": "p8889f50f2a",
   "n": "Pingburger",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區大安路大安路一段51巷28號1樓",
   "ll": [
    25.042996,
@@ -4274,7 +4274,7 @@
   "id": "p1c8201a171",
   "n": "鮨崤",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里大安路ㄧ段31巷12號1",
   "ll": [
    25.043923,
@@ -4289,7 +4289,7 @@
   "id": "pcff8299874",
   "n": "東京。烟火気（昭和 酒食）",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里市民大道四段74號一樓",
   "ll": [
    25.044738,
@@ -4304,7 +4304,7 @@
   "id": "pf57d8a3ca7",
   "n": "東京串燒酒場",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區萬壽里康定路18-3號",
   "ll": [
    25.045262,
@@ -4319,7 +4319,7 @@
   "id": "pd4626a626c",
   "n": "Alice By Tokyo & 老城西。酒食製作所",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區萬壽里康定路18-2號",
   "ll": [
    25.045325,
@@ -4334,7 +4334,7 @@
   "id": "p8e836d6cf9",
   "n": "東京。酒食製作所",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里市民大道四段86號一樓",
   "ll": [
    25.044712,
@@ -4349,7 +4349,7 @@
   "id": "p46d2bc866a",
   "n": "離騷 Bar & Bistro",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區幸市里新生南路一段52之3號2樓",
   "ll": [
    25.04139,
@@ -4364,7 +4364,7 @@
   "id": "pf723a7de2c",
   "n": "濟南牛肉麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區幸市里濟南路二段60之3號",
   "ll": [
    25.040124,
@@ -4379,7 +4379,7 @@
   "id": "pec53f81892",
   "n": "七十二牛肉麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區幸市里濟南路二段71號",
   "ll": [
    25.040295,
@@ -4394,7 +4394,7 @@
   "id": "p4f93c7848c",
   "n": "春日好日",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區龍圖里信義路三段134巷22號",
   "ll": [
    25.031588,
@@ -4409,7 +4409,7 @@
   "id": "p3c4c78b9a7",
   "n": "TAMED FOX 大安店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區德安里四維路76巷5號",
   "ll": [
    25.034377,
@@ -4424,7 +4424,7 @@
   "id": "pc22a5fa587",
   "n": "神樂坂割烹",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區黎平里和平東路三段177號",
   "ll": [
    25.023997,
@@ -4439,7 +4439,7 @@
   "id": "p103f28644c",
   "n": "羅家古早味",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區三厝里向上路三段65號",
   "ll": [
    24.146224,
@@ -4455,7 +4455,7 @@
   "id": "pd0faf35a4a",
   "n": "功夫上海手工魚丸",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區忠明里中美街380號",
   "ll": [
    24.151935,
@@ -4471,7 +4471,7 @@
   "id": "p453d1b65c2",
   "n": "裡小樓小料理",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區至善里西屯路二段293巷50號",
   "ll": [
    24.176626,
@@ -4487,7 +4487,7 @@
   "id": "p71ec536205",
   "n": "可口牛肉麵",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區何成里大墩路911號",
   "ll": [
    24.156975,
@@ -4503,7 +4503,7 @@
   "id": "p7eb342edb3",
   "n": "澀 Sur-",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區綠川里中山路29號3樓",
   "ll": [
    24.137674,
@@ -4518,7 +4518,7 @@
   "id": "p9d7781dc72",
   "n": "一村 Tobira Bar & restaurant",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區中山里新生北路二段68巷11-1號",
   "ll": [
    25.056497,
@@ -4533,7 +4533,7 @@
   "id": "p1069319be0",
   "n": "Birdy Yakitori 燒鳥狂想曲",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路303號2F",
   "ll": [
    25.082796,
@@ -4548,7 +4548,7 @@
   "id": "p01ef30d541",
   "n": "logy",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港墘里瑞光路258巷39號1F",
   "ll": [
    25.074901,
@@ -4563,7 +4563,7 @@
   "id": "pb285594fb4",
   "n": "Double V",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光信里延吉街234號一樓",
   "ll": [
    25.036425,
@@ -4578,7 +4578,7 @@
   "id": "p1a75e3826e",
   "n": "順柔烏龍麵 (うどん しなやか)",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區永定里永春東七路535號",
   "ll": [
    24.139096,
@@ -4593,7 +4593,7 @@
   "id": "pa41a36e653",
   "n": "藍鯨早餐店",
   "c": "美食",
-  "region": "south-kaohsiung",
+  "region": "south-kaohsiung-sanmin",
   "a": "高雄市三民區德東里嫩江街111號",
   "ll": [
    22.644077,
@@ -4608,7 +4608,7 @@
   "id": "p083ca9c60b",
   "n": "林家蔬菜羊肉爐",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區新福里吉林路327號",
   "ll": [
    25.063855,
@@ -4623,7 +4623,7 @@
   "id": "p8d9ddd5643",
   "n": "協力香雞排板橋三民路店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區正泰里三民路二段202-10號",
   "ll": [
    25.01413,
@@ -4638,7 +4638,7 @@
   "id": "p6ed3d0ae97",
   "n": "竣師父牛肉麵-大安店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安区光武里大安路一段52巷24號一樓",
   "ll": [
    25.042978,
@@ -4653,7 +4653,7 @@
   "id": "p951ee14956",
   "n": "鮨 隆",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區中山里新生北路二段60-5號",
   "ll": [
    25.055909,
@@ -4668,7 +4668,7 @@
   "id": "pe80fccd487",
   "n": "300° STEAK 南崁店",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-luzhu",
   "a": "-1號, No. 464-1號仁愛路一段五福里蘆竹區桃園市338",
   "ll": [
    25.051053,
@@ -4683,7 +4683,7 @@
   "id": "pe12fac17cc",
   "n": "一宗壽司",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區民有里復興北路313巷37號",
   "ll": [
    25.059048,
@@ -4698,7 +4698,7 @@
   "id": "paf9fb361d8",
   "n": "有情出包所 / True Bao Maker",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區正義里林森北路107巷4號",
   "ll": [
    25.050316,
@@ -4713,7 +4713,7 @@
   "id": "p3040adca68",
   "n": "福二漢堡製造所",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區水源里汀州路三段229號",
   "ll": [
    25.014015,
@@ -4728,7 +4728,7 @@
   "id": "p3775695b7c",
   "n": "Este día 這一天異國廚房 古巴三明治（台北總店）",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區文盛里羅斯福路三段244巷15號",
   "ll": [
    25.016731,
@@ -4743,7 +4743,7 @@
   "id": "p1be4a79f49",
   "n": "饗食星馬",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-shulin",
   "a": "新北市樹林區樹德里大安路251號",
   "ll": [
    24.99404,
@@ -4758,7 +4758,7 @@
   "id": "pd8e93c00c0",
   "n": "西門靖 XimenJimmy",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區萬壽里武昌街二段122號",
   "ll": [
    25.045273,
@@ -4773,7 +4773,7 @@
   "id": "p39d7832f2d",
   "n": "西門 梁山泊小籠湯包",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區萬壽里漢口街二段54-4號",
   "ll": [
    25.045499,
@@ -4788,7 +4788,7 @@
   "id": "p6bb9f5b109",
   "n": "麵屋德家",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區民權西路70巷41-1號1樓",
   "ll": [
    25.060993,
@@ -4803,7 +4803,7 @@
   "id": "p5225fe287e",
   "n": "楊國福麻辣燙 南港首店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-nangang",
   "a": "台北市南港區東新里南港路二段280號",
   "ll": [
    25.054465,
@@ -4818,7 +4818,7 @@
   "id": "p29fb3aabfb",
   "n": "fumée Yakitori",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區康樂里中山北路二段39巷3號B3",
   "ll": [
    25.054187,
@@ -4833,7 +4833,7 @@
   "id": "pb916007b6e",
   "n": "蔡家牛肉麵",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-zhonghe",
   "a": "新北市中和區秀景里秀朗路三段153巷16弄12號",
   "ll": [
    24.99156,
@@ -4848,7 +4848,7 @@
   "id": "p413c8486d4",
   "n": "Beau",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光信里仁愛路四段408巷11號",
   "ll": [
    25.037156,
@@ -4863,7 +4863,7 @@
   "id": "p3d50f5ec4f",
   "n": "92k週末食堂",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-gongliao",
   "a": "新北市貢寮區真理里美艷山街70之3號",
   "ll": [
    25.07371,
@@ -4878,7 +4878,7 @@
   "id": "p90ce80112b",
   "n": "The Lookout Bistro & Bar 眺吧餐酒館",
   "c": "美食",
-  "region": "south-kaohsiung",
+  "region": "south-kaohsiung-xinxing",
   "a": "高雄市新兴区玉衡里中山一路14-26號14樓",
   "ll": [
    22.626358,
@@ -4893,7 +4893,7 @@
   "id": "p9ece35bfc7",
   "n": "Burger&co",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "No. 49, 通安街 大安區, 台北市106",
   "ll": [
    25.031255,
@@ -4908,7 +4908,7 @@
   "id": "pfc8e443ddc",
   "n": "1976道地香港美食 敦南本店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建倫里敦化南路一段233巷11號",
   "ll": [
    25.040453,
@@ -4923,7 +4923,7 @@
   "id": "pac9af409cc",
   "n": "極之好味 港式燒臘飯館｜台北大安店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里大安路一段16巷8號1 樓",
   "ll": [
    25.044444,
@@ -4938,7 +4938,7 @@
   "id": "p99ff9b29df",
   "n": "東加炸雞",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區長春里虎林街108巷1號",
   "ll": [
    25.042545,
@@ -4953,7 +4953,7 @@
   "id": "p5da09ad08f",
   "n": "穆記牛肉麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區三張里吳興街239號",
   "ll": [
    25.027499,
@@ -4968,7 +4968,7 @@
   "id": "pca85c125cd",
   "n": "柑橘Shinn 鴨蔥",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區黎平里嘉興街315號",
   "ll": [
    25.023125,
@@ -4983,7 +4983,7 @@
   "id": "pf7768a072d",
   "n": "樂業麵線",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區芳和里樂業街136號",
   "ll": [
    25.02031,
@@ -4998,7 +4998,7 @@
   "id": "pd2030f312e",
   "n": "寧夏夜市-林振櫂燒麻糬",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區星明里寧夏路97號攤位",
   "ll": [
    25.055982,
@@ -5013,7 +5013,7 @@
   "id": "p7b2c4e0fa9",
   "n": "Pattie-O Detroit Pizza 樂緹歐比薩專賣店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wenshan",
   "a": "台北市文山區興得里興隆路三段36巷15弄12號",
   "ll": [
    24.999566,
@@ -5028,7 +5028,7 @@
   "id": "p75db6a8a37",
   "n": "WOK by OBOND",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區朱崙里龍江路18號",
   "ll": [
    25.04788,
@@ -5043,7 +5043,7 @@
   "id": "pf130fe504d",
   "n": "皇城老媽",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區華聲里延吉街97巷5號",
   "ll": [
    25.043279,
@@ -5058,7 +5058,7 @@
   "id": "p92e9b85050",
   "n": "麵屋壹慶",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區晴光里雙城街32巷2號",
   "ll": [
    25.066181,
@@ -5073,7 +5073,7 @@
   "id": "pa1e05431a3",
   "n": "川渝小吃坊",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區建泰里南京西路18巷6弄8之1號",
   "ll": [
    25.052007,
@@ -5088,7 +5088,7 @@
   "id": "pde44545de5",
   "n": "忠誠牛肉麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區忠誠里德行東路80號",
   "ll": [
    25.107328,
@@ -5103,7 +5103,7 @@
   "id": "p9517cf774b",
   "n": "品豪鐵板燒（廣福店）",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-zhonghe",
   "a": "新北市中和區枋寮里廣福路40號",
   "ll": [
    25.002277,
@@ -5118,7 +5118,7 @@
   "id": "p6ff5f10506",
   "n": "大胖肉焿光華總店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-zhonghe",
   "a": "新北市中和區瓦磘里光華街13號",
   "ll": [
    25.004241,
@@ -5133,7 +5133,7 @@
   "id": "pdf8df37b40",
   "n": "Pizza power",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-zhonghe",
   "a": "新北市中和區枋寮里廣福路77號71巷口",
   "ll": [
    25.000848,
@@ -5148,7 +5148,7 @@
   "id": "p0e7eb8a58a",
   "n": "C：柒家珈琲（燉飯&義大利麵）",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區和安里信義路三段147巷15弄1-1號",
   "ll": [
    25.035301,
@@ -5163,7 +5163,7 @@
   "id": "p03d91491fe",
   "n": "台中順天環匯酒店",
   "c": "住宿",
-  "region": "central-taichung",
+  "region": "central-taichung-xitun",
   "a": "台中市西屯區潮洋里台灣大道三段818號",
   "ll": [
    24.172352,
@@ -5178,7 +5178,7 @@
   "id": "pf98a07b3c9",
   "n": "司旅 chez nous hotel",
   "c": "住宿",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區和安里信義路三段147巷18號",
   "ll": [
    25.036089,
@@ -5193,7 +5193,7 @@
   "id": "p3f63a0e6ea",
   "n": "禧榕軒大飯店",
   "c": "住宿",
-  "region": "south-tainan",
+  "region": "south-tainan-beiqu",
   "a": "台南市北區公園里成功路28號",
   "ll": [
    22.997998,
@@ -5208,7 +5208,7 @@
   "id": "p5d32bba96f",
   "n": "三大牛肉火鍋（創始店）",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-yongkang",
   "a": "台南市永康區崑山里國光三街3號",
   "ll": [
    23.003393,
@@ -5223,7 +5223,7 @@
   "id": "pd3912880a9",
   "n": "Focus kitchen肯恩廚房",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區福住里信義路二段198巷6號",
   "ll": [
    25.033036,
@@ -5238,7 +5238,7 @@
   "id": "pd33fdb494e",
   "n": "petit doux 微兜 永康店",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區福住里信義路二段198巷7之3號",
   "ll": [
    25.032637,
@@ -5253,7 +5253,7 @@
   "id": "p7551f94ccb",
   "n": "燒肉擔當本店 Yakiniku PIC",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建安里敦化南路一段161巷52號",
   "ll": [
    25.043383,
@@ -5268,7 +5268,7 @@
   "id": "p6fa022aa01",
   "n": "星曜雞湯",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區康樂里林森北路247號2樓",
   "ll": [
    25.054168,
@@ -5283,7 +5283,7 @@
   "id": "p00c26b9da8",
   "n": "驥園川菜餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區德安里敦化南路1段324號B1",
   "ll": [
    25.03532,
@@ -5298,7 +5298,7 @@
   "id": "p5b5ff2e19c",
   "n": "友德南投意麵",
   "c": "美食",
-  "region": "central-nantou",
+  "region": "central-nantou-nantou",
   "a": "南投縣南投市南投里中山街179號",
   "ll": [
    23.909111,
@@ -5313,7 +5313,7 @@
   "id": "p63a2d1b58a",
   "n": "秦味館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區車層里延吉街138巷2號",
   "ll": [
    25.039935,
@@ -5328,7 +5328,7 @@
   "id": "p3c0c5f241c",
   "n": "六千泓佐土產牛肉",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-zhongxi",
   "a": "台南市中西區南廠里海安路一段63號",
   "ll": [
    22.98922,
@@ -5344,7 +5344,7 @@
   "id": "p3c6a3e4f94",
   "n": "老阿伯現滷豆干",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-daxi",
   "a": "桃園市大溪區興和里中正路37號",
   "ll": [
    24.882945,
@@ -5359,7 +5359,7 @@
   "id": "p9706c3abca",
   "n": "賴媽媽傳統豆花 體育館本店",
   "c": "咖啡甜點",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-daxi",
   "a": "桃園市大溪區福仁里登龍路22號多目標體育館1樓",
   "ll": [
    24.883545,
@@ -5374,7 +5374,7 @@
   "id": "pe3d0a61f0c",
   "n": "Baker Street 貝克街早午餐",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-zhongli",
   "a": "桃園市中壢區普忠里中北路165巷69號",
   "ll": [
    24.958092,
@@ -5389,7 +5389,7 @@
   "id": "pd9c32af9a9",
   "n": "三冬麵舖",
   "c": "美食",
-  "region": "north-taoyuan",
+  "region": "north-taoyuan-taoyuan",
   "a": "桃園市桃園區寶安里同德十街5號",
   "ll": [
    25.018702,
@@ -5404,7 +5404,7 @@
   "id": "p83bdc2cc3f",
   "n": "今大魯肉飯",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-sanchong",
   "a": "新北市三重區重陽里大仁街40號",
   "ll": [
    25.064409,
@@ -5419,7 +5419,7 @@
   "id": "p33eecda4fd",
   "n": "朱記花枝羹",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-sanchong",
   "a": "新北市三重區文化里正義北路51號右走廊",
   "ll": [
    25.064157,
@@ -5434,7 +5434,7 @@
   "id": "p4e64b17ceb",
   "n": "老王紅燒牛肉麵",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區錦華里潮州街82號",
   "ll": [
    25.02908,
@@ -5449,7 +5449,7 @@
   "id": "p44c18865cb",
   "n": "疍宅Egghost三元店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區永功里三元街176號1樓",
   "ll": [
    25.02784,
@@ -5464,7 +5464,7 @@
   "id": "pff52eeb498",
   "n": "抹More",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區永昌里寧波西街221號",
   "ll": [
    25.025654,
@@ -5479,7 +5479,7 @@
   "id": "p8ab2d60d08",
   "n": "黃家香腸",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區永功里泉州街32之3號",
   "ll": [
    25.025893,
@@ -5494,7 +5494,7 @@
   "id": "p0fe1293b46",
   "n": "麵鄉 安徽淮南牛肉湯",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區青山里華西街167、169號號攤",
   "ll": [
    25.03944,
@@ -5509,7 +5509,7 @@
   "id": "pb791c1564e",
   "n": "一甲子餐飲",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區新起里康定路79號",
   "ll": [
    25.040402,
@@ -5524,7 +5524,7 @@
   "id": "pc590633367",
   "n": "BRUN不然-安和店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建倫里安和路一段7號",
   "ll": [
    25.039759,
@@ -5539,7 +5539,7 @@
   "id": "pec6685ef46",
   "n": "秋田笠",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區中興里向上北路141號",
   "ll": [
    24.147789,
@@ -5554,7 +5554,7 @@
   "id": "p125c2aed5b",
   "n": "俺達の肉屋 日本和牛燒肉店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區公平里公益路194-1號",
   "ll": [
    24.151009,
@@ -5569,7 +5569,7 @@
   "id": "p9baf4ae21a",
   "n": "復興餐廳",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-daya",
   "a": "台中市大雅區忠義里月祥路301號",
   "ll": [
    24.2308,
@@ -5584,7 +5584,7 @@
   "id": "p79ce709414",
   "n": "虹夕諾雅 谷關",
   "c": "住宿",
-  "region": "central-taichung",
+  "region": "central-taichung-heping",
   "a": "台中市和平區博愛里東關路一段溫泉巷16號",
   "ll": [
    24.205376,
@@ -5599,7 +5599,7 @@
   "id": "pa0f7ce8d42",
   "n": "与玥樓頂級粵菜餐廳",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區新生里公益路二段783號",
   "ll": [
    24.150923,
@@ -5614,7 +5614,7 @@
   "id": "pdf6c2e0b54",
   "n": "老蔡大麵焿",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中区中华里篤行路18號",
   "ll": [
    24.146832,
@@ -5629,7 +5629,7 @@
   "id": "pef7a74626f",
   "n": "Mao king貓王經典Restaurant 南屯店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區新生里龍富路四段437號",
   "ll": [
    24.14782,
@@ -5644,7 +5644,7 @@
   "id": "p00131728c1",
   "n": "十三涮四川料理重慶火鍋",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-fengyuan",
   "a": "台中市豐原區東湳里豐原大道六段469號",
   "ll": [
    24.26461,
@@ -5659,7 +5659,7 @@
   "id": "p7b26339ac9",
   "n": "N23.5° Lounge",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中庄里忠孝路516號",
   "ll": [
    23.493697,
@@ -5674,7 +5674,7 @@
   "id": "pa68c57b80a",
   "n": "桃城三禾火雞肉飯",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中山里民權路97號",
   "ll": [
    23.483899,
@@ -5689,7 +5689,7 @@
   "id": "p29a8224095",
   "n": "金牌川菜料理",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區新厝里興達路120號",
   "ll": [
    23.489139,
@@ -5704,7 +5704,7 @@
   "id": "pf6fd1ae0af",
   "n": "往前咖啡製作所 / Forward roasters",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區北門里興中街205號",
   "ll": [
    23.484115,
@@ -5719,7 +5719,7 @@
   "id": "p816e8070ac",
   "n": "富貴亭飲食店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區大墩里三民路二段18巷31號",
   "ll": [
    24.140146,
@@ -5734,7 +5734,7 @@
   "id": "pcfbb34f49f",
   "n": "百齡左岸籃球場",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區葫東里",
   "ll": [
    25.084703,
@@ -5749,7 +5749,7 @@
   "id": "p93bce00517",
   "n": "機車練習",
   "c": "景點",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-yonghe",
   "a": "新北市永和區民樂里民樂街39巷23號",
   "ll": [
    25.000018,
@@ -5764,7 +5764,7 @@
   "id": "pd3b2072f75",
   "n": "蔣老爹愛吃鍋 市民店｜台北東區｜麻辣火鍋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建安里市民大道四段124號",
   "ll": [
    25.044339,
@@ -5779,7 +5779,7 @@
   "id": "pb9663a96f7",
   "n": "萬華世界下午酒場",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區福音里三水街70號",
   "ll": [
    25.035775,
@@ -5794,7 +5794,7 @@
   "id": "p9165f7cefc",
   "n": "尋覓蜜烘焙工作室",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區麗山街348巷8號右側",
   "ll": [
    25.082188,
@@ -5809,7 +5809,7 @@
   "id": "p6d3427bede",
   "n": "小慧涼麵店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區芳和里臥龍街151巷10號",
   "ll": [
    25.018701,
@@ -5824,7 +5824,7 @@
   "id": "pf6f6c9d3d7",
   "n": "LOST and Found 內湖",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區基湖路3巷11號",
   "ll": [
    25.081153,
@@ -5839,7 +5839,7 @@
   "id": "p25cd8dadc5",
   "n": "Supranormal Bakery Cafe 瑞光",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區西湖里瑞光路583巷26號",
   "ll": [
    25.080609,
@@ -5854,7 +5854,7 @@
   "id": "p25eed1fe67",
   "n": "福州山公園",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區臥龍街195巷",
   "ll": [
    25.01601,
@@ -5869,7 +5869,7 @@
   "id": "p00a7e7dd66",
   "n": "NoneLeft Taichung 台中餐酒館 義式餐廳 Wine Bar",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區忠誠里精誠八街10巷4號1樓",
   "ll": [
    24.154173,
@@ -5884,7 +5884,7 @@
   "id": "p8385edac28",
   "n": "饗宴鐵板燒",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-wujie",
   "a": "宜蘭縣五結鄉大吉村溪濱路二段263號",
   "ll": [
    24.7098,
@@ -5899,7 +5899,7 @@
   "id": "p40b3441645",
   "n": "黃小妹地攤火鍋－市民店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區光武里市民大道四段12號",
   "ll": [
    25.044643,
@@ -5914,7 +5914,7 @@
   "id": "pb5e98b0ea9",
   "n": "ON TAP",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區車層里忠孝東路四段216巷11弄21號",
   "ll": [
    25.040896,
@@ -5929,7 +5929,7 @@
   "id": "pfb5b90c7c0",
   "n": "T+T",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中華里敦化北路165巷11號",
   "ll": [
    25.05483,
@@ -5944,7 +5944,7 @@
   "id": "p36703a9a89",
   "n": "MO",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-beiqu",
   "a": "台南市北區北華里崇安街30號",
   "ll": [
    23.000148,
@@ -5959,7 +5959,7 @@
   "id": "p1aba931ab6",
   "n": "Taïrroir 態芮",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山区金泰里乐群三路299號6樓",
   "ll": [
    25.08278,
@@ -5974,7 +5974,7 @@
   "id": "pddb8c0a1a7",
   "n": "裘莉早餐屋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區西湖里內湖路一段343之1號343之1號",
   "ll": [
    25.082258,
@@ -5989,7 +5989,7 @@
   "id": "p1a8165ffa3",
   "n": "心泰原創泰國料理-敦南店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區義安里敦化南路二段81巷47號",
   "ll": [
    25.030075,
@@ -6004,7 +6004,7 @@
   "id": "pfa78e50be8",
   "n": "葛莉莎披薩 Gloriosa Pizza",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港墘里江南街107巷8號",
   "ll": [
    25.076397,
@@ -6019,7 +6019,7 @@
   "id": "pdfdc2598f0",
   "n": "南川麵館",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xindian",
   "a": "新北市新店區百和里中正路336號",
   "ll": [
    24.975096,
@@ -6034,7 +6034,7 @@
   "id": "p5852ed4e33",
   "n": "Peter's Hut",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xindian",
   "a": "新北市新店區美城里華城路6-1號",
   "ll": [
    24.960531,
@@ -6049,7 +6049,7 @@
   "id": "p5c6458ab9f",
   "n": "Des Glaneuses Bakery & Kitchen",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區三張里莊敬路391巷5號",
   "ll": [
    25.028376,
@@ -6064,7 +6064,7 @@
   "id": "p7c27f49d1f",
   "n": "小酌之家",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區新庄里吉林路420號",
   "ll": [
    25.065931,
@@ -6079,7 +6079,7 @@
   "id": "p6404ef69d2",
   "n": "21茶坊",
   "c": "咖啡甜點",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮賢文里中華路37-9號",
   "ll": [
    24.677354,
@@ -6094,7 +6094,7 @@
   "id": "p99d169f891",
   "n": "羅東雞之房桶仔雞烤雞專賣店",
   "c": "美食",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮民權路241號",
   "ll": [
    24.676952,
@@ -6109,7 +6109,7 @@
   "id": "pc22851613c",
   "n": "北門綠豆沙牛乳大王-羅東店",
   "c": "咖啡甜點",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮信義里中正北路179號",
   "ll": [
    24.684312,
@@ -6125,7 +6125,7 @@
   "id": "pc96a01883e",
   "n": "暖嶼 Warm Island Villa",
   "c": "住宿",
-  "region": "east-yilan",
+  "region": "east-yilan-sanxing",
   "a": "宜蘭縣三星鄉大隱村大埔二路402號",
   "ll": [
    24.673158,
@@ -6140,7 +6140,7 @@
   "id": "p12a6a1b823",
   "n": "秘醬滷味 宜蘭羅東店",
   "c": "小吃夜市",
-  "region": "east-yilan",
+  "region": "east-yilan-luodong",
   "a": "宜蘭縣羅東鎮集祥里公正街57號1樓",
   "ll": [
    24.678013,
@@ -6155,7 +6155,7 @@
   "id": "pb527d8ba96",
   "n": "阿財牛肉湯",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-anping",
   "a": "台南市安平區天妃里古堡街5號",
   "ll": [
    22.999476,
@@ -6170,7 +6170,7 @@
   "id": "pfcd848698f",
   "n": "台中大麵羹",
   "c": "小吃夜市",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區公園路16號",
   "ll": [
    24.144926,
@@ -6185,7 +6185,7 @@
   "id": "p7091b6007b",
   "n": "永德堂薏仁牛奶",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里忠孝路136號",
   "ll": [
    24.129283,
@@ -6200,7 +6200,7 @@
   "id": "pbfb67aaa5c",
   "n": "943傳統整復推拿「久適鬆」",
   "c": "景點",
-  "region": "central-taichung",
+  "region": "central-taichung-dongqu",
   "a": "台中市東區振興里立德街165號",
   "ll": [
    24.131455,
@@ -6215,7 +6215,7 @@
   "id": "p295b7cda4d",
   "n": "味泉米糕",
   "c": "小吃夜市",
-  "region": "central-taichung",
+  "region": "central-taichung-nanqu",
   "a": "台中市南區城隍里忠孝路151號",
   "ll": [
    24.129464,
@@ -6230,7 +6230,7 @@
   "id": "p07b2302807",
   "n": "山風藍 草悟PARK 2",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區民龍里英才路534號1F",
   "ll": [
    24.14943,
@@ -6245,7 +6245,7 @@
   "id": "p8f2317ae01",
   "n": "繡球麵店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區中興里中興街102號",
   "ll": [
    24.147651,
@@ -6260,7 +6260,7 @@
   "id": "pfcd0e3f989",
   "n": "豐味綠豆沙牛乳專門店一中支店",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北區新興里太平路63巷1號",
   "ll": [
    24.147545,
@@ -6275,7 +6275,7 @@
   "id": "pbe3a42e30e",
   "n": "21臭豆腐",
   "c": "小吃夜市",
-  "region": "central-taichung",
+  "region": "central-taichung-beiqu",
   "a": "台中市北區新興里一中街21號",
   "ll": [
    24.147232,
@@ -6290,7 +6290,7 @@
   "id": "p0d309cbfa5",
   "n": "劍潭榮宗麵線",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區福華里承德路四段40巷109號",
   "ll": [
    25.081667,
@@ -6305,7 +6305,7 @@
   "id": "p7d99a5c868",
   "n": "澤 日本料理 Sawa",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區後港里大南路248號B1",
   "ll": [
    25.088658,
@@ -6320,7 +6320,7 @@
   "id": "p3da5e84fb5",
   "n": "SALT&STONE LaLaport 南港餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-nangang",
   "a": "台北市南港區三重里經貿二路131號1樓",
   "ll": [
    25.059262,
@@ -6335,7 +6335,7 @@
   "id": "p34421b0d2e",
   "n": "六必居潮州一品沙鍋粥 (民權店)",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區福丘里民權路3號",
   "ll": [
    25.010001,
@@ -6350,7 +6350,7 @@
   "id": "p3329703ebf",
   "n": "大媽泡芙",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區北門里興中街165號",
   "ll": [
    23.482704,
@@ -6365,7 +6365,7 @@
   "id": "pc99968eb76",
   "n": "光華愛玉",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區民族里光華路47號",
   "ll": [
    23.477521,
@@ -6380,7 +6380,7 @@
   "id": "p94270352de",
   "n": "Ponpie澎派 板橋店",
   "c": "咖啡甜點",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區民安里民權路202巷4弄1號",
   "ll": [
    25.014166,
@@ -6395,7 +6395,7 @@
   "id": "pa9bb1361ac",
   "n": "義爸爸披薩",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區民安里公館街62號",
   "ll": [
    25.014064,
@@ -6410,7 +6410,7 @@
   "id": "pf0a0f3d5b2",
   "n": "崇文錦魯麵",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區豐年里崇文街107號",
   "ll": [
    23.472,
@@ -6425,7 +6425,7 @@
   "id": "p37113a341e",
   "n": "林聰明沙鍋魚頭",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區中央里中正路361號",
   "ll": [
    23.478773,
@@ -6440,7 +6440,7 @@
   "id": "pa2702ecb7b",
   "n": "朵朵",
   "c": "咖啡甜點",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區番社里中山路454號",
   "ll": [
    23.47956,
@@ -6455,7 +6455,7 @@
   "id": "p516868508d",
   "n": "阿溪雞肉飯",
   "c": "小吃夜市",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區培元里仁愛路356號",
   "ll": [
    23.472542,
@@ -6470,7 +6470,7 @@
   "id": "p417d44d19e",
   "n": "真記桃城雞排",
   "c": "小吃夜市",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-xiqu",
   "a": "嘉義市西區書院里中正路698號",
   "ll": [
    23.478614,
@@ -6486,7 +6486,7 @@
   "id": "p0e782ff42e",
   "n": "大腕燒肉專門店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山区成功里敬业二路199號5樓",
   "ll": [
    25.084409,
@@ -6501,7 +6501,7 @@
   "id": "p0596e3b54e",
   "n": "糜家莊潮式砂鍋粥",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區中庄里吉林路226號",
   "ll": [
    25.059116,
@@ -6516,7 +6516,7 @@
   "id": "p635fe97e6f",
   "n": "双生綠豆沙牛奶",
   "c": "咖啡甜點",
-  "region": "south-tainan",
+  "region": "south-tainan-zhongxi",
   "a": "台南市中西區南美里民族路二段281號",
   "ll": [
    22.996413,
@@ -6531,7 +6531,7 @@
   "id": "p44d4467f4f",
   "n": "金烤盃（寵物友善餐廳）",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港墘里江南街96巷7號",
   "ll": [
    25.077397,
@@ -6547,7 +6547,7 @@
   "id": "p25281805ab",
   "n": "游壽司麗水店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區永康里麗水街7巷7號",
   "ll": [
    25.030981,
@@ -6562,7 +6562,7 @@
   "id": "pd6f1bc94b4",
   "n": "閃動格子CyberCube公館體驗店",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區文盛里羅斯福路三段316巷14號",
   "ll": [
    25.015511,
@@ -6577,7 +6577,7 @@
   "id": "p237c3945cb",
   "n": "Old Bridge 義式冰淇淋",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群三路200號3樓",
   "ll": [
    25.082729,
@@ -6592,7 +6592,7 @@
   "id": "p4d274137c2",
   "n": "華漾DIM SUM 忠泰樂生活店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區樂群三路200號5樓",
   "ll": [
    25.082096,
@@ -6607,7 +6607,7 @@
   "id": "p8fd355b709",
   "n": "潮州滷味 大直總店",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區大直里北安路595巷20弄1號",
   "ll": [
    25.082041,
@@ -6622,7 +6622,7 @@
   "id": "p6be6bd627c",
   "n": "泰心禾泰式spa按摩港墘1館",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港富里港墘路103號",
   "ll": [
    25.08016,
@@ -6637,7 +6637,7 @@
   "id": "p8ab2e3fd0e",
   "n": "Takeout burger & cafe 內湖店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港墘里洲子街55號1樓",
   "ll": [
    25.079542,
@@ -6652,7 +6652,7 @@
   "id": "pe8db4700fe",
   "n": "搖滾牛冰淇淋專賣店",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區福住里永康街51號",
   "ll": [
    25.030035,
@@ -6667,7 +6667,7 @@
   "id": "p6a74e72c75",
   "n": "老鄧Lao Deng1949",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區福住里信義路二段198巷4號",
   "ll": [
    25.033253,
@@ -6682,7 +6682,7 @@
   "id": "pda3c6a5d19",
   "n": "新牛屋厚切牛排-內湖店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區瑞光里江南街71巷16弄46號1樓",
   "ll": [
    25.075732,
@@ -6697,7 +6697,7 @@
   "id": "pf0f1197cd9",
   "n": "烏來阿蓋小阿姨美食吃",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-wulai",
   "a": "新北市烏來區新烏路四段3號",
   "ll": [
    24.890866,
@@ -6712,7 +6712,7 @@
   "id": "p891efff4fb",
   "n": "月明薑母鴨 新莊店",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xinzhuang",
   "a": "新北市新莊區營盤里三泰路30-4號",
   "ll": [
    25.035221,
@@ -6727,7 +6727,7 @@
   "id": "p5511963728",
   "n": "INTRO Kitchen",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區福佳里基河路300巷21號",
   "ll": [
    25.093771,
@@ -6742,7 +6742,7 @@
   "id": "p43b4c2761c",
   "n": "廣州街夜市脆皮蚵仔煎",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區青山里廣州街224號",
   "ll": [
    25.036706,
@@ -6757,7 +6757,7 @@
   "id": "p30df74a5d8",
   "n": "蛙蛙書店有限公司",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區民輝里八德路二段3號",
   "ll": [
    25.044646,
@@ -6772,7 +6772,7 @@
   "id": "p85cb62b944",
   "n": "陳家涼麵",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區東光里南京東路五段123巷29號",
   "ll": [
    25.052789,
@@ -6787,7 +6787,7 @@
   "id": "pd44e93e586",
   "n": "Mosaic Art & Cafe 馬賽克土耳其餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區永康里永康街4巷26號1 樓",
   "ll": [
    25.032936,
@@ -6802,7 +6802,7 @@
   "id": "pf0968cc352",
   "n": "OttiMo Gelato",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區永康里麗水街1-1號",
   "ll": [
    25.033347,
@@ -6817,7 +6817,7 @@
   "id": "p1395e0f859",
   "n": "祿承坊傳統整復推拿 廣州店",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區青山里廣州街235號",
   "ll": [
    25.036821,
@@ -6832,7 +6832,7 @@
   "id": "p60dc11e919",
   "n": "禪云心養生會館24H按摩",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區南福里和平西路一段19號",
   "ll": [
    25.027043,
@@ -6847,7 +6847,7 @@
   "id": "pb49ab46575",
   "n": "清風亭",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區",
   "ll": [
    25.134591,
@@ -6862,7 +6862,7 @@
   "id": "pb754d4ce73",
   "n": "北投焚化爐景觀台",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-beitou",
   "a": "台北市北投區洲美里洲美街271號",
   "ll": [
    25.107952,
@@ -6877,7 +6877,7 @@
   "id": "pc874383b43",
   "n": "神不在場/密室逃脫/實境遊戲",
   "c": "景點",
-  "region": "south-tainan",
+  "region": "south-tainan-yongkang",
   "a": "台南市永康区胜利里中华路1-2號3樓",
   "ll": [
    22.998863,
@@ -6892,7 +6892,7 @@
   "id": "p90b3337b89",
   "n": "碧湖步道",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區內湖路三段60巷",
   "ll": [
    25.089434,
@@ -6907,7 +6907,7 @@
   "id": "p6913b67e54",
   "n": "吳留手串燒居酒屋-本店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區埤頭里八德路二段312巷13號",
   "ll": [
    25.046761,
@@ -6922,7 +6922,7 @@
   "id": "p732f2a6d79",
   "n": "阿洋義式冰淇淋",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-datong",
   "a": "台北市大同區玉泉里延平北路一段66巷17號1樓",
   "ll": [
    25.0516,
@@ -6937,7 +6937,7 @@
   "id": "pebfa2b0a48",
   "n": "橘色空間-板橋桌遊店",
   "c": "景點",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-banqiao",
   "a": "新北市板橋區流芳里南門街30號 皇號樓喜餅2樓",
   "ll": [
    25.008557,
@@ -6952,7 +6952,7 @@
   "id": "pf726d80c73",
   "n": "Feeling18巧克力工房",
   "c": "咖啡甜點",
-  "region": "central-nantou",
+  "region": "central-nantou-puli",
   "a": "南投縣埔里鎮枇杷里慈恩街20號",
   "ll": [
    23.957321,
@@ -6967,7 +6967,7 @@
   "id": "p420ba161fd",
   "n": "雪城麻辣燙(輔大店)",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xinzhuang",
   "a": "新北市新莊區營盤里中正路514巷3號",
   "ll": [
    25.032667,
@@ -6982,7 +6982,7 @@
   "id": "pcc374a95b4",
   "n": "GumGum Not Only Beer & Wings 雞翅啤酒吧-內科店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區基湖路3巷68號",
   "ll": [
    25.080616,
@@ -6997,7 +6997,7 @@
   "id": "p876cb27d75",
   "n": "入口漢堡 (大直總店)",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區成功里明水路618號",
   "ll": [
    25.082413,
@@ -7012,7 +7012,7 @@
   "id": "p9697517dd1",
   "n": "阿裕牛肉涮涮鍋(崑崙店)",
   "c": "美食",
-  "region": "south-tainan",
+  "region": "south-tainan-rende",
   "a": "台南市仁德區上崙里崑崙路733-1號",
   "ll": [
    22.940437,
@@ -7027,7 +7027,7 @@
   "id": "p1c1ed65c29",
   "n": "食不厭",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-ruifang",
   "a": "新北市瑞芳區金光路221號",
   "ll": [
    25.106806,
@@ -7042,7 +7042,7 @@
   "id": "pf43adb372e",
   "n": "五草車中華麵食館",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-yonghe",
   "a": "新北市永和區永樂里永和路一段46號",
   "ll": [
    25.005695,
@@ -7057,7 +7057,7 @@
   "id": "p98c44e2d9d",
   "n": "昌平炸雞王 昌平路總店",
   "c": "小吃夜市",
-  "region": "central-taichung",
+  "region": "central-taichung-beitun",
   "a": "台中市北屯區平心里昌平路一段105之9號",
   "ll": [
    24.173898,
@@ -7072,7 +7072,7 @@
   "id": "pae429b1394",
   "n": "阿宗麵線",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區西門里峨眉街8-1號",
   "ll": [
    25.043292,
@@ -7087,7 +7087,7 @@
   "id": "p31b7f5b433",
   "n": "金鍋盃小火鍋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港華里環山路二段37號",
   "ll": [
    25.085455,
@@ -7102,7 +7102,7 @@
   "id": "p0d6220ea6d",
   "n": "新港鴨肉羹",
   "c": "美食",
-  "region": "south-chiayi-county",
+  "region": "south-chiayi-county-xingang",
   "a": "嘉義縣新港鄉中山路奉天大廈17號",
   "ll": [
    23.554997,
@@ -7117,7 +7117,7 @@
   "id": "p25a76f971b",
   "n": "eve casa",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區大湖山莊街166號一樓",
   "ll": [
    25.086789,
@@ -7132,7 +7132,7 @@
   "id": "pe654d4c4a1",
   "n": "小庭院泰食",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區瑞光里江南街71巷16弄50號",
   "ll": [
    25.075767,
@@ -7147,7 +7147,7 @@
   "id": "pf8cf04d403",
   "n": "仁壽司",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區紫星里成功路四段61巷25弄13號",
   "ll": [
    25.080353,
@@ -7162,7 +7162,7 @@
   "id": "p4147d19003",
   "n": "REEDS COFFEE & BAKERY 內湖店",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區湖濱里成功路三段146號",
   "ll": [
    25.079935,
@@ -7177,7 +7177,7 @@
   "id": "p6a79f97705",
   "n": "勞瑞斯牛肋排餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區興雅里松仁路28號6樓",
   "ll": [
    25.039633,
@@ -7192,7 +7192,7 @@
   "id": "p80d9f388be",
   "n": "旭日朝食",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區西安里文湖街87號",
   "ll": [
    25.086572,
@@ -7207,7 +7207,7 @@
   "id": "p59d8ee21a8",
   "n": "陳董藥燉排骨攤位",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區慈祐里饒河街160號",
   "ll": [
    25.050626,
@@ -7222,7 +7222,7 @@
   "id": "pe341a2eaeb",
   "n": "墾丁蛋蛋ㄉㄨㄞ奶",
   "c": "咖啡甜點",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區文盛里汀州路三段165號",
   "ll": [
    25.015299,
@@ -7237,7 +7237,7 @@
   "id": "pa9264aca71",
   "n": "Botega del vin",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區建倫里忠孝東路四段170巷17弄7號",
   "ll": [
    25.039993,
@@ -7252,7 +7252,7 @@
   "id": "pf424cd6d93",
   "n": "金元寶炒飯",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區萬壽里武昌街二段72之9號",
   "ll": [
    25.044698,
@@ -7267,7 +7267,7 @@
   "id": "pad7b52aa81",
   "n": "江浙 秀蘭小館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區福住里信義路二段198巷5-5號",
   "ll": [
    25.032974,
@@ -7282,7 +7282,7 @@
   "id": "pc496d26a75",
   "n": "御吉YUJI 日式便當專賣",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區麗山里內湖路一段591巷10弄2號",
   "ll": [
    25.081452,
@@ -7297,7 +7297,7 @@
   "id": "p386865e153",
   "n": "一麵知椒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區西安里文湖街87號1樓",
   "ll": [
    25.086572,
@@ -7312,7 +7312,7 @@
   "id": "p0cbdf5f556",
   "n": "阿明豬心冬粉",
   "c": "小吃夜市",
-  "region": "south-tainan",
+  "region": "south-tainan-zhongxi",
   "a": "台南市中西區府前里保安路72號",
   "ll": [
    22.990454,
@@ -7327,7 +7327,7 @@
   "id": "p7e668dd754",
   "n": "五指山星城咖啡",
   "c": "咖啡甜點",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-xizhi",
   "a": "新北市汐止區汐萬路三段",
   "ll": [
    25.125942,
@@ -7342,7 +7342,7 @@
   "id": "p59c3e2be6a",
   "n": "玖肆鴨霸",
   "c": "美食",
-  "region": "south-pingtung",
+  "region": "south-pingtung-liuqiu",
   "a": "屏東縣琉球鄉本福村中山路22-6號",
   "ll": [
    22.347947,
@@ -7357,7 +7357,7 @@
   "id": "pe5bfe8d15e",
   "n": "小琉球香村滷味麵食館",
   "c": "小吃夜市",
-  "region": "south-pingtung",
+  "region": "south-pingtung-liuqiu",
   "a": "屏東縣琉球鄉大福村中正路347-2號",
   "ll": [
    22.340478,
@@ -7372,7 +7372,7 @@
   "id": "pf509df6718",
   "n": "漁人灶咖•巴豆補給站",
   "c": "咖啡甜點",
-  "region": "south-pingtung",
+  "region": "south-pingtung-liuqiu",
   "a": "屏東縣琉球鄉天福村中正路32號",
   "ll": [
    22.327489,
@@ -7387,7 +7387,7 @@
   "id": "pfb6023362e",
   "n": "茗馨點心世界50年老店",
   "c": "美食",
-  "region": "south-pingtung",
+  "region": "south-pingtung-donggang",
   "a": "屏東縣東港鎮新勝里新基街45巷31號對面（第二市場內，正宗肉圓斜對面",
   "ll": [
    22.46744,
@@ -7402,7 +7402,7 @@
   "id": "p447f3d517f",
   "n": "伊茲密爾土耳其廚房 Izmir Turk Kitchen",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-xinyi",
   "a": "台北市信義區興雅里基隆路一段147巷14號",
   "ll": [
    25.042287,
@@ -7417,7 +7417,7 @@
   "id": "pdcbb5d56f9",
   "n": "SpeedRun by VG Taipei",
   "c": "景點",
-  "region": "north-taipei",
+  "region": "north-taipei-daan",
   "a": "台北市大安區通安里通安街79號2樓",
   "ll": [
    25.030327,
@@ -7433,7 +7433,7 @@
   "id": "p40550cbf59",
   "n": "碧山岩 桶仔雞",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港富里內湖路一段737巷51弄32號1樓",
   "ll": [
    25.080501,
@@ -7448,7 +7448,7 @@
   "id": "p8b203d1e00",
   "n": "OL健康餐盒 內湖店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區西湖里內湖路一段285巷68弄13號",
   "ll": [
    25.08582,
@@ -7463,7 +7463,7 @@
   "id": "pd4acde9f13",
   "n": "阿根脆皮臭豆腐",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區慈佑里饒河街夜市",
   "ll": [
    25.050188,
@@ -7478,7 +7478,7 @@
   "id": "p7f0b6621a1",
   "n": "魯都香滷味-內湖文德店",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區瑞陽里文德路22巷27弄3號1樓",
   "ll": [
    25.076786,
@@ -7493,7 +7493,7 @@
   "id": "pd253ef187c",
   "n": "燒烤臭豆腐",
   "c": "小吃夜市",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-bali",
   "a": "新北市八里區米倉里渡船頭街18號",
   "ll": [
    25.158517,
@@ -7508,7 +7508,7 @@
   "id": "pb4cf179aca",
   "n": "道樂拉麵 大北店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-shilin",
   "a": "台北市士林區仁勇里大北路9號",
   "ll": [
    25.089651,
@@ -7523,7 +7523,7 @@
   "id": "p62d7f3cdc3",
   "n": "東門興記手工水餃",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongzheng",
   "a": "台北市中正區文祥里金山南路一段124號",
   "ll": [
    25.035064,
@@ -7538,7 +7538,7 @@
   "id": "p9feb66ecfa",
   "n": "鼎越鴻越南美食館",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港墘里文德路22巷4弄2號",
   "ll": [
    25.078167,
@@ -7553,7 +7553,7 @@
   "id": "pe595502770",
   "n": "合點壽司 がってん寿司 內湖店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區西湖里內湖路一段306號",
   "ll": [
    25.081663,
@@ -7568,7 +7568,7 @@
   "id": "p660740bfa8",
   "n": "源芳刈包.",
   "c": "小吃夜市",
-  "region": "north-taipei",
+  "region": "north-taipei-wanhua",
   "a": "台北市萬華區青山里華西街17-2號",
   "ll": [
    25.039406,
@@ -7583,7 +7583,7 @@
   "id": "pa4b822db36",
   "n": "梅花廳 - 兄弟大飯店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-songshan",
   "a": "台北市松山區中正里南京東路三段255號2-3樓",
   "ll": [
    25.052051,
@@ -7598,7 +7598,7 @@
   "id": "p3c21ecca6b",
   "n": "RÒU X James Sharman",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-zhongshan",
   "a": "台北市中山區金泰里樂群二路199號中城廣場一樓萬豪酒店1-10櫃位",
   "ll": [
    25.080429,
@@ -7614,7 +7614,7 @@
   "id": "pcb216dc5d9",
   "n": "北港江記龍門生炒鴨肉焿",
   "c": "美食",
-  "region": "north-newtaipei",
+  "region": "north-newtaipei-sanchong",
   "a": "新北市三重區龍門里龍門路134號",
   "ll": [
    25.073058,
@@ -7629,7 +7629,7 @@
   "id": "ped37da160a",
   "n": "阿棋 三代福州意麵老店",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區三民路二段7號第二市場內1",
   "ll": [
    24.142604,
@@ -7644,7 +7644,7 @@
   "id": "p550e4dc066",
   "n": "Yolo Moment 台中店",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區新生里龍富路四段565號",
   "ll": [
    24.150752,
@@ -7660,7 +7660,7 @@
   "id": "p9ada36faa3",
   "n": "第二市場 鄭氏肉包餛飩湯",
   "c": "小吃夜市",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區公益里向上路一段198號",
   "ll": [
    24.146821,
@@ -7675,7 +7675,7 @@
   "id": "p152dcbe370",
   "n": "霧都老火鍋(大墩店)",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區大興里大墩路28號",
   "ll": [
    24.137534,
@@ -7690,7 +7690,7 @@
   "id": "p31a8bd0137",
   "n": "JL STUDIO 現代新加坡料理",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-nantun",
   "a": "台中市南屯區益豐路四段689 號2樓",
   "ll": [
    24.150484,
@@ -7706,7 +7706,7 @@
   "id": "pa3b4272195",
   "n": "鳥苑Torien Yakitori",
   "c": "美食",
-  "region": "central-taichung",
+  "region": "central-taichung-xiqu",
   "a": "台中市西區忠誠里忠明南路48號",
   "ll": [
    24.155438,
@@ -7721,7 +7721,7 @@
   "id": "p4d0ff0f913",
   "n": "宮原眼科",
   "c": "咖啡甜點",
-  "region": "central-taichung",
+  "region": "central-taichung-zhongqu",
   "a": "台中市中區綠川里中山路20號",
   "ll": [
    24.137828,
@@ -7736,7 +7736,7 @@
   "id": "p0ecdc50481",
   "n": "Nose man鼻孔先生手作早午餐",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區北門里北門街73號",
   "ll": [
    23.484179,
@@ -7751,7 +7751,7 @@
   "id": "pc13cec5fcf",
   "n": "三元花園韓式餐廳 潭美店",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區石潭里石潭路1號",
   "ll": [
    25.063159,
@@ -7766,7 +7766,7 @@
   "id": "p06e8b63e97",
   "n": "天天沙茶火鍋",
   "c": "美食",
-  "region": "south-kaohsiung",
+  "region": "south-kaohsiung-yancheng",
   "a": "高雄市鹽埕區府北里七賢三路240號",
   "ll": [
    22.629892,
@@ -7781,7 +7781,7 @@
   "id": "pc38a6a323b",
   "n": "卡拉拉涮涮鍋",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區清白里成功路四段205號",
   "ll": [
    25.084246,
@@ -7796,7 +7796,7 @@
   "id": "p609546de52",
   "n": "延三溫體牛-李記",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區港都里港墘路82巷3號",
   "ll": [
    25.080965,
@@ -7811,7 +7811,7 @@
   "id": "p48a24706e9",
   "n": "極品串燒",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區湖興里瑞光路111號",
   "ll": [
    25.07128,
@@ -7826,7 +7826,7 @@
   "id": "pd2eef8b01d",
   "n": "淬義義大利餐廳",
   "c": "美食",
-  "region": "north-taipei",
+  "region": "north-taipei-neihu",
   "a": "台北市內湖區瑞光路258巷37號",
   "ll": [
    25.075012,
@@ -7841,7 +7841,7 @@
   "id": "p63a8c45b00",
   "n": "北門沙鍋魚頭",
   "c": "美食",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區林森里忠孝路284-1號",
   "ll": [
    23.485781,
@@ -7856,7 +7856,7 @@
   "id": "pc8da2eb223",
   "n": "廟口煎餅",
   "c": "小吃夜市",
-  "region": "south-chiayi-city",
+  "region": "south-chiayi-city-dongqu",
   "a": "嘉義市東區北門里文化路280號",
   "ll": [
    23.483513,

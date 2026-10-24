@@ -1,5 +1,5 @@
 {
-  "note": "地區樹：大區 → 縣市 → 區域。id 格式 {大區}-{縣市}-{區域}，永不改名。center 為 [緯度, 經度]，zoom 為 Leaflet 縮放。districts 等地點進來再補。",
+  "note": "地區樹：大區 → 縣市 → 區域。id 格式 {大區}-{縣市}-{區域}，永不改名。center 為 [緯度, 經度]，zoom 為 Leaflet 縮放。districts 由地點地址的區名推出（2026-10-24），中心點為該區地點座標平均、縮放 14；新區域等地點進來再補。",
   "center": [
     23.7,
     120.96
@@ -23,7 +23,128 @@
             121.55
           ],
           "zoom": 12,
-          "districts": []
+          "districts": [
+            {
+              "id": "north-taipei-daan",
+              "n": "大安區",
+              "center": [
+                25.0359,
+                121.5459
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-zhongshan",
+              "n": "中山區",
+              "center": [
+                25.0664,
+                121.54
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-neihu",
+              "n": "內湖區",
+              "center": [
+                25.0798,
+                121.5785
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-zhongzheng",
+              "n": "中正區",
+              "center": [
+                25.0294,
+                121.5208
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-xinyi",
+              "n": "信義區",
+              "center": [
+                25.0349,
+                121.565
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-songshan",
+              "n": "松山區",
+              "center": [
+                25.0549,
+                121.5534
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-wanhua",
+              "n": "萬華區",
+              "center": [
+                25.0413,
+                121.5025
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-shilin",
+              "n": "士林區",
+              "center": [
+                25.1024,
+                121.5292
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-datong",
+              "n": "大同區",
+              "center": [
+                25.0566,
+                121.5143
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-nangang",
+              "n": "南港區",
+              "center": [
+                25.0564,
+                121.609
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-beitou",
+              "n": "北投區",
+              "center": [
+                25.1205,
+                121.496
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taipei-wenshan",
+              "n": "文山區",
+              "center": [
+                24.9996,
+                121.5555
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "north-newtaipei",
@@ -33,7 +154,168 @@
             121.46
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "north-newtaipei-banqiao",
+              "n": "板橋區",
+              "center": [
+                25.0157,
+                121.4638
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-yonghe",
+              "n": "永和區",
+              "center": [
+                25.0056,
+                121.5178
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-ruifang",
+              "n": "瑞芳區",
+              "center": [
+                25.1179,
+                121.8399
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-sanchong",
+              "n": "三重區",
+              "center": [
+                25.0661,
+                121.4957
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-zhonghe",
+              "n": "中和區",
+              "center": [
+                24.9997,
+                121.5092
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-xizhi",
+              "n": "汐止區",
+              "center": [
+                25.0867,
+                121.6223
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-xindian",
+              "n": "新店區",
+              "center": [
+                24.9678,
+                121.5334
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-xinzhuang",
+              "n": "新莊區",
+              "center": [
+                25.0339,
+                121.4356
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-tucheng",
+              "n": "土城區",
+              "center": [
+                24.9629,
+                121.418
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-linkou",
+              "n": "林口區",
+              "center": [
+                25.0743,
+                121.3682
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-jinshan",
+              "n": "金山區",
+              "center": [
+                25.225,
+                121.6302
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-luzhou",
+              "n": "蘆洲區",
+              "center": [
+                25.0844,
+                121.4777
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-shulin",
+              "n": "樹林區",
+              "center": [
+                24.994,
+                121.4195
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-gongliao",
+              "n": "貢寮區",
+              "center": [
+                25.0737,
+                121.9191
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-wulai",
+              "n": "烏來區",
+              "center": [
+                24.8909,
+                121.5511
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-newtaipei-bali",
+              "n": "八里區",
+              "center": [
+                25.1585,
+                121.4349
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "north-keelung",
@@ -53,7 +335,58 @@
             121.3
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "north-taoyuan-zhongli",
+              "n": "中壢區",
+              "center": [
+                24.9765,
+                121.2281
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taoyuan-luzhu",
+              "n": "蘆竹區",
+              "center": [
+                25.0414,
+                121.2743
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taoyuan-taoyuan",
+              "n": "桃園區",
+              "center": [
+                25.0051,
+                121.2858
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taoyuan-guishan",
+              "n": "龜山區",
+              "center": [
+                25.0577,
+                121.37
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-taoyuan-daxi",
+              "n": "大溪區",
+              "center": [
+                24.8832,
+                121.2867
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "north-hsinchu-city",
@@ -63,7 +396,28 @@
             120.97
           ],
           "zoom": 12,
-          "districts": []
+          "districts": [
+            {
+              "id": "north-hsinchu-city-beiqu",
+              "n": "北區",
+              "center": [
+                24.805,
+                120.9676
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "north-hsinchu-city-dongqu",
+              "n": "東區",
+              "center": [
+                24.8058,
+                120.9704
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "north-hsinchu-county",
@@ -104,7 +458,128 @@
             120.68
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "central-taichung-xiqu",
+              "n": "西區",
+              "center": [
+                24.1475,
+                120.6632
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-nantun",
+              "n": "南屯區",
+              "center": [
+                24.1484,
+                120.6353
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-zhongqu",
+              "n": "中區",
+              "center": [
+                24.1418,
+                120.6806
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-nanqu",
+              "n": "南區",
+              "center": [
+                24.1297,
+                120.682
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-xitun",
+              "n": "西屯區",
+              "center": [
+                24.1669,
+                120.6437
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-beiqu",
+              "n": "北區",
+              "center": [
+                24.1532,
+                120.6821
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-beitun",
+              "n": "北屯區",
+              "center": [
+                24.1778,
+                120.6992
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-dongqu",
+              "n": "東區",
+              "center": [
+                24.1379,
+                120.6992
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-wufeng",
+              "n": "霧峰區",
+              "center": [
+                24.0614,
+                120.6981
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-daya",
+              "n": "大雅區",
+              "center": [
+                24.2308,
+                120.624
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-heping",
+              "n": "和平區",
+              "center": [
+                24.2054,
+                121.0105
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-taichung-fengyuan",
+              "n": "豐原區",
+              "center": [
+                24.2646,
+                120.7271
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "central-changhua",
@@ -124,7 +599,28 @@
             120.97
           ],
           "zoom": 9,
-          "districts": []
+          "districts": [
+            {
+              "id": "central-nantou-nantou",
+              "n": "南投市",
+              "center": [
+                23.9091,
+                120.6856
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "central-nantou-puli",
+              "n": "埔里鎮",
+              "center": [
+                23.9573,
+                120.9749
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "central-yunlin",
@@ -155,7 +651,28 @@
             120.45
           ],
           "zoom": 12,
-          "districts": []
+          "districts": [
+            {
+              "id": "south-chiayi-city-dongqu",
+              "n": "東區",
+              "center": [
+                23.4818,
+                120.4528
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-chiayi-city-xiqu",
+              "n": "西區",
+              "center": [
+                23.4788,
+                120.4431
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "south-chiayi-county",
@@ -165,7 +682,38 @@
             120.57
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "south-chiayi-county-taibao",
+              "n": "太保市",
+              "center": [
+                23.4701,
+                120.2966
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-chiayi-county-fanlu",
+              "n": "番路鄉",
+              "center": [
+                23.4441,
+                120.6726
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-chiayi-county-xingang",
+              "n": "新港鄉",
+              "center": [
+                23.555,
+                120.3475
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "south-tainan",
@@ -175,7 +723,58 @@
             120.21
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "south-tainan-zhongxi",
+              "n": "中西區",
+              "center": [
+                22.9938,
+                120.1982
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-tainan-yongkang",
+              "n": "永康區",
+              "center": [
+                23.0025,
+                120.2507
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-tainan-beiqu",
+              "n": "北區",
+              "center": [
+                22.9991,
+                120.2073
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-tainan-anping",
+              "n": "安平區",
+              "center": [
+                22.9995,
+                120.1615
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-tainan-rende",
+              "n": "仁德區",
+              "center": [
+                22.9404,
+                120.2611
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "south-kaohsiung",
@@ -185,7 +784,48 @@
             120.3
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "south-kaohsiung-sanmin",
+              "n": "三民區",
+              "center": [
+                22.6442,
+                120.3018
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-kaohsiung-zuoying",
+              "n": "左營區",
+              "center": [
+                22.6835,
+                120.3073
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-kaohsiung-xinxing",
+              "n": "新興區",
+              "center": [
+                22.6264,
+                120.3021
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-kaohsiung-yancheng",
+              "n": "鹽埕區",
+              "center": [
+                22.6299,
+                120.2843
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "south-pingtung",
@@ -195,7 +835,28 @@
             120.55
           ],
           "zoom": 9,
-          "districts": []
+          "districts": [
+            {
+              "id": "south-pingtung-liuqiu",
+              "n": "琉球鄉",
+              "center": [
+                22.3386,
+                120.3692
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "south-pingtung-donggang",
+              "n": "東港鎮",
+              "center": [
+                22.4674,
+                120.4513
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         }
       ]
     },
@@ -216,7 +877,78 @@
             121.74
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "east-yilan-luodong",
+              "n": "羅東鎮",
+              "center": [
+                24.6775,
+                121.7684
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "east-yilan-yilan",
+              "n": "宜蘭市",
+              "center": [
+                24.7505,
+                121.7502
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "east-yilan-wujie",
+              "n": "五結鄉",
+              "center": [
+                24.6966,
+                121.7969
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "east-yilan-jiaoxi",
+              "n": "礁溪鄉",
+              "center": [
+                24.8324,
+                121.7754
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "east-yilan-zhuangwei",
+              "n": "壯圍鄉",
+              "center": [
+                24.7762,
+                121.7792
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "east-yilan-dongshan",
+              "n": "冬山鄉",
+              "center": [
+                24.6795,
+                121.7353
+              ],
+              "zoom": 14,
+              "districts": []
+            },
+            {
+              "id": "east-yilan-sanxing",
+              "n": "三星鄉",
+              "center": [
+                24.6732,
+                121.7223
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "east-hualien",
@@ -226,7 +958,18 @@
             121.4
           ],
           "zoom": 9,
-          "districts": []
+          "districts": [
+            {
+              "id": "east-hualien-fengbin",
+              "n": "豐濱鄉",
+              "center": [
+                23.4502,
+                121.4966
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "east-taitung",
@@ -236,7 +979,18 @@
             121.15
           ],
           "zoom": 9,
-          "districts": []
+          "districts": [
+            {
+              "id": "east-taitung-taidong",
+              "n": "台東市",
+              "center": [
+                22.7674,
+                121.1363
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         }
       ]
     },
@@ -257,7 +1011,18 @@
             119.58
           ],
           "zoom": 10,
-          "districts": []
+          "districts": [
+            {
+              "id": "island-penghu-magong",
+              "n": "馬公市",
+              "center": [
+                23.5668,
+                119.5722
+              ],
+              "zoom": 14,
+              "districts": []
+            }
+          ]
         },
         {
           "id": "island-kinmen",
