@@ -93,8 +93,8 @@
 | `n` | 名稱 |
 | `c`、`c2` | 主分類；副分類（最多 2 個，選填） |
 | `region` | 最底層的地區 id |
-| `a`、`ll` | 地址、座標 `[緯度, 經度]`。**座標不得取自 Google Places**（條款只允許長期保存 `place_id`）：由 OpenStreetMap（Nominatim）地址查詢取得，查不到的由 Howard 在地圖上手動點位置 |
-| `llsrc` | 座標來源：`osm` 或 `manual`（選填；A 重查座標後填上，用來區分舊的 Google 座標） |
+| `a`、`ll` | 地址、座標 `[緯度, 經度]`。座標可取自 Google Places 回傳的位置（Places 條款只明確允許長期保存 `place_id`，座標有快取期限；Howard 已知此風險後決定存入，2026-10-24），查不到時用 OSM（Nominatim）或由 Howard 手動點位置 |
+| `llsrc` | 座標來源：`google`、`osm` 或 `manual`（選填） |
 | `h`、`oh` | 不存入 repo：營業時間由網站即時向 Places API 查詢，只放瀏覽器暫存 |
 | `rt`、`rv` | 不存入 repo：評分與評論數同樣即時查詢 |
 | `pid`、`gurl` | Google Place ID、Google 地圖連結 |
@@ -102,7 +102,7 @@
 | `src` | 來源：清單、收件匣、去過、手動 |
 | `status` | `open`、`closed`、`moved`；預設只顯示 `open` |
 
-**初次匯入流程**：Google 地圖清單先放進 `data/staging/import-list.json`（只有 `n`、`c`、選填 `note`，歇業的標 `status`）；`lookup-places` workflow 用 Places API 查出縣市、`pid`、`gurl`，結果存到 `snapshot` 分支的 `lookup/`（不取評分、評論數、營業時間、座標）；座標另由 OSM 地址查詢補上（Nominatim 每秒最多 1 次、要帶說明用途的 User-Agent）；A 確認後轉成上表格式寫進 `places.json`。`data/staging/` 不受 `validate.mjs` 檢查，也不會被網站載入。
+**初次匯入流程**：Google 地圖清單先放進 `data/staging/import-list.json`（只有 `n`、`c`、選填 `note`，歇業的標 `status`）；`lookup-places` workflow 用 Places API 查出座標、縣市、`pid`、`gurl`，結果存到 `snapshot` 分支的 `lookup/`（不取評分、評論數、營業時間）；Google 查不到座標的，改用 OSM 地址查詢（Nominatim 每秒最多 1 次、要帶說明用途的 User-Agent）或手動點位置；A 確認後轉成上表格式寫進 `places.json`。`data/staging/` 不受 `validate.mjs` 檢查，也不會被網站載入。
 
 **Firebase 路徑**
 
@@ -195,9 +195,9 @@
 
 - [x] 宜蘭歸東部（2026-10-23 確認）
 - [x] 基礎設施：repo、Pages、Firebase 專案與規則、`FIREBASE_SECRET`、`firebase.dbUrl` 已完成；模組啟動順序為基礎設施 → A、B → C、D、E → F（B 已合併，A 進行中）
-- [ ] Google 地圖清單：暫存清單 384 筆（美食 326、咖啡甜點 37、住宿 10、景點 4、小吃夜市 3、購物市集 1、未分類 3），尚待補縣市、`pid`，座標改用 OSM 重查，並確認 3 筆未分類與 4 筆歇業標記
-- [x] 座標來源（2026-10-24 Howard 決定）：Google 只留 `pid`，座標用 OSM 查詢，查不到的手動點位置；目前 `places.json` 的 380 筆座標來自 Google，需由 A 重查並換掉
-- [ ] `a`（地址）目前也來自 Google 的 `formattedAddress`，是否要改成 OSM 地址或自行輸入，待 Howard 決定
+- [ ] Google 地圖清單：暫存清單 384 筆（美食 326、咖啡甜點 37、住宿 10、景點 4、小吃夜市 3、購物市集 1、未分類 3），尚待 Places 查詢補座標、縣市、`pid`，並確認 3 筆未分類與 4 筆歇業標記
+- [x] 座標來源（2026-10-24 Howard 最終決定）：座標存 Google Places 回傳的位置；OSM 在台灣資料不足，只當備援。Howard 已知 Places 條款對座標快取的限制並接受風險；評分、評論數、營業時間仍不存 repo
+- [x] 地址 `a` 同理，沿用 Google 的 `formattedAddress`（同一風險決定）
 - [ ] 去過紀錄的提供時間與形式（不限形式）
 - [ ] Google 金鑰有兩把：匯入工具用的 repo secret `GOOGLE_PLACES_KEY`，與瀏覽器用的 `google.placesKey`（限制 API 與來源網址）；皆由 Howard 自己設定，不貼聊天
 - [ ] 縣市邊界資料（GeoJSON）的來源與授權，由 A 找政府開放資料並簡化
