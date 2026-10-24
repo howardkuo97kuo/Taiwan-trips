@@ -95,6 +95,10 @@ if (places) {
         pids.add(p.pid);
       }
       for (const k of FORBIDDEN_PLACE_KEYS) if (k in p) bad(`不得存放 ${k}（Google 資料不存入 repo）`);
+      if (p.mich != null) {
+        if (!['bib', 'star1', 'star2', 'star3'].includes(p.mich.t)) bad('mich.t 必須是 bib、star1、star2 或 star3');
+        if (!Number.isInteger(p.mich.y) || p.mich.y < 2018 || p.mich.y > 2100) bad('mich.y 必須是年份（2018 起）');
+      }
     });
   }
 }

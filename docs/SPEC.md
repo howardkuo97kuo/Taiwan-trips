@@ -98,6 +98,7 @@
 | `llsrc` | 座標來源：`google`、`osm` 或 `manual`（選填） |
 | `h`、`oh`、`rt`、`rv` | 不存入 `places.json`：營業時間、評分、評論數存在 Firebase `/google/{pid}`（見下方「Firebase 路徑」） |
 | `pid`、`gurl` | Google Place ID、Google 地圖連結 |
+| `mich` | 選填：米其林標示 `{ t, y }`，`t` 為 `bib`（必比登推介）、`star1`、`star2`、`star3`，`y` 為台灣米其林指南的年份（目前是 2026 年版）；網站在卡片與詳情頁用米其林圖示標出。資料依該年官方名單比對店名與地址，有疑義的不標 |
 | `note` | 備註 |
 | `src` | 來源：清單、收件匣、去過、手動 |
 | `status` | `open`、`closed`、`moved`；預設只顯示 `open` |
