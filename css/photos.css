@@ -1,0 +1,22 @@
+/* 地點照片：卡片縮圖與詳情輪播。照片來自 Google，載入前後都有分類圖示墊底。 */
+.tw-thumb { float: right; width: 72px; height: 72px; margin: 0 0 6px 10px; border-radius: var(--r-sm, 8px); border: 2px solid var(--ink); background: linear-gradient(135deg, var(--paper), var(--card)); display: grid; place-items: center; overflow: hidden; position: relative; }
+.tw-thumb .tw-ico { width: 28px; height: 28px; color: var(--muted); }
+.tw-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: tw-photo-in .4s ease both; }
+.tw-gallery { position: relative; margin: 0 0 16px; border: 2px solid var(--ink); border-radius: var(--r-md); overflow: hidden; background: var(--card); }
+.tw-gallery-empty { aspect-ratio: 16 / 9; display: grid; place-content: center; justify-items: center; gap: 8px; color: var(--muted); }
+.tw-gallery-empty .tw-ico { width: 44px; height: 44px; }
+.tw-gallery-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.tw-gallery-track::-webkit-scrollbar { display: none; }
+.tw-gallery-item { flex: 0 0 100%; margin: 0; position: relative; scroll-snap-align: center; aspect-ratio: 16 / 9; background: var(--paper); }
+.tw-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tw-gallery-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 12px 6px; font-size: 12px; color: #fff; background: linear-gradient(transparent, #0009); }
+.tw-gallery-item figcaption a { color: inherit; }
+.tw-gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--ink); background: var(--card); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; }
+.tw-gallery-nav.is-prev { left: 8px; }
+.tw-gallery-nav.is-next { right: 8px; }
+.tw-gallery-dots { position: absolute; left: 0; right: 0; top: 8px; display: flex; justify-content: center; gap: 5px; }
+.tw-gallery-dots i { width: 7px; height: 7px; border-radius: 50%; background: #fff8; box-shadow: 0 0 0 1px #0004; }
+.tw-gallery-dots i.is-on { background: #fff; }
+@keyframes tw-photo-in { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .tw-thumb img { animation: none; } }
+@media (max-width: 640px) { .tw-thumb { width: 56px; height: 56px; } .tw-gallery-nav { display: none; } }
