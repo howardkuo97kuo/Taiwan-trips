@@ -9,6 +9,9 @@ on:
       limit:
         description: 這次查幾筆
         default: '50'
+      list:
+        description: 暫存清單檔（預設是 Google 清單）
+        default: data/staging/import-list.json
 
 permissions:
   contents: write
@@ -29,6 +32,7 @@ jobs:
           GOOGLE_PLACES_KEY: ${{ secrets.GOOGLE_PLACES_KEY }}
           INPUT_OFFSET: ${{ inputs.offset }}
           INPUT_LIMIT: ${{ inputs.limit }}
+          INPUT_LIST: ${{ inputs.list }}
         run: |
-          node tools/places-lookup.mjs "$INPUT_OFFSET" "$INPUT_LIMIT" "out/lookup/result-$INPUT_OFFSET.json"
+          node tools/places-lookup.mjs "$INPUT_OFFSET" "$INPUT_LIMIT" "out/lookup/result-$(basename "$INPUT_LIST" .json)-$INPUT_OFFSET.json" "$INPUT_LIST"
           bash scripts/snapshot-commit.sh out "lookup-places: $INPUT_OFFSET + $INPUT_LIMIT"
