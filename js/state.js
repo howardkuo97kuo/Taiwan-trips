@@ -3,7 +3,7 @@
 // 欄位（契約，改動先改 docs/MODULES.md）：
 //   config    data/config.json
 //   regions   data/regions.json 原樣（形狀由 A 決定）
-//   places    data/places.json 的地點陣列（已含 status，未過濾）
+//   places    data/places.json 加上 Firebase /places（排程查好、等併回的新地點）的合併陣列，未過濾
 //   marks     { apong: {placeId: mark}, baobao: {placeId: mark} }，即時同步
 //   who       'apong' | 'baobao' | null，記在 localStorage twWho
 //   route     { name, params }，目前畫面
@@ -17,7 +17,7 @@ const WHO_IDS = ['apong', 'baobao'];
 const state = {
   config: null,
   regions: null,
-  places: [],
+  places: [], // data/places.json 與 Firebase /places 合併後的結果
   marks: { apong: {}, baobao: {} },
   who: null,
   route: { name: 'home', params: [] },
@@ -78,7 +78,42 @@ export async function loadData() {
   ]);
   set('config', config);
   set('regions', regions);
-  set('places', Array.isArray(places) ? places : places?.places ?? []);
+  basePlaces = Array.isArray(places) ? places : places?.places ?? [];
+  mergePlaces();
+}
+
+// ── 地點合併點 ──
+// data/places.json 是唯一來源；Firebase /places 裡還沒併回 repo 的新地點補在後面。
+// repo 的地點優先：id 或 pid 已在 repo 就略過（併回之後遠端那筆自然失效）。
+let basePlaces = [];
+let remotePlaces = [];
+const ID_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+function validRemote(p) {
+  return p && typeof p === 'object'
+    && typeof p.id === 'string' && ID_RE.test(p.id)
+    && typeof p.n === 'string' && p.n
+    && typeof p.region === 'string'
+    && Array.isArray(p.ll) && p.ll.length === 2 && p.ll.every((x) => typeof x === 'number')
+    && (state.config?.categories ?? []).includes(p.c);
+}
+
+function mergePlaces() {
+  const ids = new Set(basePlaces.map((p) => p.id));
+  const pids = new Set(basePlaces.map((p) => p.pid).filter(Boolean));
+  const extra = remotePlaces.filter((p) => !ids.has(p.id) && !(p.pid && pids.has(p.pid)));
+  set('places', extra.length ? [...basePlaces, ...extra] : basePlaces);
+}
+
+// 給 sync.js 用：傳入 /places 的原始內容（物件或陣列），格式不合的略過
+export function setRemotePlaces(raw) {
+  const seen = new Set();
+  remotePlaces = Object.values(raw ?? {}).filter((p) => {
+    if (!validRemote(p) || seen.has(p.id)) return false;
+    seen.add(p.id);
+    return true;
+  });
+  mergePlaces();
 }
 
 // 預設只顯示 open（契約）

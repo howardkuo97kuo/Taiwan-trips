@@ -140,6 +140,19 @@ async function fallbackLoad() {
   }
 }
 
+// ── /places 輪詢：Claude 查好、還沒併回 places.json 的新地點，併進全站地點列表 ──
+const PLACES_POLL_MS = 60_000;
+let placesTimer = null;
+
+async function pollPlaces() {
+  if (document.hidden) return;
+  try {
+    store.setRemotePlaces(await fbGet('places'));
+  } catch (e) {
+    console.warn('[sync] 讀取 /places 失敗', e);
+  }
+}
+
 export function startSync() {
   base = (store.get('config')?.firebase?.dbUrl ?? '').replace(/\/+$/, '');
   if (!base) {
@@ -148,12 +161,17 @@ export function startSync() {
     return;
   }
   fallbackLoad();
+  pollPlaces();
+  placesTimer = setInterval(pollPlaces, PLACES_POLL_MS);
+  document.addEventListener('visibilitychange', pollPlaces);
   if (typeof EventSource === 'undefined') return;
   for (const w of WHO) openStream(w);
 }
 
 export function stopSync() {
   streams.splice(0).forEach((es) => es.close());
+  clearInterval(placesTimer);
+  document.removeEventListener('visibilitychange', pollPlaces);
   opened.clear();
   store.set('online', false);
 }

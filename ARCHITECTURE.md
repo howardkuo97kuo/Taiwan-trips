@@ -73,7 +73,7 @@
 沒有框架，沒有建置。`index.html` 以 `<script type="module">` 載入 `js/app.js`，其餘模組由路由表按需 `import()`。
 
 1. **外殼（`app.js`）**：頂列顯示站名、連線狀態、目前身分；底部導覽依路由表產生；選身分的對話層。
-2. **狀態（`state.js`）**：模組之間唯一的溝通管道。鍵：`config`、`regions`、`places`（未過濾，顯示請用 `store.isVisible(p)`，預設只顯示 `status: open`）、`marks`（`{apong: {…}, baobao: {…}}`，即時更新）、`who`、`route`、`online`、`synced`。
+2. **狀態（`state.js`）**：模組之間唯一的溝通管道。鍵：`config`、`regions`、`places`（`data/places.json` 加上 Firebase `/places` 還沒併回的新地點，repo 的優先：`id` 或 `pid` 重複就略過遠端那筆；遠端格式不合——缺 `id`／`n`／`region`／`ll`、分類不在清單——也略過；未過濾，顯示請用 `store.isVisible(p)`，預設只顯示 `status: open`）、`marks`（`{apong: {…}, baobao: {…}}`，即時更新）、`who`、`route`、`online`、`synced`。
 3. **同步（`sync.js`）**：啟動時先一次性讀 `/marks` 當後備，再開兩條 SSE（各一人）；寫入一律走 `setMark`，只能寫目前身分自己那條，先更新畫面，失敗就回復並丟錯。
 4. **功能模組（D、E、F）**：各自 `export function mount(el, ctx)`，回傳清理函式。`ctx` 帶 `route`、`store`、`sync`、`navigate`、`h`、`clear`、`config`。檔案不存在或沒有 `mount` 時畫面顯示「尚未完成」，可選模組（E、F）的導覽項目不顯示。
 
@@ -107,7 +107,7 @@
   3. `lookup-places`（`list` 填該檔）查座標、縣市、`pid`；
   4. `node tools/merge-places.mjs <結果> <清單>` 併進 `places.json`，走 PR；
   5. PR 合併後用 `write-data` 把對應收件匣的 `status` 改成 `done`／`dup`／`skip`。
-  `/places` 目前只有收件匣頁會讀來顯示「已查好、等併回」，還沒併進全站的地點列表。
+  `/places` 由 `sync.js` 每 60 秒輪詢（頁面隱藏時暫停），經 `store.setRemotePlaces` 併進全站地點列表（見下），收件匣頁另外讀來顯示「已查好、等併回」。
 - 修正地點本身（分類、縣市、備註）：走收件匣的「修正」，由 Claude 確認後改 `places.json`；網站只能改自己的標記。
 - 歇業或搬遷：`status` 設為 `closed` 或 `moved`，保留紀錄但預設不顯示、不排進行程。
 
