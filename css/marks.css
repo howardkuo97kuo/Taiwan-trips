@@ -84,18 +84,21 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-place-card.is-skipped .tw-place-mid, .tw-place-card.is-skipped .tw-place-stub { opacity: .55; }
 @media (pointer: coarse) { .tw-mark-skip { min-height: 40px; padding: 6px 10px; } }
 
-/* ── 想去：愛心按鈕與彈跳（只在卡片／表格列） ── */
-.tw-place-card .tw-mark-dot { width: 40px; height: 40px; border: 0; background: none; border-radius: 0; display: grid; place-items: center; box-shadow: none; position: relative; }
-.tw-place-card .tw-mark-dot::before { content: "♡"; font-size: 34px; line-height: 1; color: var(--ink); transition: color .2s, transform .2s; }
-.tw-place-card .tw-mark-dot.is-on::before { content: "♥"; color: var(--stamp); }
-.tw-place-card .tw-mark-dot.is-ghost::before { font-size: 26px; color: var(--line); }
-.tw-place-card .tw-mark-dot.is-ghost.is-on::before { color: var(--muted); }
+/* ── 想去：貼郵票（帶鋸齒邊的小郵票，點下去「啪」地貼上） ── */
+.tw-place-card .tw-mark-dot { width: 46px; height: 56px; border: 0; background: none; border-radius: 0; padding: 0; display: block; position: relative; box-shadow: none; filter: drop-shadow(0 1px 1px #0006); }
+.tw-place-card .tw-mark-dot::before { content: ""; position: absolute; inset: 0; background: var(--line); border: 4px solid var(--card); box-sizing: border-box; -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2048%27%3E%3Cpath%20fill-rule%3D%27evenodd%27%20d%3D%27M0%200H40V48H0zM1.7000000000000002%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM1.7000000000000002%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200z%27%2F%3E%3C%2Fsvg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2048%27%3E%3Cpath%20fill-rule%3D%27evenodd%27%20d%3D%27M0%200H40V48H0zM1.7000000000000002%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM1.7000000000000002%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200z%27%2F%3E%3C%2Fsvg%3E") center / 100% 100% no-repeat; transition: background .2s, transform .2s; }
+.tw-place-card .tw-mark-dot::after { content: attr(data-ini); position: absolute; inset: 4px; display: grid; place-items: center; font: 700 17px var(--f-display); color: color-mix(in srgb, var(--muted) 70%, transparent); }
+.tw-place-card .tw-mark-dot.is-on::before { background: linear-gradient(165deg, var(--blue), var(--rail) 70%, var(--stamp)); }
+.tw-place-card .tw-mark-dot.is-on::after { color: #fff; text-shadow: 0 1px 2px #0007; }
+.tw-place-card .tw-mark-dot.is-ghost { width: 36px; height: 44px; filter: drop-shadow(0 1px 1px #0004); }
+.tw-place-card .tw-mark-dot.is-ghost::after { font-size: 14px; }
+.tw-place-card .tw-mark-dot.is-ghost.is-on::before { background: linear-gradient(165deg, var(--muted), var(--ink)); }
+.tw-place-card .tw-mark-dot.is-ghost.is-on::after { color: #fff; }
+.tw-place-card button.tw-mark-dot:hover::before { transform: rotate(-3deg) scale(1.06); }
 .tw-place-card .tw-mark-dot.is-on, .tw-place-card button.tw-mark-dot:hover { box-shadow: none; transform: none; }
-.tw-place-card button.tw-mark-dot:hover::before { transform: scale(1.15); }
-.tw-place-card .tw-mark-dot.is-pop::before { animation: tw-heart-pop .55s cubic-bezier(.3, 1.8, .5, 1) both; }
-.tw-place-card .tw-mark-dot.is-pop::after { content: "♥ ♥ ♥"; position: absolute; left: 50%; top: 4px; transform: translateX(-50%); font-size: 11px; letter-spacing: 6px; color: var(--stamp); white-space: nowrap; animation: tw-heart-float .9s ease-out both; pointer-events: none; }
-@keyframes tw-heart-pop { 0% { transform: scale(.4); } 55% { transform: scale(1.45); } 100% { transform: scale(1); } }
-@keyframes tw-heart-float { from { opacity: 1; transform: translate(-50%, 0); } to { opacity: 0; transform: translate(-50%, -34px); } }
+.tw-place-card .tw-mark-dot.is-pop { animation: tw-stamp-stick .5s cubic-bezier(.2, 1.1, .4, 1) both; }
+@keyframes tw-stamp-stick { 0% { transform: translateY(-34px) rotate(-18deg) scale(1.6); opacity: 0; } 55% { transform: translateY(2px) rotate(3deg) scale(.92); opacity: 1; } 75% { transform: translateY(-1px) rotate(-2deg) scale(1.03); } 100% { transform: rotate(-2deg) scale(1); } }
+.tw-place-card .tw-mark-dot.is-on:not(.is-ghost) { transform: rotate(-2deg); }
 
 /* ── 另一方的狀態小章（照片左上角） ── */
 .tw-place-media { position: relative; }
@@ -113,3 +116,12 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 @keyframes tw-stamp-slam2 { 0% { transform: rotate(-34deg) scale(3); opacity: 0; } 45% { transform: rotate(-9deg) scale(.88); opacity: 1; } 62% { transform: rotate(-9deg) scale(1.08); } 80% { transform: translate(2px, -1px) rotate(-9deg) scale(1); } 100% { transform: rotate(-9deg) scale(1); } }
 @keyframes tw-stamp-ring { from { opacity: .8; transform: scale(.6); } to { opacity: 0; transform: scale(1.8); } }
 .tw-place-card .tw-mark-dot.is-on, .tw-place-card .tw-mark-dot.is-ghost, .tw-place-card .tw-mark-dot.is-ghost.is-on { background: none; border: 0; }
+
+/* ── 去過：車票剪票（票孔「喀」一聲打出來） ── */
+.tw-place-card .tw-mark-stamp { width: 112px; height: 71px; transform: rotate(-4deg); }
+.tw-place-card .tw-mark-stamp-empty { width: 112px; height: 71px; border-radius: 12px; border: 2.5px dashed var(--muted); font-size: 15px; }
+.tw-place-card .tw-mark-stamp.is-slam { animation: tw-ticket-in .5s cubic-bezier(.2, 1.1, .4, 1) both; }
+.tw-place-card .tw-mark-stamp.is-slam::after { display: none; }
+.tw-place-card .tw-mark-stamp.is-slam .hole { transform-box: fill-box; transform-origin: center; animation: tw-punch .45s cubic-bezier(.3, 1.6, .5, 1) .3s both; }
+@keyframes tw-ticket-in { from { transform: translateY(-18px) rotate(-14deg) scale(1.3); opacity: 0; } to { transform: rotate(-4deg); opacity: 1; } }
+@keyframes tw-punch { 0% { transform: scale(0); } 100% { transform: scale(1); } }

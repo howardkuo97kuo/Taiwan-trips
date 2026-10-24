@@ -169,7 +169,7 @@
 .tw-place-thead { display: none; }
 @media (min-width: 900px) {
   .tw-place-list { max-width: 1280px; }
-  .tw-place-thead, .tw-place-card, .tw-place-card.has-media { grid-template-columns: 96px 292px minmax(0, 1.15fr) minmax(0, 1fr) 108px; }
+  .tw-place-thead, .tw-place-card, .tw-place-card.has-media { grid-template-columns: 96px 292px minmax(0, 1.15fr) minmax(0, 1fr) 132px; }
   .tw-place-thead { display: grid; padding: 0 0 6px; font: 700 13px var(--f-body); color: var(--muted); border-bottom: 2px solid var(--ink); margin-bottom: 12px; }
   .tw-place-thead span { padding: 0 12px; }
   .tw-place-thead span:first-child { text-align: center; }
