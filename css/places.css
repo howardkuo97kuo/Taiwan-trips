@@ -169,7 +169,7 @@
 .tw-place-thead { display: none; }
 @media (min-width: 900px) {
   .tw-place-list { max-width: 1280px; }
-  .tw-place-thead, .tw-place-card, .tw-place-card.has-media { grid-template-columns: 96px 292px minmax(0, 1.15fr) minmax(0, 1fr) 132px; }
+  .tw-place-thead, .tw-place-card, .tw-place-card.has-media { grid-template-columns: 150px 250px minmax(0, 1fr) minmax(0, 1fr) 272px; }
   .tw-place-thead { display: grid; padding: 0 0 6px; font: 700 13px var(--f-body); color: var(--muted); border-bottom: 2px solid var(--ink); margin-bottom: 12px; }
   .tw-place-thead span { padding: 0 12px; }
   .tw-place-thead span:first-child { text-align: center; }
@@ -197,4 +197,18 @@
   .tw-place-card .tw-place-tab { display: grid; place-items: center; position: absolute; left: -2px; top: 14px; width: 40px; height: 32px; background: var(--tk, var(--ink)); color: #fff; border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px #0004; z-index: 3; }
   .tw-place-card .tw-place-tab .tw-ico { width: 20px; height: 20px; color: #fff; margin: 0; }
   .tw-place-card .tw-mark-want { padding-left: 22px; }
+}
+
+/* 列高加大：郵票、車票各自有空間 */
+@media (min-width: 900px) {
+  .tw-place-card { min-height: 236px; }
+  .tw-place-card .tw-mark-want { align-items: center; justify-content: center; gap: 4px; }
+  .tw-place-card .tw-mark-wrow { flex-direction: column; align-items: center; gap: 2px; }
+  .tw-place-card .tw-mark-wb { flex-direction: column; align-items: center; font-size: 12px; }
+  .tw-place-card .tw-place-media .tw-gallery, .tw-place-card .tw-gallery.is-card .tw-gallery-track, .tw-place-card .tw-gallery.is-card .tw-gallery-item, .tw-place-card .tw-gallery.is-card .tw-gallery-empty { height: 196px; }
+}
+@media (max-width: 899px) {
+  .tw-place-card .tw-mark-want { flex-wrap: wrap; gap: 4px 10px; }
+  .tw-place-card .tw-mark-skip { white-space: nowrap; }
+  .tw-place-card .tw-mark-again { white-space: nowrap; }
 }

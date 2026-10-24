@@ -78,8 +78,36 @@ export function michBadge(ctx, p) {
 // ── 卡片：一張鐵路車票 ──
 // 左邊票根（分類、縣市），中間店名與地址，右邊兩人的「想去」圓點與「蓋章」。
 // 兩人都想去時，票上多一個「雙人票」小牌；剛蓋章時蓋章動畫播一次（takeFx）。
-// 去過：台鐵硬紙卡票（米黃底、藍綠色票頭、紅字「去過」、日期戳、剪票缺口與票孔；想再去就蓋紅色「再訪」）
-const stampSVG = (ym, place = '', again = false) => `<svg viewBox="0 0 132 84" aria-hidden="true"><path d="M7 2H125a5 5 0 0 1 5 5V34l-8 8 8 8V77a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" fill="#f3e7c6" stroke="#7a5c2e" stroke-width="1.6"/><path d="M7 2H125a5 5 0 0 1 5 5V19H2V7a5 5 0 0 1 5-5Z" fill="#1f6f78"/><text x="66" y="14" text-anchor="middle" font-size="10" letter-spacing="3" fill="#fff6dc" class="tk">臺灣鐵路</text><text x="14" y="55" font-size="28" font-weight="700" fill="#c4352b">去過</text><text x="14" y="73" font-size="11" class="ym" fill="#233a56" letter-spacing="1">${/^\d{4}-\d{2}$/.test(ym ?? '') ? ym.replace('-', '.') : ''}</text><text x="118" y="31" text-anchor="end" font-size="9" fill="#7a5c2e">${place ? `${place} →` : ''}</text><circle class="hole" cx="108" cy="66" r="5.5" fill="var(--card)" stroke="#7a5c2e" stroke-width="1"/>${again ? '<g class="again" transform="rotate(-12 96 52)"><rect x="74" y="40" width="44" height="20" rx="3" fill="none" stroke="#c4352b" stroke-width="2"/><text x="96" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#c4352b">再訪</text></g>' : ''}</svg>`;
+// 去過：台鐵硬式車票（舊紙撕邊、票孔、直書民國年月、從臺灣 To 縣市、座位、全票／半票、山與小火車；想再去蓋紅色「再訪」）
+const NUM = '〇一二三四五六七八九';
+const zhYM = (ym) => {
+  const m = /^(\d{4})-(\d{2})$/.exec(ym ?? '');
+  if (!m) return [];
+  const y = String(+m[1] - 1911).split('').map((d) => NUM[+d]).join('');
+  const mo = +m[2];
+  const mm = mo < 10 ? NUM[mo] : mo === 10 ? '十' : '十' + NUM[mo - 10];
+  return ['民', '國', ...y, '年', ...mm, '月'];
+};
+const stampSVG = (ym, place = '', again = false, seat = '', full = false) => {
+  const col = zhYM(ym).map((c, i) => '<text x="30" y="' + (50 + i * 22) + '" text-anchor="middle" font-size="19" fill="#2a2118">' + c + '</text>').join('');
+  return '<svg viewBox="0 0 460 250" aria-hidden="true">'
+    + '<path d="M14 10L120 6L250 12L380 7L446 12Q452 14 452 22L449 90L455 150L450 236Q448 244 440 244L300 248L170 243L40 247L12 242Q6 240 7 232L10 150L5 90L8 24Q8 12 14 10Z" fill="#efd9a6" stroke="#8a6a3c" stroke-width="3"/>'
+    + '<path d="M54 26V224" stroke="#8a6a3c" stroke-width="2"/>' + col
+    + '<circle class="hole" cx="262" cy="44" r="18" fill="var(--card)" stroke="#c4a45e" stroke-width="3"/>'
+    + '<text x="72" y="70" font-size="36" font-weight="700" fill="#2a2118">臺灣鐵路局</text>'
+    + '<text x="110" y="102" font-size="24" font-weight="700" fill="#2a2118">車票<tspan font-size="16" font-weight="400"> (Ticket)</tspan></text>'
+    + '<text x="72" y="146" font-size="17" fill="#2a2118">從</text><text x="96" y="148" font-size="28" font-weight="700" fill="#2a2118">臺灣</text>'
+    + '<text x="168" y="146" font-size="17" fill="#2a2118">To</text><text x="198" y="148" font-size="28" font-weight="700" fill="#2a2118">' + place + '</text>'
+    + '<text x="72" y="196" font-size="19" fill="#2a2118">座位：' + seat + '</text>'
+    + '<g><path d="M298 70Q330 40 360 66Q385 44 410 66L440 82V90H298Z" fill="#7fb06b" stroke="#4d6b3c" stroke-width="2"/><circle cx="395" cy="40" r="9" fill="none" stroke="#d99a2b" stroke-width="2"/>'
+    + '<svg x="296" y="80" width="150" height="15" viewBox="30 315 1350 135"><image href="img/train.webp" width="1408" height="768"/></svg></g>'
+    + '<rect x="290" y="122" width="156" height="100" rx="8" fill="none" stroke="#6b4a2a" stroke-width="3"/><rect x="297" y="129" width="142" height="86" rx="5" fill="none" stroke="#6b4a2a" stroke-width="1.2"/>'
+    + '<text x="368" y="168" text-anchor="middle" font-size="30" font-weight="700" fill="#2a2118">' + (full ? '全票' : '半票') + '</text>'
+    + '<text x="368" y="192" text-anchor="middle" font-size="11" letter-spacing="1" fill="#2a2118">VALID FOR 1 DAY</text><text x="368" y="208" text-anchor="middle" font-size="10" fill="#6b4a2a">' + (ym ?? '').replace('-', ' · ') + '</text>'
+    + (again ? '<g class="again" transform="rotate(-12 340 112)"><rect x="296" y="94" width="88" height="40" rx="6" fill="#efd9a6cc" stroke="#c4352b" stroke-width="3.5"/><text x="340" y="123" text-anchor="middle" font-size="26" font-weight="700" fill="#c4352b">再訪</text></g>' : '')
+    + '</svg>';
+};
+
 
 export function placeCard(ctx, p) {
   const { h, store } = ctx;
@@ -98,15 +126,17 @@ export function placeCard(ctx, p) {
     const on = s[id].want;
     return mine
       ? h('button', { type: 'button', dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot${on ? ' is-on' : ''}${on && fx.heart ? ' is-pop' : ''}`, 'aria-pressed': on ? 'true' : 'false',
-        'aria-label': `${name(id)}想去：${p.n}`, onclick: () => quickMark(ctx, p.id, 'want') })
-      : h('span', { dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` });
+        'aria-label': `${name(id)}想去：${p.n}`, onclick: () => quickMark(ctx, p.id, 'want') }, ...(on ? [pm(id)] : []))
+      : h('span', { dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot is-ghost${on ? ' is-on' : ''}`, role: 'img', 'aria-label': `${name(id)}${on ? '想去' : '沒有標想去'}` }, ...(on ? [pm(id)] : []));
   };
+  const roc = (ts) => { if (!ts) return ''; const d = new Date(ts + 8 * 3600e3); return `${d.getUTCFullYear() - 1911}.${d.getUTCMonth() + 1}.${d.getUTCDate()}`; };
+  const pm = (id) => h('span', { class: 'tw-pm', 'aria-hidden': 'true' }, h('b', {}, county.replace(/[縣市]$/, '') || '台灣'), h('i', {}, roc(s[id].mark?.ts)), h('em', {}, name(id)));
   // 沒選身分時兩個都只讀，點了會提示先選身分
   const wantRow = who
     ? [h('span', { class: 'tw-mark-wb' }, dot(who, true), name(who)), h('span', { class: 'tw-mark-wb' }, dot(other, false), name(other))]
     : ['apong', 'baobao'].map((id) => h('span', { class: 'tw-mark-wb' }, h('button', {
       type: 'button', dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
-      onclick: () => quickMark(ctx, p.id, 'want') }), name(id)));
+      onclick: () => quickMark(ctx, p.id, 'want') }, ...(s[id].want ? [pm(id)] : [])), name(id)));
 
   const beenMark = who ? me.mark : (s.apong.mark?.been ? s.apong.mark : s.baobao.mark);
   const stamped = who ? me.been : (s.apong.been || s.baobao.been);
@@ -115,7 +145,10 @@ export function placeCard(ctx, p) {
       'aria-label': `取消蓋章：${p.n}`, onclick: () => quickMark(ctx, p.id, 'been') })
     : h('button', { type: 'button', class: 'tw-mark-stamp-empty', 'aria-pressed': 'false', 'aria-label': `蓋章去過：${p.n}`,
       onclick: () => quickMark(ctx, p.id, 'been') }, '標去過');
-  if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym, county.replace(/[縣市]$/, ''), who ? !!me.again : !!(s.apong.again || s.baobao.again));
+  if (stamped) {
+    const beenIds = ['apong', 'baobao'].filter((id) => s[id].been);
+    stampBtn.innerHTML = stampSVG(beenMark?.ym, county.replace(/[縣市]$/, ''), who ? !!me.again : !!(s.apong.again || s.baobao.again), beenIds.map(name).join('、'), beenIds.length === 2);
+  }
 
   const ghostBits = (id, m) => [name(id), m.want && '想去', m.skip && '不想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
   // 卡片上簡短顯示兩人的喜歡程度（只有去過且有填才出現）
