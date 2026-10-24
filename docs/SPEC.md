@@ -206,10 +206,10 @@
 
 ## 上線前清單
 
-- [ ] `data/config.json` 欄位全填、沒有殘留 `cnx`、`Thailand`、`Bangkok`、`清邁`
+- [x] `data/config.json` 欄位全填、沒有殘留 `cnx`、`Thailand`、`Bangkok`、`清邁`
 - [ ] Firebase 規則已貼上並存檔（收件匣改為只能新增的版本，需 Howard 重新貼上）
 - [ ] 讀寫 workflow 用空操作驗證
 - [ ] 金鑰已限制
-- [ ] `sw.js` 的版本號已更新
-- [ ] CI 全綠
+- [x] `sw.js` 的版本號已更新
+- [x] CI 全綠
 - [ ] 手機上測試離線與加到主畫面
