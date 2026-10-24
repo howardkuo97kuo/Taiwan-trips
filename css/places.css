@@ -60,3 +60,30 @@
 .tw-place-like { font-size: 13px; border-radius: 99px; padding: 0 8px; background: var(--card); border: 1.5px solid var(--line); }
 .tw-place-like.is-love { border-color: var(--stamp); }
 .tw-place-like.is-meh { color: var(--muted); }
+
+/* ── Google 即時資料：評分、地址、營業時間、評論 ── */
+.tw-place-live { margin-top: 22px; padding: 16px 18px 18px; border: 2px solid var(--ink); border-radius: var(--r-md); background: color-mix(in srgb, var(--card) 88%, transparent); }
+.tw-place-live > h2 { margin: 0 0 12px; font-size: 22px; }
+.tw-live-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.tw-live-card { background: var(--card); border: 2px solid var(--line); border-radius: var(--r-md); padding: 12px 14px; }
+.tw-live-card h3 { margin: 0 0 6px; font-size: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tw-live-card p { margin: 4px 0; overflow-wrap: anywhere; }
+.tw-live-rating { display: flex; align-items: center; gap: 14px; }
+.tw-live-big { font: 700 52px/1 var(--f-num); }
+.tw-live-stars { color: var(--rail-ink); letter-spacing: 2px; white-space: nowrap; }
+.tw-live-open { font: 400 13px var(--f-body); border-radius: 99px; padding: 0 10px; background: var(--line); color: var(--ink); }
+.tw-live-open.is-open { background: var(--ok); color: #fff; }
+.tw-live-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.tw-live-copy, .tw-live-link { border: 0; background: none; color: var(--blue); text-decoration: underline; padding: 2px 0; min-height: 32px; }
+.tw-place-hours { list-style: none; padding: 0; margin: 4px 0 0; font-size: 14px; }
+.tw-place-hours li { padding: 2px 6px; border-radius: 4px; }
+.tw-place-hours li.is-today { background: color-mix(in srgb, var(--gold) 38%, transparent); color: var(--ink); font-weight: 700; }
+.tw-live-h3 { margin: 18px 0 8px; font-size: 18px; }
+.tw-reviews { display: grid; gap: 10px; }
+.tw-review { background: var(--card); border: 2px solid var(--line); border-radius: var(--r-md); padding: 10px 14px; }
+.tw-review header { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.tw-review-by { font-weight: 700; color: var(--ink); }
+.tw-review-text { margin: 6px 0 2px; overflow-wrap: anywhere; white-space: pre-line; }
+.tw-review-text.is-clamped { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.tw-review-orig { margin: 4px 0; color: var(--muted); font-size: 14px; white-space: pre-line; overflow-wrap: anywhere; }
+.tw-review-acts { display: flex; gap: 14px; }

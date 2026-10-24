@@ -3,7 +3,7 @@
 import { catIcon } from './icons.js';
 
 const API = 'https://places.googleapis.com/v1';
-const MAX_PHOTOS = 6;
+const MAX_PHOTOS = 10; // Places API 一次最多回 10 張
 const pending = new Map(); // pid → Promise，同一地點同時只查一次
 let active = 0;
 const queue = [];
@@ -44,16 +44,60 @@ export function placePhotos(pid, key, { strict = false } = {}) {
 
 const src = (name, key, w) => `${API}/${name}/media?maxWidthPx=${w}&key=${encodeURIComponent(key)}`;
 
-// 卡片縮圖：進入畫面才查
-export function thumb(ctx, p) {
+// ── 放大檢視：整頁蓋上去，← → 換張、Esc 或點背景關閉 ──
+function openLightbox(ctx, p, list, key, start) {
+  const { h } = ctx;
+  const back = document.activeElement;
+  let i = start;
+  const img = h('img', { alt: '', decoding: 'async' });
+  const cap = h('p', { class: 'tw-lightbox-cap' });
+  const count = h('span', { class: 'tw-lightbox-count' });
+  const close = () => { document.removeEventListener('keydown', onKey); box.remove(); document.body.classList.remove('tw-noscroll'); back?.focus?.(); };
+  const go = (d) => { i = (i + d + list.length) % list.length; show(); };
+  const show = () => {
+    const x = list[i];
+    img.src = src(x.name, key, 2000);
+    img.alt = `${p.n} 照片 ${i + 1}`;
+    count.textContent = `${i + 1} / ${list.length}`;
+    cap.replaceChildren('照片：', x.uri ? h('a', { href: x.uri, target: '_blank', rel: 'noopener' }, x.by || 'Google 使用者') : (x.by || 'Google 使用者'));
+  };
+  const onKey = (e) => {
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') go(-1);
+    else if (e.key === 'ArrowRight') go(1);
+  };
+  const closeBtn = h('button', { type: 'button', class: 'tw-lightbox-x', 'aria-label': '關閉', onclick: close }, '×');
+  const box = h('div', { class: 'tw-lightbox', role: 'dialog', 'aria-modal': 'true', 'aria-label': `${p.n}的照片`, onclick: (e) => { if (e.target === box) close(); } },
+    closeBtn, img,
+    list.length > 1 && h('button', { type: 'button', class: 'tw-lightbox-nav is-prev', 'aria-label': '上一張', onclick: () => go(-1) }, '‹'),
+    list.length > 1 && h('button', { type: 'button', class: 'tw-lightbox-nav is-next', 'aria-label': '下一張', onclick: () => go(1) }, '›'),
+    h('div', { class: 'tw-lightbox-bar' }, count, cap));
+  show();
+  document.body.append(box);
+  document.body.classList.add('tw-noscroll');
+  document.addEventListener('keydown', onKey);
+  closeBtn.focus();
+}
+
+// 卡片縮圖：進入畫面才查。count > 1 時並排顯示前幾張（卡片用 3 張，快速選擇用 1 張）
+export function thumb(ctx, p, { count = 1 } = {}) {
   const key = ctx.config?.google?.placesKey;
   if (!key || !p.pid) return null;
   const { h } = ctx;
-  const box = h('div', { class: 'tw-thumb', 'aria-hidden': 'true' }, catIcon(p.c));
+  const first = h('div', { class: 'tw-thumb', 'aria-hidden': 'true' }, catIcon(p.c));
+  const box = count > 1 ? h('div', { class: 'tw-thumbs', 'aria-hidden': 'true' }, first) : first;
+  const fill = (el, item, w) => {
+    const img = h('img', { alt: '', decoding: 'async', src: src(item.name, key, w) });
+    img.onload = () => { el.append(img); el.classList.add('is-loaded'); };
+  };
   const go = () => placePhotos(p.pid, key).then((list) => {
     if (!list[0]) return;
-    const img = h('img', { alt: '', decoding: 'async', src: src(list[0].name, key, 240) });
-    img.onload = () => { box.append(img); box.classList.add('is-loaded'); };
+    fill(first, list[0], count > 1 ? 480 : 360);
+    for (let i = 1; i < Math.min(count, list.length); i++) {
+      const t = h('div', { class: 'tw-thumb' });
+      box.append(t);
+      fill(t, list[i], 480);
+    }
   });
   if (!('IntersectionObserver' in window)) { go(); return box; }
   const io = new IntersectionObserver((es) => {
@@ -77,19 +121,25 @@ export function carousel(ctx, p) {
     if (!list.length) { ph.lastChild.textContent = '這個地點沒有 Google 照片'; return; }
     const track = h('div', { class: 'tw-gallery-track', tabindex: '0' }, list.map((x, i) =>
       h('figure', { class: 'tw-gallery-item' },
-        h('img', { alt: `${p.n} 照片 ${i + 1}`, loading: i ? 'lazy' : 'eager', decoding: 'async', src: src(x.name, key, 900) }),
+        h('button', { type: 'button', class: 'tw-gallery-zoom', 'aria-label': `放大看第 ${i + 1} 張照片`, onclick: () => openLightbox(ctx, p, list, key, i) },
+          h('img', { alt: `${p.n} 照片 ${i + 1}`, loading: i ? 'lazy' : 'eager', decoding: 'async', src: src(x.name, key, 1600) })),
         x.by && h('figcaption', {}, '照片：', x.uri ? h('a', { href: x.uri, target: '_blank', rel: 'noopener' }, x.by) : x.by))));
+    const strip = list.length > 1 && h('div', { class: 'tw-gallery-strip', role: 'group', 'aria-label': '照片縮圖' }, list.map((x, i) =>
+      h('button', { type: 'button', class: 'tw-gallery-chip', 'aria-label': `看第 ${i + 1} 張`, onclick: () => track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }) },
+        h('img', { alt: '', loading: 'lazy', decoding: 'async', src: src(x.name, key, 240) }))));
     const dots = h('div', { class: 'tw-gallery-dots', 'aria-hidden': 'true' }, list.map(() => h('i', {})));
     const mark = () => {
       const i = Math.round(track.scrollLeft / (track.clientWidth || 1));
       [...dots.children].forEach((d, j) => d.classList.toggle('is-on', j === i));
+      strip && [...strip.children].forEach((c, j) => c.classList.toggle('is-on', j === i));
     };
     const step = (dir) => track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
     track.addEventListener('scroll', mark, { passive: true });
     root.replaceChildren(track,
       list.length > 1 && h('button', { type: 'button', class: 'tw-gallery-nav is-prev', 'aria-label': '上一張', onclick: () => step(-1) }, '‹'),
       list.length > 1 && h('button', { type: 'button', class: 'tw-gallery-nav is-next', 'aria-label': '下一張', onclick: () => step(1) }, '›'),
-      list.length > 1 && dots);
+      list.length > 1 && dots,
+      strip);
     mark();
   }).catch((e) => {
     if (alive) ph.lastChild.textContent = `照片查詢失敗（${e.message}）`;

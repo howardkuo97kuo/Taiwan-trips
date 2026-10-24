@@ -1,5 +1,5 @@
 /* 地點照片：卡片縮圖與詳情輪播。照片來自 Google，載入前後都有分類圖示墊底。 */
-.tw-thumb { float: right; width: 72px; height: 72px; margin: 0 0 6px 10px; border-radius: var(--r-sm, 8px); border: 2px solid var(--ink); background: linear-gradient(135deg, var(--paper), var(--card)); display: grid; place-items: center; overflow: hidden; position: relative; }
+.tw-thumb { float: right; width: 96px; height: 72px; margin: 0 0 6px 10px; border-radius: var(--r-sm, 8px); border: 2px solid var(--ink); background: linear-gradient(135deg, var(--paper), var(--card)); display: grid; place-items: center; overflow: hidden; position: relative; }
 .tw-thumb .tw-ico { width: 28px; height: 28px; color: var(--muted); }
 .tw-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: tw-photo-in .4s ease both; }
 .tw-gallery { position: relative; margin: 0 0 16px; border: 2px solid var(--ink); border-radius: var(--r-md); overflow: hidden; background: var(--card); }
@@ -7,7 +7,8 @@
 .tw-gallery-empty .tw-ico { width: 44px; height: 44px; }
 .tw-gallery-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .tw-gallery-track::-webkit-scrollbar { display: none; }
-.tw-gallery-item { flex: 0 0 100%; margin: 0; position: relative; scroll-snap-align: center; aspect-ratio: 16 / 9; background: var(--paper); }
+.tw-gallery-item { flex: 0 0 100%; margin: 0; position: relative; scroll-snap-align: center; height: clamp(260px, 50vw, 560px); background: var(--paper); }
+.tw-gallery-zoom { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
 .tw-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .tw-gallery-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 12px 6px; font-size: 12px; color: #fff; background: linear-gradient(transparent, #0009); }
 .tw-gallery-item figcaption a { color: inherit; }
@@ -17,6 +18,27 @@
 .tw-gallery-dots { position: absolute; left: 0; right: 0; top: 8px; display: flex; justify-content: center; gap: 5px; }
 .tw-gallery-dots i { width: 7px; height: 7px; border-radius: 50%; background: #fff8; box-shadow: 0 0 0 1px #0004; }
 .tw-gallery-dots i.is-on { background: #fff; }
+/* 卡片上並排的幾張縮圖 */
+.tw-thumbs { float: right; display: flex; gap: 6px; margin: 0 0 6px 10px; }
+.tw-thumbs .tw-thumb { float: none; margin: 0; width: 112px; height: 84px; }
+
+/* 詳情輪播下方的縮圖列 */
+.tw-gallery-strip { display: flex; gap: 6px; overflow-x: auto; padding: 8px; border-top: 2px solid var(--ink); background: var(--card); scrollbar-width: thin; }
+.tw-gallery-chip { flex: none; width: 92px; height: 62px; padding: 0; border: 2px solid var(--line); border-radius: var(--r-sm, 8px); overflow: hidden; background: var(--paper); opacity: .75; }
+.tw-gallery-chip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tw-gallery-chip.is-on { border-color: var(--rail); opacity: 1; }
+
+/* 放大檢視 */
+.tw-noscroll { overflow: hidden; }
+.tw-lightbox { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: rgba(5, 10, 24, .93); padding: 16px 16px 72px; }
+.tw-lightbox > img { max-width: 96vw; max-height: calc(100dvh - 120px); object-fit: contain; border-radius: var(--r-sm, 8px); animation: tw-photo-in .25s ease both; }
+.tw-lightbox-x { position: absolute; top: 12px; right: 14px; width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fff; background: #0008; color: #fff; font-size: 30px; line-height: 1; }
+.tw-lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 2px solid #fff; background: #0008; color: #fff; font-size: 30px; line-height: 1; }
+.tw-lightbox-nav.is-prev { left: 12px; } .tw-lightbox-nav.is-next { right: 12px; }
+.tw-lightbox-bar { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px calc(14px + env(safe-area-inset-bottom, 0px)); color: #fff; display: flex; gap: 14px; justify-content: center; font-size: 14px; background: linear-gradient(transparent, #000a); }
+.tw-lightbox-cap { margin: 0; } .tw-lightbox-cap a { color: inherit; }
+.tw-lightbox button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 @keyframes tw-photo-in { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .tw-thumb img { animation: none; } }
-@media (max-width: 640px) { .tw-thumb { width: 56px; height: 56px; } .tw-gallery-nav { display: none; } }
+@media (max-width: 900px) { .tw-thumbs .tw-thumb:nth-child(n+3) { display: none; } }
+@media (max-width: 640px) { .tw-thumb { width: 72px; height: 54px; } .tw-thumbs .tw-thumb { width: 92px; height: 69px; } .tw-gallery-nav { display: none; } .tw-gallery-chip { width: 76px; height: 52px; } .tw-lightbox-nav { width: 44px; height: 44px; } }

@@ -55,7 +55,7 @@
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage`（30 分鐘內有效）；清單的「現在營業」篩選與評分排序只看已查過的地點，按「查詢這批」才替目前清單前 40 筆查（同時 4 個請求，控制 Places 費用） | D |
 | `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、喜歡程度 `like`、好吃 `good`、雷點 `avoid`、備註 `note`，寫入走 `sync.setMark`）、`markCompare`（兩人並排顯示全部欄位）、`LIKES`／`likeOf`、`statusOf`、`litCounties`；地點卡片上顯示兩人的喜歡程度 | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
-| `js/photos.js`、`css/photos.css` | 地點照片（Howard 2026-10-24 要求）：`google.placesKey` 有填且地點有 `pid` 時，Places (New) 即時查 `photos`，卡片縮圖進入畫面才載（同時最多 4 個請求）、詳情頁橫向輪播（最多 6 張）並顯示作者；照片參照只放 `sessionStorage` 鍵 `tw-photos:<pid>`，不存檔；沒有金鑰或沒圖就留分類圖示。輸出 `thumb`、`carousel` | 新增（D 的 `places.js` 呼叫） |
+| `js/photos.js`、`css/photos.css` | 地點照片（Howard 2026-10-24 要求）：`google.placesKey` 有填且地點有 `pid` 時，Places (New) 即時查 `photos`，卡片並排最多 3 張縮圖（進入畫面才載，同時最多 4 個請求）、詳情頁橫向輪播（最多 10 張、1600 寬）加縮圖列，點圖開放大檢視（← → 換張、Esc 關閉）並顯示作者；照片參照只放 `sessionStorage` 鍵 `tw-photos:<pid>`，不存檔；沒有金鑰或沒圖就留分類圖示。輸出 `thumb`、`carousel`。詳情頁的「Google 即時資料」（`places.js` 的 `liveBox`）即時查 Google 地址、營業時間（標出今天）、評分與最多 5 則最相關評論，只放 `sessionStorage` 鍵 `twLiveD:<pid>`，不存檔 | 新增（D 的 `places.js` 呼叫） |
 | `js/icons.js` | 分類圖示（`catIcon(分類)` 回傳內嵌 SVG，顏色跟文字）；`places.js` 的分類按鈕、車票、詳情使用 | C |
 | `css/fx.css` | 圖示尺寸、導覽圖示（CSS mask）、換頁與車票進場、按鈕回饋、載入／空狀態插圖；動態受 `app.css` 的減少動態規則管轄 | C |
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
