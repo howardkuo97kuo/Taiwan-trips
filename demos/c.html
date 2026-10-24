@@ -73,6 +73,9 @@ input { cursor: text; }
 .map h2 { display: flex; justify-content: space-between; align-items: baseline; }
 .map h2 small { font: 400 14px var(--sans); color: var(--soft); }
 .map svg { width: 100%; height: auto; max-height: 520px; display: block; }
+.map .land path { fill: color-mix(in srgb, var(--ink) 9%, var(--paper)); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+.map .lead line { stroke: var(--soft); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.map .lead circle { fill: var(--soft); }
 .map .grid line { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 2 5; }
 .map .bub { cursor: pointer; }
 .map .bub circle { fill: var(--paper); stroke: var(--ink); stroke-width: 2.5; }
@@ -267,7 +270,18 @@ const TW = (() => {
 
   const lit = (stats = countyStats()) => counties.filter(c => stats[c.id].been > 0).length;
 
+  /* 簡化的台灣輪廓（[緯度, 經度]，約略描形，只用來襯底，不是官方邊界；正式版改用 data/geo/ 的縣市邊界） */
+  const GEO = {
+    main: [[25.30, 121.54], [25.27, 121.70], [25.15, 121.78], [25.13, 121.93], [25.00, 122.00], [24.85, 121.92], [24.60, 121.87], [24.30, 121.72], [24.00, 121.62], [23.60, 121.52], [23.20, 121.42], [22.90, 121.25], [22.60, 121.02], [22.35, 120.88], [22.10, 120.85], [21.91, 120.85], [21.93, 120.75], [22.05, 120.70], [22.30, 120.62], [22.45, 120.58], [22.62, 120.27], [22.95, 120.15], [23.30, 120.08], [23.65, 120.12], [23.95, 120.25], [24.20, 120.45], [24.45, 120.60], [24.70, 120.85], [24.88, 120.97], [25.05, 121.22], [25.15, 121.40], [25.25, 121.48]],
+    islands: {
+      penghu: [[23.72, 119.50], [23.72, 119.68], [23.55, 119.69], [23.44, 119.56], [23.56, 119.45]],
+      kinmen: [[24.52, 118.20], [24.52, 118.50], [24.41, 118.50], [24.40, 118.30]],
+      lienchiang: [[26.22, 119.92], [26.22, 120.02], [26.12, 120.02], [26.12, 119.92]],
+    },
+  };
+
   const api = {
+    geo: GEO,
     DATA, WHO, counties, byCounty, places, cats, filter, mk, other, wantBoth, wantOne, beenAny,
     visible, countyStats, lit, NOW,
     ym: id => { const a = mk('apong', id).ym, b = mk('baobao', id).ym; return [a, b].filter(Boolean).sort().pop() || ''; },
@@ -319,7 +333,7 @@ let shown = 40, popped = null;
 /* 小地圖：用縣市中心的經緯度排泡泡，互相擠開 */
 const sx = lng => (lng - 117.9) * 128, sy = lat => (26.45 - lat) * 128;
 function layoutBubbles(st) {
-  const nodes = TW.counties.filter(c => st[c.id].total).map(c => ({ c, x: sx(c.center[1]), y: sy(c.center[0]), r: Math.min(34, 13 + Math.sqrt(st[c.id].total) * 1.9) }));
+  const nodes = TW.counties.filter(c => st[c.id].total).map(c => ({ c, tx: sx(c.center[1]), ty: sy(c.center[0]), x: sx(c.center[1]), y: sy(c.center[0]), r: Math.min(34, 13 + Math.sqrt(st[c.id].total) * 1.9) }));
   for (let k = 0; k < 80; k++) for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
     const a = nodes[i], b = nodes[j]; let dx = b.x - a.x, dy = b.y - a.y; const d = Math.hypot(dx, dy) || .01, min = a.r + b.r + 4;
     if (d < min) { const m = (min - d) / 2; dx /= d; dy /= d; a.x -= dx * m; a.y -= dy * m; b.x += dx * m; b.y += dy * m; }
@@ -349,8 +363,11 @@ function render() {
 
   // 小地圖
   const nodes = layoutBubbles(st);
+  const poly = pts => pts.map(([la, lo], i) => (i ? 'L' : 'M') + sx(lo).toFixed(1) + ' ' + sy(la).toFixed(1)).join(' ') + 'Z';
   $('map').innerHTML = `<h2>台灣小地圖 <small>泡泡越大，地點越多；紅圈是去過</small></h2>
     <svg viewBox="0 0 560 610" role="group" aria-label="各縣市地點數">
+      <g class="land" aria-hidden="true"><path d="${poly(TW.geo.main)}"/>${Object.values(TW.geo.islands).map(p => `<path d="${poly(p)}"/>`).join('')}</g>
+      <g class="lead" aria-hidden="true">${nodes.filter(n => Math.hypot(n.x - n.tx, n.y - n.ty) > 6).map(n => `<line x1="${n.tx.toFixed(1)}" y1="${n.ty.toFixed(1)}" x2="${n.x.toFixed(1)}" y2="${n.y.toFixed(1)}"/><circle cx="${n.tx.toFixed(1)}" cy="${n.ty.toFixed(1)}" r="2.5"/>`).join('')}</g>
       <g class="grid" aria-hidden="true">${[22, 23, 24, 25, 26].map(la => `<line x1="0" x2="560" y1="${sy(la)}" y2="${sy(la)}"/>`).join('')}${[118, 119, 120, 121, 122].map(lo => `<line y1="0" y2="610" x1="${sx(lo)}" x2="${sx(lo)}"/>`).join('')}</g>
       ${nodes.map(n => { const s = st[n.c.id]; return `<g class="bub${s.been ? ' on' : ''}${f.county === n.c.id ? ' sel' : ''}" tabindex="0" role="button" data-act="county" data-v="${n.c.id}" aria-label="${n.c.n} ${s.total} 個地點" transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})">
         <circle r="${n.r}"/>${n.r > 19 ? `<text y="-2" class="n">${s.total}</text><text y="14">${n.c.n.replace(/[縣市]$/, '')}</text>` : `<text y="5" class="n">${s.total}</text><text y="${n.r + 15}">${n.c.n.replace(/[縣市]$/, '')}</text>`}

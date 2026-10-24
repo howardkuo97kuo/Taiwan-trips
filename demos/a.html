@@ -56,10 +56,15 @@ h1 { margin: 0; font: 900 clamp(34px, 5vw, 56px)/1.1 var(--serif); letter-spacin
 .mark-total p { margin: 0; line-height: 1.45; }
 .mark-total strong { font: 900 22px/1.3 var(--serif); display: block; }
 .mark-total span { color: var(--ink-soft); font-size: 14px; }
-.stamps { display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(9, auto); gap: 8px; }
+.atlas { position: relative; width: 100%; aspect-ratio: 440 / 560; }
+.atlas svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.atlas .land path { fill: color-mix(in srgb, var(--ink) 8%, var(--ground)); stroke: var(--ink-soft); stroke-width: 1.6; stroke-dasharray: 5 4; stroke-linejoin: round; }
+.atlas .lead line { stroke: var(--ink-soft); stroke-width: 1; stroke-dasharray: 2 3; }
+.atlas .lead circle { fill: var(--red); }
+.atlas .stamp { position: absolute; transform: translate(-50%, -50%); }
 .stamp {
   --g: var(--ground);
-  position: relative; padding: 9px 4px 6px; min-height: 76px; border: 0; text-align: center; background-color: var(--paper); color: var(--ink);
+  padding: 8px 2px 5px; border: 0; text-align: center; background-color: var(--paper); color: var(--ink);
   background-image:
     radial-gradient(circle at 50% 0, var(--g) 3px, transparent 3.4px), radial-gradient(circle at 50% 100%, var(--g) 3px, transparent 3.4px),
     radial-gradient(circle at 0 50%, var(--g) 3px, transparent 3.4px), radial-gradient(circle at 100% 50%, var(--g) 3px, transparent 3.4px);
@@ -69,8 +74,8 @@ h1 { margin: 0; font: 900 clamp(34px, 5vw, 56px)/1.1 var(--serif); letter-spacin
   filter: drop-shadow(0 1px 0 var(--rule));
   display: flex; flex-direction: column; justify-content: space-between; align-items: center;
 }
-.stamp .nm { font: 700 13px/1.2 var(--serif); }
-.stamp .ct { font: 900 19px/1 var(--serif); }
+.stamp .nm { font: 700 12px/1.2 var(--serif); }
+.stamp .ct { font: 900 17px/1 var(--serif); }
 .stamp .ct small { font: 400 11px var(--sans); color: var(--ink-soft); margin-left: 2px; }
 .stamp.empty { background-color: transparent; color: var(--ink-soft); filter: none; border: 1.5px dashed var(--rule); cursor: default; background-image: none; }
 .stamp.empty .ct { font-size: 12px; font-weight: 400; font-family: var(--sans); }
@@ -120,7 +125,7 @@ ul.places { list-style: none; margin: 0; padding: 0; }
   .album { position: static; }
   header.top { grid-template-columns: 1fr; }
   .wrap { padding: 0 16px; }
-  .stamps { max-width: 440px; }
+  .atlas { max-width: 440px; }
 }
 @media (max-width: 560px) {
   .row { grid-template-columns: 1fr; }
@@ -147,7 +152,7 @@ ul.places { list-style: none; margin: 0; padding: 0; }
   <div class="layout">
     <aside class="album" aria-label="點亮台灣">
       <div class="mark-total" id="total"></div>
-      <div class="stamps" id="stamps"></div>
+      <div class="atlas" id="stamps"></div>
       <p class="legend">紅色郵戳：這個縣市有人去過。右上角的數字是兩人都想去的地點數。點郵票只看那個縣市。</p>
     </aside>
     <main>
@@ -248,7 +253,18 @@ const TW = (() => {
 
   const lit = (stats = countyStats()) => counties.filter(c => stats[c.id].been > 0).length;
 
+  /* 簡化的台灣輪廓（[緯度, 經度]，約略描形，只用來襯底，不是官方邊界；正式版改用 data/geo/ 的縣市邊界） */
+  const GEO = {
+    main: [[25.30, 121.54], [25.27, 121.70], [25.15, 121.78], [25.13, 121.93], [25.00, 122.00], [24.85, 121.92], [24.60, 121.87], [24.30, 121.72], [24.00, 121.62], [23.60, 121.52], [23.20, 121.42], [22.90, 121.25], [22.60, 121.02], [22.35, 120.88], [22.10, 120.85], [21.91, 120.85], [21.93, 120.75], [22.05, 120.70], [22.30, 120.62], [22.45, 120.58], [22.62, 120.27], [22.95, 120.15], [23.30, 120.08], [23.65, 120.12], [23.95, 120.25], [24.20, 120.45], [24.45, 120.60], [24.70, 120.85], [24.88, 120.97], [25.05, 121.22], [25.15, 121.40], [25.25, 121.48]],
+    islands: {
+      penghu: [[23.72, 119.50], [23.72, 119.68], [23.55, 119.69], [23.44, 119.56], [23.56, 119.45]],
+      kinmen: [[24.52, 118.20], [24.52, 118.50], [24.41, 118.50], [24.40, 118.30]],
+      lienchiang: [[26.22, 119.92], [26.22, 120.02], [26.12, 120.02], [26.12, 119.92]],
+    },
+  };
+
   const api = {
+    geo: GEO,
     DATA, WHO, counties, byCounty, places, cats, filter, mk, other, wantBoth, wantOne, beenAny,
     visible, countyStats, lit, NOW,
     ym: id => { const a = mk('apong', id).ym, b = mk('baobao', id).ym; return [a, b].filter(Boolean).sort().pop() || ''; },
@@ -293,17 +309,32 @@ const TW = (() => {
 })();
 </script>
 <script>
-const POS = {
-  'island-lienchiang': [0, 0], 'north-taipei': [3, 0], 'north-keelung': [4, 0],
-  'island-kinmen': [0, 1], 'north-taoyuan': [2, 1], 'north-newtaipei': [3, 1], 'east-yilan': [4, 1],
-  'north-hsinchu-city': [1, 2], 'north-hsinchu-county': [2, 2],
-  'central-miaoli': [2, 3], 'east-hualien': [4, 3],
-  'central-changhua': [1, 4], 'central-taichung': [2, 4], 'central-nantou': [3, 4],
-  'central-yunlin': [1, 5],
-  'south-chiayi-city': [0, 6], 'south-chiayi-county': [1, 6], 'east-taitung': [4, 6],
-  'island-penghu': [0, 7], 'south-tainan': [1, 7],
-  'south-kaohsiung': [1, 8], 'south-pingtung': [2, 8],
-};
+/* 郵票依縣市中心的經緯度擺在台灣輪廓上，互相擠開，再用虛線連回真正的位置 */
+const AW = 440, AH = 560, K = 118;
+const ax = lng => (lng - 119.55) * K + 52, ay = lat => (26.45 - lat) * K;
+const KINMEN_AT = [44, 262];
+let layout = null;
+function placeStamps(st) {
+  if (layout) return layout;
+  const nodes = TW.counties.map(c => {
+    const empty = st[c.id].total === 0;
+    let tx = ax(c.center[1]), ty = ay(c.center[0]);
+    if (c.id === 'island-kinmen') [tx, ty] = KINMEN_AT;
+    return { c, tx, ty, x: tx, y: ty, w: empty ? 50 : 60, h: empty ? 38 : 64 };
+  });
+  for (let k = 0; k < 400; k++) {
+    for (const n of nodes) { n.x += (n.tx - n.x) * .03; n.y += (n.ty - n.y) * .03; }
+    for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+      const a = nodes[i], b = nodes[j];
+      const ox = (a.w + b.w) / 2 + 5 - Math.abs(b.x - a.x), oy = (a.h + b.h) / 2 + 5 - Math.abs(b.y - a.y);
+      if (ox > 0 && oy > 0) {
+        if (ox < oy) { const m = ox / 2 * (b.x >= a.x ? 1 : -1); a.x -= m; b.x += m; } else { const m = oy / 2 * (b.y >= a.y ? 1 : -1); a.y -= m; b.y += m; }
+      }
+    }
+    for (const n of nodes) { n.x = Math.min(AW - n.w / 2 - 2, Math.max(n.w / 2 + 2, n.x)); n.y = Math.min(AH - n.h / 2 - 2, Math.max(n.h / 2 + 2, n.y)); }
+  }
+  return (layout = nodes);
+}
 const $ = id => document.getElementById(id);
 const MODES = [['all', '全部'], ['both', '兩人都想去'], ['one', '只有一人想去'], ['been', '去過']];
 let shown = 40, lastToggle = null;
@@ -329,12 +360,15 @@ function render() {
 
   $('total').innerHTML = postmark(lit) + `<p><strong>已蓋 ${lit} 個縣市</strong><span>阿胖 ${TW.counties.filter(c => st[c.id].beenBy.apong).length} 個、寶寶 ${TW.counties.filter(c => st[c.id].beenBy.baobao).length} 個；還有 ${22 - filled} 個縣市沒有地點</span></p>`;
 
-  $('stamps').innerHTML = TW.counties.map(c => {
-    const s = st[c.id], [x, y] = POS[c.id];
+  const nodes = placeStamps(st);
+  const poly = pts => pts.map(([la, lo], i) => (i ? 'L' : 'M') + ax(lo).toFixed(1) + ' ' + ay(la).toFixed(1)).join(' ') + 'Z';
+  $('stamps').innerHTML = `<svg viewBox="0 0 ${AW} ${AH}" aria-hidden="true"><g class="land"><path d="${poly(TW.geo.main)}"/>${['penghu', 'lienchiang'].map(k => `<path d="${poly(TW.geo.islands[k])}"/>`).join('')}<path d="M${KINMEN_AT[0] - 20} ${KINMEN_AT[1] - 8}h40v14h-40z"/></g>
+    <g class="lead">${nodes.filter(n => Math.hypot(n.x - n.tx, n.y - n.ty) > 8).map(n => `<line x1="${n.tx.toFixed(1)}" y1="${n.ty.toFixed(1)}" x2="${n.x.toFixed(1)}" y2="${n.y.toFixed(1)}"/><circle cx="${n.tx.toFixed(1)}" cy="${n.ty.toFixed(1)}" r="2.4"/>`).join('')}</g></svg>` + nodes.map(({ c, x, y, w, h }) => {
+    const s = st[c.id];
     const empty = s.total === 0;
     const cls = 'stamp' + (empty ? ' empty' : '') + (s.been ? ' lit' : '');
     const label = `${c.n}，${s.total} 個地點${s.been ? '，已去過' : ''}${s.both ? `，${s.both} 個兩人都想去` : ''}`;
-    return `<button type="button" class="${cls}" style="grid-column:${x + 1};grid-row:${y + 1}" data-act="county" data-v="${c.id}" aria-pressed="${f.county === c.id}" aria-label="${label}" ${empty ? 'disabled' : ''}>
+    return `<button type="button" class="${cls}" style="left:${(x / AW * 100).toFixed(2)}%;top:${(y / AH * 100).toFixed(2)}%;width:${(w / AW * 100).toFixed(2)}%;height:${(h / AH * 100).toFixed(2)}%" data-act="county" data-v="${c.id}" aria-pressed="${f.county === c.id}" aria-label="${label}" ${empty ? 'disabled' : ''}>
       <span class="nm">${c.n.replace(/[縣市]$/, '')}</span>
       <span class="ct">${empty ? '尚無' : s.total}${empty ? '' : '<small>間</small>'}</span>
       ${s.both ? `<span class="both" aria-hidden="true">♥${s.both}</span>` : ''}
