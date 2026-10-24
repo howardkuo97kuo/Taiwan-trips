@@ -48,10 +48,12 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 /* ── 兩人並排 ── */
 .tw-mark-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
 .tw-mark-col { background: color-mix(in srgb, var(--card) 86%, transparent); border: 2px solid var(--ink); border-radius: var(--r-md); padding: 10px 14px; }
-.tw-mark-col.is-apong { border-top: 6px solid var(--rail); }
-.tw-mark-col.is-baobao { border-top: 6px solid var(--blue); }
+.tw-mark-col strong::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; background: var(--muted); }
+.tw-mark-col.is-apong strong::before { background: var(--rail); }
+.tw-mark-col.is-baobao strong::before { background: var(--blue); }
 .tw-mark-col p { margin: 4px 0 0; }
-.tw-mark-quote { color: var(--muted); font-size: 14px; border-left: 3px solid var(--line); padding-left: 10px; }
+.tw-mark-quote { color: var(--muted); font-size: 14px; }
+.tw-mark-quote::before { content: "「"; } .tw-mark-quote::after { content: "」"; }
 @media (max-width: 520px) { .tw-mark-compare { grid-template-columns: 1fr; } }
 
 /* ── 小標記（只讀） ── */

@@ -28,7 +28,7 @@
 .lg-b { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--ink); background: var(--card); }
 .lg-s { width: 16px; height: 16px; border-radius: 50%; border: 3px double var(--stamp); background: var(--stamp-soft); }
 .lg-g { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); }
-.lg-l { width: 22px; height: 0; border-top: 5px solid var(--rail); vertical-align: 3px !important; }
+.lg-l { width: 22px; height: 5px; border-radius: 3px; background: var(--rail); vertical-align: 3px !important; }
 
 /* 地圖 */
 .tw-map-box { position: relative; }
