@@ -169,9 +169,9 @@ export async function mount(el, ctx) {
     panelL.innerHTML = postmark(lit.any.size, `${intro ? 'is-slam' : ''} ${changed ? 'is-bump' : ''}`) +
       `<p class="tw-map-facts"><strong>${who ? `${esc(store.whoName(who))}，今天往哪站走？` : '今天往哪站走？'}</strong>` +
       `${esc(store.whoName('apong'))}蓋了 <b>${lit.apong.size}</b> 站，${esc(store.whoName('baobao'))} <b>${lit.baobao.size}</b> 站。<br>` +
-      `${store.get('places').filter((p) => store.isVisible(p)).length} 個地點，分在 ${filled} 個縣市；還有 ${total - filled} 個縣市等地點進來。</p>`;
-    panelR.innerHTML = `<div class="tw-map-pair"><b>${bothAll}</b><span>張雙人票：兩個人都想去</span><a href="#/compare">看雙人票</a></div>
-      <ul class="tw-map-legend"><li><i class="lg-b"></i>泡泡越大，地點越多</li><li><i class="lg-s"></i>紅雙圈：有人蓋過郵戳</li><li><i class="lg-g"></i>金色小牌：雙人票數</li><li><i class="lg-l"></i>橘色實線：兩站都蓋過，鐵軌鋪好了</li></ul>`;
+      `${store.get('places').filter((p) => store.isVisible(p)).length} 個地點，分在 ${filled} 個縣市；還有 ${total - filled} 個縣市等地點進來。<br><span class="tw-map-cta">👆 點地圖上的縣市，看那裡有哪些地點</span></p>`;
+    panelR.innerHTML = `<div class="tw-map-pair"><b>${bothAll}</b><span>個地點：兩個人都想去</span><a href="#/compare">看清單</a></div>
+      <ul class="tw-map-legend"><li><i class="lg-b"></i>泡泡越大，地點越多</li><li><i class="lg-s"></i>紅雙圈：有人蓋過郵戳</li><li><i class="lg-g"></i>金色小牌：兩人都想去的數量</li><li><i class="lg-l"></i>橘色實線：兩站都蓋過，鐵軌鋪好了</li></ul>`;
     mapBox.innerHTML = mapSVG(lit, newly, intro);
     if (focusId) mapBox.querySelector(`[data-county="${CSS.escape(focusId)}"]`)?.focus?.({ preventScroll: true });
 

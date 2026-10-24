@@ -7,11 +7,11 @@ import * as prefs from './prefs.js';
 
 // 路由表：hash 第一段 → 模組與導覽。模組還沒做好（檔案不存在）時，畫面顯示「尚未完成」。
 const ROUTES = {
-  '': { name: 'home', module: './map.js', label: '地圖', nav: true },
+  '': { name: 'home', module: './map.js', label: '🗺️ 地圖', nav: true },
   r: { name: 'region', module: './places.js' }, // #/r/<regionId>
   p: { name: 'place', module: './places.js' }, // #/p/<placeId>
-  compare: { name: 'compare', module: './marks.js', label: '兩人對照', nav: true },
-  inbox: { name: 'inbox', module: './inbox.js', label: '收件匣', nav: true, optional: true },
+  compare: { name: 'compare', module: './marks.js', label: '💞 兩人對照', nav: true },
+  inbox: { name: 'inbox', module: './inbox.js', label: '✉️ 新增地點', nav: true, optional: true },
   trips: { name: 'trips', module: './itinerary.js', label: '行程', nav: true, optional: true },
 };
 
@@ -85,8 +85,8 @@ function renderHeader() {
     }, prefs.motionOn() ? '動畫：開' : '動畫：關'),
     h('button', { class: 'tw-pill tw-theme-btn', type: 'button', onclick: prefs.toggleTheme },
       prefs.isDark() ? '淺色' : '深色'),
-    h('button', { class: 'tw-who-btn', type: 'button', onclick: () => pickWho() },
-      who ? store.whoName(who) : '選身分'),
+    h('button', { class: 'tw-who-btn', type: 'button', onclick: () => pickWho(), title: '切換身分' },
+      who ? `我是${store.whoName(who)} ▾` : '我是誰？'),
   );
 }
 
@@ -113,6 +113,10 @@ export function pickWho() {
     h('div', { class: 'tw-dialog', role: 'dialog', 'aria-modal': 'true' },
       h('h2', {}, '你是誰？'),
       h('p', { class: 'tw-hint' }, '只是用來記你的標記，不需要登入，之後可以隨時切換。'),
+      !current && h('ol', { class: 'tw-guide' },
+        h('li', {}, '在地圖點一個縣市，看那裡的地點'),
+        h('li', {}, '每個地點標「想去」，去過就蓋章'),
+        h('li', {}, '到「兩人對照」看兩個人都想去哪些')),
       h('div', { class: 'tw-who-choices' },
         store.whoIds().map((id) => h('button', {
           class: `tw-who-choice${id === current ? ' is-current' : ''}`,
