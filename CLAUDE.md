@@ -40,7 +40,7 @@
 
 ## 資料契約（摘要）
 
-- `data/places.json` 是唯一的地點來源。欄位：`id`（永不改名）、`n`、`c`、`c2`（最多 2 個，選填）、`region`（最底層地區 id）、`a`、`ll`（`[緯度, 經度]`，不得取自 Google，來源 `osm` 或 `manual`）、`llsrc`、`pid`、`gurl`、`note`、`src`、`status`（`open|closed|moved`，預設只顯示 `open`）。
+- `data/places.json` 是唯一的地點來源。欄位：`id`（永不改名）、`n`、`c`、`c2`（最多 2 個，選填）、`region`（最底層地區 id）、`a`、`ll`（`[緯度, 經度]`，可取自 Google Places，Howard 已知條款風險後決定）、`llsrc`（`google|osm|manual`）、`pid`、`gurl`、`note`、`src`、`status`（`open|closed|moved`，預設只顯示 `open`）。
 - **不存** Google 的評分、評論數、營業時間（`rt`、`rv`、`h`、`oh`），Places 條款限制長期保存；網站打開地點時即時查詢，只放瀏覽器暫存。CI 會擋。
 - 地區 id 格式 `{大區}-{縣市}-{區域}`，英文小寫；定義在 `data/regions.json`。
 - Firebase：`/marks/{apong|baobao}/{placeId}`（網站可寫）、`/inbox/{id}`（網站可寫）、`/places`、`/removed`（只有 write-data）、`/trips/`（預留，不開放）。規則在 `firebase-rules.json`，需 Howard 手動貼到主控台。
@@ -63,7 +63,7 @@ CI（`.github/workflows/ci.yml`）在每個 PR 與 `main` 推送時跑驗證與�
 - **讀**：`read-firebase.yml`（輸入 `path`：`marks`、`inbox`、`places`、`removed` 或 `all`）把資料放到 `snapshot` 分支的 `live/`，再從該分支讀回。
 - **寫**：`write-data.yml`（輸入 `path`、`expect_ts`、`payload`）。先備份到 `snapshot` 分支的 `backup/`，現場的 `ts` 與 `expect_ts` 不符就拒絕，寫完讀回比對。同一件事的改動先合併，一次寫入。
 - **快照**：`snapshot.yml` 每天把整個資料庫備份到 `snapshot` 分支，也可手動觸發。
-- **匯入查詢**（模組 A）：`lookup-places.yml`（輸入 `offset`、`limit`）用 Places API 查 `data/staging/import-list.json` 的縣市、`pid`（不取座標；座標走 OSM），結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`。
+- **匯入查詢**（模組 A）：`lookup-places.yml`（輸入 `offset`、`limit`）用 Places API 查 `data/staging/import-list.json` 的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`。
 - 需要 repo secret `FIREBASE_SECRET`；資料庫網址讀自 `data/config.json` 的 `firebase.dbUrl`，沒填就會明確失敗。
 
 ## 安全修改程序

@@ -48,7 +48,7 @@
 | `data/regions.json` | 地區樹：大區 → 縣市 → 區域（含中心點與縮放） | A（契約檔，改動先回報總管） |
 | `data/places.json` | 唯一的地點來源 | A |
 | `data/staging/import-list.json` | Google 清單匯入的暫存清單（店名、分類、備註、歇業狀態），查到座標前不進 `places.json` | A |
-| `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的縣市、`pid`（不取座標；座標改走 OSM），結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
+| `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js` | 首頁：Leaflet 地圖，每縣市一個計數圓點（點亮的縣市變綠），選到縣市後畫出個別地點；下方接篩選與卡片。只畫有 `ll` 的地點，座標更新後自動套用 | D |
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage` | D |
 | `js/marks.js` | `#/compare` 兩人對照四組與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、心得，寫入走 `sync.setMark`）、`markSummary`、`markCompare`、`statusOf`、`litCounties` | D |
@@ -93,7 +93,7 @@
 `data/places.json` 是唯一來源，隨網站一起發佈，啟動時載入。評分、評論數、營業時間**不存進 repo**（Places 條款限制長期保存，CI 會擋 `rt`、`rv`、`h`、`oh`），打開地點時由瀏覽器向 Places API 即時查詢，結果只放瀏覽器暫存。
 
 ### 新增與修正地點
-- 初次匯入：Google 地圖清單先放進 `data/staging/import-list.json`（只有店名、分類、備註、歇業標記），由 `lookup-places` 向 Places API 查出縣市、`pid`，座標用 OSM（Nominatim）查，查不到的由 Howard 手動點位置，A 確認後轉成統一格式寫進 `places.json`；「去過」紀錄同樣由 A 轉入。
+- 初次匯入：Google 地圖清單先放進 `data/staging/import-list.json`（只有店名、分類、備註、歇業標記），由 `lookup-places` 向 Places API 查出座標、縣市、`pid`（Google 查不到座標時才用 OSM 或手動），A 確認後轉成統一格式寫進 `places.json`；「去過」紀錄同樣由 A 轉入。
 - 之後新增：網站的收件匣把連結或店名寫到 Firebase `/inbox`；排程工具查好資料後寫入 `/places`（網站輪詢後合併顯示）；Claude 定期把 `/places` 併回 `places.json`（走 PR）並清掉 Firebase 那份。
 - 修正地點本身（分類、縣市、備註）：走收件匣的「修正」，由 Claude 確認後改 `places.json`；網站只能改自己的標記。
 - 歇業或搬遷：`status` 設為 `closed` 或 `moved`，保留紀錄但預設不顯示、不排進行程。

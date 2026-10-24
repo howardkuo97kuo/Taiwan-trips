@@ -88,7 +88,7 @@ if (places) {
           if (lat < BBOX.latMin || lat > BBOX.latMax || lng < BBOX.lngMin || lng > BBOX.lngMax) bad(`座標不在台灣範圍：${p.ll}`);
         }
       }
-      if (p.llsrc != null && !['osm', 'manual'].includes(p.llsrc)) bad('llsrc 必須是 osm 或 manual');
+      if (p.llsrc != null && !['google', 'osm', 'manual'].includes(p.llsrc)) bad('llsrc 必須是 google、osm 或 manual');
       if (p.status != null && !STATUS.includes(p.status)) bad(`status 必須是 ${STATUS.join('、')}`);
       if (p.pid) {
         if (pids.has(p.pid)) bad(`pid 重複：${p.pid}`);
