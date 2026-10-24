@@ -1,0 +1,62 @@
+name: write-marks-batch
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 倉庫內的 JSON 檔（data/staging/*.json），形狀 {apong:{placeId:mark}, baobao:{…}}；和 payload 擇一
+        type: string
+        required: false
+        default: ''
+      payload:
+        description: 直接貼上的 JSON，形狀同上；和 file 擇一
+        type: string
+        required: false
+        default: ''
+      mode:
+        description: skip＝現場已有的 placeId 不動（預設）；overwrite＝整筆取代
+        type: choice
+        options: [skip, overwrite]
+        default: skip
+
+permissions:
+  contents: write
+
+concurrency:
+  group: firebase-io
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 備份、驗證、合併寫入、讀回確認
+        env:
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+          INPUT_FILE: ${{ inputs.file }}
+          INPUT_PAYLOAD: ${{ inputs.payload }}
+          INPUT_MODE: ${{ inputs.mode }}
+        run: |
+          source scripts/fb-env.sh
+
+          if [ -n "$INPUT_FILE" ] && [ -n "$INPUT_PAYLOAD" ]; then
+            echo "::error::file 與 payload 只能擇一"; exit 1
+          fi
+          if [ -n "$INPUT_FILE" ]; then
+            if ! [[ "$INPUT_FILE" =~ ^data/staging/[A-Za-z0-9_.-]+\.json$ ]]; then
+              echo "::error::file 只能是 data/staging/*.json"; exit 1
+            fi
+            [ -f "$INPUT_FILE" ] || { echo "::error::找不到 $INPUT_FILE（請用有這個檔案的分支執行）"; exit 1; }
+            cp "$INPUT_FILE" payload.json
+          elif [ -n "$INPUT_PAYLOAD" ]; then
+            printf '%s' "$INPUT_PAYLOAD" > payload.json
+          else
+            echo "::error::file 與 payload 至少要給一個"; exit 1
+          fi
+          jq empty payload.json || { echo "::error::payload 不是合法 JSON"; exit 1; }
+
+          mkdir -p out/backup
+          status=0
+          bash scripts/write-marks-batch.sh payload.json "$INPUT_MODE" out/backup || status=$?
+          bash scripts/snapshot-commit.sh out "write-marks-batch: backup before batch write"
+          exit $status
