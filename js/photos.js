@@ -92,11 +92,11 @@ export function thumb(ctx, p, { count = 1 } = {}) {
   };
   const go = () => placePhotos(p.pid, key).then((list) => {
     if (!list[0]) return;
-    fill(first, list[0], count > 1 ? 480 : 360);
+    fill(first, list[0], count > 1 ? 640 : 360);
     for (let i = 1; i < Math.min(count, list.length); i++) {
       const t = h('div', { class: 'tw-thumb' });
       box.append(t);
-      fill(t, list[i], 480);
+      fill(t, list[i], 640);
     }
   });
   if (!('IntersectionObserver' in window)) { go(); return box; }

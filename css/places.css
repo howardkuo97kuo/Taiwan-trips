@@ -87,3 +87,24 @@
 .tw-review-text.is-clamped { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .tw-review-orig { margin: 4px 0; color: var(--muted); font-size: 14px; white-space: pre-line; overflow-wrap: anywhere; }
 .tw-review-acts { display: flex; gap: 14px; }
+
+/* ── 卡片：照片放大成一整排、Google 資料點開看 ── */
+.tw-place-media { grid-column: 2 / -1; padding: 0 16px 12px; }
+.tw-place-media .tw-thumbs { float: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; }
+.tw-place-card .tw-place-media .tw-thumbs .tw-thumb, .tw-place-card .tw-place-media .tw-thumbs .tw-thumb:nth-child(n+3) { display: grid; width: 100%; height: auto; aspect-ratio: 4 / 3; float: none; margin: 0; }
+.tw-place-gd { grid-column: 1 / -1; border-top: 2px dashed var(--line); }
+.tw-place-gd > summary { cursor: pointer; padding: 10px 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; list-style: none; min-height: 44px; }
+.tw-place-gd > summary::-webkit-details-marker { display: none; }
+.tw-place-gd > summary::before { content: "▸"; color: var(--muted); transition: transform .2s; }
+.tw-place-gd[open] > summary::before { transform: rotate(90deg); }
+.tw-gd-title { font-weight: 700; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.tw-gd-rating { color: var(--rail-ink); font-family: var(--f-num); font-weight: 700; }
+.tw-gd-body { padding: 0 16px 14px; }
+.tw-gd-body .tw-live-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+@media (max-width: 640px) {
+  .tw-place-media { grid-column: 1 / -1; padding: 0 12px 10px; }
+  .tw-place-media .tw-thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tw-place-card .tw-place-media .tw-thumbs .tw-thumb:nth-child(n+3) { display: none; }
+  .tw-place-gd > summary { padding: 8px 12px; }
+  .tw-gd-body { padding: 0 12px 12px; }
+}
