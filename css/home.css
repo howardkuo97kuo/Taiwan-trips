@@ -101,3 +101,6 @@
 @media (max-width: 640px) {
   .tw-map-panel:first-child { grid-template-columns: 1fr; justify-items: center; text-align: center; }
 }
+
+/* 首屏下方：清單落在半透明面板上，照片再亮也讀得清楚 */
+.tw-map-below { background: color-mix(in srgb, var(--paper) 82%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: var(--r-lg); padding: 18px 20px 24px; }

@@ -1,1 +1,71 @@
-/* 標記、蓋章、兩人對照。模組 C。內容在後續 PR 補上。 */
+/* 標記、蓋章、兩人對照。模組 C。結構見 js/marks.js 與 js/places.js 的 placeCard。 */
+
+/* ── 車票右側：兩人的「想去」圓點 ── */
+.tw-mark-want { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 8px 14px; }
+.tw-mark-wrow { display: flex; gap: 10px; }
+.tw-mark-wb { display: flex; flex-direction: column; align-items: center; gap: 1px; font-size: 12px; color: var(--muted); }
+.tw-mark-wl { font-size: 13px; color: var(--muted); }
+.tw-mark-dot { width: 32px; height: 32px; border-radius: 50%; border: 2.5px solid var(--ink); background: var(--card); padding: 0; display: block; transition: background .2s, transform .2s; }
+button.tw-mark-dot:hover { transform: scale(1.1); }
+.tw-mark-dot.is-on { background: var(--rail); }
+.tw-mark-dot.is-ghost { border-color: var(--line); }
+.tw-mark-dot.is-ghost.is-on { background: var(--muted); border-color: var(--muted); }
+
+/* ── 蓋章區 ── */
+.tw-mark-stampzone { width: 124px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 8px 12px 8px 4px; border-left: 2px dashed var(--line); }
+.tw-mark-stamp-empty { width: 82px; height: 82px; border-radius: 50%; border: 2.5px dashed var(--muted); background: transparent; color: var(--muted); font: 700 15px var(--f-display); padding: 0; transition: border-color .2s, color .2s; }
+.tw-mark-stamp-empty:hover { border-color: var(--stamp); color: var(--stamp); }
+.tw-mark-stamp { width: 86px; height: 86px; border: 0; background: none; padding: 0; color: var(--stamp); transform: rotate(-9deg); }
+.tw-mark-stamp svg { width: 100%; height: 100%; overflow: visible; }
+.tw-mark-stamp text { font-family: var(--f-display); font-weight: 700; fill: currentColor; }
+.tw-mark-stamp .ym { font-family: var(--f-num); }
+.tw-mark-stamp.is-slam { animation: tw-stamp-slam .5s cubic-bezier(.25, 1, .5, 1) both; }
+@keyframes tw-stamp-slam { 0% { transform: rotate(-30deg) scale(2.6); opacity: 0; } 55% { opacity: 1; } 100% { transform: rotate(-9deg) scale(1); } }
+.tw-mark-again { border: 0; background: none; font-size: 12.5px; color: var(--muted); padding: 2px; text-decoration: underline; }
+.tw-mark-again[aria-pressed="true"] { color: var(--rail-ink); font-weight: 700; }
+
+@media (max-width: 640px) {
+  .tw-mark-want { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; border-top: 2px dashed var(--line); padding: 8px 14px; }
+  .tw-mark-stampzone { grid-column: 1 / -1; width: auto; border-left: 0; border-top: 2px dashed var(--line); padding: 8px; }
+  .tw-mark-stamp, .tw-mark-stamp-empty { width: 72px; height: 72px; }
+}
+@media (pointer: coarse) { .tw-mark-dot { width: 40px; height: 40px; } .tw-mark-again { min-height: 36px; } }
+
+/* ── 地點詳情的標記列 ── */
+.tw-mark-bar { margin: 14px 0; display: grid; gap: 10px; }
+.tw-mark-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tw-mark-toggle { border: 2px solid var(--ink); background: var(--card); border-radius: var(--r-sm); padding: 6px 18px; min-height: 44px; font-size: 16px; transition: background .2s, color .2s; }
+.tw-mark-toggle.is-on { background: var(--ink); color: var(--paper); }
+.tw-mark-toggle.is-want.is-on { background: var(--rail); border-color: var(--rail); color: #fff; }
+.tw-mark-toggle.is-been.is-on { background: var(--stamp); border-color: var(--stamp); color: #fff; }
+.tw-mark-stars { display: flex; gap: 2px; }
+.tw-mark-star { border: 0; background: none; font-size: 30px; line-height: 1; padding: 2px 4px; color: var(--line); min-width: 40px; min-height: 44px; }
+.tw-mark-star.is-on { color: var(--gold); text-shadow: 0 0 0 var(--gold-ink); -webkit-text-stroke: 1px var(--gold-ink); }
+.tw-mark-ym, .tw-mark-note { border: 2px solid var(--ink); background: var(--card); color: var(--ink); border-radius: var(--r-sm); padding: 6px 10px; }
+.tw-mark-note { width: 100%; resize: vertical; }
+.tw-mark-msg { margin: 0; color: var(--stamp); font-size: 14px; min-height: 1.2em; }
+
+/* ── 兩人並排 ── */
+.tw-mark-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
+.tw-mark-col { background: color-mix(in srgb, var(--card) 86%, transparent); border: 2px solid var(--ink); border-radius: var(--r-md); padding: 10px 14px; }
+.tw-mark-col.is-apong { border-top: 6px solid var(--rail); }
+.tw-mark-col.is-baobao { border-top: 6px solid var(--blue); }
+.tw-mark-col p { margin: 4px 0 0; }
+.tw-mark-quote { color: var(--muted); font-size: 14px; border-left: 3px solid var(--line); padding-left: 10px; }
+@media (max-width: 520px) { .tw-mark-compare { grid-template-columns: 1fr; } }
+
+/* ── 小標記（只讀） ── */
+.tw-mark-summary { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tw-mark-chip { border-radius: 99px; padding: 0 10px; font-size: 13px; background: var(--card); border: 1.5px solid var(--line); }
+.tw-mark-chip.is-both { background: var(--gold); color: var(--gold-ink); border-color: var(--gold-ink); }
+
+/* ── 兩人對照頁 ── */
+.tw-mark-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.tw-mark-tab { border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 88%, transparent); border-radius: var(--r-sm); padding: 4px 16px; min-height: 40px; }
+.tw-mark-tab.is-active { background: var(--ink); color: var(--paper); font-weight: 700; }
+.tw-mark-tab:first-child.is-active { background: var(--gold); color: var(--gold-ink); border-color: var(--gold-ink); }
+.tw-mark-lit { margin-top: 28px; background: color-mix(in srgb, var(--card) 86%, transparent); border: 2px solid var(--ink); border-radius: var(--r-md); padding: 14px 18px; max-width: 880px; }
+.tw-mark-lit h2 { margin: 0 0 6px; font-size: 22px; }
+.tw-mark-lit-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tw-mark-lit-chip { border: 2px dashed var(--line); border-radius: 99px; padding: 0 14px; color: var(--muted); text-decoration: none; min-height: 34px; display: inline-flex; align-items: center; }
+.tw-mark-lit-chip.is-lit { border: 2px solid var(--stamp); border-style: double; border-width: 3px; background: var(--stamp-soft); color: var(--stamp); font-weight: 700; }

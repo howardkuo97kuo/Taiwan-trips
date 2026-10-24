@@ -48,6 +48,54 @@ export function countyIdOf(counties, regionId) {
   return best;
 }
 
+// ── 卡片上的快速標記：想去、蓋章（去過）、想再去 ──
+// 標完會跳 Toast 並提供「復原」；剛蓋章或剛變成雙人票時，卡片下一次重畫會播一次動畫（takeFx）。
+const fx = { slam: null, pair: null };
+export function takeFx(placeId) {
+  const out = { slam: fx.slam === placeId, pair: fx.pair === placeId };
+  if (out.slam) fx.slam = null;
+  if (out.pair) fx.pair = null;
+  return out;
+}
+
+const KEY_LABEL = { want: '想去', been: '去過', again: '想再去' };
+
+export async function quickMark(ctx, placeId, key) {
+  const { store, sync, toast } = ctx;
+  const who = store.get('who');
+  if (!who) {
+    toast?.('先選一下你是誰，才能標記', { action: '選身分', onAction: () => document.querySelector('.tw-who-btn')?.click() });
+    return;
+  }
+  const prev = store.get('marks')[who]?.[placeId] ?? null;
+  const on = !!prev?.[key];
+  let patch;
+  if (key === 'been') patch = on ? { been: null, ym: null, again: null, stars: null } : { been: true, ym: prev?.ym ?? ymNow() };
+  else if (key === 'again') patch = on ? { again: null } : { again: true, been: true, ym: prev?.ym ?? ymNow() };
+  else patch = { [key]: on ? null : true };
+
+  // 動畫旗標要在寫入前設好：setMark 會先更新畫面
+  if (key === 'been' && !on) fx.slam = placeId;
+  if (key === 'want' && !on && statusOf(store, placeId)[store.otherWho(who)]?.want) fx.pair = placeId;
+
+  const name = store.placeById(placeId)?.n ?? '';
+  const undo = () => {
+    const back = {};
+    for (const k of new Set([...Object.keys(prev ?? {}), ...Object.keys(patch)])) if (k !== 'ts') back[k] = prev?.[k] ?? null;
+    sync.setMark(placeId, back).catch(() => toast('復原沒成功，網路好了再試一次。', { tone: 'bad' }));
+  };
+  try {
+    await sync.setMark(placeId, patch);
+  } catch (e) {
+    console.warn(e);
+    fx.slam = fx.pair = null;
+    toast('沒存成功，網路好了再試一次。', { tone: 'bad' });
+    return;
+  }
+  const msg = key === 'been' ? (on ? `取消蓋章：${name}` : `已蓋章：${name}`) : `${on ? '取消' : '已標'}「${KEY_LABEL[key]}」：${name}`;
+  toast(msg, { action: '復原', onAction: undo });
+}
+
 // ── 小標記列（卡片上用，只讀） ──
 export function markSummary(ctx, placeId) {
   const { h, store } = ctx;

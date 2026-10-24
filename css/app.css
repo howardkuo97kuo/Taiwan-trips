@@ -94,3 +94,6 @@ body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) 
 :root[data-motion="off"] .tw-mist { display: none; }
 .tw-sync.is-pending .tw-dot { background: var(--gold); animation: tw-blink 1.2s ease-in-out infinite; }
 @keyframes tw-blink { 50% { opacity: .3; } }
+
+/* 首頁以外的頁面：照片只留淡淡的氛圍，文字清楚優先 */
+body[data-route]:not([data-route="home"]) .tw-veil { opacity: max(var(--veil), .84); }
