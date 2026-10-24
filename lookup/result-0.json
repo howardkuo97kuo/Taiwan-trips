@@ -1,0 +1,117 @@
+[
+ {
+  "i": 0,
+  "n": "文德海鮮羹",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJOfSgaCStQjQRzoo7SE_kLiQ",
+   "name": "文德海鮮羹",
+   "addr": "114臺北市內湖區瑞陽里文德路22巷29弄1號",
+   "ll": [
+    25.0764526,
+    121.58026509999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=2607272263459506894&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 1,
+  "n": "米半 鐵板料理",
+  "c": "美食",
+  "note": "脆友說鴨胸很推然後飯後甜點銅鑼燒很好吃 https://www.threads.com/share/_2_53k4Qw/",
+  "match": {
+   "pid": "ChIJJ897b9yVbjQREyTkl0oBC9U",
+   "name": "米半 鐵板料理",
+   "addr": "600嘉義市西區國華里文化路297巷1號",
+   "ll": [
+    23.4849878,
+    120.44802609999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15351365174709986323&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "嘉義市",
+   "region": "south-chiayi-city"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 2,
+  "n": "馬納蒂",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJnf_dlpxPXTQRIvXT2zVNAds",
+   "name": "馬納蒂",
+   "addr": "224新北市瑞芳區深澳里建基路二段55號",
+   "ll": [
+    25.133541899999997,
+    121.80664519999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=15780979462999635234&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "新北市",
+   "region": "north-newtaipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 3,
+  "n": "輝葉放空站",
+  "c": "咖啡甜點",
+  "match": {
+   "pid": "ChIJrxF31rCrQjQRCIU4tfV7qbQ",
+   "name": "輝葉放空站",
+   "addr": "105臺北市松山區松基里復興北路193號",
+   "ll": [
+    25.0552963,
+    121.54444869999999
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=13018072493128713480&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [
+   {
+    "pid": "ChIJb2MJGgCpQjQRKuPyUjYDc6w",
+    "name": "輝葉放空站 (永和中興店 | 複合式咖啡館)",
+    "addr": "234新北市永和区中兴里中興街135號",
+    "ll": [
+     25.012294400000002,
+     121.51878199999999
+    ],
+    "business": "OPERATIONAL",
+    "gurl": "https://maps.google.com/?cid=12426279328700097322&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "county": "新北市",
+    "region": "north-newtaipei"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "i": 4,
+  "n": "澎澄飯店 Discovery Hotel",
+  "c": "住宿",
+  "match": {
+   "pid": "ChIJNQE8SuxabDQR1-xU_EDlPG8",
+   "name": "澎澄飯店 Discovery Hotel",
+   "addr": "880澎湖縣馬公市陽明里同和路168號",
+   "ll": [
+    23.5668463,
+    119.5722115
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=8015533504086731991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "澎湖縣",
+   "region": "island-penghu"
+  },
+  "alts": [],
+  "ok": true
+ }
+]
