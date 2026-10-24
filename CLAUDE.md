@@ -12,6 +12,7 @@
 - 電話、訂位代號、個人資訊不放進公開網站或 repo；去過只記年月（`YYYY-MM`）。
 - 金鑰（`FIREBASE_SECRET`、Google 金鑰）不貼聊天、不 commit、不印出；`FIREBASE_SECRET` 由 Howard 自己放進 repo Settings > Secrets and variables > Actions。
 - 回報「誰標了想去」之前，先重新讀取最新的 Firebase 資料。
+- **結構有變就更新 [`ARCHITECTURE.md`](ARCHITECTURE.md)**：新增或改名檔案、路由、store 鍵、Firebase 路徑、workflow、金鑰位置、模組狀態，都在同一個 PR 一起改；它描述「現在的樣子」，與 `docs/SPEC.md` 不一致時以 SPEC 為準。
 
 ## 固定值
 
@@ -31,7 +32,7 @@
 | 模組 | 檔案 |
 |---|---|
 | A 資料 | `data/*.json`、`data/geo/` |
-| B 骨架與同步 | `index.html`、`js/app.js`、`js/state.js`、`js/sync.js`、`js/util.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md` |
+| B 骨架與同步 | `index.html`、`js/app.js`、`js/state.js`、`js/sync.js`、`js/util.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md`、`ARCHITECTURE.md`（各模組改到自己的部分時要在同一個 PR 更新） |
 | C 介面 | `css/*.css` |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` |
