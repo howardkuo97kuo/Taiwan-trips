@@ -59,6 +59,7 @@
 | `js/icons.js` | 分類圖示（`catIcon(分類)` 回傳內嵌 SVG，顏色跟文字）；`places.js` 的分類按鈕、車票、詳情使用 | C |
 | `css/fx.css` | 圖示尺寸、導覽圖示（CSS mask）、換頁與車票進場、按鈕回饋、載入／空狀態插圖；動態受 `app.css` 的減少動態規則管轄 | C |
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
+| `js/quick.js`、`css/quick.css` | `#/quick` 快速選擇：一次一張尚未標記的地點（沒有 `want`、`been`、`skip`），按鈕／滑動（右想去、左不想去）／鍵盤（→ ← ↓ 退格）；可依大區、分類篩選；「之後再說」只在本次頁面內跳過；底部列出自己標了不想去的並可改回；寫入走 `sync.setMark`，`want` 與 `skip` 互斥 | 新增（B 的路由表、D 的 `marks.js` 配合） |
 | `js/inbox.js` | `#/inbox`：新增／修正兩種送件（寫 `/inbox`，≤ 500 字），每 30 秒輪詢 `/inbox` 與 `/places`（頁面隱藏時暫停），顯示處理狀態與「已查好、等併回」的地點；自己送的待處理項目可收回；離線送件先存 localStorage `twInboxQueue`，連上網路後補送。狀態：`new` 待處理、`done` 已上架、`dup` 已經有了、`skip` 不收錄 | E |
 | `sw.js`、`manifest.webmanifest`、`img/icons/` | Service Worker：快取名 `tw-v2`（圖磚 `tw-tiles-v1`，最多 400 張）；同網域檔案網路優先（3 秒逾時退回快取），離線也能開；Leaflet、字型、OSM 圖磚先用快取再背景更新；Firebase 與 Places API 不攔截。`SHELL` 列出要預先快取的檔案，新增同網域檔案要加進去。manifest 與圖示供加到主畫面（`start_url` 與 `scope` 用相對路徑，Pages 子路徑也能用） | E |
 | `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
@@ -88,6 +89,7 @@
 | `#/r/<regionId>` | `js/places.js` | D |
 | `#/p/<placeId>` | `js/places.js` | D |
 | `#/compare` | `js/marks.js` | D |
+| `#/quick` | `js/quick.js` | 新增 |
 | `#/inbox` | `js/inbox.js` | E |
 | `#/trips` | `js/itinerary.js` | F |
 
@@ -118,7 +120,7 @@
 
 | 路徑 | 誰寫 | 內容 |
 | --- | --- | --- |
-| `/marks/{apong\|baobao}/{placeId}` | 網站（各寫自己那條）、Claude（write-data） | `{want?, been?, again?, ym?, stars?, like?, good?, avoid?, note?, ts}` |
+| `/marks/{apong\|baobao}/{placeId}` | 網站（各寫自己那條）、Claude（write-data） | `{want?, been?, again?, skip?, ym?, stars?, like?, good?, avoid?, note?, ts}` |
 | `/inbox/{id}` | 網站（只能新增，或收回狀態仍是 `new` 的項目；不能覆寫）、Claude（write-data 改狀態） | `{text, by, ts, status}` |
 | `/places`、`/removed` | 只有排程工具與 write-data | 新增的地點、被移除的地點（定期併回 `places.json`） |
 | `/trips/` | 無 | 預留，規則不開放 |
