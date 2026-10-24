@@ -144,6 +144,7 @@ async function boot() {
   store.subscribe('online', renderHeader);
   store.subscribe('synced', renderHeader);
   sync.startSync();
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch((e) => console.warn('[sw]', e)); // 離線快取（E）
   if (!store.get('who')) pickWho();
   window.addEventListener('hashchange', render);
   await render();
