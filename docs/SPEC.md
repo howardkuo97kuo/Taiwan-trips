@@ -196,18 +196,18 @@
 
 - [x] 宜蘭歸東部（2026-10-23 確認）
 - [x] 基礎設施：repo、Pages、Firebase 專案與規則、`FIREBASE_SECRET`、`firebase.dbUrl` 已完成；模組啟動順序為基礎設施 → A、B → C、D、E → F（B 已合併，A 進行中）
-- [ ] Google 地圖清單：暫存清單 384 筆（美食 326、咖啡甜點 37、住宿 10、景點 4、小吃夜市 3、購物市集 1、未分類 3），尚待 Places 查詢補座標、縣市、`pid`，並確認 3 筆未分類與 4 筆歇業標記
+- [ ] Google 地圖清單：暫存清單 395 筆已用 Places 查詢並併進 `places.json`（共 522 筆含去過）；「已作廢」與老街懷舊便當兩間縣市待補
 - [x] 座標來源（2026-10-24 Howard 最終決定）：座標存 Google Places 回傳的位置；OSM 在台灣資料不足，只當備援。Howard 已知 Places 條款對座標快取的限制並接受風險；評分、評論數、營業時間仍不存 repo
 - [x] 地址 `a` 同理，沿用 Google 的 `formattedAddress`（同一風險決定）
-- [ ] 去過紀錄的提供時間與形式（不限形式）
+- [x] 去過紀錄：127 筆已匯入並寫入 Firebase
 - [ ] Google 金鑰有兩把：匯入工具用的 repo secret `GOOGLE_PLACES_KEY`，與瀏覽器用的 `google.placesKey`（限制 API 與來源網址）；皆由 Howard 自己設定，不貼聊天
-- [ ] 縣市邊界資料（GeoJSON）的來源與授權，由 A 找政府開放資料並簡化
+- [x] 縣市邊界 `data/geo/counties.json` 已有（taiwan-atlas，MIT；原始資料授權未逐項查證）
 - [ ] 行程的「長途段」要不要在畫面上特別標示（目前不設上限，只顯示每段方式與時間）
 
 ## 上線前清單
 
 - [ ] `data/config.json` 欄位全填、沒有殘留 `cnx`、`Thailand`、`Bangkok`、`清邁`
-- [ ] Firebase 規則已貼上並存檔
+- [ ] Firebase 規則已貼上並存檔（收件匣改為只能新增的版本，需 Howard 重新貼上）
 - [ ] 讀寫 workflow 用空操作驗證
 - [ ] 金鑰已限制
 - [ ] `sw.js` 的版本號已更新

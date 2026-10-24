@@ -47,7 +47,7 @@
     },
     "inbox": {
       "$id": {
-        ".write": true,
+        ".write": "!data.exists() || (data.child('status').val() === 'new' && !newData.exists())",
         ".validate": "newData.hasChildren(['text', 'by', 'ts', 'status'])",
         "text": {
           ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
