@@ -72,7 +72,8 @@
 @keyframes tw-pulse { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
 .is-intro .tw-seg.is-on { stroke-dasharray: 1; animation: tw-draw .5s cubic-bezier(.25, 1, .5, 1) both; animation-delay: calc(var(--i) * 90ms); }
 .is-intro .tw-seg.is-half, .is-intro .tw-seg.is-off, .is-intro .tw-seg.is-br { animation: tw-fade .5s ease-out both; animation-delay: calc(var(--i) * 90ms); }
-.is-intro .tw-stn { animation: tw-pop .45s cubic-bezier(.25, 1, .5, 1) both; animation-delay: calc(var(--i) * 90ms + 120ms); transform-box: fill-box; transform-origin: center; }
+/* 動畫套在子元素：<g> 本身的位置是 transform 屬性，CSS 動畫會把它蓋掉，泡泡全擠到左上角 */
+.is-intro .tw-stn > :not(title) { animation: tw-pop .45s cubic-bezier(.25, 1, .5, 1) both; animation-delay: calc(var(--i) * 90ms + 120ms); transform-box: fill-box; transform-origin: center; }
 .tw-seg.is-lay { stroke-dasharray: 1 !important; animation: tw-draw .7s cubic-bezier(.25, 1, .5, 1) both; }
 .tw-stn.is-new .tw-body, .tw-stn.is-new .tw-ring { transform-box: fill-box; transform-origin: center; animation: tw-stamp-in .55s cubic-bezier(.25, 1, .5, 1); }
 .tw-stn.is-new .tw-pulse { animation: tw-pulse .9s ease-out; }

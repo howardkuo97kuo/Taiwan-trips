@@ -1,5 +1,6 @@
 // 地區瀏覽、篩選、地點詳情（路由 #/r/<regionId>、#/p/<placeId>）。模組 D。
 // 輸出 placeCard、listView、findRegion、inRegion 給 map.js 用。
+import { catIcon } from './icons.js';
 import { markBar, markCompare, statusOf, quickMark, takeFx } from './marks.js';
 
 // ── 地區工具 ──
@@ -108,7 +109,7 @@ export function placeCard(ctx, p) {
   return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}`, dataset: { pid: p.id } },
     pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '雙人票'),
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
-      h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
+      catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
     h('div', { class: 'tw-place-mid' },
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
@@ -153,7 +154,7 @@ export function listView(ctx, places, { limit = 60 } = {}) {
         type: 'button', class: `tw-place-chip${filters.cats.has(c) ? ' is-on' : ''}`,
         'aria-pressed': filters.cats.has(c) ? 'true' : 'false',
         onclick: () => { filters.cats.has(c) ? filters.cats.delete(c) : filters.cats.add(c); shown = limit; drawCats(); drawList(); },
-      }, `${c} ${n}`));
+      }, catIcon(c), `${c} ${n}`));
     }
   };
 
@@ -280,7 +281,7 @@ function mountPlace(el, ctx) {
       (found?.trail ?? []).flatMap((t) => [' › ', h('a', { href: `#/r/${t.id}` }, t.n)])),
     h('h1', {}, p.n),
     store.isVisible(p) ? null : h('p', { class: 'tw-place-status' }, p.status === 'moved' ? '已搬遷' : '已歇業'),
-    h('div', { class: 'tw-place-cats' }, cats.map((c) => h('span', { class: 'tw-place-cat' }, c))),
+    h('div', { class: 'tw-place-cats' }, cats.map((c) => h('span', { class: 'tw-place-cat' }, catIcon(c), c))),
     p.a && h('p', { class: 'tw-place-addr' }, p.a),
     p.note && h('p', { class: 'tw-place-note' }, p.note),
     h('p', { class: 'tw-place-links' },
