@@ -199,7 +199,7 @@ function peerBadge(ctx, s, who, other) {
   return tags.length ? h('div', { class: 'tw-peers' }, tags) : null;
 }
 
-function googleBlock(ctx, p, sumSlot) {
+export function googleBlock(ctx, p, sumSlot) {
   if (!p.pid) return null;
   const { h } = ctx;
   const box = h('div', { class: 'tw-place-g' });

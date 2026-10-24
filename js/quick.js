@@ -1,8 +1,9 @@
 // 快速選擇 #/quick：一次一張卡，想去／不想去／之後再說。可滑動、鍵盤 ←（不想去）→（想去）。
 // 寫入走 sync.setMark，想去與不想去互斥（skip 欄位見 docs/SPEC.md）。
 import { statusOf } from './marks.js';
-import { findRegion, michBadge } from './places.js';
-import { thumb } from './photos.js';
+import { findRegion, michBadge, googleBlock } from './places.js';
+import { carousel } from './photos.js';
+import { loadGoogle, googleOf, onGoogle, todayZh } from './google.js';
 import { catIcon } from './icons.js';
 
 const SWIPE_PX = 90;
@@ -71,15 +72,26 @@ export function mount(el, ctx) {
     const m = statusOf(store, p.id);
     const other = store.otherWho(who);
     const county = findRegion(store.get('regions'), p.region)?.county?.n ?? '';
+    const g = googleOf(p.pid);
+    const sumSlot = h('div', { class: 'tw-place-sumslot' });
+    const gb = p.pid ? googleBlock(ctx, p, sumSlot) : null;
+    const today = g?.hours?.find((t) => t.startsWith(todayZh()));
+    const revs = (g?.reviews ?? []).slice(0, 2).map((rv) => h('blockquote', { class: 'tw-quick-rev' },
+      h('span', {}, `${rv.by || 'Google 使用者'}　${'★'.repeat(Math.round(rv.r || 0))}`),
+      h('p', {}, (rv.t || '').length > 110 ? `${rv.t.slice(0, 110)}…` : rv.t || '（沒有文字）')));
     const otherBits = [m[other].want && '想去', m[other].been && '去過', m[other].mark?.skip && '不想去'].filter(Boolean);
     const card = h('article', { class: 'tw-quick-card' },
       h('div', { class: 'tw-quick-stub' }, catIcon(p.c), h('span', {}, p.c), county && h('span', {}, county)),
-      thumb(ctx, p),
+      ctx.config?.google?.placesKey && p.pid && h('div', { class: 'tw-quick-media' }, carousel(ctx, p, { card: true })),
       h('h2', { class: 'tw-quick-name' }, p.n),
       michBadge(ctx, p),
+      sumSlot,
+      today && h('p', { class: 'tw-quick-today' }, `今天 ${today.replace(/^[^:：]*[:：]\s*/, '')}`),
       p.a && h('p', { class: 'tw-quick-addr' }, p.a),
+      gb,
       p.note && h('p', { class: 'tw-quick-note' }, p.note),
       h('p', { class: 'tw-quick-other' }, `${store.whoName(other)}：${otherBits.join('、') || '還沒標'}`),
+      revs.length > 0 && h('div', { class: 'tw-quick-revs' }, revs),
       p.gurl && h('a', { class: 'tw-quick-map', href: p.gurl, target: '_blank', rel: 'noopener' }, 'Google 地圖'),
       h('span', { class: 'tw-quick-badge is-no' }, '不想去'),
       h('span', { class: 'tw-quick-badge is-yes' }, '想去'));
@@ -159,8 +171,10 @@ export function mount(el, ctx) {
 
   buildQueue();
   render();
+  loadGoogle();
+  const offG = onGoogle(() => render());
   // 標記更新（含另一人或另一台裝置）時只重畫清單說明，不打斷目前這張卡
   const off = store.subscribe('marks', () => { if (!cardEl) render(); });
   const offWho = store.subscribe('who', (w) => { who = w; hist.length = 0; buildQueue(); render(); });
-  return () => { document.removeEventListener('keydown', onKey); off(); offWho(); };
+  return () => { document.removeEventListener('keydown', onKey); off(); offWho(); offG(); };
 }
