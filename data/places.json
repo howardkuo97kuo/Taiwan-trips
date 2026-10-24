@@ -2570,7 +2570,6 @@
   "pid": "ChIJH2PGWAADaDQR_o0syTFmchc",
   "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJH2PGWAADaDQR_o0syTFmchc",
   "src": "清單",
-  "status": "closed",
   "llsrc": "google"
  },
  {
@@ -5908,6 +5907,51 @@
   ],
   "pid": "ChIJ574rWaurQjQRu6ikD7bEFI4",
   "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ574rWaurQjQRu6ikD7bEFI4",
+  "src": "清單",
+  "llsrc": "google"
+ },
+ {
+  "id": "pb5e98b0ea9",
+  "n": "ON TAP",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區車層里忠孝東路四段216巷11弄21號",
+  "ll": [
+   25.040896,
+   121.553935
+  ],
+  "pid": "ChIJuaugn8irQjQRGK9M9fzfO6c",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJuaugn8irQjQRGK9M9fzfO6c",
+  "src": "清單",
+  "llsrc": "google"
+ },
+ {
+  "id": "pfb5b90c7c0",
+  "n": "T+T",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市松山區中華里敦化北路165巷11號",
+  "ll": [
+   25.05483,
+   121.550714
+  ],
+  "pid": "ChIJZ0R6E8mrQjQR3LBJvDh6gwc",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJZ0R6E8mrQjQR3LBJvDh6gwc",
+  "src": "清單",
+  "llsrc": "google"
+ },
+ {
+  "id": "p36703a9a89",
+  "n": "MO",
+  "c": "美食",
+  "region": "south-tainan",
+  "a": "台南市北區北華里崇安街30號",
+  "ll": [
+   23.000148,
+   120.206246
+  ],
+  "pid": "ChIJhyshddR3bjQRaQ7_QWz2Y00",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJhyshddR3bjQRaQ7_QWz2Y00",
   "src": "清單",
   "llsrc": "google"
  }
