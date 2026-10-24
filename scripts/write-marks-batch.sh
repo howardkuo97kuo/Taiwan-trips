@@ -19,8 +19,8 @@ jq -e '
   and ([.[] | to_entries[]] | all(
     (.key | test("^[A-Za-z0-9_-]+$")) and
     (.value | type == "object" and (.ts | type == "number")
-      and (keys | all(IN("want","been","again","ym","stars","like","good","avoid","note","ts")))
-      and ((.want // false) | type == "boolean") and ((.been // false) | type == "boolean") and ((.again // false) | type == "boolean")
+      and (keys | all(IN("want","been","again","skip","ym","stars","like","good","avoid","note","ts")))
+      and ((.want // false) | type == "boolean") and ((.been // false) | type == "boolean") and ((.again // false) | type == "boolean") and ((.skip // false) | type == "boolean")
       and ((.ym // "0000-01") | type == "string" and test("^[0-9]{4}-(0[1-9]|1[0-2])$"))
       and ((.stars // 1) | type == "number" and . >= 1 and . <= 5 and . == floor)
       and ((.like // "love") | IN("love","ok","meh"))

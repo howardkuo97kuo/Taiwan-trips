@@ -109,7 +109,7 @@
 
 | 路徑 | 用途 | 誰能寫 |
 |---|---|---|
-| `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
+| `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, skip?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、不想去 `skip`（與 `want` 互斥，網站寫入時會清掉另一個）、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
 | `/inbox/{id}` | 收件匣：連結或店名、誰送的、時間、狀態 | 網站 |
 | `/places`、`/removed` | 排程查好後的新地點、被移除的地點（定期併回 `places.json`） | 只有排程工具與 write-data |
 | `/trips/` | 預留，現在不寫、規則不開放 | 無 |

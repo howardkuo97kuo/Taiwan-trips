@@ -2,7 +2,7 @@
 // 同網域的頁面、程式、資料：網路優先（3 秒沒回應就用快取），離線時照樣打得開；
 // 地圖圖磚與外部函式庫、字型：先用快取、背景更新，圖磚最多留 TILE_MAX 張；
 // Firebase 與 Places API 一律不攔截（標記與評分要即時，離線時的標記由 sync.js 處理）。
-const VERSION = 'tw-v2';
+const VERSION = 'tw-v3';
 const TILES = 'tw-tiles-v1';
 const TILE_MAX = 400;
 const NET_TIMEOUT = 3000;
@@ -20,12 +20,14 @@ const SHELL = [
   'css/inbox.css',
   'css/fx.css',
   'css/photos.css',
+  'css/quick.css',
   'js/app.js',
   'js/state.js',
   'js/sync.js',
   'js/util.js',
   'js/icons.js',
   'js/prefs.js',
+  'js/quick.js',
   'js/map.js',
   'js/places.js',
   'js/photos.js',
