@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（刪除已匯入的 `data/staging/visited-*.json`；清單加「現在營業」篩選與評分排序；地區樹補上 75 個區域（由地址推出，`regions.json` 的 `districts`）；收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
+最後更新：2026-10-24（刪除 `sync.js` 沒人用的 `marksOf`、`stopSync`、`isConfigured`；刪除已匯入的 `data/staging/visited-*.json`；清單加「現在營業」篩選與評分排序；地區樹補上 75 個區域（由地址推出，`regions.json` 的 `districts`）；收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
 
 ## 一句話
 
@@ -43,7 +43,7 @@
 | `js/app.js` | 啟動、路由表 `ROUTES`、模組掛載、頂列（同步狀態、動畫與深淺色按鈕）與導覽、身分選擇 | B |
 | `js/prefs.js` | 深淺色（localStorage `twTheme`）、動畫開關（`twMotion`，預設跟系統的減少動態，`?motion=on` 可覆蓋）、背景照片的視差與遮罩 | B |
 | `js/state.js` | 單一 store：`get`／`set`／`subscribe`、身分、載入 `data/*.json` | B |
-| `js/sync.js` | Firebase REST 與兩條 `/marks` 串流、`setMark`、`marksOf` | B |
+| `js/sync.js` | Firebase REST 與兩條 `/marks` 串流、`setMark` | B |
 | `js/util.js` | `h`（建 DOM）、`clear`、`ymNow`、`debounce`、`loadJson` | B |
 | `data/config.json` | 站名、前綴、時區、身分、分類、Firebase 網址、Google 金鑰欄位、地圖預設視角 | A |
 | `data/regions.json` | 地區樹：大區 → 縣市 → 區域（含中心點與縮放） | A（契約檔，改動先回報總管） |
