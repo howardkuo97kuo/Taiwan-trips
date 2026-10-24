@@ -319,11 +319,11 @@ function liveContent(ctx, p, g, { compact = false } = {}) {
     h('p', { class: 'tw-ai-text' }, g.ai.t),
     h('p', { class: 'tw-hint' }, `AI 依 Google 最相關的 ${g.ai.n || revs.length} 則評論整理（${dateLabel(g.ai.at)}），僅供參考`));
   const aiOrHint = ai || (revs.length ? h('p', { class: 'tw-hint' }, 'AI 評語整理中，下次更新後會出現。') : h('p', { class: 'tw-hint' }, 'Google 沒有提供這個地點的評論文字。'));
-  const original = !compact && revs.length > 0 && h('details', { class: 'tw-review-more tw-review-original' },
-    h('summary', {}, `看 Google 原始評論（${revs.length} 則）`), h('div', { class: 'tw-reviews' }, revs.map(review)));
+  const original = !compact && revs.length > 0 ? h('section', { class: 'tw-review-original' },
+    h('h3', {}, `Google 實際評論（${revs.length} 則）`), h('div', { class: 'tw-reviews' }, revs.map(review))) : null;
 
   return [
-    closed && h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`),
+    closed ? h('p', { class: 'tw-live-warn' }, `Google 標示這裡「${closed}」，出發前請先確認。`) : null,
     h('div', { class: 'tw-live-grid' }, rating, address, hours),
     aiOrHint,
     original,
