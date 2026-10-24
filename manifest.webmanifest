@@ -1,0 +1,16 @@
+{
+  "name": "胖寶寶台灣行",
+  "short_name": "台灣行",
+  "description": "阿胖和寶寶的台灣地點庫：依地區瀏覽，各自標想去、去過。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#13264b",
+  "theme_color": "#13264b",
+  "icons": [
+    { "src": "img/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

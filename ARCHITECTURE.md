@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E、F 尚未開始）
+最後更新：2026-10-24（B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
 
 ## 一句話
 
@@ -30,7 +30,7 @@
 | A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得）暫存在 `data/staging/visited-marks.json`，待寫入 Firebase |
 | C 介面 | `css/*.css` | 已完成：設計變數、外殼、首頁、清單、標記樣式（`tokens.css`、`app.css`、`home.css`、`places.css`、`marks.css`），手機與電腦版、深淺色已驗證；E、F 模組上線時再補 `tw-inbox-`、`tw-trip-` 樣式 |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成並驗證（真實資料：522 筆地點皆有 `ll` 且落在台灣，兩人各 127 筆去過，點亮 10／22 縣市）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；樣式由 C 的 `css/home.css`、`places.css`、`marks.css` 提供；只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
-| E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |
+| E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 第一版已合併：收件匣頁、離線補送、Service Worker、加到主畫面、收件匣轉查詢清單與上架工具；`index.html`、`js/app.js` 各加了幾行接線（B 的檔案，已在 PR 說明） |
 | F 行程推薦 | `js/itinerary.js`、`data/itineraries/` | 未開始，導覽列不顯示 |
 
 ## 檔案與責任
@@ -56,7 +56,11 @@
 | `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、心得，寫入走 `sync.setMark`）、`markSummary`、`markCompare`、`statusOf`、`litCounties` | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
-| `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |
+| `js/inbox.js` | `#/inbox`：新增／修正兩種送件（寫 `/inbox`，≤ 500 字），每 30 秒輪詢 `/inbox` 與 `/places`（頁面隱藏時暫停），顯示處理狀態與「已查好、等併回」的地點；自己送的待處理項目可收回；離線送件先存 localStorage `twInboxQueue`，連上網路後補送。狀態：`new` 待處理、`done` 已上架、`dup` 已經有了、`skip` 不收錄 | E |
+| `sw.js`、`manifest.webmanifest`、`img/icons/` | Service Worker：快取名 `tw-v1`（圖磚 `tw-tiles-v1`，最多 400 張）；同網域檔案網路優先（3 秒逾時退回快取），離線也能開；Leaflet、字型、OSM 圖磚先用快取再背景更新；Firebase 與 Places API 不攔截。`SHELL` 列出要預先快取的檔案，新增同網域檔案要加進去。manifest 與圖示供加到主畫面（`start_url` 與 `scope` 用相對路徑，Pages 子路徑也能用） | E |
+| `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
+| `tools/merge-places.mjs` | 把 `lookup-places` 的結果併進 `data/places.json`（只收吻合的、pid 重複的略過、id 規則同 A），並印出要把收件匣標成 `done`／`dup` 的 id | E |
+| `css/inbox.css` | 收件匣的基本樣式（E 先放一份，只用 `tw-inbox-` class，C 可接手調整） | E（C 可改） |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
 | `scripts/validate.mjs` | 資料格式驗證（CI 守門員，契約檔） | B |
 | `scripts/fb-env.sh`、`scripts/snapshot-commit.sh` | workflow 共用：讀資料庫網址與密鑰、提交到 `snapshot` 分支 | B |
@@ -97,7 +101,13 @@
 
 ### 新增與修正地點
 - 初次匯入：Google 地圖清單先放進 `data/staging/import-list.json`（只有店名、分類、備註、歇業標記），由 `lookup-places` 向 Places API 查出座標、縣市、`pid`（Google 查不到座標時才用 OSM 或手動），A 確認後轉成統一格式寫進 `places.json`；「去過」紀錄同樣由 A 轉入。
-- 之後新增：網站的收件匣把連結或店名寫到 Firebase `/inbox`；排程工具查好資料後寫入 `/places`（網站輪詢後合併顯示）；Claude 定期把 `/places` 併回 `places.json`（走 PR）並清掉 Firebase 那份。
+- 之後新增：網站的收件匣把連結或店名寫到 Firebase `/inbox`。Claude 的處理流程（沒有新 workflow，沿用既有的）：
+  1. `read-firebase`（`inbox`）→ 從 `snapshot` 分支讀 `live/inbox.json`；
+  2. `node tools/inbox-to-list.mjs live/inbox.json data/staging/inbox-<日期>.json`，人工看過分類與店名；
+  3. `lookup-places`（`list` 填該檔）查座標、縣市、`pid`；
+  4. `node tools/merge-places.mjs <結果> <清單>` 併進 `places.json`，走 PR；
+  5. PR 合併後用 `write-data` 把對應收件匣的 `status` 改成 `done`／`dup`／`skip`。
+  `/places` 目前只有收件匣頁會讀來顯示「已查好、等併回」，還沒併進全站的地點列表。
 - 修正地點本身（分類、縣市、備註）：走收件匣的「修正」，由 Claude 確認後改 `places.json`；網站只能改自己的標記。
 - 歇業或搬遷：`status` 設為 `closed` 或 `moved`，保留紀錄但預設不顯示、不排進行程。
 
@@ -154,7 +164,7 @@
 - **資料庫不登入**：任何知道網址的人理論上能在規則允許的範圍內寫入；靠規則限制路徑與格式，並由每日快照還原。
 - **身分只是前端區分**：記在瀏覽器 localStorage，不是安全機制。
 - **公開資料**：repo 與網站公開，去過只記年月，不放電話、訂位代號與個人資訊。
-- **Places 資料不快取在 repo**：離線時看不到評分與營業時間。
+- **Places 資料不快取在 repo**：離線時看不到評分與營業時間；離線時標記寫入不會排隊，會回復並提示（收件匣則會排隊補送）。
 - **串流連線數上限**：新增即時路徑前先算。
 - **規則要手動貼**：`firebase-rules.json` 與主控台可能不同步，改規則時要確認 Howard 已貼上。
 

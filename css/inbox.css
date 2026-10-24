@@ -1,0 +1,24 @@
+/* 收件匣畫面。模組 E 先放一份基本樣式（只用 tw-inbox- 開頭的 class），C 之後可整份接手調整。 */
+.tw-inbox { max-width: 720px; margin: 0 auto; display: grid; gap: 10px; }
+.tw-inbox-title { margin: 0; font: 400 28px var(--f-display); }
+.tw-inbox-lead { margin: 0; color: var(--muted); }
+.tw-inbox-kinds { display: flex; gap: 8px; }
+.tw-inbox-kind { border: 1.5px solid var(--line); background: var(--card); color: var(--muted); border-radius: 99px; padding: 4px 16px; min-height: 36px; }
+.tw-inbox-kind.is-active { border-color: var(--ink); color: var(--ink); background: var(--gold); color: var(--gold-ink); }
+.tw-inbox-input { width: 100%; resize: vertical; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: var(--r-md); background: var(--card); }
+.tw-inbox-input:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
+.tw-inbox-actions { display: flex; justify-content: flex-end; }
+.tw-inbox-send { border: 0; background: var(--rail); color: #fff; border-radius: 99px; padding: 6px 26px; min-height: 40px; font-weight: 700; }
+.tw-inbox-send:disabled { opacity: .5; cursor: not-allowed; }
+.tw-inbox-hint { margin: 0; }
+.tw-inbox-sub { margin: 14px 0 0; font: 400 18px var(--f-display); }
+.tw-inbox-list { display: grid; gap: 8px; }
+.tw-inbox-item { background: var(--card); border: 1.5px solid var(--line); border-radius: var(--r-md); padding: 10px 14px; }
+.tw-inbox-item.is-pending { border-style: dashed; }
+.tw-inbox-text { margin: 0 0 6px; overflow-wrap: anywhere; white-space: pre-wrap; }
+.tw-inbox-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; color: var(--muted); font-size: 14px; }
+.tw-inbox-status { border-radius: 99px; padding: 0 10px; font-size: 13px; border: 1.5px solid var(--line); }
+.tw-inbox-status.is-new { color: var(--rail-ink); border-color: var(--rail); }
+.tw-inbox-status.is-done { color: var(--ok); border-color: var(--ok); }
+.tw-inbox-undo { margin-left: auto; border: 0; background: none; color: var(--blue); text-decoration: underline; min-height: 32px; }
+.tw-inbox-names { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
