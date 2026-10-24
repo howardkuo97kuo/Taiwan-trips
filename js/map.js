@@ -76,7 +76,8 @@ export async function mount(el, ctx) {
   const panelL = h('div', { class: 'tw-map-panel' });
   const mapBox = h('div', { class: 'tw-map-box' });
   const panelR = h('div', { class: 'tw-map-panel is-right' });
-  hero.append(panelL, mapBox, panelR);
+  const quickEl = h('div', { class: 'tw-map-quick' });
+  hero.append(panelL, mapBox, panelR, quickEl); // quickEl 用 CSS order 排到最前面，first-child 的版面規則才不會變
   const zoneBar = h('div', { class: 'tw-map-zones', role: 'group', 'aria-label': '大區' });
   const below = h('section', { class: 'tw-map-below', id: 'tw-map-below' });
   el.append(hero, zoneBar, below);
@@ -165,6 +166,21 @@ export async function mount(el, ctx) {
     const filled = counties.filter((c) => countIn(store, c.id) > 0).length;
     const bothAll = store.get('places').filter((p) => store.isVisible(p) && statusOf(store, p.id).apong.want && statusOf(store, p.id).baobao.want).length;
     const changed = prevCount !== null && prevCount !== lit.any.size;
+
+    // 快速選擇入口：還有幾個地點這個人沒表態（沒標想去、去過、不想去）
+    const mark = (id) => store.get('marks')[who]?.[id];
+    const left = who ? store.get('places').filter((p) => store.isVisible(p) && !mark(p.id)?.want && !mark(p.id)?.been && !mark(p.id)?.skip).length : 0;
+    clear(quickEl);
+    if (!who) {
+      quickEl.append(h('p', {}, h('b', {}, '想快速挑地點？'), ' 先選你是誰。'),
+        h('button', { type: 'button', class: 'tw-map-quick-go', onclick: () => document.querySelector('.tw-who-btn')?.click() }, '選身分'));
+    } else if (left > 0) {
+      quickEl.append(h('p', {}, h('b', {}, `${store.whoName(who)}，還有 ${left} 個地點沒選`), ' 一次一張，想去或不想去。'),
+        h('a', { class: 'tw-map-quick-go', href: '#/quick' }, '開始快速選擇'));
+    } else {
+      quickEl.append(h('p', {}, h('b', {}, `${store.whoName(who)}，所有地點都選過了`), ' 有新地點進來再來挑。'),
+        h('a', { class: 'tw-map-quick-go is-quiet', href: '#/quick' }, '看看選過的'));
+    }
 
     panelL.innerHTML = postmark(lit.any.size, `${intro ? 'is-slam' : ''} ${changed ? 'is-bump' : ''}`) +
       `<p class="tw-map-facts"><strong>${who ? `${esc(store.whoName(who))}，今天往哪站走？` : '今天往哪站走？'}</strong>` +
