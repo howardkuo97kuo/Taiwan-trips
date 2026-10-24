@@ -80,7 +80,7 @@ export function mount(el, ctx) {
     const rows = [...queued, ...(items ?? [])];
     clear(listBox);
     if (items === null && !queued.length) {
-      listBox.append(h('p', { class: loadError ? 'tw-empty' : 'tw-loading' }, loadError ? '讀不到收件匣（可能離線），稍後會再試。' : '載入中…'));
+      listBox.append(h('p', { class: loadError ? 'tw-empty' : 'tw-loading' }, loadError ? '讀不到送件紀錄（可能離線），稍後會再試。' : '載入中…'));
     } else if (!rows.length) {
       listBox.append(h('p', { class: 'tw-empty' }, '還沒有東西。貼一個想去的地方吧。'));
     } else {
@@ -167,7 +167,7 @@ export function mount(el, ctx) {
   const onOnline = () => { flush(); drawHint(); };
 
   el.append(h('section', { class: 'tw-inbox' },
-    h('h2', { class: 'tw-inbox-title' }, '收件匣'),
+    h('h2', { class: 'tw-inbox-title' }, '新增地點'),
     h('p', { class: 'tw-inbox-lead' }, '想加的地點、要修正的資料，丟進來就好。'),
     kindBox, input, h('div', { class: 'tw-inbox-actions' }, submit), hint,
     h('h3', { class: 'tw-inbox-sub' }, '送過的紀錄'), listBox, pubBox));

@@ -7,11 +7,11 @@ import * as prefs from './prefs.js';
 
 // 路由表：hash 第一段 → 模組與導覽。模組還沒做好（檔案不存在）時，畫面顯示「尚未完成」。
 const ROUTES = {
-  '': { name: 'home', module: './map.js', label: '🗺️ 地圖', nav: true },
+  '': { name: 'home', module: './map.js', label: '地圖', nav: true },
   r: { name: 'region', module: './places.js' }, // #/r/<regionId>
   p: { name: 'place', module: './places.js' }, // #/p/<placeId>
-  compare: { name: 'compare', module: './marks.js', label: '💞 兩人對照', nav: true },
-  inbox: { name: 'inbox', module: './inbox.js', label: '✉️ 新增地點', nav: true, optional: true },
+  compare: { name: 'compare', module: './marks.js', label: '兩人對照', nav: true },
+  inbox: { name: 'inbox', module: './inbox.js', label: '新增地點', nav: true, optional: true },
   trips: { name: 'trips', module: './itinerary.js', label: '行程', nav: true, optional: true },
 };
 
