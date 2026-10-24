@@ -90,7 +90,7 @@ const zhYM = (ym) => {
 };
 const stampSVG = (ym, place = '', again = false, seat = '', full = false) => {
   const col = zhYM(ym).map((c, i, a) => '<text x="25" y="' + (90 + (i - (a.length - 1) / 2) * 17) + '" text-anchor="middle" font-size="14" fill="#fff6dc">' + c + '</text>').join('');
-  return '<svg viewBox="0 0 400 180" aria-hidden="true"><defs><linearGradient id="tkp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9edcc"/><stop offset="1" stop-color="#ecd7a2"/></linearGradient><clipPath id="tkc"><path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z"/></clipPath></defs>'
+  return '<svg class="tk" viewBox="0 0 400 180" aria-hidden="true"><defs><linearGradient id="tkp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9edcc"/><stop offset="1" stop-color="#ecd7a2"/></linearGradient><clipPath id="tkc"><path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z"/></clipPath></defs>'
     + '<path d="M12 2H388a10 10 0 0 1 10 10V81a9 9 0 0 0 0 18V168a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V99a9 9 0 0 0 0-18V12A10 10 0 0 1 12 2Z" fill="url(#tkp)" stroke="#8a6a3c" stroke-width="2.5"/>'
     + '<rect clip-path="url(#tkc)" x="0" y="0" width="48" height="180" fill="#1f6f78"/>' + col
     + '<path d="M56 14V166" stroke="#8a6a3c" stroke-width="1.6" stroke-dasharray="4 5"/>'
