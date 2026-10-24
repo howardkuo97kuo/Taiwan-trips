@@ -1,0 +1,62 @@
+[
+ {
+  "i": 43,
+  "n": "ON TAP",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJuaugn8irQjQRGK9M9fzfO6c",
+   "name": "ON TAP",
+   "addr": "106臺北市大安區車層里忠孝東路四段216巷11弄21號",
+   "ll": [
+    25.0408963,
+    121.55393490000002
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=12050471505500090136&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 109,
+  "n": "T+T",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJZ0R6E8mrQjQR3LBJvDh6gwc",
+   "name": "T+T",
+   "addr": "105臺北市松山區中華里敦化北路165巷11號",
+   "ll": [
+    25.054830199999998,
+    121.5507135
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=541410764310294748&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台北市",
+   "region": "north-taipei"
+  },
+  "alts": [],
+  "ok": true
+ },
+ {
+  "i": 301,
+  "n": "MO",
+  "c": "美食",
+  "match": {
+   "pid": "ChIJhyshddR3bjQRaQ7_QWz2Y00",
+   "name": "MO",
+   "addr": "704臺南市北區北華里崇安街30號",
+   "ll": [
+    23.000148499999998,
+    120.2062456
+   ],
+   "business": "OPERATIONAL",
+   "gurl": "https://maps.google.com/?cid=5576571708438941289&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "county": "台南市",
+   "region": "south-tainan"
+  },
+  "alts": [],
+  "ok": true
+ }
+]
