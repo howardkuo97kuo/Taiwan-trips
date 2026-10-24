@@ -90,6 +90,7 @@ export function placeCard(ctx, p) {
   const county = findRegion(store.get('regions'), p.region)?.county?.n ?? '';
   const pair = s.apong.want && s.baobao.want;
   const fx = takeFx(p.id);
+  const hasMedia = !!(p.pid && ctx.config?.google?.placesKey);
   const name = (id) => store.whoName(id);
 
   const dot = (id, mine) => {
@@ -125,7 +126,7 @@ export function placeCard(ctx, p) {
     ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' 還沒標' : ''}`
     : '';
 
-  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}${me?.skip ? ' is-skipped' : ''}`, dataset: { pid: p.id } },
+  return h('article', { class: `tw-place-card${pair ? ' is-pair' : ''}${me?.skip ? ' is-skipped' : ''}${hasMedia ? ' has-media' : ''}`, dataset: { pid: p.id } },
     pair && h('span', { class: `tw-place-pair${fx.pair ? ' is-fresh' : ''}` }, '兩人都想去'),
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
       catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
@@ -141,7 +142,7 @@ export function placeCard(ctx, p) {
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')),
-    p.pid && ctx.config?.google?.placesKey && h('div', { class: 'tw-place-media' }, carousel(ctx, p, { card: true })),
+    hasMedia && h('div', { class: 'tw-place-media' }, carousel(ctx, p, { card: true })),
     googleBlock(ctx, p));
 }
 
