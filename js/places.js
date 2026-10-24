@@ -1,6 +1,7 @@
 // 地區瀏覽、篩選、地點詳情（路由 #/r/<regionId>、#/p/<placeId>）。模組 D。
 // 輸出 placeCard、listView、findRegion、inRegion 給 map.js 用。
 import { catIcon } from './icons.js';
+import { thumb, carousel } from './photos.js';
 import { markBar, markCompare, statusOf, quickMark, takeFx, likeOf } from './marks.js';
 
 // ── 地區工具 ──
@@ -116,6 +117,7 @@ export function placeCard(ctx, p) {
     h('a', { class: 'tw-place-stub', href: `#/p/${p.id}`, 'aria-hidden': 'true', tabindex: '-1' },
       catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
     h('div', { class: 'tw-place-mid' },
+      thumb(ctx, p),
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
       who && ghost && h('div', { class: 'tw-place-ghost' }, ghost),
@@ -283,11 +285,13 @@ function mountPlace(el, ctx) {
   drawCompare();
   drawBar();
   const live = liveBox(ctx, p);
+  const gallery = carousel(ctx, p);
 
   el.append(h('div', { class: 'tw-place-view' },
     h('nav', { class: 'tw-place-crumbs', 'aria-label': '路徑' },
       h('a', { href: '#/' }, '全台'),
       (found?.trail ?? []).flatMap((t) => [' › ', h('a', { href: `#/r/${t.id}` }, t.n)])),
+    gallery,
     h('h1', {}, p.n),
     store.isVisible(p) ? null : h('p', { class: 'tw-place-status' }, p.status === 'moved' ? '已搬遷' : '已歇業'),
     h('div', { class: 'tw-place-cats' }, cats.map((c) => h('span', { class: 'tw-place-cat' }, catIcon(c), c))),
@@ -307,7 +311,7 @@ function mountPlace(el, ctx) {
     }),
     store.subscribe('who', () => { drawBar(); drawCompare(); }),
   ];
-  return () => { offs.forEach((off) => off()); live.destroy?.(); };
+  return () => { offs.forEach((off) => off()); live.destroy?.(); gallery.destroy?.(); };
 }
 
 export function mount(el, ctx) {

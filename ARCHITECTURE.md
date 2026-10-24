@@ -55,11 +55,12 @@
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage` | D |
 | `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、喜歡程度 `like`、好吃 `good`、雷點 `avoid`、備註 `note`，寫入走 `sync.setMark`）、`markSummary`、`markCompare`（兩人並排顯示全部欄位）、`LIKES`／`likeOf`、`statusOf`、`litCounties`；地點卡片上顯示兩人的喜歡程度 | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
+| `js/photos.js`、`css/photos.css` | 地點照片（Howard 2026-10-24 要求）：`google.placesKey` 有填且地點有 `pid` 時，Places (New) 即時查 `photos`，卡片縮圖進入畫面才載（同時最多 4 個請求）、詳情頁橫向輪播（最多 6 張）並顯示作者；照片參照只放 `sessionStorage` 鍵 `tw-photos:<pid>`，不存檔；沒有金鑰或沒圖就留分類圖示。輸出 `thumb`、`carousel` | 新增（D 的 `places.js` 呼叫） |
 | `js/icons.js` | 分類圖示（`catIcon(分類)` 回傳內嵌 SVG，顏色跟文字）；`places.js` 的分類按鈕、車票、詳情使用 | C |
 | `css/fx.css` | 圖示尺寸、導覽圖示（CSS mask）、換頁與車票進場、按鈕回饋、載入／空狀態插圖；動態受 `app.css` 的減少動態規則管轄 | C |
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js` | `#/inbox`：新增／修正兩種送件（寫 `/inbox`，≤ 500 字），每 30 秒輪詢 `/inbox` 與 `/places`（頁面隱藏時暫停），顯示處理狀態與「已查好、等併回」的地點；自己送的待處理項目可收回；離線送件先存 localStorage `twInboxQueue`，連上網路後補送。狀態：`new` 待處理、`done` 已上架、`dup` 已經有了、`skip` 不收錄 | E |
-| `sw.js`、`manifest.webmanifest`、`img/icons/` | Service Worker：快取名 `tw-v1`（圖磚 `tw-tiles-v1`，最多 400 張）；同網域檔案網路優先（3 秒逾時退回快取），離線也能開；Leaflet、字型、OSM 圖磚先用快取再背景更新；Firebase 與 Places API 不攔截。`SHELL` 列出要預先快取的檔案，新增同網域檔案要加進去。manifest 與圖示供加到主畫面（`start_url` 與 `scope` 用相對路徑，Pages 子路徑也能用） | E |
+| `sw.js`、`manifest.webmanifest`、`img/icons/` | Service Worker：快取名 `tw-v2`（圖磚 `tw-tiles-v1`，最多 400 張）；同網域檔案網路優先（3 秒逾時退回快取），離線也能開；Leaflet、字型、OSM 圖磚先用快取再背景更新；Firebase 與 Places API 不攔截。`SHELL` 列出要預先快取的檔案，新增同網域檔案要加進去。manifest 與圖示供加到主畫面（`start_url` 與 `scope` 用相對路徑，Pages 子路徑也能用） | E |
 | `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
 | `tools/merge-places.mjs` | 把 `lookup-places` 的結果併進 `data/places.json`（只收吻合的、pid 重複的略過、id 規則同 A），並印出要把收件匣標成 `done`／`dup` 的 id | E |
 | `css/inbox.css` | 收件匣的基本樣式（E 先放一份，只用 `tw-inbox-` class，C 可接手調整） | E（C 可改） |
@@ -158,7 +159,7 @@
 | Firebase 資料庫網址 | `data/config.json` 的 `firebase.dbUrl` | 公開 |
 | Firebase 密鑰 | GitHub Secret `FIREBASE_SECRET` | 由 Howard 自己放進 Settings；不 commit、不印出、不貼聊天 |
 | Firebase 規則 | repo 的 `firebase-rules.json` 存檔，主控台才是生效的那份 | 改了要由 Howard 手動貼上 |
-| Google Places 金鑰（瀏覽器用） | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；目前尚未填 |
+| Google Places 金鑰（瀏覽器用） | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；目前尚未填（地點照片也用它） |
 | Google Places 金鑰（匯入工具用） | GitHub Secret `GOOGLE_PLACES_KEY` | 只給 `lookup-places` workflow 用；由 Howard 自己放進 Settings，不 commit、不印出、不貼聊天 |
 
 ## 已知限制與取捨
