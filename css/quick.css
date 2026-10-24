@@ -31,3 +31,18 @@
 .tw-quick-skipped li { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .tw-quick-skipped li button { border: 0; background: none; color: var(--blue); min-height: 40px; }
 @media (prefers-reduced-motion: reduce) { .tw-quick-card { transition: none; } }
+
+/* 快速選擇卡片：照片輪播在上、資訊在下 */
+.tw-quick-card { max-width: 580px; }
+.tw-quick-actions { max-width: 580px; }
+.tw-quick-media .tw-gallery.is-card .tw-gallery-item, .tw-quick-media .tw-gallery.is-card .tw-gallery-empty { height: clamp(170px, 26vw, 230px); }
+.tw-quick-card .tw-place-g { border-top: 0; padding: 0; }
+.tw-quick-card .tw-place-sumslot { margin: 0; }
+.tw-quick-today { margin: 0; font-size: 15px; color: var(--ink); }
+.tw-quick-revs { display: grid; gap: 8px; }
+.tw-quick-rev { margin: 0; padding: 8px 12px; border-left: 3px solid var(--line); background: color-mix(in srgb, var(--paper) 60%, transparent); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.tw-quick-rev span { font-size: 13px; color: var(--muted); }
+.tw-quick-rev p { margin: 2px 0 0; font-size: 14px; }
+/* 資訊變多後卡片較高：按鈕固定在畫面下緣，不用捲到卡片底 */
+.tw-quick-actions { position: sticky; bottom: calc(var(--nav-h, 0px) + 10px); z-index: 5; padding: 8px 10px; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(8px); border-radius: var(--r-md, 14px); }
+.tw-quick-rev p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }

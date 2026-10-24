@@ -63,11 +63,14 @@ button:active:not(:disabled):not(.tw-mark-stamp), .tw-nav-item:active, .tw-place
 .tw-station-s { font: 700 13px/1 var(--f-display); padding: 10px 12px; background: var(--rail); color: var(--rail-ink, #fff); display: grid; place-items: center; }
 @keyframes tw-station { 0% { transform: translateX(110%); } 22%, 72% { transform: translateX(0); } 100% { transform: translateX(110%); } }
 
-/* ── 頁首鐵軌條：一列小火車從左開到右（只跑一次） ── */
-.tw-air { position: relative; z-index: 40; clip-path: inset(-40px 0 -40px 0); }
-.tw-air::after { content: ""; position: absolute; top: 0; left: 0; width: 288px; height: 30px; z-index: 2; pointer-events: none;
-  background: url("../img/train-cut.webp") 0 0 / 288px 30px no-repeat; transform: translateX(-320px); animation: tw-train 14s linear 1.2s 1 both; }
-@keyframes tw-train { from { transform: translateX(-320px); } to { transform: translateX(100vw); } }
+/* ── 導覽列下方的細鐵軌：阿里山小火車開過一次（不經過紅白藍郵戳條） ── */
+.tw-rail { order: 1; position: relative; width: 100%; max-width: var(--wrap); margin-inline: auto; height: 26px; overflow: hidden; pointer-events: none; }
+.tw-rail::before { content: ""; position: absolute; left: 28px; right: 28px; bottom: 2px; height: 4px; opacity: .55;
+  background: linear-gradient(var(--ink), var(--ink)) 0 0 / 100% 1.5px no-repeat, repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 10px) 0 2px / 100% 2px no-repeat; }
+.tw-rail::after { content: ""; position: absolute; left: 0; bottom: 3px; width: 230px; height: 24px; background: url("../img/train-cut.webp") 0 0 / 230px 24px no-repeat;
+  transform: translateX(-240px); animation: tw-train 14s linear 1.2s 1 both; }
+@keyframes tw-train { from { transform: translateX(-240px); } to { transform: translateX(110vw); } }
+@media (max-width: 760px) { .tw-rail::before { left: 14px; right: 14px; } }
 
 /* ── 車票紙張質感：淡紙紋、分類色條 ── */
 .tw-place-card { background-image: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--ink) 3%, transparent) 3px 4px); }
