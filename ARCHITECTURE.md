@@ -2,7 +2,7 @@
 
 胖寶寶台灣行的程式怎麼分層、資料怎麼流動、哪些地方有限制。**資料格式與產品決策以 [`docs/SPEC.md`](docs/SPEC.md) 為準**（那份是契約），模組介面見 [`docs/MODULES.md`](docs/MODULES.md)，怎麼跟 Howard 合作與固定值見 [`CLAUDE.md`](CLAUDE.md)。本檔描述「現在的樣子」，每次結構有變就一起更新（規則見最後一節）。行號只是指引，請用函式名稱搜尋。
 
-最後更新：2026-10-24（直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
+最後更新：2026-10-24（收件匣規則改為只能新增；文件對齊現況；直覺性調整：導覽加圖示並把「收件匣」顯示為「新增地點」，身分鈕顯示「我是○○」，首次進站有三步說明；路由與檔案不變；B、C、D 已合併：樣式「環島郵路」完成，風格小樣已移除，已用真實標記資料驗證；A 資料進行中；E 收件匣與離線已合併；F 尚未開始）
 
 ## 一句話
 
@@ -118,8 +118,8 @@
 
 | 路徑 | 誰寫 | 內容 |
 | --- | --- | --- |
-| `/marks/{apong\|baobao}/{placeId}` | 網站（各寫自己那條）、Claude（write-data） | `{want?, been?, again?, ym?, stars?, note?, ts}` |
-| `/inbox/{id}` | 網站 | `{text, by, ts, status}` |
+| `/marks/{apong\|baobao}/{placeId}` | 網站（各寫自己那條）、Claude（write-data） | `{want?, been?, again?, ym?, stars?, like?, good?, avoid?, note?, ts}` |
+| `/inbox/{id}` | 網站（只能新增，或收回狀態仍是 `new` 的項目；不能覆寫）、Claude（write-data 改狀態） | `{text, by, ts, status}` |
 | `/places`、`/removed` | 只有排程工具與 write-data | 新增的地點、被移除的地點（定期併回 `places.json`） |
 | `/trips/` | 無 | 預留，規則不開放 |
 
@@ -159,7 +159,7 @@
 | Firebase 資料庫網址 | `data/config.json` 的 `firebase.dbUrl` | 公開 |
 | Firebase 密鑰 | GitHub Secret `FIREBASE_SECRET` | 由 Howard 自己放進 Settings；不 commit、不印出、不貼聊天 |
 | Firebase 規則 | repo 的 `firebase-rules.json` 存檔，主控台才是生效的那份 | 改了要由 Howard 手動貼上 |
-| Google Places 金鑰（瀏覽器用） | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；目前尚未填（地點照片也用它） |
+| Google Places 金鑰（瀏覽器用） | `data/config.json` 的 `google.placesKey`（公開） | 靠 Google Cloud 限制 API 與來源網址保護；已填並運作（評分、營業時間、地點照片都用它）；建議在 Google Cloud 設每日配額與預算警示 |
 | Google Places 金鑰（匯入工具用） | GitHub Secret `GOOGLE_PLACES_KEY` | 只給 `lookup-places` workflow 用；由 Howard 自己放進 Settings，不 commit、不印出、不貼聊天 |
 
 ## 已知限制與取捨

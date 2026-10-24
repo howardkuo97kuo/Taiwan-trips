@@ -52,7 +52,7 @@ export function mount(el, ctx) {
 | `sync.marksOf(placeId)` | `{apong, baobao}` 兩人在這個地點的標記 |
 | `sync.fbGet / fbPut / fbPush / fbDelete(path, …)` | 低階 REST，給 E 的收件匣用（`/inbox/…`）。規則外的路徑會被 Firebase 拒絕 |
 
-標記格式：`{want?, been?, again?, ym?('YYYY-MM'), stars?(1–5 整數), note?(≤200 字), ts}`。兩條串流（兩人的 `/marks`）由 B 開，D 不要自己開串流；`/places`、`/inbox` 用輪詢（E 自行處理）。
+標記格式：`{want?, been?, again?, ym?('YYYY-MM'), stars?(1–5 整數), like?('love'|'ok'|'meh'), good?(≤300 字), avoid?(≤300 字), note?(≤200 字), ts}`。兩條串流（兩人的 `/marks`）由 B 開，D 不要自己開串流；`/places`、`/inbox` 用輪詢（E 自行處理）。
 
 ## 外殼的 class 與結構（給 C）
 
