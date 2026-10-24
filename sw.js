@@ -2,7 +2,7 @@
 // 同網域的頁面、程式、資料：網路優先（3 秒沒回應就用快取），離線時照樣打得開；
 // 地圖圖磚與外部函式庫、字型：先用快取、背景更新，圖磚最多留 TILE_MAX 張；
 // Firebase 與 Places API 一律不攔截（標記與評分要即時，離線時的標記由 sync.js 處理）。
-const VERSION = 'tw-v3';
+const VERSION = 'tw-v4';
 const TILES = 'tw-tiles-v1';
 const TILE_MAX = 400;
 const NET_TIMEOUT = 3000;
@@ -67,7 +67,8 @@ const withTimeout = (p, ms) => new Promise((ok, no) => {
 async function networkFirst(req) {
   const cache = await caches.open(VERSION);
   try {
-    const res = await withTimeout(fetch(req), NET_TIMEOUT);
+    // 繞過瀏覽器 HTTP 快取（Pages 預設 10 分鐘），改版後馬上拿到新檔
+    const res = await withTimeout(fetch(req.mode === 'navigate' ? req : new Request(req, { cache: 'no-cache' })), NET_TIMEOUT);
     if (res.ok) cache.put(req, res.clone());
     return res;
   } catch (err) {
