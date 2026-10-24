@@ -1,7 +1,7 @@
 // 地區瀏覽、篩選、地點詳情（路由 #/r/<regionId>、#/p/<placeId>）。模組 D。
 // 輸出 placeCard、listView、findRegion、inRegion 給 map.js 用。
 import { catIcon } from './icons.js';
-import { markBar, markCompare, statusOf, quickMark, takeFx } from './marks.js';
+import { markBar, markCompare, statusOf, quickMark, takeFx, likeOf } from './marks.js';
 
 // ── 地區工具 ──
 // 回傳 { level:'zone'|'county'|'district', node, zone, county, trail:[{id,n}] }；找不到回 null
@@ -102,6 +102,11 @@ export function placeCard(ctx, p) {
   if (stamped) stampBtn.innerHTML = stampSVG(beenMark?.ym);
 
   const ghostBits = (id, m) => [name(id), m.want && '想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
+  // 卡片上簡短顯示兩人的喜歡程度（只有去過且有填才出現）
+  const likeTags = ['apong', 'baobao'].map((id) => {
+    const lk = likeOf(s[id].mark?.like);
+    return lk && h('span', { class: `tw-place-like is-${lk.id}`, title: `${name(id)}：${lk.label}` }, `${lk.icon} ${name(id)}`);
+  }).filter(Boolean);
   const ghost = who
     ? `${ghostBits(other, ot)}${!ot.want && !ot.been ? ' 還沒標' : ''}`
     : '';
@@ -113,7 +118,8 @@ export function placeCard(ctx, p) {
     h('div', { class: 'tw-place-mid' },
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
-      who && ghost && h('div', { class: 'tw-place-ghost' }, ghost)),
+      who && ghost && h('div', { class: 'tw-place-ghost' }, ghost),
+      likeTags.length > 0 && h('div', { class: 'tw-place-likes' }, likeTags)),
     h('div', { class: 'tw-mark-want', role: 'group', 'aria-label': `${p.n}的想去` }, h('div', { class: 'tw-mark-wrow' }, wantRow), h('span', { class: 'tw-mark-wl' }, '標想去')),
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
       stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',

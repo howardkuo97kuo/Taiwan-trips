@@ -71,3 +71,14 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-mark-lit-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .tw-mark-lit-chip { border: 2px dashed var(--line); border-radius: 99px; padding: 0 14px; color: var(--muted); text-decoration: none; min-height: 34px; display: inline-flex; align-items: center; }
 .tw-mark-lit-chip.is-lit { border: 2px solid var(--stamp); border-style: double; border-width: 3px; background: var(--stamp-soft); color: var(--stamp); font-weight: 700; }
+
+/* ── 喜歡程度、好吃與雷點 ── */
+.tw-mark-likes { display: flex; flex-wrap: wrap; gap: 8px; }
+.tw-mark-like { border: 2px solid var(--ink); background: var(--card); border-radius: var(--r-sm); padding: 6px 14px; min-height: 44px; font-size: 16px; transition: background .2s, color .2s; }
+.tw-mark-like.is-on { background: var(--ink); color: var(--paper); }
+.tw-mark-like.is-love.is-on { background: var(--stamp); border-color: var(--stamp); color: #fff; }
+.tw-mark-field { display: grid; gap: 4px; font-size: 14px; color: var(--muted); }
+.tw-mark-field .tw-mark-note { font: inherit; font-size: 16px; color: var(--ink); }
+.tw-mark-good, .tw-mark-avoid { font-size: 14px; padding: 6px 10px; border-radius: var(--r-sm); white-space: pre-wrap; overflow-wrap: anywhere; }
+.tw-mark-good { background: color-mix(in srgb, var(--gold) 22%, var(--card)); }
+.tw-mark-avoid { background: var(--stamp-soft); }
