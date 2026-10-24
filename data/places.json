@@ -5954,5 +5954,1917 @@
   "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJhyshddR3bjQRaQ7_QWz2Y00",
   "src": "清單",
   "llsrc": "google"
+ },
+ {
+  "id": "p1aba931ab6",
+  "n": "Taïrroir 態芮",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山区金泰里乐群三路299號6樓",
+  "ll": [
+   25.08278,
+   121.559177
+  ],
+  "pid": "ChIJIduw3BKsQjQR3Gkz01ZqB8s",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJIduw3BKsQjQR3Gkz01ZqB8s",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pddb8c0a1a7",
+  "n": "裘莉早餐屋",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區西湖里內湖路一段343之1號343之1號",
+  "ll": [
+   25.082258,
+   121.568963
+  ],
+  "pid": "ChIJoaSwGG-sQjQR6ROy6p_Rp8A",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJoaSwGG-sQjQR6ROy6p_Rp8A",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p1a8165ffa3",
+  "n": "心泰原創泰國料理-敦南店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區義安里敦化南路二段81巷47號",
+  "ll": [
+   25.030075,
+   121.550581
+  ],
+  "pid": "ChIJbzssLs2rQjQRyazDexzOAr8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJbzssLs2rQjQRyazDexzOAr8",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pfa78e50be8",
+  "n": "葛莉莎披薩 Gloriosa Pizza",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港墘里江南街107巷8號",
+  "ll": [
+   25.076397,
+   121.576882
+  ],
+  "pid": "ChIJSbJCOWutQjQRtummm5ilTuk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJSbJCOWutQjQRtummm5ilTuk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pdfdc2598f0",
+  "n": "南川麵館",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市新店區百和里中正路336號",
+  "ll": [
+   24.975096,
+   121.536748
+  ],
+  "pid": "ChIJv9rq-R0CaDQRLiYwx1ha0-A",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJv9rq-R0CaDQRLiYwx1ha0-A",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p5852ed4e33",
+  "n": "Peter's Hut",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市新店區美城里華城路6-1號",
+  "ll": [
+   24.960531,
+   121.530015
+  ],
+  "pid": "ChIJy-uk8yUCaDQREWJdtS83WrU",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJy-uk8yUCaDQREWJdtS83WrU",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p5c6458ab9f",
+  "n": "Des Glaneuses Bakery & Kitchen",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市信義區三張里莊敬路391巷5號",
+  "ll": [
+   25.028376,
+   121.565695
+  ],
+  "pid": "ChIJ_-r2CbqrQjQRzbnLWtgJfdc",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ_-r2CbqrQjQRzbnLWtgJfdc",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p7c27f49d1f",
+  "n": "小酌之家",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山區新庄里吉林路420號",
+  "ll": [
+   25.065931,
+   121.530315
+  ],
+  "pid": "ChIJPczFdPTQDRQR7szVg5HOzhI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJPczFdPTQDRQR7szVg5HOzhI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p6404ef69d2",
+  "n": "21茶坊",
+  "c": "咖啡甜點",
+  "region": "east-yilan",
+  "a": "宜蘭縣羅東鎮賢文里中華路37-9號",
+  "ll": [
+   24.677354,
+   121.766667
+  ],
+  "pid": "ChIJ9b3Lcn7mZzQR_drqX0p-vEs",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ9b3Lcn7mZzQR_drqX0p-vEs",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p99d169f891",
+  "n": "羅東雞之房桶仔雞烤雞專賣店",
+  "c": "美食",
+  "region": "east-yilan",
+  "a": "宜蘭縣羅東鎮民權路241號",
+  "ll": [
+   24.676952,
+   121.764014
+  ],
+  "pid": "ChIJZRze0n_mZzQRQwFOkaTGyXY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJZRze0n_mZzQRQwFOkaTGyXY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc22851613c",
+  "n": "北門綠豆沙牛乳大王-羅東店",
+  "c": "咖啡甜點",
+  "region": "east-yilan",
+  "a": "宜蘭縣羅東鎮信義里中正北路179號",
+  "ll": [
+   24.684312,
+   121.771154
+  ],
+  "pid": "ChIJnVJvG5vlZzQRvqThmnxQ1yg",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJnVJvG5vlZzQRvqThmnxQ1yg",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "pc96a01883e",
+  "n": "暖嶼 Warm Island Villa",
+  "c": "住宿",
+  "region": "east-yilan",
+  "a": "宜蘭縣三星鄉大隱村大埔二路402號",
+  "ll": [
+   24.673158,
+   121.722291
+  ],
+  "pid": "ChIJyWAbbyvnZzQRdG5XJmmNI_U",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJyWAbbyvnZzQRdG5XJmmNI_U",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p12a6a1b823",
+  "n": "秘醬滷味 宜蘭羅東店",
+  "c": "小吃夜市",
+  "region": "east-yilan",
+  "a": "宜蘭縣羅東鎮集祥里公正街57號1樓",
+  "ll": [
+   24.678013,
+   121.768569
+  ],
+  "pid": "ChIJ91lo4R_nZzQRD4gItNupdJI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ91lo4R_nZzQRD4gItNupdJI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pb527d8ba96",
+  "n": "阿財牛肉湯",
+  "c": "美食",
+  "region": "south-tainan",
+  "a": "台南市安平區天妃里古堡街5號",
+  "ll": [
+   22.999476,
+   120.161475
+  ],
+  "pid": "ChIJv9hbKx12bjQRJmLpqLWzqsk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJv9hbKx12bjQRJmLpqLWzqsk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pfcd848698f",
+  "n": "台中大麵羹",
+  "c": "小吃夜市",
+  "region": "central-taichung",
+  "a": "台中市中區公園路16號",
+  "ll": [
+   24.144926,
+   120.681492
+  ],
+  "pid": "ChIJiXm3Q2w9aTQR3XZn6Y-GemE",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJiXm3Q2w9aTQR3XZn6Y-GemE",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p7091b6007b",
+  "n": "永德堂薏仁牛奶",
+  "c": "咖啡甜點",
+  "region": "central-taichung",
+  "a": "台中市南區城隍里忠孝路136號",
+  "ll": [
+   24.129283,
+   120.681493
+  ],
+  "pid": "ChIJs6b7WRc9aTQRrAi8vbyNRmc",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJs6b7WRc9aTQRrAi8vbyNRmc",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pbfb67aaa5c",
+  "n": "943傳統整復推拿「久適鬆」",
+  "c": "景點",
+  "region": "central-taichung",
+  "a": "台中市東區振興里立德街165號",
+  "ll": [
+   24.131455,
+   120.688241
+  ],
+  "pid": "ChIJKY3UUpo9aTQR6cEDLlT10Kw",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJKY3UUpo9aTQR6cEDLlT10Kw",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p295b7cda4d",
+  "n": "味泉米糕",
+  "c": "小吃夜市",
+  "region": "central-taichung",
+  "a": "台中市南區城隍里忠孝路151號",
+  "ll": [
+   24.129464,
+   120.6814
+  ],
+  "pid": "ChIJDc7JQxo9aTQRVuCKHcOH4j4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJDc7JQxo9aTQRVuCKHcOH4j4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p07b2302807",
+  "n": "山風藍 草悟PARK 2",
+  "c": "咖啡甜點",
+  "region": "central-taichung",
+  "a": "台中市西區民龍里英才路534號1F",
+  "ll": [
+   24.14943,
+   120.665065
+  ],
+  "pid": "ChIJUZER9qI9aTQRzHJjsK9U5Go",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJUZER9qI9aTQRzHJjsK9U5Go",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p8f2317ae01",
+  "n": "繡球麵店",
+  "c": "美食",
+  "region": "central-taichung",
+  "a": "台中市西區中興里中興街102號",
+  "ll": [
+   24.147651,
+   120.663264
+  ],
+  "pid": "ChIJ73Fo2iY9aTQRBn3Wjl_mi9U",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ73Fo2iY9aTQRBn3Wjl_mi9U",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pfcd0e3f989",
+  "n": "豐味綠豆沙牛乳專門店一中支店",
+  "c": "咖啡甜點",
+  "region": "central-taichung",
+  "a": "台中市北區新興里太平路63巷1號",
+  "ll": [
+   24.147545,
+   120.684357
+  ],
+  "pid": "ChIJFefhQGk9aTQR1jW1jHaDCVk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJFefhQGk9aTQR1jW1jHaDCVk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pbe3a42e30e",
+  "n": "21臭豆腐",
+  "c": "小吃夜市",
+  "region": "central-taichung",
+  "a": "台中市北區新興里一中街21號",
+  "ll": [
+   24.147232,
+   120.684116
+  ],
+  "pid": "ChIJXb02D-c9aTQRKbJiHzxLNh4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJXb02D-c9aTQRKbJiHzxLNh4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p0d309cbfa5",
+  "n": "劍潭榮宗麵線",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市士林區福華里承德路四段40巷109號",
+  "ll": [
+   25.081667,
+   121.520556
+  ],
+  "pid": "ChIJL5FCnbOuQjQRq1mSA-rTXOU",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJL5FCnbOuQjQRq1mSA-rTXOU",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p7d99a5c868",
+  "n": "澤 日本料理 Sawa",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市士林區後港里大南路248號B1",
+  "ll": [
+   25.088658,
+   121.520384
+  ],
+  "pid": "ChIJrebBtbOuQjQRbkSo7owLB9c",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJrebBtbOuQjQRbkSo7owLB9c",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p3da5e84fb5",
+  "n": "SALT&STONE LaLaport 南港餐廳",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市南港區三重里經貿二路131號1樓",
+  "ll": [
+   25.059262,
+   121.617544
+  ],
+  "pid": "ChIJO1lQbwCtQjQRHSxoPz3smt0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJO1lQbwCtQjQRHSxoPz3smt0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p34421b0d2e",
+  "n": "六必居潮州一品沙鍋粥 (民權店)",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市板橋區福丘里民權路3號",
+  "ll": [
+   25.010001,
+   121.462874
+  ],
+  "pid": "ChIJNZKIdx6oQjQRdPECsfSu_Rs",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJNZKIdx6oQjQRdPECsfSu_Rs",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p3329703ebf",
+  "n": "大媽泡芙",
+  "c": "咖啡甜點",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區北門里興中街165號",
+  "ll": [
+   23.482704,
+   120.449981
+  ],
+  "pid": "ChIJs-jmLwCVbjQR9_CRkMJcWLg",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJs-jmLwCVbjQR9_CRkMJcWLg",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc99968eb76",
+  "n": "光華愛玉",
+  "c": "咖啡甜點",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區民族里光華路47號",
+  "ll": [
+   23.477521,
+   120.453757
+  ],
+  "pid": "ChIJNV88xTaUbjQRIEzE7FaJE8E",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJNV88xTaUbjQRIEzE7FaJE8E",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p94270352de",
+  "n": "Ponpie澎派 板橋店",
+  "c": "咖啡甜點",
+  "region": "north-newtaipei",
+  "a": "新北市板橋區民安里民權路202巷4弄1號",
+  "ll": [
+   25.014166,
+   121.45954
+  ],
+  "pid": "ChIJNyazfhuoQjQRhV4etrTXSNw",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJNyazfhuoQjQRhV4etrTXSNw",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pa9bb1361ac",
+  "n": "義爸爸披薩",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市板橋區民安里公館街62號",
+  "ll": [
+   25.014064,
+   121.460336
+  ],
+  "pid": "ChIJKVoGWeCpQjQR-QcKJiUHoNc",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJKVoGWeCpQjQR-QcKJiUHoNc",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf0a0f3d5b2",
+  "n": "崇文錦魯麵",
+  "c": "美食",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區豐年里崇文街107號",
+  "ll": [
+   23.472,
+   120.453467
+  ],
+  "pid": "ChIJ4YXCMzqUbjQRHnPlORaSFOo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ4YXCMzqUbjQRHnPlORaSFOo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p37113a341e",
+  "n": "林聰明沙鍋魚頭",
+  "c": "美食",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區中央里中正路361號",
+  "ll": [
+   23.478773,
+   120.450253
+  ],
+  "pid": "ChIJec9IdTGUbjQR3flv4mZlLV0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJec9IdTGUbjQR3flv4mZlLV0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pa2702ecb7b",
+  "n": "朵朵",
+  "c": "咖啡甜點",
+  "region": "south-chiayi-city",
+  "a": "嘉義市西區番社里中山路454號",
+  "ll": [
+   23.47956,
+   120.443937
+  ],
+  "pid": "ChIJpxJZMS-UbjQRYY2NJipheO0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJpxJZMS-UbjQRYY2NJipheO0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p516868508d",
+  "n": "阿溪雞肉飯",
+  "c": "小吃夜市",
+  "region": "south-chiayi-city",
+  "a": "嘉義市西區培元里仁愛路356號",
+  "ll": [
+   23.472542,
+   120.442638
+  ],
+  "pid": "ChIJjQ90PiSUbjQRjCMx3C3Pjx0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJjQ90PiSUbjQRjCMx3C3Pjx0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p417d44d19e",
+  "n": "真記桃城雞排",
+  "c": "小吃夜市",
+  "region": "south-chiayi-city",
+  "a": "嘉義市西區書院里中正路698號",
+  "ll": [
+   23.478614,
+   120.442931
+  ],
+  "pid": "ChIJgyQGIi-UbjQRxhuPqBm0OTg",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJgyQGIi-UbjQRxhuPqBm0OTg",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "p0e782ff42e",
+  "n": "大腕燒肉專門店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山区成功里敬业二路199號5樓",
+  "ll": [
+   25.084409,
+   121.554211
+  ],
+  "pid": "ChIJqX0G4sSrQjQRYjGrIB6PAcI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJqX0G4sSrQjQRYjGrIB6PAcI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p0596e3b54e",
+  "n": "糜家莊潮式砂鍋粥",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山區中庄里吉林路226號",
+  "ll": [
+   25.059116,
+   121.530163
+  ],
+  "pid": "ChIJt2N2OVypQjQRkjce1t7AjyQ",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJt2N2OVypQjQRkjce1t7AjyQ",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p635fe97e6f",
+  "n": "双生綠豆沙牛奶",
+  "c": "咖啡甜點",
+  "region": "south-tainan",
+  "a": "台南市中西區南美里民族路二段281號",
+  "ll": [
+   22.996413,
+   120.203494
+  ],
+  "pid": "ChIJP0eOi2F2bjQRpFKjnUKvoyA",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJP0eOi2F2bjQRpFKjnUKvoyA",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p44d4467f4f",
+  "n": "金烤盃（寵物友善餐廳）",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港墘里江南街96巷7號",
+  "ll": [
+   25.077397,
+   121.576591
+  ],
+  "pid": "ChIJAVI1ezutQjQR7oWOrbUvPOg",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJAVI1ezutQjQR7oWOrbUvPOg",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "p25281805ab",
+  "n": "游壽司麗水店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區永康里麗水街7巷7號",
+  "ll": [
+   25.030981,
+   121.529095
+  ],
+  "pid": "ChIJy6vPnYOpQjQROLEuho5E-Fk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJy6vPnYOpQjQROLEuho5E-Fk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pd6f1bc94b4",
+  "n": "閃動格子CyberCube公館體驗店",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市中正區文盛里羅斯福路三段316巷14號",
+  "ll": [
+   25.015511,
+   121.532341
+  ],
+  "pid": "ChIJi9qYcoWpQjQRBaVj7wy4xWo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJi9qYcoWpQjQRBaVj7wy4xWo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p237c3945cb",
+  "n": "Old Bridge 義式冰淇淋",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市中山區金泰里樂群三路200號3樓",
+  "ll": [
+   25.082729,
+   121.557216
+  ],
+  "pid": "ChIJPYXDk6ytQjQREIC4TLoadR0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJPYXDk6ytQjQREIC4TLoadR0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p4d274137c2",
+  "n": "華漾DIM SUM 忠泰樂生活店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山區樂群三路200號5樓",
+  "ll": [
+   25.082096,
+   121.557096
+  ],
+  "pid": "ChIJp3UodmWtQjQR9hAjKu4ZKxo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJp3UodmWtQjQR9hAjKu4ZKxo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p8fd355b709",
+  "n": "潮州滷味 大直總店",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市中山區大直里北安路595巷20弄1號",
+  "ll": [
+   25.082041,
+   121.547615
+  ],
+  "pid": "ChIJdYI8XQWsQjQROPfHsDGicac",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJdYI8XQWsQjQROPfHsDGicac",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p6be6bd627c",
+  "n": "泰心禾泰式spa按摩港墘1館",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市內湖區港富里港墘路103號",
+  "ll": [
+   25.08016,
+   121.577672
+  ],
+  "pid": "ChIJW4zyx4itQjQRdSDK932HYaU",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJW4zyx4itQjQRdSDK932HYaU",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p8ab2e3fd0e",
+  "n": "Takeout burger & cafe 內湖店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港墘里洲子街55號1樓",
+  "ll": [
+   25.079542,
+   121.573668
+  ],
+  "pid": "ChIJH0HPEeOtQjQR1GUkjTCP_dk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJH0HPEeOtQjQR1GUkjTCP_dk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pe8db4700fe",
+  "n": "搖滾牛冰淇淋專賣店",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市大安區福住里永康街51號",
+  "ll": [
+   25.030035,
+   121.5296
+  ],
+  "pid": "ChIJV_fXY6ICaDQRfDZ8vG19RnU",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJV_fXY6ICaDQRfDZ8vG19RnU",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p6a74e72c75",
+  "n": "老鄧Lao Deng1949",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區福住里信義路二段198巷4號",
+  "ll": [
+   25.033253,
+   121.530195
+  ],
+  "pid": "ChIJxe3EC4KpQjQR5L43YFNVwM4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJxe3EC4KpQjQR5L43YFNVwM4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pda3c6a5d19",
+  "n": "新牛屋厚切牛排-內湖店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區瑞光里江南街71巷16弄46號1樓",
+  "ll": [
+   25.075732,
+   121.577934
+  ],
+  "pid": "ChIJIzEVTACtQjQR_g3wXL504y4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJIzEVTACtQjQR_g3wXL504y4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf0f1197cd9",
+  "n": "烏來阿蓋小阿姨美食吃",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市烏來區新烏路四段3號",
+  "ll": [
+   24.890866,
+   121.551056
+  ],
+  "pid": "ChIJPeOSpZoGaDQRAgBqS6SnQts",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJPeOSpZoGaDQRAgBqS6SnQts",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p891efff4fb",
+  "n": "月明薑母鴨 新莊店",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市新莊區營盤里三泰路30-4號",
+  "ll": [
+   25.035221,
+   121.438097
+  ],
+  "pid": "ChIJl-Gfm5KnQjQR_-hmrlABByo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJl-Gfm5KnQjQR_-hmrlABByo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p5511963728",
+  "n": "INTRO Kitchen",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市士林區福佳里基河路300巷21號",
+  "ll": [
+   25.093771,
+   121.518561
+  ],
+  "pid": "ChIJt7vNFFSvQjQRp-Cw_uCjY8k",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJt7vNFFSvQjQRp-Cw_uCjY8k",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p43b4c2761c",
+  "n": "廣州街夜市脆皮蚵仔煎",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市萬華區青山里廣州街224號",
+  "ll": [
+   25.036706,
+   121.495853
+  ],
+  "pid": "ChIJBVwUCaypQjQRqC88qFN_Rko",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJBVwUCaypQjQRqC88qFN_Rko",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p30df74a5d8",
+  "n": "蛙蛙書店有限公司",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市大安區民輝里八德路二段3號",
+  "ll": [
+   25.044646,
+   121.53328
+  ],
+  "pid": "ChIJd74pMmOpQjQRQlDJs0y_V6Y",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJd74pMmOpQjQRQlDJs0y_V6Y",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p85cb62b944",
+  "n": "陳家涼麵",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市松山區東光里南京東路五段123巷29號",
+  "ll": [
+   25.052789,
+   121.560715
+  ],
+  "pid": "ChIJ8UEiupSrQjQRI41f0iKRUCo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ8UEiupSrQjQRI41f0iKRUCo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pd44e93e586",
+  "n": "Mosaic Art & Cafe 馬賽克土耳其餐廳",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區永康里永康街4巷26號1 樓",
+  "ll": [
+   25.032936,
+   121.529157
+  ],
+  "pid": "ChIJ94EutZypQjQRN2RejuATJMc",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ94EutZypQjQRN2RejuATJMc",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf0968cc352",
+  "n": "OttiMo Gelato",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市大安區永康里麗水街1-1號",
+  "ll": [
+   25.033347,
+   121.529218
+  ],
+  "pid": "ChIJ7wSgxmipQjQRHdGka3qIW_M",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ7wSgxmipQjQRHdGka3qIW_M",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p1395e0f859",
+  "n": "祿承坊傳統整復推拿 廣州店",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市萬華區青山里廣州街235號",
+  "ll": [
+   25.036821,
+   121.49858
+  ],
+  "pid": "ChIJ-0XGNampQjQROeDH4nyYWQI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ-0XGNampQjQROeDH4nyYWQI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p60dc11e919",
+  "n": "禪云心養生會館24H按摩",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市中正區南福里和平西路一段19號",
+  "ll": [
+   25.027043,
+   121.521144
+  ],
+  "pid": "ChIJv-46yOmpQjQR7znv4n1pr9Y",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJv-46yOmpQjQR7znv4n1pr9Y",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pb49ab46575",
+  "n": "清風亭",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市士林區",
+  "ll": [
+   25.134591,
+   121.583131
+  ],
+  "pid": "ChIJQ7EBIHatQjQRCmLx8nymAtY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJQ7EBIHatQjQRCmLx8nymAtY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pb754d4ce73",
+  "n": "北投焚化爐景觀台",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市北投區洲美里洲美街271號",
+  "ll": [
+   25.107952,
+   121.499262
+  ],
+  "pid": "ChIJTc3E_eauQjQRRcWFjnQJm4Y",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJTc3E_eauQjQRRcWFjnQJm4Y",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc874383b43",
+  "n": "神不在場/密室逃脫/實境遊戲",
+  "c": "景點",
+  "region": "south-tainan",
+  "a": "台南市永康区胜利里中华路1-2號3樓",
+  "ll": [
+   22.998863,
+   120.234471
+  ],
+  "pid": "ChIJYxlgy8Z2bjQRHmAGCyWbW4Q",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJYxlgy8Z2bjQRHmAGCyWbW4Q",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p90b3337b89",
+  "n": "碧湖步道",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市內湖區內湖路三段60巷",
+  "ll": [
+   25.089434,
+   121.592996
+  ],
+  "pid": "ChIJKT-hO_KsQjQRqcJBaStmlxY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJKT-hO_KsQjQRqcJBaStmlxY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p6913b67e54",
+  "n": "吳留手串燒居酒屋-本店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山區埤頭里八德路二段312巷13號",
+  "ll": [
+   25.046761,
+   121.542993
+  ],
+  "pid": "ChIJpxae_turQjQREwIog8NTMrE",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJpxae_turQjQREwIog8NTMrE",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p732f2a6d79",
+  "n": "阿洋義式冰淇淋",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市大同區玉泉里延平北路一段66巷17號1樓",
+  "ll": [
+   25.0516,
+   121.51123
+  ],
+  "pid": "ChIJNSD0IzGpQjQRnSSVEc1lZtM",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJNSD0IzGpQjQRnSSVEc1lZtM",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pebfa2b0a48",
+  "n": "橘色空間-板橋桌遊店",
+  "c": "景點",
+  "region": "north-newtaipei",
+  "a": "新北市板橋區流芳里南門街30號 皇號樓喜餅2樓",
+  "ll": [
+   25.008557,
+   121.456992
+  ],
+  "pid": "ChIJz7jQ7-CpQjQRIA7Bc17VDH4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJz7jQ7-CpQjQRIA7Bc17VDH4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf726d80c73",
+  "n": "Feeling18巧克力工房",
+  "c": "咖啡甜點",
+  "region": "central-nantou",
+  "a": "南投縣埔里鎮枇杷里慈恩街20號",
+  "ll": [
+   23.957321,
+   120.974888
+  ],
+  "pid": "ChIJodngPpDZaDQRO4VQ1NvWoMk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJodngPpDZaDQRO4VQ1NvWoMk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p420ba161fd",
+  "n": "雪城麻辣燙(輔大店)",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市新莊區營盤里中正路514巷3號",
+  "ll": [
+   25.032667,
+   121.433182
+  ],
+  "pid": "ChIJgafImeinQjQRlCQoqndwDD0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJgafImeinQjQRlCQoqndwDD0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pcc374a95b4",
+  "n": "GumGum Not Only Beer & Wings 雞翅啤酒吧-內科店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區基湖路3巷68號",
+  "ll": [
+   25.080616,
+   121.566855
+  ],
+  "pid": "ChIJ_arISaqtQjQR_wwFFgzwBZ0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ_arISaqtQjQR_wwFFgzwBZ0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p876cb27d75",
+  "n": "入口漢堡 (大直總店)",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山區成功里明水路618號",
+  "ll": [
+   25.082413,
+   121.551485
+  ],
+  "pid": "ChIJVYL8abqtQjQR-h7YJk6LXQ4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJVYL8abqtQjQR-h7YJk6LXQ4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p9697517dd1",
+  "n": "阿裕牛肉涮涮鍋(崑崙店)",
+  "c": "美食",
+  "region": "south-tainan",
+  "a": "台南市仁德區上崙里崑崙路733-1號",
+  "ll": [
+   22.940437,
+   120.261144
+  ],
+  "pid": "ChIJz6N8OQlzbjQRwwtEcVi8ZTo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJz6N8OQlzbjQRwwtEcVi8ZTo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p1c1ed65c29",
+  "n": "食不厭",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市瑞芳區金光路221號",
+  "ll": [
+   25.106806,
+   121.851713
+  ],
+  "pid": "ChIJE-7IdxlFXTQRJZq-aKCT2Oo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJE-7IdxlFXTQRJZq-aKCT2Oo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf43adb372e",
+  "n": "五草車中華麵食館",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市永和區永樂里永和路一段46號",
+  "ll": [
+   25.005695,
+   121.513131
+  ],
+  "pid": "ChIJk1KfRt2pQjQRDWMUgDGxhzo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJk1KfRt2pQjQRDWMUgDGxhzo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p98c44e2d9d",
+  "n": "昌平炸雞王 昌平路總店",
+  "c": "小吃夜市",
+  "region": "central-taichung",
+  "a": "台中市北屯區平心里昌平路一段105之9號",
+  "ll": [
+   24.173898,
+   120.690319
+  ],
+  "pid": "ChIJDU8JP-gXaTQRHycsvAWUlwQ",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJDU8JP-gXaTQRHycsvAWUlwQ",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pae429b1394",
+  "n": "阿宗麵線",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市萬華區西門里峨眉街8-1號",
+  "ll": [
+   25.043292,
+   121.50771
+  ],
+  "pid": "ChIJQXy1aAmpQjQR7UZhdHZCnLE",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJQXy1aAmpQjQR7UZhdHZCnLE",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p31b7f5b433",
+  "n": "金鍋盃小火鍋",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港華里環山路二段37號",
+  "ll": [
+   25.085455,
+   121.573122
+  ],
+  "pid": "ChIJRSe7tGesQjQRNdxpyD9oJWA",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJRSe7tGesQjQRNdxpyD9oJWA",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p0d6220ea6d",
+  "n": "新港鴨肉羹",
+  "c": "美食",
+  "region": "south-chiayi-county",
+  "a": "嘉義縣新港鄉中山路奉天大廈17號",
+  "ll": [
+   23.554997,
+   120.347454
+  ],
+  "pid": "ChIJnZnL9FO9bjQRcYqS1siWLZM",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJnZnL9FO9bjQRcYqS1siWLZM",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p25a76f971b",
+  "n": "eve casa",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市內湖區大湖山莊街166號一樓",
+  "ll": [
+   25.086789,
+   121.601372
+  ],
+  "pid": "ChIJjzG60ZCtQjQRuuUMpYbrBfI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJjzG60ZCtQjQRuuUMpYbrBfI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pe654d4c4a1",
+  "n": "小庭院泰食",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區瑞光里江南街71巷16弄50號",
+  "ll": [
+   25.075767,
+   121.578007
+  ],
+  "pid": "ChIJdUh_TNGtQjQRQVbtYiPl_1w",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJdUh_TNGtQjQRQVbtYiPl_1w",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf8cf04d403",
+  "n": "仁壽司",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區紫星里成功路四段61巷25弄13號",
+  "ll": [
+   25.080353,
+   121.592279
+  ],
+  "pid": "ChIJI6qy1sqtQjQRmPh_nlO_9aw",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJI6qy1sqtQjQRmPh_nlO_9aw",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p4147d19003",
+  "n": "REEDS COFFEE & BAKERY 內湖店",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市內湖區湖濱里成功路三段146號",
+  "ll": [
+   25.079935,
+   121.589705
+  ],
+  "pid": "ChIJSa1zFYysQjQRCQI-kl6iSVE",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJSa1zFYysQjQRCQI-kl6iSVE",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p6a79f97705",
+  "n": "勞瑞斯牛肋排餐廳",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市信義區興雅里松仁路28號6樓",
+  "ll": [
+   25.039633,
+   121.56787
+  ],
+  "pid": "ChIJjwfWf7CrQjQR8HEILkaBigk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJjwfWf7CrQjQR8HEILkaBigk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p80d9f388be",
+  "n": "旭日朝食",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區西安里文湖街87號",
+  "ll": [
+   25.086572,
+   121.564393
+  ],
+  "pid": "ChIJY7bsAwCtQjQRofJd7g9jOR4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJY7bsAwCtQjQRofJd7g9jOR4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p59d8ee21a8",
+  "n": "陳董藥燉排骨攤位",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市松山區慈祐里饒河街160號",
+  "ll": [
+   25.050626,
+   121.575761
+  ],
+  "pid": "ChIJAcWEBZyrQjQRP2hkUcjm17U",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJAcWEBZyrQjQRP2hkUcjm17U",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pe341a2eaeb",
+  "n": "墾丁蛋蛋ㄉㄨㄞ奶",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市中正區文盛里汀州路三段165號",
+  "ll": [
+   25.015299,
+   121.532129
+  ],
+  "pid": "ChIJmdQQdoupQjQRXbuKj3Ywky0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJmdQQdoupQjQRXbuKj3Ywky0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pa9264aca71",
+  "n": "Botega del vin",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區建倫里忠孝東路四段170巷17弄7號",
+  "ll": [
+   25.039993,
+   121.551408
+  ],
+  "pid": "ChIJG2nsXs-rQjQRpRJ_Nf_Z6K8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJG2nsXs-rQjQRpRJ_Nf_Z6K8",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf424cd6d93",
+  "n": "金元寶炒飯",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市萬華區萬壽里武昌街二段72之9號",
+  "ll": [
+   25.044698,
+   121.505951
+  ],
+  "pid": "ChIJl9MJJgmpQjQRrzEhGT-_Zp0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJl9MJJgmpQjQRrzEhGT-_Zp0",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pad7b52aa81",
+  "n": "江浙 秀蘭小館",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區福住里信義路二段198巷5-5號",
+  "ll": [
+   25.032974,
+   121.530542
+  ],
+  "pid": "ChIJK5RQPYKpQjQRl9cqkvtxY0M",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJK5RQPYKpQjQRl9cqkvtxY0M",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc496d26a75",
+  "n": "御吉YUJI 日式便當專賣",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區麗山里內湖路一段591巷10弄2號",
+  "ll": [
+   25.081452,
+   121.57311
+  ],
+  "pid": "ChIJB28-SdOtQjQRThNp9TOvMBQ",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJB28-SdOtQjQRThNp9TOvMBQ",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p386865e153",
+  "n": "一麵知椒",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區西安里文湖街87號1樓",
+  "ll": [
+   25.086572,
+   121.564393
+  ],
+  "pid": "ChIJE8ZlLvGtQjQRQxA9e00t93s",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJE8ZlLvGtQjQRQxA9e00t93s",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p0cbdf5f556",
+  "n": "阿明豬心冬粉",
+  "c": "小吃夜市",
+  "region": "south-tainan",
+  "a": "台南市中西區府前里保安路72號",
+  "ll": [
+   22.990454,
+   120.196138
+  ],
+  "pid": "ChIJTUDx43p2bjQR7Sms7Ecs97U",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJTUDx43p2bjQR7Sms7Ecs97U",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p7e668dd754",
+  "n": "五指山星城咖啡",
+  "c": "咖啡甜點",
+  "region": "north-newtaipei",
+  "a": "新北市汐止區汐萬路三段",
+  "ll": [
+   25.125942,
+   121.604661
+  ],
+  "pid": "ChIJ7w_XazWtQjQROT396OxjPu8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ7w_XazWtQjQROT396OxjPu8",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p59c3e2be6a",
+  "n": "玖肆鴨霸",
+  "c": "美食",
+  "region": "south-pingtung",
+  "a": "屏東縣琉球鄉本福村中山路22-6號",
+  "ll": [
+   22.347947,
+   120.378339
+  ],
+  "pid": "ChIJE_ud1XjlcTQR9TOuqZZrX_8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJE_ud1XjlcTQR9TOuqZZrX_8",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pe5bfe8d15e",
+  "n": "小琉球香村滷味麵食館",
+  "c": "小吃夜市",
+  "region": "south-pingtung",
+  "a": "屏東縣琉球鄉大福村中正路347-2號",
+  "ll": [
+   22.340478,
+   120.370722
+  ],
+  "pid": "ChIJ6deXJ-TvcTQRfuLwG-Dkbw4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ6deXJ-TvcTQRfuLwG-Dkbw4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pf509df6718",
+  "n": "漁人灶咖•巴豆補給站",
+  "c": "咖啡甜點",
+  "region": "south-pingtung",
+  "a": "屏東縣琉球鄉天福村中正路32號",
+  "ll": [
+   22.327489,
+   120.358443
+  ],
+  "pid": "ChIJTQDX-obvcTQRXV09IstYOBY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJTQDX-obvcTQRXV09IstYOBY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pfb6023362e",
+  "n": "茗馨點心世界50年老店",
+  "c": "美食",
+  "region": "south-pingtung",
+  "a": "屏東縣東港鎮新勝里新基街45巷31號對面（第二市場內，正宗肉圓斜對面",
+  "ll": [
+   22.46744,
+   120.451251
+  ],
+  "pid": "ChIJsxTK5B3hcTQRoo7p-HNvfIA",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJsxTK5B3hcTQRoo7p-HNvfIA",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p447f3d517f",
+  "n": "伊茲密爾土耳其廚房 Izmir Turk Kitchen",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市信義區興雅里基隆路一段147巷14號",
+  "ll": [
+   25.042287,
+   121.566245
+  ],
+  "pid": "ChIJ-TGkwYarQjQRM3SlfjB6Cuw",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ-TGkwYarQjQRM3SlfjB6Cuw",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pdcbb5d56f9",
+  "n": "SpeedRun by VG Taipei",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市大安區通安里通安街79號2樓",
+  "ll": [
+   25.030327,
+   121.553338
+  ],
+  "pid": "ChIJaYkVvVarQjQRfagwJEX4jDs",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJaYkVvVarQjQRfagwJEX4jDs",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "p40550cbf59",
+  "n": "碧山岩 桶仔雞",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港富里內湖路一段737巷51弄32號1樓",
+  "ll": [
+   25.080501,
+   121.580506
+  ],
+  "pid": "ChIJ1cd-RUatQjQRUCPxkqAMeqY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ1cd-RUatQjQRUCPxkqAMeqY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p8b203d1e00",
+  "n": "OL健康餐盒 內湖店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區西湖里內湖路一段285巷68弄13號",
+  "ll": [
+   25.08582,
+   121.566978
+  ],
+  "pid": "ChIJvbCWuyatQjQRHZTwYOjPv38",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJvbCWuyatQjQRHZTwYOjPv38",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pd4acde9f13",
+  "n": "阿根脆皮臭豆腐",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市松山區慈佑里饒河街夜市",
+  "ll": [
+   25.050188,
+   121.572759
+  ],
+  "pid": "ChIJgfY-CRKrQjQR5HR4_DqYcVQ",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJgfY-CRKrQjQR5HR4_DqYcVQ",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p7f0b6621a1",
+  "n": "魯都香滷味-內湖文德店",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市內湖區瑞陽里文德路22巷27弄3號1樓",
+  "ll": [
+   25.076786,
+   121.579778
+  ],
+  "pid": "ChIJr2LXblitQjQRElfIIJnytso",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJr2LXblitQjQRElfIIJnytso",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pd253ef187c",
+  "n": "燒烤臭豆腐",
+  "c": "小吃夜市",
+  "region": "north-newtaipei",
+  "a": "新北市八里區米倉里渡船頭街18號",
+  "ll": [
+   25.158517,
+   121.43486
+  ],
+  "pid": "ChIJZTWVQDqlQjQRQAH8pRKiwvM",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJZTWVQDqlQjQRQAH8pRKiwvM",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pb4cf179aca",
+  "n": "道樂拉麵 大北店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市士林區仁勇里大北路9號",
+  "ll": [
+   25.089651,
+   121.526647
+  ],
+  "pid": "ChIJh4d5b7CuQjQROIFVtA_euJI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJh4d5b7CuQjQROIFVtA_euJI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p62d7f3cdc3",
+  "n": "東門興記手工水餃",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中正區文祥里金山南路一段124號",
+  "ll": [
+   25.035064,
+   121.527222
+  ],
+  "pid": "ChIJg5conoKpQjQRcpCQX-l7DNY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJg5conoKpQjQRcpCQX-l7DNY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p9feb66ecfa",
+  "n": "鼎越鴻越南美食館",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港墘里文德路22巷4弄2號",
+  "ll": [
+   25.078167,
+   121.579561
+  ],
+  "pid": "ChIJHVUoAmOsQjQRi6bGpjqzocI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJHVUoAmOsQjQRi6bGpjqzocI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pe595502770",
+  "n": "合點壽司 がってん寿司 內湖店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區西湖里內湖路一段306號",
+  "ll": [
+   25.081663,
+   121.569171
+  ],
+  "pid": "ChIJ4Q0LbRmtQjQRdY73rlCGMeY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ4Q0LbRmtQjQRdY73rlCGMeY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p660740bfa8",
+  "n": "源芳刈包.",
+  "c": "小吃夜市",
+  "region": "north-taipei",
+  "a": "台北市萬華區青山里華西街17-2號",
+  "ll": [
+   25.039406,
+   121.498584
+  ],
+  "pid": "ChIJY4KDoKmpQjQR2RFjiDc6c2Y",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJY4KDoKmpQjQR2RFjiDc6c2Y",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pa4b822db36",
+  "n": "梅花廳 - 兄弟大飯店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市松山區中正里南京東路三段255號2-3樓",
+  "ll": [
+   25.052051,
+   121.544596
+  ],
+  "pid": "ChIJ0y_Ui92rQjQR8GiTxFrIVSU",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ0y_Ui92rQjQR8GiTxFrIVSU",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p3c21ecca6b",
+  "n": "RÒU X James Sharman",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市中山區金泰里樂群二路199號中城廣場一樓萬豪酒店1-10櫃位",
+  "ll": [
+   25.080429,
+   121.559299
+  ],
+  "pid": "ChIJ0TdhLNGtQjQRgmIkyL3Edw8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ0TdhLNGtQjQRgmIkyL3Edw8",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "pcb216dc5d9",
+  "n": "北港江記龍門生炒鴨肉焿",
+  "c": "美食",
+  "region": "north-newtaipei",
+  "a": "新北市三重區龍門里龍門路134號",
+  "ll": [
+   25.073058,
+   121.498148
+  ],
+  "pid": "ChIJDfBUjyWpQjQRjvgkVCjH9i4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJDfBUjyWpQjQRjvgkVCjH9i4",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "ped37da160a",
+  "n": "阿棋 三代福州意麵老店",
+  "c": "美食",
+  "region": "central-taichung",
+  "a": "台中市中區三民路二段7號第二市場內1",
+  "ll": [
+   24.142604,
+   120.678762
+  ],
+  "pid": "ChIJy52TyhI9aTQRzhVInAELafI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJy52TyhI9aTQRzhVInAELafI",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p550e4dc066",
+  "n": "Yolo Moment 台中店",
+  "c": "咖啡甜點",
+  "region": "central-taichung",
+  "a": "台中市南屯區新生里龍富路四段565號",
+  "ll": [
+   24.150752,
+   120.626172
+  ],
+  "pid": "ChIJZw4IQSo9aTQRlIA3wQ3BE_U",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJZw4IQSo9aTQRlIA3wQ3BE_U",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "p9ada36faa3",
+  "n": "第二市場 鄭氏肉包餛飩湯",
+  "c": "小吃夜市",
+  "region": "central-taichung",
+  "a": "台中市西區公益里向上路一段198號",
+  "ll": [
+   24.146821,
+   120.660011
+  ],
+  "pid": "ChIJ7aJGrJg9aTQR9RpaTzhNqxY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ7aJGrJg9aTQR9RpaTzhNqxY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p152dcbe370",
+  "n": "霧都老火鍋(大墩店)",
+  "c": "美食",
+  "region": "central-taichung",
+  "a": "台中市南屯區大興里大墩路28號",
+  "ll": [
+   24.137534,
+   120.650042
+  ],
+  "pid": "ChIJ1_0x-WM9aTQREhhRlOGHAFo",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ1_0x-WM9aTQREhhRlOGHAFo",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p31a8bd0137",
+  "n": "JL STUDIO 現代新加坡料理",
+  "c": "美食",
+  "region": "central-taichung",
+  "a": "台中市南屯區益豐路四段689 號2樓",
+  "ll": [
+   24.150484,
+   120.628543
+  ],
+  "pid": "ChIJpzHEAN09aTQRdBlo7PKl7A0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJpzHEAN09aTQRdBlo7PKl7A0",
+  "src": "去過",
+  "llsrc": "google",
+  "status": "closed"
+ },
+ {
+  "id": "pa3b4272195",
+  "n": "鳥苑Torien Yakitori",
+  "c": "美食",
+  "region": "central-taichung",
+  "a": "台中市西區忠誠里忠明南路48號",
+  "ll": [
+   24.155438,
+   120.658309
+  ],
+  "pid": "ChIJh4nFD5s9aTQRuaeVKQxRy7g",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJh4nFD5s9aTQRuaeVKQxRy7g",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p4d0ff0f913",
+  "n": "宮原眼科",
+  "c": "咖啡甜點",
+  "region": "central-taichung",
+  "a": "台中市中區綠川里中山路20號",
+  "ll": [
+   24.137828,
+   120.683555
+  ],
+  "pid": "ChIJ-bIJXaeQbjQRBlsPVLME9EY",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ-bIJXaeQbjQRBlsPVLME9EY",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p0ecdc50481",
+  "n": "Nose man鼻孔先生手作早午餐",
+  "c": "美食",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區北門里北門街73號",
+  "ll": [
+   23.484179,
+   120.450768
+  ],
+  "pid": "ChIJ7Q2xuHqXbjQRDyFjc951pnE",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ7Q2xuHqXbjQRDyFjc951pnE",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc13cec5fcf",
+  "n": "三元花園韓式餐廳 潭美店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區石潭里石潭路1號",
+  "ll": [
+   25.063159,
+   121.585527
+  ],
+  "pid": "ChIJKeTPNn6rQjQR5gMHloYIOo8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJKeTPNn6rQjQR5gMHloYIOo8",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p06e8b63e97",
+  "n": "天天沙茶火鍋",
+  "c": "美食",
+  "region": "south-kaohsiung",
+  "a": "高雄市鹽埕區府北里七賢三路240號",
+  "ll": [
+   22.629892,
+   120.284332
+  ],
+  "pid": "ChIJvXH4IXAEbjQRMCftjjFVcOk",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJvXH4IXAEbjQRMCftjjFVcOk",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc38a6a323b",
+  "n": "卡拉拉涮涮鍋",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區清白里成功路四段205號",
+  "ll": [
+   25.084246,
+   121.596032
+  ],
+  "pid": "ChIJqTk-FO2sQjQR_KMAEBVt2YE",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJqTk-FO2sQjQR_KMAEBVt2YE",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p609546de52",
+  "n": "延三溫體牛-李記",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區港都里港墘路82巷3號",
+  "ll": [
+   25.080965,
+   121.577499
+  ],
+  "pid": "ChIJNelO4jitQjQRx1xiR2MQ39E",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJNelO4jitQjQRx1xiR2MQ39E",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p48a24706e9",
+  "n": "極品串燒",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區湖興里瑞光路111號",
+  "ll": [
+   25.07128,
+   121.582056
+  ],
+  "pid": "ChIJVQ_pZEetQjQRt1a5by0sN7s",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJVQ_pZEetQjQRt1a5by0sN7s",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pd2eef8b01d",
+  "n": "淬義義大利餐廳",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區瑞光路258巷37號",
+  "ll": [
+   25.075012,
+   121.574988
+  ],
+  "pid": "ChIJzRDbD3usQjQRMehq-gyr_Ew",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJzRDbD3usQjQRMehq-gyr_Ew",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "p63a8c45b00",
+  "n": "北門沙鍋魚頭",
+  "c": "美食",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區林森里忠孝路284-1號",
+  "ll": [
+   23.485781,
+   120.453672
+  ],
+  "pid": "ChIJ8bBgW8uVbjQRGp_uAtaxAPw",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ8bBgW8uVbjQRGp_uAtaxAPw",
+  "src": "去過",
+  "llsrc": "google"
+ },
+ {
+  "id": "pc8da2eb223",
+  "n": "廟口煎餅",
+  "c": "小吃夜市",
+  "region": "south-chiayi-city",
+  "a": "嘉義市東區北門里文化路280號",
+  "ll": [
+   23.483513,
+   120.448873
+  ],
+  "pid": "ChIJeSg-_DKUbjQRRjZPr8RpjNI",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJeSg-_DKUbjQRRjZPr8RpjNI",
+  "src": "去過",
+  "llsrc": "google"
  }
 ]
