@@ -110,3 +110,13 @@
 @media (max-width: 640px) { .tw-place-g { padding: 10px 12px 12px; } }
 
 .tw-live-warn { margin: 0 0 10px; padding: 6px 12px; border-radius: var(--r-sm); background: var(--stamp-soft); color: var(--stamp); font-weight: 700; }
+
+/* ── 米其林標示：星星與必比登用官方色，圖形用遮罩上色，深色模式自動變亮 ── */
+.tw-mich { --mich: #ba0b2f; display: flex; width: fit-content; align-items: center; gap: 6px; margin: 4px 0 2px; padding: 1px 12px 1px 8px; border-radius: 99px; background: color-mix(in srgb, var(--mich) 9%, var(--card)); border: 1.5px solid color-mix(in srgb, var(--mich) 55%, transparent); color: var(--mich); font-weight: 700; font-size: 14px; line-height: 1.7; white-space: nowrap; }
+:root[data-theme="dark"] .tw-mich { --mich: #ff7a8e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tw-mich { --mich: #ff7a8e; } }
+.tw-mich-ico { display: inline-block; flex: none; width: 18px; height: 18px; background: var(--mich); -webkit-mask: center / contain no-repeat; mask: center / contain no-repeat; margin-right: -3px; }
+.tw-mich-ico.is-star { -webkit-mask-image: url(../img/michelin/star.svg); mask-image: url(../img/michelin/star.svg); }
+.tw-mich-ico.is-bib { width: 24px; -webkit-mask-image: url(../img/michelin/bib.svg); mask-image: url(../img/michelin/bib.svg); margin-right: 0; }
+.tw-mich-t { margin-left: 6px; }
+.tw-place-cats + .tw-mich { margin-bottom: 8px; }

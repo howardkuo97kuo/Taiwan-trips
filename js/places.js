@@ -64,6 +64,17 @@ function passFilters(store, p) {
   return true;
 }
 
+// ── 米其林標示 ──
+// p.mich = { t: 'bib' | 'star1' | 'star2' | 'star3', y: 年份 }：台灣米其林指南該年的必比登推介或星級（資料見 docs/SPEC.md）
+const MICH = { bib: ['必比登推介', 0], star1: ['米其林一星', 1], star2: ['米其林二星', 2], star3: ['米其林三星', 3] };
+export function michBadge(ctx, p) {
+  const m = p.mich && MICH[p.mich.t];
+  if (!m) return null;
+  const { h } = ctx;
+  const icons = m[1] ? Array.from({ length: m[1] }, () => h('i', { class: 'tw-mich-ico is-star', 'aria-hidden': 'true' })) : [h('i', { class: 'tw-mich-ico is-bib', 'aria-hidden': 'true' })];
+  return h('span', { class: `tw-mich is-${p.mich.t}`, title: `${p.mich.y} 年台灣米其林指南：${m[0]}` }, icons, h('span', { class: 'tw-mich-t' }, `${m[0]}　${p.mich.y}`));
+}
+
 // ── 卡片：一張鐵路車票 ──
 // 左邊票根（分類、縣市），中間店名與地址，右邊兩人的「想去」圓點與「蓋章」。
 // 兩人都想去時，票上多一個「雙人票」小牌；剛蓋章時蓋章動畫播一次（takeFx）。
@@ -121,6 +132,7 @@ export function placeCard(ctx, p) {
       catIcon(p.c), h('span', { class: 'tw-place-c' }, p.c), h('span', { class: 'tw-place-z' }, county.replace(/[縣市]$/, ''))),
     h('div', { class: 'tw-place-mid' },
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
+      michBadge(ctx, p),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
       who && ghost && h('div', { class: 'tw-place-ghost' }, ghost),
       likeTags.length > 0 && h('div', { class: 'tw-place-likes' }, likeTags)),
@@ -369,6 +381,7 @@ function mountPlace(el, ctx) {
     h('h1', {}, p.n),
     store.isVisible(p) ? null : h('p', { class: 'tw-place-status' }, p.status === 'moved' ? '已搬遷' : '已歇業'),
     h('div', { class: 'tw-place-cats' }, cats.map((c) => h('span', { class: 'tw-place-cat' }, catIcon(c), c))),
+    michBadge(ctx, p),
     p.a && h('p', { class: 'tw-place-addr' }, p.a),
     p.note && h('p', { class: 'tw-place-note' }, p.note),
     h('p', { class: 'tw-place-links' },

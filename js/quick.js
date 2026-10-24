@@ -1,7 +1,7 @@
 // 快速選擇 #/quick：一次一張卡，想去／不想去／之後再說。可滑動、鍵盤 ←（不想去）→（想去）。
 // 寫入走 sync.setMark，想去與不想去互斥（skip 欄位見 docs/SPEC.md）。
 import { statusOf } from './marks.js';
-import { findRegion } from './places.js';
+import { findRegion, michBadge } from './places.js';
 import { thumb } from './photos.js';
 import { catIcon } from './icons.js';
 
@@ -76,6 +76,7 @@ export function mount(el, ctx) {
       h('div', { class: 'tw-quick-stub' }, catIcon(p.c), h('span', {}, p.c), county && h('span', {}, county)),
       thumb(ctx, p),
       h('h2', { class: 'tw-quick-name' }, p.n),
+      michBadge(ctx, p),
       p.a && h('p', { class: 'tw-quick-addr' }, p.a),
       p.note && h('p', { class: 'tw-quick-note' }, p.note),
       h('p', { class: 'tw-quick-other' }, `${store.whoName(other)}：${otherBits.join('、') || '還沒標'}`),
