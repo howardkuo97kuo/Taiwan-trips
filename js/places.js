@@ -133,6 +133,7 @@ export function placeCard(ctx, p) {
     h('div', { class: 'tw-place-mid' },
       h('a', { class: 'tw-place-name', href: `#/p/${p.id}` }, p.n),
       michBadge(ctx, p),
+      h('div', { class: 'tw-place-sub' }, `${p.c}${county ? ' · ' + county : ''}`),
       p.a && h('div', { class: 'tw-place-addr' }, p.a),
       who && ghost && h('div', { class: 'tw-place-ghost' }, ghost),
       likeTags.length > 0 && h('div', { class: 'tw-place-likes' }, likeTags)),
@@ -179,7 +180,8 @@ export function listView(ctx, places, { limit = 60 } = {}) {
       listEl.append(head, h('p', { class: 'tw-empty' }, '沒有符合的地點，換個篩選看看。'));
       return;
     }
-    listEl.append(head, ...rows.slice(0, shown).map((p) => placeCard(ctx, p)));
+    const thead = h('div', { class: 'tw-place-thead', 'aria-hidden': 'true' }, ['想去', '照片', '名稱', '評分與評語', '去過'].map((t) => h('span', {}, t)));
+    listEl.append(head, thead, ...rows.slice(0, shown).map((p) => placeCard(ctx, p)));
     if (rows.length > shown) {
       listEl.append(h('button', { type: 'button', class: 'tw-place-more', onclick: () => { shown += limit; drawList(); } },
         `再顯示 ${Math.min(limit, rows.length - shown)} 個`));
