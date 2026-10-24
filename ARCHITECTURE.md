@@ -27,7 +27,7 @@
 | 模組 | 範圍 | 狀態 |
 | --- | --- | --- |
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
-| A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 381 筆（座標、縣市、`pid` 由 Places 查詢補齊） |
+| A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 392 筆（座標、縣市、`pid` 由 Places 查詢補齊） |
 | C 介面 | `css/*.css` | 未開始（`index.html` 已預留 `css/app.css`） |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 未開始，畫面顯示「尚未完成」 |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |

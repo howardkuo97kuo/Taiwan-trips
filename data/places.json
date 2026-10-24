@@ -5350,5 +5350,173 @@
   "pid": "ChIJ6euChRI9aTQRFWbtofrK26w",
   "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ6euChRI9aTQRFWbtofrK26w",
   "src": "清單"
+ },
+ {
+  "id": "pcfbb34f49f",
+  "n": "百齡左岸籃球場",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市士林區葫東里",
+  "ll": [
+   25.084703,
+   121.513168
+  ],
+  "pid": "ChIJ_en2hjCvQjQRfrdoktwmXH0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ_en2hjCvQjQRfrdoktwmXH0",
+  "src": "清單"
+ },
+ {
+  "id": "p93bce00517",
+  "n": "機車練習",
+  "c": "景點",
+  "region": "north-newtaipei",
+  "a": "新北市永和區民樂里民樂街39巷23號",
+  "ll": [
+   25.000018,
+   121.529573
+  ],
+  "pid": "ChIJu5HcU_qpQjQRgC4lpsvZWC4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJu5HcU_qpQjQRgC4lpsvZWC4",
+  "src": "清單"
+ },
+ {
+  "id": "pd3b2072f75",
+  "n": "蔣老爹愛吃鍋 市民店｜台北東區｜麻辣火鍋",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區建安里市民大道四段124號",
+  "ll": [
+   25.044339,
+   121.551251
+  ],
+  "pid": "ChIJXcdndiCrQjQRJ-mlW24VJYU",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJXcdndiCrQjQRJ-mlW24VJYU",
+  "src": "清單"
+ },
+ {
+  "id": "pb9663a96f7",
+  "n": "萬華世界下午酒場",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市萬華區福音里三水街70號",
+  "ll": [
+   25.035775,
+   121.501921
+  ],
+  "pid": "ChIJ_xa109-pQjQRJqn0isZwWqc",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ_xa109-pQjQRJqn0isZwWqc",
+  "src": "清單"
+ },
+ {
+  "id": "p9165f7cefc",
+  "n": "尋覓蜜烘焙工作室",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市內湖區麗山街348巷8號右側",
+  "ll": [
+   25.082188,
+   121.573412
+  ],
+  "pid": "ChIJgdo1niatQjQRaoMQ3wb2N9o",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJgdo1niatQjQRaoMQ3wb2N9o",
+  "src": "清單"
+ },
+ {
+  "id": "p6d3427bede",
+  "n": "小慧涼麵店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區芳和里臥龍街151巷10號",
+  "ll": [
+   25.018701,
+   121.551143
+  ],
+  "pid": "ChIJa0JahjqqQjQRfN2M6PMUG5w",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJa0JahjqqQjQRfN2M6PMUG5w",
+  "src": "清單"
+ },
+ {
+  "id": "pf6f6c9d3d7",
+  "n": "LOST and Found 內湖",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市內湖區基湖路3巷11號",
+  "ll": [
+   25.081153,
+   121.566382
+  ],
+  "pid": "ChIJ9XjUMP2tQjQRXVUhaiaZ9u0",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ9XjUMP2tQjQRXVUhaiaZ9u0",
+  "src": "清單"
+ },
+ {
+  "id": "p25cd8dadc5",
+  "n": "Supranormal Bakery Cafe 瑞光",
+  "c": "咖啡甜點",
+  "region": "north-taipei",
+  "a": "台北市內湖區西湖里瑞光路583巷26號",
+  "ll": [
+   25.080609,
+   121.568255
+  ],
+  "pid": "ChIJyyaouZmtQjQRNxjbt8FCH2s",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJyyaouZmtQjQRNxjbt8FCH2s",
+  "src": "清單"
+ },
+ {
+  "id": "p25eed1fe67",
+  "n": "福州山公園",
+  "c": "景點",
+  "region": "north-taipei",
+  "a": "台北市大安區臥龍街195巷",
+  "ll": [
+   25.01601,
+   121.55484
+  ],
+  "pid": "ChIJ-2iGHziqQjQRtIxo8kzMOl8",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ-2iGHziqQjQRtIxo8kzMOl8",
+  "src": "清單"
+ },
+ {
+  "id": "p00a7e7dd66",
+  "n": "NoneLeft Taichung 台中餐酒館 義式餐廳 Wine Bar",
+  "c": "美食",
+  "region": "central-taichung",
+  "a": "台中市西區忠誠里精誠八街10巷4號1樓",
+  "ll": [
+   24.154173,
+   120.65604
+  ],
+  "pid": "ChIJq1SLISE9aTQRUvicsvfbgio",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJq1SLISE9aTQRUvicsvfbgio",
+  "src": "清單"
+ },
+ {
+  "id": "p8385edac28",
+  "n": "饗宴鐵板燒",
+  "c": "美食",
+  "region": "east-yilan",
+  "a": "宜蘭縣五結鄉大吉村溪濱路二段263號",
+  "ll": [
+   24.7098,
+   121.804045
+  ],
+  "pid": "ChIJAQ0fCYTlZzQRF2mnED8WCek",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJAQ0fCYTlZzQRF2mnED8WCek",
+  "src": "清單"
+ },
+ {
+  "id": "p40b3441645",
+  "n": "黃小妹地攤火鍋－市民店",
+  "c": "美食",
+  "region": "north-taipei",
+  "a": "台北市大安區光武里市民大道四段12號",
+  "ll": [
+   25.044643,
+   121.544454
+  ],
+  "pid": "ChIJ574rWaurQjQRu6ikD7bEFI4",
+  "gurl": "https://www.google.com/maps/place/?q=place_id:ChIJ574rWaurQjQRu6ikD7bEFI4",
+  "src": "清單"
  }
 ]
