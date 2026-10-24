@@ -41,9 +41,9 @@
 ## 資料契約（摘要）
 
 - `data/places.json` 是唯一的地點來源。欄位：`id`（永不改名）、`n`、`c`、`c2`（最多 2 個，選填）、`region`（最底層地區 id）、`a`、`ll`（`[緯度, 經度]`，可取自 Google Places，Howard 已知條款風險後決定）、`llsrc`（`google|osm|manual`）、`pid`、`gurl`、`note`、`src`、`status`（`open|closed|moved`，預設只顯示 `open`）。
-- **不存** Google 的評分、評論數、營業時間（`rt`、`rv`、`h`、`oh`），Places 條款限制長期保存；網站打開地點時即時查詢，只放瀏覽器暫存。CI 會擋。
+- `places.json` **不存** Google 的評分、評論數、營業時間（`rt`、`rv`、`h`、`oh`），CI 會擋。Howard 2026-10-25 決定：這些改由排程 `refresh-google`（每週，也可手動）寫進 Firebase `/google/{pid}`，網站只讀並顯示「上次更新時間」；Places 條款不允許長期保存，風險由 Howard 承擔。照片仍即時載入、不存。
 - 地區 id 格式 `{大區}-{縣市}-{區域}`，英文小寫；定義在 `data/regions.json`。
-- Firebase：`/marks/{apong|baobao}/{placeId}`（網站可寫）、`/inbox/{id}`（網站可寫）、`/places`、`/removed`（只有 write-data）、`/trips/`（預留，不開放）。規則在 `firebase-rules.json`，需 Howard 手動貼到主控台。
+- Firebase：`/marks/{apong|baobao}/{placeId}`（網站可寫）、`/inbox/{id}`（網站可寫）、`/places`、`/removed`（只有 write-data）、`/google/{pid}`（只有 `refresh-google` 排程寫，網站只讀）、`/trips/`（預留，不開放）。規則在 `firebase-rules.json`，需 Howard 手動貼到主控台。
 - 地點本身的修正走收件匣，由 Claude 確認後改 `places.json`；網站只改自己的標記。
 - 行程存 `data/itineraries/<id>.json`；每段 `next` 各自標 `mode`（`drive|transit|walk|bike`）與 `min`。
 

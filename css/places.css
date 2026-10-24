@@ -92,19 +92,19 @@
 .tw-place-media { grid-column: 2 / -1; padding: 0 16px 12px; }
 .tw-place-media .tw-thumbs { float: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; }
 .tw-place-card .tw-place-media .tw-thumbs .tw-thumb, .tw-place-card .tw-place-media .tw-thumbs .tw-thumb:nth-child(n+3) { display: grid; width: 100%; height: auto; aspect-ratio: 4 / 3; float: none; margin: 0; }
-.tw-place-gd { grid-column: 1 / -1; border-top: 2px dashed var(--line); }
-.tw-place-gd > summary { cursor: pointer; padding: 10px 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; list-style: none; min-height: 44px; }
-.tw-place-gd > summary::-webkit-details-marker { display: none; }
-.tw-place-gd > summary::before { content: "▸"; color: var(--muted); transition: transform .2s; }
-.tw-place-gd[open] > summary::before { transform: rotate(90deg); }
-.tw-gd-title { font-weight: 700; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
-.tw-gd-rating { color: var(--rail-ink); font-family: var(--f-num); font-weight: 700; }
-.tw-gd-body { padding: 0 16px 14px; }
-.tw-gd-body .tw-live-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 @media (max-width: 640px) {
   .tw-place-media { grid-column: 1 / -1; padding: 0 12px 10px; }
   .tw-place-media .tw-thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tw-place-card .tw-place-media .tw-thumbs .tw-thumb:nth-child(n+3) { display: none; }
-  .tw-place-gd > summary { padding: 8px 12px; }
-  .tw-gd-body { padding: 0 12px 12px; }
 }
+
+/* ── 卡片上直接顯示的 Google 資料 ── */
+.tw-place-g { grid-column: 1 / -1; border-top: 2px dashed var(--line); padding: 12px 16px 14px; min-width: 0; }
+.tw-place-g .tw-live-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.tw-place-g .tw-live-h3 { margin-top: 12px; }
+.tw-gd-updated { margin: 10px 0 2px; font-size: 13px; color: var(--muted); }
+.tw-gd-updated.is-stale { color: var(--stamp); font-weight: 700; }
+.tw-review-more { margin-top: 8px; }
+.tw-review-more > summary { cursor: pointer; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; min-height: 36px; display: flex; align-items: center; }
+.tw-review-more > .tw-review { margin-top: 8px; }
+@media (max-width: 640px) { .tw-place-g { padding: 10px 12px 12px; } }

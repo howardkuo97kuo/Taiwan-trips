@@ -1,0 +1,43 @@
+name: refresh-google
+
+# 每週一凌晨（台北 03:00）更新一次 Google 地點資料到 Firebase /google；也可手動觸發。
+# 需要 repo secret GOOGLE_PLACES_KEY（伺服器端金鑰）與 FIREBASE_SECRET。
+on:
+  schedule:
+    - cron: '0 19 * * 0'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 最多更新幾筆（0 或空白＝全部）
+        type: string
+        required: false
+      offset:
+        description: 從第幾筆開始（0＝從頭）
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firebase-io
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 更新 Google 地點資料
+        env:
+          GOOGLE_PLACES_KEY: ${{ secrets.GOOGLE_PLACES_KEY }}
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+          INPUT_LIMIT: ${{ inputs.limit }}
+          INPUT_OFFSET: ${{ inputs.offset }}
+        run: |
+          args=()
+          [[ "$INPUT_LIMIT" =~ ^[0-9]+$ ]] && args+=(--limit "$INPUT_LIMIT")
+          [[ "$INPUT_OFFSET" =~ ^[0-9]+$ ]] && args+=(--offset "$INPUT_OFFSET")
+          node tools/google-refresh.mjs "${args[@]}"
