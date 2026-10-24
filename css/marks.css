@@ -4,7 +4,7 @@
 .tw-mark-want { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 8px 14px; }
 .tw-mark-wrow { display: flex; gap: 10px; }
 .tw-mark-wb { display: flex; flex-direction: column; align-items: center; gap: 1px; font-size: 12px; color: var(--muted); }
-.tw-mark-wl { font-size: 13px; color: var(--muted); }
+.tw-mark-wl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .tw-mark-dot { width: 32px; height: 32px; border-radius: 50%; border: 2.5px solid var(--ink); background: var(--card); padding: 0; display: block; transition: background .2s, transform .2s; }
 button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-mark-dot.is-on { background: var(--rail); }
