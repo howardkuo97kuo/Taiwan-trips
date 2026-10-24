@@ -43,7 +43,7 @@
 | `js/app.js` | 啟動、路由表 `ROUTES`、模組掛載、頂列（同步狀態、動畫與深淺色按鈕）與導覽、身分選擇 | B |
 | `js/prefs.js` | 深淺色（localStorage `twTheme`）、動畫開關（`twMotion`，預設跟系統的減少動態，`?motion=on` 可覆蓋）、背景照片的視差與遮罩 | B |
 | `js/state.js` | 單一 store：`get`／`set`／`subscribe`、身分、載入 `data/*.json` | B |
-| `js/sync.js` | Firebase REST 與兩條 `/marks` 串流、`setMark`、`marksOf` | B |
+| `js/sync.js` | Firebase REST 與兩條 `/marks` 串流、`setMark` | B |
 | `js/util.js` | `h`（建 DOM）、`clear`、`ymNow`、`debounce`、`loadJson` | B |
 | `data/config.json` | 站名、前綴、時區、身分、分類、Firebase 網址、Google 金鑰欄位、地圖預設視角 | A |
 | `data/regions.json` | 地區樹：大區 → 縣市 → 區域（含中心點與縮放） | A（契約檔，改動先回報總管） |
@@ -53,7 +53,7 @@
 | `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
 | `js/map.js` | 首頁「環島郵路」：用 `data/geo/counties.json` 的真實縣市邊界畫成 SVG，橘線繞一圈串起各縣市，泡泡大小是地點數，去過的縣市蓋郵戳（紅雙圈、邊界塗色），金色小牌是雙人票數；選到縣市後下方出現 Leaflet 縣市地圖（個別地點）與篩選、卡片。只畫有 `ll` 的地點；沒有邊界檔時退回只畫泡泡 | D |
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage`（30 分鐘內有效）；清單的「現在營業」篩選與評分排序只看已查過的地點，按「查詢這批」才替目前清單前 40 筆查（同時 4 個請求，控制 Places 費用） | D |
-| `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、喜歡程度 `like`、好吃 `good`、雷點 `avoid`、備註 `note`，寫入走 `sync.setMark`）、`markSummary`、`markCompare`（兩人並排顯示全部欄位）、`LIKES`／`likeOf`、`statusOf`、`litCounties`；地點卡片上顯示兩人的喜歡程度 | D |
+| `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、喜歡程度 `like`、好吃 `good`、雷點 `avoid`、備註 `note`，寫入走 `sync.setMark`）、`markCompare`（兩人並排顯示全部欄位）、`LIKES`／`likeOf`、`statusOf`、`litCounties`；地點卡片上顯示兩人的喜歡程度 | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
 | `js/photos.js`、`css/photos.css` | 地點照片（Howard 2026-10-24 要求）：`google.placesKey` 有填且地點有 `pid` 時，Places (New) 即時查 `photos`，卡片縮圖進入畫面才載（同時最多 4 個請求）、詳情頁橫向輪播（最多 6 張）並顯示作者；照片參照只放 `sessionStorage` 鍵 `tw-photos:<pid>`，不存檔；沒有金鑰或沒圖就留分類圖示。輸出 `thumb`、`carousel` | 新增（D 的 `places.js` 呼叫） |
 | `js/icons.js` | 分類圖示（`catIcon(分類)` 回傳內嵌 SVG，顏色跟文字）；`places.js` 的分類按鈕、車票、詳情使用 | C |

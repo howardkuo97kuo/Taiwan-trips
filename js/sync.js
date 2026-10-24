@@ -70,12 +70,6 @@ export async function setMark(placeId, patch) {
   }
 }
 
-// 單一地點兩人的標記，方便對照
-export const marksOf = (placeId) => ({
-  apong: store.get('marks').apong?.[placeId] ?? null,
-  baobao: store.get('marks').baobao?.[placeId] ?? null,
-});
-
 // ── 即時串流（只開兩條：兩人的 /marks）──
 function setMarks(who, value) {
   const marks = { ...store.get('marks') };
@@ -167,13 +161,3 @@ export function startSync() {
   if (typeof EventSource === 'undefined') return;
   for (const w of WHO) openStream(w);
 }
-
-export function stopSync() {
-  streams.splice(0).forEach((es) => es.close());
-  clearInterval(placesTimer);
-  document.removeEventListener('visibilitychange', pollPlaces);
-  opened.clear();
-  store.set('online', false);
-}
-
-export const isConfigured = () => !!base;

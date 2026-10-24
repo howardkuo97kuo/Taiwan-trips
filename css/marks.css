@@ -56,11 +56,6 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-mark-quote::before { content: "「"; } .tw-mark-quote::after { content: "」"; }
 @media (max-width: 520px) { .tw-mark-compare { grid-template-columns: 1fr; } }
 
-/* ── 小標記（只讀） ── */
-.tw-mark-summary { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-.tw-mark-chip { border-radius: 99px; padding: 0 10px; font-size: 13px; background: var(--card); border: 1.5px solid var(--line); }
-.tw-mark-chip.is-both { background: var(--gold); color: var(--gold-ink); border-color: var(--gold-ink); }
-
 /* ── 兩人對照頁 ── */
 .tw-mark-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
 .tw-mark-tab { border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 88%, transparent); border-radius: var(--r-sm); padding: 4px 16px; min-height: 40px; }

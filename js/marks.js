@@ -1,5 +1,5 @@
 // 個人標記與兩人對照（路由 #/compare）。模組 D。
-// 輸出的共用函式給 places.js、map.js 用：markBar、markSummary、statusOf、litCounties。
+// 輸出的共用函式給 places.js、map.js 用：markBar、statusOf、litCounties。
 import { ymNow, debounce } from './util.js';
 
 // ── 共用：兩人在某地點的狀態 ──
@@ -102,20 +102,6 @@ export async function quickMark(ctx, placeId, key) {
   }
   const msg = key === 'been' ? (on ? `取消蓋章：${name}` : `已蓋章：${name}`) : `${on ? '取消' : '已標'}「${KEY_LABEL[key]}」：${name}`;
   toast(msg, { action: '復原', onAction: undo });
-}
-
-// ── 小標記列（卡片上用，只讀） ──
-export function markSummary(ctx, placeId) {
-  const { h, store } = ctx;
-  const s = statusOf(store, placeId);
-  const chips = [];
-  for (const who of ['apong', 'baobao']) {
-    const name = store.whoName(who);
-    if (s[who].want) chips.push(h('span', { class: `tw-mark-chip is-want is-${who}` }, `♥ ${name}`));
-    if (s[who].been) chips.push(h('span', { class: `tw-mark-chip is-been is-${who}` }, `✓ ${name}`));
-  }
-  if (s.apong.want && s.baobao.want) chips.unshift(h('span', { class: 'tw-mark-chip is-both' }, '兩人都想去'));
-  return h('div', { class: 'tw-mark-summary' }, chips);
 }
 
 // ── 標記編輯（地點詳情用）：想去／去過／想再去／年月／星等／心得 ──

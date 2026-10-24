@@ -49,7 +49,6 @@ export function mount(el, ctx) {
 | 函式 | 用途 |
 |---|---|
 | `sync.setMark(placeId, patch)` | 寫**目前身分**自己的標記。`patch` 併進現有標記，值為 `null` 的欄位移除，全空就刪除整筆；`ts` 自動補。先更新畫面，失敗會回復並丟錯，呼叫端請 `catch` 後提示 |
-| `sync.marksOf(placeId)` | `{apong, baobao}` 兩人在這個地點的標記 |
 | `sync.fbGet / fbPut / fbPush / fbDelete(path, …)` | 低階 REST，給 E 的收件匣用（`/inbox/…`）。規則外的路徑會被 Firebase 拒絕 |
 
 標記格式：`{want?, been?, again?, ym?('YYYY-MM'), stars?(1–5 整數), like?('love'|'ok'|'meh'), good?(≤300 字), avoid?(≤300 字), note?(≤200 字), ts}`。兩條串流（兩人的 `/marks`）由 B 開，D 不要自己開串流；`/places`、`/inbox` 用輪詢（E 自行處理）。
