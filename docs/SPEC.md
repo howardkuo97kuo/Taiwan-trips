@@ -79,6 +79,7 @@
 - 宜蘭暫定歸在東部，若想歸北部再調整。
 - 地址可自動判斷縣市；Google 清單匯入時先自動歸縣市，再人工確認區域。
 - 地圖視角跟著層級走：大區看全台、縣市看城市、區域看街區，各層的中心點與縮放存在 `regions.json`。
+- `regions.json` 的形狀：`{ note, center, zoom, zones: [ { id, n, center, zoom, counties: [ { id, n, center, zoom, districts: [] } ] } ] }`；大區 id 為 `north`、`central`、`south`、`east`、`island`，縣市 id 為 `{大區}-{縣市}`（例如 `north-taipei`、`island-lienchiang`）。
 
 ## 資料格式與 Firebase
 
@@ -99,6 +100,8 @@
 | `note` | 備註 |
 | `src` | 來源：清單、收件匣、去過、手動 |
 | `status` | `open`、`closed`、`moved`；預設只顯示 `open` |
+
+**初次匯入流程**：Google 地圖清單先放進 `data/staging/import-list.json`（只有 `n`、`c`、選填 `note`，歇業的標 `status`）；`lookup-places` workflow 用 Places API 查出座標、縣市、`pid`、`gurl`，結果存到 `snapshot` 分支的 `lookup/`（不取評分、評論數、營業時間）；A 確認後轉成上表格式寫進 `places.json`。`data/staging/` 不受 `validate.mjs` 檢查，也不會被網站載入。
 
 **Firebase 路徑**
 
@@ -151,9 +154,9 @@
 | `js/map.js`、`js/places.js`、`js/marks.js` | 首頁地圖、地區瀏覽、篩選、地點詳情、個人標記、兩人對照、點亮台灣 | D |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線、加到主畫面 | E |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
-| `data/config.json`、`data/regions.json`、`data/places.json`、`data/geo/` | 設定、地區樹、地點庫、縣市邊界 | A |
+| `data/config.json`、`data/regions.json`、`data/places.json`、`data/geo/`、`data/staging/`、`tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 設定、地區樹、地點庫、縣市邊界、匯入暫存清單與 Places 查詢工具 | A |
 | `scripts/validate.mjs`、`.github/workflows/`、`firebase-rules.json` | 格式驗證、CI、Firebase 讀寫與快照、規則存檔 | B |
-| `docs/SPEC.md`、`CLAUDE.md` | 規格與工作說明（契約） | B |
+| `docs/SPEC.md`、`docs/MODULES.md`、`CLAUDE.md`、`ARCHITECTURE.md`、`.github/pull_request_template.md` | 規格（契約）、模組介面、工作說明、架構說明（結構有變就在同一個 PR 更新）、PR 範本 | B |
 
 `data/config.json` 放站名、時區 `Asia/Taipei`、前綴 `tw`、分類清單、Firebase 與 Google 金鑰（金鑰限制 API 與來源網址）。localStorage 鍵與快取名都用 `tw` 開頭（`twWho`、`tw-v1`）；新增同網域檔案要加進 `sw.js` 的 `SHELL`，改了快取規則要把版本號加一。
 
@@ -178,7 +181,7 @@
 
 | 模組 | 負責的檔案 | 產出 | 前置 |
 |---|---|---|---|
-| A 資料 | `data/*.json`、`data/geo/` | `config.json`、五區與 22 縣市地區樹、縣市邊界、地點庫（含 Google 清單匯入與補欄位）、去過紀錄匯入 | 無 |
+| A 資料 | `data/*.json`、`data/geo/`、`data/staging/`、`tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | `config.json`、五區與 22 縣市地區樹、縣市邊界、地點庫（含 Google 清單匯入與補欄位）、去過紀錄匯入 | 無 |
 | B 骨架與同步 | `index.html`、`js/app.js`、`state.js`、`sync.js`、`util.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md` | 新 repo、Pages 上線、模組載入、Firebase 連線與身分選擇、規則存檔、讀寫與快照 workflow、驗證腳本與 CI | 無（先用假資料） |
 | C 介面 | `css/*.css` | 「胖寶寶台灣行」視覺、手機優先版面、卡片、篩選列、深淺色 | A 的資料格式、B 的頁面結構 |
 | D 地圖與地點庫 | `js/map.js`、`places.js`、`marks.js` | 首頁地圖、地區瀏覽、篩選、地點詳情、想去／去過／心得／星等、兩人對照、點亮台灣 | A、B |
@@ -189,11 +192,12 @@
 
 ## 開放問題
 
-- [ ] 宜蘭歸東部（暫定）還是北部
-- [ ] 模組啟動順序
-- [ ] Google 地圖清單的匯入結果與分類對應：先依 Google 地點類型自動分類，再由使用者確認
+- [x] 宜蘭歸東部（2026-10-23 確認）
+- [x] 基礎設施：repo、Pages、Firebase 專案與規則、`FIREBASE_SECRET`、`firebase.dbUrl` 已完成；模組啟動順序為基礎設施 → A、B → C、D、E → F（B 已合併，A 進行中）
+- [ ] Google 地圖清單：暫存清單 384 筆（美食 326、咖啡甜點 37、住宿 10、景點 4、小吃夜市 3、購物市集 1、未分類 3），尚待 Places 查詢補座標、縣市、`pid`，並確認 3 筆未分類與 4 筆歇業標記
+- [ ] 座標來源：Places API 回傳的座標能不能存進 repo（條款明確允許長期保存的只有 place_id，座標一般限制快取天數）；待 Howard 決定
 - [ ] 去過紀錄的提供時間與形式（不限形式）
-- [ ] 新建 Firebase 專案與 Google Places 金鑰（限制 API 與來源網址）；`FIREBASE_SECRET` 由 Howard 自己放進 repo Secrets，不貼聊天
+- [ ] Google 金鑰有兩把：匯入工具用的 repo secret `GOOGLE_PLACES_KEY`，與瀏覽器用的 `google.placesKey`（限制 API 與來源網址）；皆由 Howard 自己設定，不貼聊天
 - [ ] 縣市邊界資料（GeoJSON）的來源與授權，由 A 找政府開放資料並簡化
 - [ ] 行程的「長途段」要不要在畫面上特別標示（目前不設上限，只顯示每段方式與時間）
 

@@ -31,7 +31,7 @@
 
 | 模組 | 檔案 |
 |---|---|
-| A 資料 | `data/*.json`、`data/geo/` |
+| A 資料 | `data/*.json`、`data/geo/`、`data/staging/`、`tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` |
 | B 骨架與同步 | `index.html`、`js/app.js`、`js/state.js`、`js/sync.js`、`js/util.js`、`scripts/`、`.github/`、`firebase-rules.json`、`docs/`、`CLAUDE.md`、`ARCHITECTURE.md`（各模組改到自己的部分時要在同一個 PR 更新） |
 | C 介面 | `css/*.css` |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` |
@@ -63,6 +63,7 @@ CI（`.github/workflows/ci.yml`）在每個 PR 與 `main` 推送時跑驗證與�
 - **讀**：`read-firebase.yml`（輸入 `path`：`marks`、`inbox`、`places`、`removed` 或 `all`）把資料放到 `snapshot` 分支的 `live/`，再從該分支讀回。
 - **寫**：`write-data.yml`（輸入 `path`、`expect_ts`、`payload`）。先備份到 `snapshot` 分支的 `backup/`，現場的 `ts` 與 `expect_ts` 不符就拒絕，寫完讀回比對。同一件事的改動先合併，一次寫入。
 - **快照**：`snapshot.yml` 每天把整個資料庫備份到 `snapshot` 分支，也可手動觸發。
+- **匯入查詢**（模組 A）：`lookup-places.yml`（輸入 `offset`、`limit`）用 Places API 查 `data/staging/import-list.json` 的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`。
 - 需要 repo secret `FIREBASE_SECRET`；資料庫網址讀自 `data/config.json` 的 `firebase.dbUrl`，沒填就會明確失敗。
 
 ## 安全修改程序
@@ -76,4 +77,4 @@ CI（`.github/workflows/ci.yml`）在每個 PR 與 `main` 推送時跑驗證與�
 
 ## 開放項目
 
-見 `docs/SPEC.md`「開放問題」與「上線前清單」。基礎設施尚待 Howard 手動完成的項目：貼 Firebase 規則、設定 `FIREBASE_SECRET`、填 `data/config.json` 的 `firebase.dbUrl`。
+見 `docs/SPEC.md`「開放問題」與「上線前清單」。基礎設施（repo、Pages、Firebase 專案與規則、`FIREBASE_SECRET`、`firebase.dbUrl`）已完成。尚待 Howard 確認的項目：repo secret `GOOGLE_PLACES_KEY`（匯入查詢用）是否已設定，以及 `data/config.json` 的 `google.placesKey`（瀏覽器用，需限制 API 與來源網址）。
