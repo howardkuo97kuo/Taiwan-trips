@@ -13,6 +13,14 @@ export function statusOf(store, placeId) {
   return { apong: pick('apong'), baobao: pick('baobao') };
 }
 
+// 喜歡程度：存 love／ok／meh
+export const LIKES = [
+  { id: 'love', icon: '😍', label: '超愛' },
+  { id: 'ok', icon: '🙂', label: '還行' },
+  { id: 'meh', icon: '😕', label: '不推' },
+];
+export const likeOf = (id) => LIKES.find((l) => l.id === id) ?? null;
+
 // 兩人對照的分組
 export const GROUPS = [
   { id: 'both-want', label: '兩人都想去', test: (a, b) => a.want && b.want },
@@ -157,12 +165,26 @@ export function markBar(ctx, placeId) {
     const ym = h('input', { type: 'month', class: 'tw-mark-ym', value: mine.ym ?? '', max: ymNow(),
       'aria-label': '去過的年月',
       onchange: (e) => save({ ym: /^\d{4}-(0[1-9]|1[0-2])$/.test(e.target.value) ? e.target.value : null }) });
-    const note = h('textarea', { class: 'tw-mark-note', rows: '2', maxlength: '200', placeholder: '一句心得（最多 200 字，別放電話與訂位代號）' });
-    note.value = mine.note ?? '';
-    note.addEventListener('input', debounce(() => save({ note: note.value.trim() || null }), 600));
+    const likes = h('div', { class: 'tw-mark-likes', role: 'group', 'aria-label': '喜不喜歡' },
+      LIKES.map((l) => h('button', {
+        type: 'button',
+        class: `tw-mark-like is-${l.id}${mine.like === l.id ? ' is-on' : ''}`,
+        'aria-pressed': mine.like === l.id ? 'true' : 'false',
+        onclick: () => save({ like: mine.like === l.id ? null : l.id }),
+      }, `${l.icon} ${l.label}`)));
+    // 文字欄：打字停 600ms 後存；空白視為清掉
+    const field = (key, max, label, ph) => {
+      const ta = h('textarea', { class: `tw-mark-note is-${key}`, rows: '2', maxlength: String(max), placeholder: ph, 'aria-label': label });
+      ta.value = mine[key] ?? '';
+      ta.addEventListener('input', debounce(() => save({ [key]: ta.value.trim() || null }), 600));
+      return h('label', { class: 'tw-mark-field' }, h('span', {}, label), ta);
+    };
     root.append(
       h('div', { class: 'tw-mark-row' }, toggle('again', '↻ 想再去', !!mine.again), ym),
-      stars, note);
+      stars, likes,
+      field('good', 300, '👍 好吃／推薦', '例如：某道菜特別好吃、值得再點'),
+      field('avoid', 300, '⚠️ 雷點／要避開', '例如：某道很雷、哪個時段別來'),
+      field('note', 200, '備註', '其他想記的（最多 200 字，別放電話與訂位代號）'));
   }
   root.append(msg);
   return root;
@@ -179,9 +201,13 @@ export function markCompare(ctx, placeId) {
     if (m?.been) bits.push(`✓ 去過${m.ym ? `（${m.ym}）` : ''}`);
     if (m?.again) bits.push('↻ 想再去');
     if (m?.stars) bits.push('★'.repeat(m.stars));
+    const lk = likeOf(m?.like);
+    if (lk) bits.push(`${lk.icon} ${lk.label}`);
     return h('div', { class: `tw-mark-col is-${who}` },
       h('strong', {}, store.whoName(who)),
       h('p', {}, bits.length ? bits.join('　') : '還沒標'),
+      m?.good && h('p', { class: 'tw-mark-good' }, h('b', {}, '👍 '), m.good),
+      m?.avoid && h('p', { class: 'tw-mark-avoid' }, h('b', {}, '⚠️ '), m.avoid),
       m?.note && h('p', { class: 'tw-mark-quote' }, m.note));
   };
   return h('div', { class: 'tw-mark-compare' }, col('apong'), col('baobao'));
