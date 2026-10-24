@@ -9,7 +9,7 @@
 一個沒有建置步驟的靜態網站（GitHub Pages 直接發佈 `main`），瀏覽器載入 `data/*.json` 當地點庫，並用 REST／SSE 讀寫 Firebase Realtime Database 上兩人的標記；Claude 與排程工具則在瀏覽器之外，透過 GitHub Actions 讀寫同一份 Firebase。行程推薦由 Claude 產生成 JSON 檔，網站只負責顯示。
 
 ```
-        手機瀏覽器（阿胖、寶寶）                       GitHub（main，受保護）
+        瀏覽器（阿胖、寶寶）                       GitHub（main，受保護）
    index.html + js/*.js（ES modules） ◄── Pages ──── data/*.json  js/  css/  docs/
         │   │                                         │
         │   └─ REST ──► Places API（評分、營業時間，即時查，不存）
@@ -55,6 +55,7 @@
 | `css/*.css` | 樣式；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
+| `demos/*.html` | 首頁風格小樣（A 郵戳集、B 路標、C 點菜單、D 環島鐵路線圖、E 手帳貼紙、F 撕下日曆、G 紅白藍帆布）：各自單檔、內嵌 `places.json` 與 `regions.json` 的內容、示意標記只存瀏覽器 localStorage（`twDemo-*`），不連 Firebase、不進 `sw.js`；選定風格後會被正式的 `css/*.css` 取代並移除 | C |
 | `scripts/validate.mjs` | 資料格式驗證（CI 守門員，契約檔） | B |
 | `scripts/fb-env.sh`、`scripts/snapshot-commit.sh` | workflow 共用：讀資料庫網址與密鑰、提交到 `snapshot` 分支 | B |
 | `.github/workflows/` | `ci`、`read-firebase`、`write-data`、`snapshot` | B |
