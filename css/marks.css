@@ -84,20 +84,26 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-place-card.is-skipped .tw-place-mid, .tw-place-card.is-skipped .tw-place-stub { opacity: .55; }
 @media (pointer: coarse) { .tw-mark-skip { min-height: 40px; padding: 6px 10px; } }
 
-/* ── 想去：台式復古小郵票（米白鋸齒邊、朱紅／靛藍底、姓名首字，點下去「啪」地貼上） ── */
-.tw-place-card .tw-mark-dot { width: 46px; height: 56px; border: 0; background: none; border-radius: 0; padding: 0; display: block; position: relative; box-shadow: none; filter: drop-shadow(0 1px 1.5px #0007); --ink-s: #c4352b; }
-.tw-place-card .tw-mark-dot[data-who="baobao"] { --ink-s: #1f6f78; }
-.tw-place-card .tw-mark-dot::before { content: ""; position: absolute; inset: 0; background: #e3d6b4; border: 4px solid #f6edd2; box-sizing: border-box; -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2048%27%3E%3Cpath%20fill-rule%3D%27evenodd%27%20d%3D%27M0%200H40V48H0zM1.7000000000000002%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM1.7000000000000002%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200z%27%2F%3E%3C%2Fsvg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2048%27%3E%3Cpath%20fill-rule%3D%27evenodd%27%20d%3D%27M0%200H40V48H0zM1.7000000000000002%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM1.7000000000000002%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM9.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM17.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM25.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%200a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM33.7%2048a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%204a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2012a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2020a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2028a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2036a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM-2.3%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200zM37.7%2044a2.3%202.3%200%201%200%204.6%200a2.3%202.3%200%201%200%20-4.6%200z%27%2F%3E%3C%2Fsvg%3E") center / 100% 100% no-repeat; transition: background .2s, transform .2s; }
-.tw-place-card .tw-mark-dot::after { content: attr(data-ini); position: absolute; inset: 7px; display: grid; place-items: center; border: 1px solid transparent; font: 700 17px var(--f-display); color: #a99b78; }
-.tw-place-card .tw-mark-dot.is-on::before { background: radial-gradient(circle at 50% 28%, color-mix(in srgb, var(--ink-s) 78%, #fff), var(--ink-s) 70%); }
-.tw-place-card .tw-mark-dot.is-on::after { color: #fff6dc; border-color: #fff6dc99; text-shadow: 0 1px 1px #0005; }
-.tw-place-card .tw-mark-dot.is-ghost { width: 36px; height: 44px; filter: drop-shadow(0 1px 1px #0005); }
-.tw-place-card .tw-mark-dot.is-ghost::after { font-size: 14px; inset: 6px; }
-.tw-place-card button.tw-mark-dot:hover::before { transform: rotate(-3deg) scale(1.06); }
+/* ── 想去：中華民國郵票（用提供的阿里山小火車郵票圖，貼上去時蓋圓郵戳：縣市、民國日期、誰） ── */
+.tw-place-card .tw-mark-dot { width: 104px; height: 104px; border: 0; background: none; border-radius: 0; padding: 0; display: block; position: relative; box-shadow: none; overflow: visible; }
+.tw-place-card .tw-mark-dot::before { content: ""; position: absolute; inset: 0; background: url("../img/stamp-alishan.png") center / contain no-repeat; filter: grayscale(1) opacity(.2) drop-shadow(0 1px 1px #0003); transition: filter .25s, transform .2s; }
+.tw-place-card .tw-mark-dot[data-who="baobao"]::before { }
+.tw-place-card .tw-mark-dot::after { content: attr(data-ini); position: absolute; inset: 0; display: grid; place-items: center; font: 700 26px var(--f-display); color: #9aa; opacity: .85; }
+.tw-place-card .tw-mark-dot.is-on::before { filter: drop-shadow(0 2px 2px #0006); }
+.tw-place-card .tw-mark-dot[data-who="baobao"].is-on::before { filter: hue-rotate(150deg) saturate(1.1) drop-shadow(0 2px 2px #0006); }
+.tw-place-card .tw-mark-dot.is-on::after { display: none; }
+.tw-place-card .tw-mark-dot.is-ghost { width: 72px; height: 72px; }
+.tw-place-card .tw-mark-dot.is-ghost::after { font-size: 20px; }
+.tw-place-card button.tw-mark-dot:hover::before { transform: rotate(-3deg) scale(1.05); }
 .tw-place-card .tw-mark-dot.is-on, .tw-place-card button.tw-mark-dot:hover { box-shadow: none; transform: none; }
+.tw-place-card .tw-mark-dot.is-on:not(.is-ghost) { transform: rotate(-2deg); }
 .tw-place-card .tw-mark-dot.is-pop { animation: tw-stamp-stick .5s cubic-bezier(.2, 1.1, .4, 1) both; }
 @keyframes tw-stamp-stick { 0% { transform: translateY(-34px) rotate(-18deg) scale(1.6); opacity: 0; } 55% { transform: translateY(2px) rotate(3deg) scale(.92); opacity: 1; } 75% { transform: translateY(-1px) rotate(-2deg) scale(1.03); } 100% { transform: rotate(-2deg) scale(1); } }
-.tw-place-card .tw-mark-dot.is-on:not(.is-ghost) { transform: rotate(-2deg); }
+/* 圓郵戳 */
+.tw-pm { position: absolute; right: -4px; bottom: 2px; width: 52%; aspect-ratio: 1; border: 2px solid #4a2e1f; border-radius: 50%; display: grid; place-content: center; text-align: center; color: #4a2e1f; transform: rotate(-14deg); mix-blend-mode: multiply; opacity: .88; line-height: 1.1; background: radial-gradient(circle, transparent 62%, #4a2e1f14 63%); pointer-events: none; }
+.tw-pm b { font: 700 13px var(--f-display); } .tw-pm i { font: normal 8px var(--f-num, inherit); letter-spacing: -.2px; } .tw-pm em { font: normal 8px var(--f-display); }
+.tw-place-card .tw-mark-dot.is-pop .tw-pm { animation: tw-pm-in .35s ease-out .35s both; }
+@keyframes tw-pm-in { from { opacity: 0; transform: rotate(-14deg) scale(1.9); } to { opacity: .88; transform: rotate(-14deg) scale(1); } }
 
 /* ── 另一方的狀態小章（照片左上角） ── */
 .tw-place-media { position: relative; }
@@ -129,3 +135,9 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-place-card .tw-mark-stamp .tk { font-family: var(--f-display); }
 .tw-place-card .tw-mark-stamp .again { animation: tw-again-in .35s cubic-bezier(.2, 1.1, .4, 1) .5s both; }
 @keyframes tw-again-in { from { opacity: 0; transform: rotate(-12deg) scale(2); } }
+
+.tw-place-card .tw-mark-stamp { width: 240px; height: auto; aspect-ratio: 460 / 250; transform: rotate(-3deg); filter: drop-shadow(0 2px 3px #0005); }
+.tw-place-card .tw-mark-stamp svg { width: 100%; height: 100%; }
+.tw-place-card .tw-mark-stamp .ym, .tw-place-card .tw-mark-stamp text { font-family: var(--f-display); }
+.tw-place-card .tw-mark-stamp-empty { width: 210px; height: 112px; border-radius: 16px; }
+@media (max-width: 899px) { .tw-place-card .tw-mark-stamp { width: 150px; } .tw-place-card .tw-mark-stamp-empty { width: 140px; height: 76px; } .tw-place-card .tw-mark-dot { width: 72px; height: 72px; } .tw-place-card .tw-mark-dot.is-ghost { width: 52px; height: 52px; } }
