@@ -62,6 +62,7 @@ CI（`.github/workflows/ci.yml`）在每個 PR 與 `main` 推送時跑驗證與�
 
 - **讀**：`read-firebase.yml`（輸入 `path`：`marks`、`inbox`、`places`、`removed` 或 `all`）把資料放到 `snapshot` 分支的 `live/`，再從該分支讀回。
 - **寫**：`write-data.yml`（輸入 `path`、`expect_ts`、`payload`）。先備份到 `snapshot` 分支的 `backup/`，現場的 `ts` 與 `expect_ts` 不符就拒絕，寫完讀回比對。同一件事的改動先合併，一次寫入。
+- **批次寫標記**：`write-marks-batch.yml`（輸入 `file` 或 `payload`、`mode`）一次合併寫入整個 `marks/{apong|baobao}`，先備份、驗欄位、讀回比對；單筆仍用 `write-data.yml`。
 - **快照**：`snapshot.yml` 每天把整個資料庫備份到 `snapshot` 分支，也可手動觸發。
 - **匯入查詢**（模組 A）：`lookup-places.yml`（輸入 `offset`、`limit`）用 Places API 查 `data/staging/import-list.json` 的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`。
 - 需要 repo secret `FIREBASE_SECRET`；資料庫網址讀自 `data/config.json` 的 `firebase.dbUrl`，沒填就會明確失敗。
