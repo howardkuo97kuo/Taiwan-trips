@@ -39,7 +39,7 @@ export async function fbPush(path, value) {
 }
 
 // ── 標記 ──
-// mark = {want?, been?, again?, ym?, stars?, note?, ts}
+// mark = {want?, been?, again?, ym?, stars?, like?, good?, avoid?, note?, ts}
 // setMark 只寫目前身分自己那條；patch 併進現有標記，值為 null/undefined 的欄位會被拿掉，
 // 沒有任何內容了就整筆刪除。先更新畫面再寫入，失敗時回復並丟出錯誤。
 export async function setMark(placeId, patch) {

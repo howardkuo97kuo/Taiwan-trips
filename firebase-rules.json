@@ -22,6 +22,15 @@
           "stars": {
             ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 5 && newData.val() % 1 === 0"
           },
+          "like": {
+            ".validate": "newData.isString() && (newData.val() === 'love' || newData.val() === 'ok' || newData.val() === 'meh')"
+          },
+          "good": {
+            ".validate": "newData.isString() && newData.val().length <= 300"
+          },
+          "avoid": {
+            ".validate": "newData.isString() && newData.val().length <= 300"
+          },
           "note": {
             ".validate": "newData.isString() && newData.val().length <= 200"
           },

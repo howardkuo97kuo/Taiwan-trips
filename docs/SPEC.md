@@ -109,13 +109,13 @@
 
 | 路徑 | 用途 | 誰能寫 |
 |---|---|---|
-| `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, ym?, stars?, note?, ts}`：想去、去過、想再去、年月（`YYYY-MM`）、1 到 5 星、一句心得（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
+| `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
 | `/inbox/{id}` | 收件匣：連結或店名、誰送的、時間、狀態 | 網站 |
 | `/places`、`/removed` | 排程查好後的新地點、被移除的地點（定期併回 `places.json`） | 只有排程工具與 write-data |
 | `/trips/` | 預留，現在不寫、規則不開放 | 無 |
 
 - 身分用 `apong`（阿胖）和 `baobao`（寶寶）；第一次進站選身分，記在 localStorage `twWho`，可隨時切換。這只是前端區分，不是安全機制。
-- `firebase-rules.json` 存在 repo，限制可寫路徑與欄位型別、大小（星等 1 到 5、心得 ≤ 200 字），其餘一律拒絕；需由 Howard 手動貼到主控台。
+- `firebase-rules.json` 存在 repo，限制可寫路徑與欄位型別、大小（星等 1 到 5、備註 ≤ 200 字、好吃與雷點各 ≤ 300 字、喜歡程度只能是 love｜ok｜meh），其餘一律拒絕；需由 Howard 手動貼到主控台。
 - 即時連線數：網站只用 2 條串流（兩人的 `/marks`），其餘（`/places`、`/inbox`）用輪詢。
 - 快照：排程用 Actions 把 Firebase 備份到 `snapshot` 分支，被亂寫或誤刪可以還原。
 - 「只有擁有者能同意」這類限制不做；兩人皆平等。
