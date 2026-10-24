@@ -28,7 +28,7 @@
 | --- | --- | --- |
 | B 骨架與同步 | 外殼、路由、身分、Firebase 連線、CI、workflow | 已合併 |
 | A 資料 | `data/places.json` 與補欄位、匯入、地區細項 | 進行中；`regions.json` 已有五大區與 22 縣市，`places.json` 已匯入 Google 清單 395 筆與去過紀錄 127 筆（共 522 筆；座標、縣市、`pid` 由 Places 查詢補齊，座標標 `llsrc: google`）；暫存清單的 `q` 欄位可指定查詢字串，去過的標記（`been`、年月、心得）暫存在 `data/staging/visited-marks.json`，待寫入 Firebase |
-| C 介面 | `css/*.css` | 未開始（`index.html` 已預留 `css/app.css`） |
+| C 介面 | `css/*.css` | 進行中：外殼與設計變數已完成（`tokens.css`、`app.css`）；首頁、清單、標記的樣式在後續 PR |
 | D 地圖與地點庫 | `js/map.js`、`js/places.js`、`js/marks.js` | 已完成第一版（PR 待合併）：首頁地圖、地區頁、篩選、地點詳情、標記、兩人對照、點亮台灣；沒有樣式（等 C），只用 `tw-map-`、`tw-place-`、`tw-mark-` 開頭的 class |
 | E 收件匣與離線 | `js/inbox.js`、`tools/`、`sw.js` | 未開始，導覽列不顯示 |
 | F 行程推薦 | `js/itinerary.js`、`data/itineraries/` | 未開始，導覽列不顯示 |
@@ -40,7 +40,8 @@
 | 檔案 | 責任 | 模組 |
 | --- | --- | --- |
 | `index.html` | 外殼容器（頂列、主畫面、底部導覽、身分選擇層）、載入 Leaflet 與 `js/app.js`；不放資料 | B |
-| `js/app.js` | 啟動、路由表 `ROUTES`、模組掛載、頂列與導覽、身分選擇 | B |
+| `js/app.js` | 啟動、路由表 `ROUTES`、模組掛載、頂列（同步狀態、動畫與深淺色按鈕）與導覽、身分選擇 | B |
+| `js/prefs.js` | 深淺色（localStorage `twTheme`）、動畫開關（`twMotion`，預設跟系統的減少動態，`?motion=on` 可覆蓋）、背景照片的視差與遮罩 | B |
 | `js/state.js` | 單一 store：`get`／`set`／`subscribe`、身分、載入 `data/*.json` | B |
 | `js/sync.js` | Firebase REST 與兩條 `/marks` 串流、`setMark`、`marksOf` | B |
 | `js/util.js` | `h`（建 DOM）、`clear`、`ymNow`、`debounce`、`loadJson` | B |
@@ -53,7 +54,8 @@
 | `js/map.js` | 首頁：Leaflet 地圖，每縣市一個計數圓點（點亮的縣市變綠），選到縣市後畫出個別地點；下方接篩選與卡片。只畫有 `ll` 的地點，座標更新後自動套用 | D |
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage` | D |
 | `js/marks.js` | `#/compare` 兩人對照四組與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、心得，寫入走 `sync.setMark`）、`markSummary`、`markCompare`、`statusOf`、`litCounties` | D |
-| `css/*.css` | 樣式；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
+| `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |
+| `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/inbox.js`、`tools/`、`sw.js`、`manifest.webmanifest` | 收件匣、排程查資料工具、離線與加到主畫面 | E |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
 | `demos/*.html` | 首頁風格小樣（A 郵戳集、B 路標、C 點菜單、D 環島鐵路線圖、E 手帳貼紙、F 撕下日曆、G 紅白藍帆布、Mix 環島郵路）：各自單檔、內嵌 `places.json` 與 `regions.json` 的內容、示意標記只存瀏覽器 localStorage（`twDemo-*`），不連 Firebase、不進 `sw.js`；選定風格後會被正式的 `css/*.css` 取代並移除 | C |

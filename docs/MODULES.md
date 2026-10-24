@@ -60,12 +60,18 @@ export function mount(el, ctx) {
 
 | 元素 | class / 結構 |
 |---|---|
-| 頂列 `#tw-header.tw-header` | `a.tw-title`、`span.tw-sync.is-online/.is-offline`、`button.tw-who-btn` |
+| 頂列 `#tw-header.tw-header` | `a.tw-title`、`span.tw-sync.is-online/.is-offline/.is-pending`（內含 `i.tw-dot`）、`button.tw-pill.tw-motion-btn`、`button.tw-pill.tw-theme-btn`、`button.tw-who-btn` |
 | 主畫面 `#tw-view.tw-view` | 各模組自己的內容；`p.tw-loading`、`p.tw-empty` |
 | 底部導覽 `#tw-nav.tw-nav` | `a.tw-nav-item`（目前頁多 `.is-active`） |
 | 身分選擇 `#tw-overlay.tw-overlay`（`[hidden]` 隱藏） | `div.tw-dialog > h2、p.tw-hint、div.tw-who-choices > button.tw-who-choice(.is-current)[data-who]、button.tw-cancel` |
 
 模組自己的 class 請用模組前綴（D：`tw-map-`、`tw-place-`、`tw-mark-`；E：`tw-inbox-`；F：`tw-trip-`），避免撞名。
+
+## Toast 與偏好（`ctx.toast`、`ctx.prefs`）
+
+- `ctx.toast(訊息, { action: '復原', onAction, tone: 'bad', ms })`：底部提示，回傳關閉函式。標記與蓋章請用它提供「復原」。
+- `ctx.prefs`：`motionOn()`、`isDark()`。動畫請用 CSS 並尊重 `prefers-reduced-motion`（`css/app.css` 已依 `data-motion` 統一關閉）。
+- 外殼另有 `.tw-bg`（背景照片）、`#tw-toast`（Toast 容器）、`.tw-view` 已設 `isolation: isolate`，Leaflet 的圖層不會蓋過對話框。
 
 ## 檔案歸屬提醒
 

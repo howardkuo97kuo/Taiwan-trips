@@ -2,7 +2,8 @@
 // 各功能模組在 js/ 下以 `export function mount(el, ctx)` 接進來，詳見 docs/MODULES.md。
 import * as store from './state.js';
 import * as sync from './sync.js';
-import { h, clear } from './util.js';
+import { h, clear, toast } from './util.js';
+import * as prefs from './prefs.js';
 
 // 路由表：hash 第一段 → 模組與導覽。模組還沒做好（檔案不存在）時，畫面顯示「尚未完成」。
 const ROUTES = {
@@ -37,7 +38,7 @@ function parseHash() {
 }
 
 function context() {
-  return { store, sync, navigate, h, clear, config: store.get('config') };
+  return { store, sync, navigate, h, clear, toast, prefs, config: store.get('config') };
 }
 
 async function render() {
@@ -69,12 +70,20 @@ async function render() {
 function renderHeader() {
   const who = store.get('who');
   const online = store.get('online');
+  // 三種狀態：已同步／連線中（還沒拿到任何資料）／離線（顯示的是上次拿到的資料）
+  const st = online ? ['is-online', '已同步', '標記會即時同步'] : store.get('synced')
+    ? ['is-offline', '離線', '目前連不上，顯示的是上次的標記'] : ['is-pending', '連線中', '正在連線'];
   clear($('tw-header')).append(
     h('a', { class: 'tw-title', href: '#/' }, store.get('config')?.siteName ?? '胖寶寶台灣行'),
-    h('span', {
-      class: `tw-sync ${online ? 'is-online' : 'is-offline'}`,
-      title: online ? '已連線' : '未連線',
-    }),
+    h('span', { class: `tw-sync ${st[0]}`, title: st[2], role: 'status' },
+      h('i', { class: 'tw-dot', 'aria-hidden': 'true' }), st[1]),
+    h('button', {
+      class: 'tw-pill tw-motion-btn', type: 'button', onclick: prefs.toggleMotion,
+      title: prefs.systemReducesMotion() && !document.documentElement.dataset.motion
+        ? '你的系統設定了減少動態，所以預設是關的；點一下可以開啟' : '開關背景與蓋章動畫',
+    }, prefs.motionOn() ? '動畫：開' : '動畫：關'),
+    h('button', { class: 'tw-pill tw-theme-btn', type: 'button', onclick: prefs.toggleTheme },
+      prefs.isDark() ? '淺色' : '深色'),
     h('button', { class: 'tw-who-btn', type: 'button', onclick: () => pickWho() },
       who ? store.whoName(who) : '選身分'),
   );
@@ -118,6 +127,13 @@ export function pickWho() {
 
 // ── 啟動 ──
 async function boot() {
+  prefs.initPrefs();
+  // 切換偏好會重畫頂列，把鍵盤焦點留在剛按的那顆
+  prefs.onPrefs(() => {
+    const was = ['tw-motion-btn', 'tw-theme-btn'].find((c) => document.activeElement?.classList.contains(c));
+    renderHeader();
+    if (was) document.querySelector(`.${was}`)?.focus();
+  });
   store.set('who', store.readWho());
   renderHeader();
   await store.loadData();
@@ -125,6 +141,7 @@ async function boot() {
   renderHeader();
   store.subscribe('who', renderHeader);
   store.subscribe('online', renderHeader);
+  store.subscribe('synced', renderHeader);
   sync.startSync();
   if (!store.get('who')) pickWho();
   window.addEventListener('hashchange', render);
