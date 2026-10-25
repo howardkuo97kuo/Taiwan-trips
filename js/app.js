@@ -12,7 +12,7 @@ const ROUTES = {
   p: { name: 'place', module: './places.js' }, // #/p/<placeId>
   compare: { name: 'compare', module: './marks.js', label: '兩人對照', nav: true },
   quick: { name: 'quick', module: './quick.js', label: '快速選擇', nav: true },
-  inbox: { name: 'inbox', module: './inbox.js', label: '新增地點', nav: true, optional: true },
+  inbox: { name: 'inbox', module: './inbox.js', label: '收件匣', nav: true, optional: true },
   trips: { name: 'trips', module: './itinerary.js', label: '行程', nav: true, optional: true },
 };
 
