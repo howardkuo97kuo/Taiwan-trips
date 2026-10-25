@@ -80,3 +80,9 @@ button:active:not(:disabled):not(.tw-mark-stamp), .tw-nav-item:active, .tw-place
 .tw-place-card[data-c="溫泉"] { --tk: #3a7ca5; } .tw-place-card[data-c="住宿"] { --tk: #5b4fa3; } .tw-place-card[data-c="購物市集"] { --tk: #b3398a; }
 .tw-place-card[data-c] { box-shadow: inset 12px 0 0 var(--tk, transparent); }
 .tw-place-card.is-pair[data-c] { box-shadow: inset 12px 0 0 var(--tk, transparent), 0 0 0 3px var(--gold); }
+
+/* ── 回到頂端按鈕：捲離頂端後浮在右下角（手機在底部導覽列上方） ── */
+.tw-totop { position: fixed; right: 16px; bottom: calc(var(--nav-h, 0px) + 16px + var(--safe-b, 0px)); z-index: 30; min-height: 44px; padding: 0 16px; border: 2px solid var(--ink); border-radius: 999px; background: var(--card); color: var(--ink); font: 700 15px var(--f-body); box-shadow: 0 6px 16px -6px #0008; cursor: pointer; animation: tw-rise .3s cubic-bezier(.25, 1, .5, 1) both; }
+.tw-totop[hidden] { display: none; }
+.tw-totop:hover { background: var(--ink); color: var(--paper); }
+@media (max-width: 760px) { .tw-totop { right: 12px; } }

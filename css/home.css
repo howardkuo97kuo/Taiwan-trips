@@ -97,8 +97,22 @@
 .tw-map-county span { font: 700 15px var(--f-num); color: var(--rail-ink); }
 .tw-map-county:hover { background: var(--card); border-color: var(--rail); }
 .tw-map-back { border: 0; background: none; color: var(--blue); text-decoration: underline; padding: 0; }
-.tw-map-canvas { height: min(42vh, 420px); min-height: 280px; border: 2px solid var(--ink); border-radius: var(--r-md); margin: 10px 0 18px; z-index: 0; }
+.tw-map-canvas { height: min(60vh, 540px); min-height: 380px; border: 2px solid var(--ink); border-radius: var(--r-md); margin: 10px 0 18px; z-index: 0; }
 .tw-map-pop a { color: var(--blue); }
+.tw-map-pop { width: 250px; font-family: var(--f-body); color: var(--ink); }
+.tw-pop-photo .tw-thumb { float: none; width: 100%; height: 120px; margin: 0 0 8px; }
+.tw-pop-name { display: block; font-size: 17px; line-height: 1.3; }
+.tw-pop-meta { margin-top: 3px; font-size: 13px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.tw-pop-ai { margin: 6px 0 2px; font-size: 13px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.tw-pop-addr { margin-top: 4px; font-size: 12px; color: var(--muted); }
+.tw-pop-acts { display: flex; gap: 6px; margin-top: 10px; }
+.tw-pop-btn { flex: 1; min-height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--ink); border-radius: 8px; background: #fff; color: var(--ink) !important; font: 700 13px var(--f-body); text-decoration: none; padding: 0 6px; cursor: pointer; }
+.tw-pop-btn.is-on { background: var(--rail); border-color: var(--rail); color: #fff !important; }
+.tw-map-legend { background: color-mix(in srgb, var(--card) 92%, transparent); border: 2px solid var(--ink); border-radius: 8px; padding: 4px 10px; font-size: 12px; color: var(--ink); margin: 0 0 22px 10px; }
+.tw-map-legend summary { cursor: pointer; font-weight: 700; }
+.tw-map-legend ul { list-style: none; margin: 4px 0 2px; padding: 0; display: grid; gap: 3px; }
+.tw-map-legend li { display: flex; align-items: center; gap: 6px; }
+.tw-map-legend i { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink); display: inline-block; }
 
 @media (max-width: 1000px) {
   .tw-map-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; justify-items: center; }
