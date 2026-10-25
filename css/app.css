@@ -27,6 +27,8 @@ body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) 
 .tw-air { height: 14px; flex: none; background: repeating-linear-gradient(-45deg, var(--stamp) 0 18px, var(--card) 18px 30px, var(--blue) 30px 48px, var(--card) 48px 60px); }
 .tw-header, .tw-view { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 28px; }
 .tw-header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding-block: 16px 6px; }
+.tw-prefs { display: contents; }
+.tw-prefs-toggle { display: none; }
 .tw-title { font: 700 clamp(26px, 3.4vw, 40px)/1.2 var(--f-display); letter-spacing: .08em; color: var(--ink); text-decoration: none; margin-right: auto;
   text-shadow: 0 0 16px var(--paper), 0 0 5px var(--paper); }
 .tw-sync { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
@@ -54,7 +56,7 @@ body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) 
     padding: 73px max(28px, calc((100vw - var(--wrap)) / 2 + 28px)) 0; }
   body.is-stuck .tw-header { display: contents; }
   body.is-stuck .tw-title { font-size: 22px; margin-right: 0; text-shadow: none; position: relative; }
-  body.is-stuck .tw-header > :not(.tw-title) { position: relative; order: 2; }
+  body.is-stuck .tw-header :is(.tw-sync, .tw-pill, .tw-who-btn) { position: relative; order: 2; }
   body.is-stuck .tw-header > .tw-sync { margin-left: auto; }
   body.is-stuck .tw-nav { position: relative; width: auto; max-width: none; padding: 0; flex: none; }
   body.is-stuck .tw-nav-item { min-height: 36px; padding: 2px 14px; font-size: 15px; }
@@ -66,6 +68,14 @@ body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) 
 @media (max-width: 760px) {
   :root { --nav-h: 62px; }
   .tw-header, .tw-view, .tw-nav { padding-inline: 14px; }
+  .tw-header { position: relative; flex-wrap: nowrap; gap: 8px; padding-block: 10px 6px; }
+  .tw-title { font-size: 20px; letter-spacing: .04em; white-space: nowrap; }
+  .tw-sync { font-size: 0; gap: 0; } /* 手機只留圓點，文字在 title／role 上 */
+  .tw-prefs-toggle { display: inline-flex; align-items: center; justify-content: center; padding: 3px 10px; font-size: 16px; }
+  .tw-prefs { display: none; position: absolute; right: 14px; top: calc(100% - 2px); z-index: 25; flex-direction: column; align-items: stretch; gap: 6px; padding: 8px;
+    background: var(--card); border: 2px solid var(--ink); border-radius: var(--r-md); box-shadow: 0 6px 18px #0003; }
+  .tw-header.is-prefs-open .tw-prefs { display: flex; }
+  .tw-who-btn { padding: 4px 12px; font-size: 16px; white-space: nowrap; }
   .tw-nav { position: fixed; left: 0; right: 0; bottom: 0; max-width: none; margin: 0; padding: 6px 10px calc(6px + var(--safe-b)); gap: 6px; z-index: 20;
     background: color-mix(in srgb, var(--card) 94%, transparent); backdrop-filter: blur(10px); border-top: 2px solid var(--ink); }
   .tw-nav-item { flex: 1; justify-content: center; padding: 6px 4px; min-height: 48px; border-width: 0; background: transparent; font-size: 15px; }

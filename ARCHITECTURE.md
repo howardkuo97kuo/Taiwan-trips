@@ -39,7 +39,7 @@
 
 | 檔案 | 責任 | 模組 |
 | --- | --- | --- |
-| `index.html` | 外殼容器（`.tw-top` 包住頂列與導覽：桌面捲動時縮成一排固定在上方，靠 `app.js` 在 body 加 `is-stuck`；手機導覽固定在底部、頂列照常捲走；主畫面、身分選擇層）、載入 Leaflet 與 `js/app.js`；不放資料 | B |
+| `index.html` | 外殼容器（`.tw-top` 包住頂列與導覽：桌面捲動時縮成一排固定在上方，靠 `app.js` 在 body 加 `is-stuck`；手機導覽固定在底部、頂列縮成一列（站名、同步圓點、⚙、身分；動畫與深色收進 ⚙ 面板，`app.js` 的 `prefsOpen`）；主畫面、身分選擇層）、載入 Leaflet 與 `js/app.js`；不放資料 | B |
 | `js/app.js` | 啟動、路由表 `ROUTES`、模組掛載、頂列（同步狀態、動畫與深淺色按鈕）與導覽、身分選擇 | B |
 | `js/prefs.js` | 深淺色（localStorage `twTheme`）、動畫開關（`twMotion`，預設跟系統的減少動態，`?motion=on` 可覆蓋）、背景照片的視差與遮罩 | B |
 | `js/state.js` | 單一 store：`get`／`set`／`subscribe`、身分、載入 `data/*.json` | B |
@@ -71,6 +71,7 @@
 | `css/inbox.css` | 收件匣的基本樣式（E 先放一份，只用 `tw-inbox-` class，C 可接手調整） | E（C 可改） |
 | `js/itinerary.js`、`data/itineraries/` | 行程顯示與行程資料 | F |
 | `scripts/validate.mjs` | 資料格式驗證（CI 守門員，契約檔） | B |
+| `scripts/mobile-check.js` | 手機寬度掃描：在網站頁面的瀏覽器主控台貼上執行，用 320／360／390／430px 的 iframe 檢查每個頁面有沒有橫向捲動或內容超出卡片；改卡片、頁首或手機版面後要跑一次 | B |
 | `scripts/fb-env.sh`、`scripts/snapshot-commit.sh` | workflow 共用：讀資料庫網址與密鑰、提交到 `snapshot` 分支 | B |
 | `.github/workflows/` | `ci`、`read-firebase`、`write-data`、`snapshot` | B |
 | `firebase-rules.json` | Firebase 規則存檔（契約檔；需 Howard 手動貼到主控台） | B |

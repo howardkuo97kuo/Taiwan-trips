@@ -212,3 +212,19 @@
   .tw-place-card .tw-mark-skip { white-space: nowrap; }
   .tw-place-card .tw-mark-again { white-space: nowrap; }
 }
+
+/* ── 手機：底部「想去／郵票車票」各佔一列，欄位不被內容撐開；窄螢幕照片置頂 ── */
+@media (max-width: 899px) {
+  .tw-place-card { grid-template-columns: 62px minmax(0, 1fr); grid-template-areas: "stub mid" "g g" "want want" "stamp stamp"; }
+  .tw-place-card.has-media { grid-template-columns: 62px 112px minmax(0, 1fr); grid-template-areas: "stub media mid" "g g g" "want want want" "stamp stamp stamp"; }
+  .tw-place-card .tw-mark-stampzone { border-left: 0; flex-wrap: wrap; justify-content: center; min-width: 0; }
+  .tw-place-card .tw-mark-stamp, .tw-place-card .tw-mark-stamp-empty { max-width: 100%; }
+  .tw-place-card .tw-place-mid, .tw-place-card .tw-place-g { overflow-wrap: anywhere; }
+  .tw-mich { max-width: 100%; flex-wrap: wrap; }
+}
+@media (max-width: 420px) {
+  .tw-place-card.has-media { grid-template-columns: 62px minmax(0, 1fr); grid-template-areas: "stub media" "stub mid" "g g" "want want" "stamp stamp"; }
+  .tw-place-card.has-media .tw-place-media { padding: 10px 12px 0 10px; }
+  .tw-place-card.has-media .tw-place-media .tw-gallery { height: 170px; }
+}
+
