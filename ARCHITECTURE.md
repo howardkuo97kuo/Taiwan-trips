@@ -65,6 +65,7 @@
 | `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
 | `js/google.js` | Google 地點資料（預存版）：進站時從 Firebase `/google` 抓一次（讀進記憶體），提供 `googleOf(pid)`、`isOpenNow`（用預存的營業時段算）、`updatedLabel`、`staleDays`、`ago`；畫面一定要顯示「上次更新」，超過 10 天加警語 | D |
 | `tools/google-refresh.mjs`、`.github/workflows/refresh-google.yml` | 每週一凌晨（台北 03:00）也可手動：用伺服器端金鑰 `GOOGLE_PLACES_KEY` 向 Places API 查全部地點的評分、評論數、地址、營業時間、最多 5 則評論，PATCH 進 Firebase `/google/{pid}`；失敗的保留舊資料；需 secret `GOOGLE_PLACES_KEY`、`FIREBASE_SECRET` | E |
+| `tools/takeout-compare.mjs` | 比對 Google Takeout「已儲存」資料夾的清單與 `places.json`：網址裡的 `!1s0x…:0x…` 直接換算成 pid（不用名稱猜），已有的略過，台灣新地點寫進 `data/staging/takeout-new.json`；接著用 `lookup-places.yml`（暫存清單有 pid 就直接查詳細資料）與 `merge-places.mjs` 併入，標記用 `write-marks-batch.yml` | A／E |
 | `tools/write-google-ai.mjs`、`.github/workflows/write-google-ai.yml` | 把 AI 整理的一小段評語寫進 Firebase `/google/{pid}/ai`（`{t, n, at}`，只寫這個欄位、每筆最多 200 字、pid 必須在 `places.json`）；`refresh-google` 改成逐欄位更新，所以每週更新不會蓋掉評語；網站卡片只顯示這段評語，詳情頁另外直接展開 Google 實際評論 | E |
 | `tools/merge-places.mjs` | 把 `lookup-places` 的結果併進 `data/places.json`（只收吻合的、pid 重複的略過、id 規則同 A），並印出要把收件匣標成 `done`／`dup` 的 id | E |
 | `css/inbox.css` | 收件匣的基本樣式（E 先放一份，只用 `tw-inbox-` class，C 可接手調整） | E（C 可改） |
