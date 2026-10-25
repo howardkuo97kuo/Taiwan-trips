@@ -214,7 +214,7 @@ export function googleBlock(ctx, p, sumSlot) {
 
 // 篩選列＋清單。places 是已限定地區的可見地點。
 // 回傳 { el, destroy }：標記更新時只重畫清單，不動篩選列（輸入框才不會失焦）。
-export function listView(ctx, places, { limit = 60 } = {}) {
+export function listView(ctx, places, { limit = 60, onFiltered = null } = {}) {
   const { h, clear, store } = ctx;
   const cats = ctx.config?.categories ?? [];
   const root = h('div', { class: 'tw-place-browser' });
@@ -224,6 +224,7 @@ export function listView(ctx, places, { limit = 60 } = {}) {
   const drawList = () => {
     clear(listEl);
     const rows = places.filter((p) => passFilters(store, p));
+    onFiltered?.(rows);
     if (filters.sort === 'rating') {
       const r = (p) => googleOf(p.pid)?.rating ?? -1;
       rows.sort((a, b) => r(b) - r(a));

@@ -2,7 +2,9 @@
 // 環島郵路：用真實縣市邊界畫台灣，一條橘線繞一圈串起各縣市，泡泡大小是地點數，去過的縣市蓋郵戳。
 // 點縣市往下展開：縣市地圖（Leaflet）加地點清單。位置只用地點的 ll（OSM 或手動）；沒有 ll 的地點不畫圖釘，清單照樣有。
 import { findRegion, inRegion, countIn, listView } from './places.js';
-import { litCounties, statusOf } from './marks.js';
+import { litCounties, statusOf, quickMark } from './marks.js';
+import { thumb } from './photos.js';
+import { loadGoogle, googleOf, isOpenNow, todayZh } from './google.js';
 import { loadJson } from './util.js';
 
 const TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -195,18 +197,46 @@ export async function mount(el, ctx) {
   }
 
   // ── 縣市圖釘（Leaflet） ──
-  function drawPins() {
+  let shownIds = null; // 下方清單目前篩出來的地點；null 表示全部
+  let lastKey = '';
+  function drawPins(fit = false) {
     pinLayer?.clearLayers();
     if (!leaflet) return;
-    const rail = cssVar('--rail'), ink = cssVar('--ink'), gold = cssVar('--gold'), stamp = cssVar('--stamp'), muted = cssVar('--muted');
-    for (const p of store.get('places').filter((x) => store.isVisible(x) && x.ll && inRegion(x, sel))) {
+    const rail = cssVar('--rail'), ink = cssVar('--ink'), gold = cssVar('--gold'), stamp = cssVar('--stamp'), none = cssVar('--line');
+    const pts = [];
+    for (const p of store.get('places').filter((x) => store.isVisible(x) && x.ll && inRegion(x, sel) && (!shownIds || shownIds.has(x.id)))) {
       const s = statusOf(store, p.id);
       const both = s.apong.want && s.baobao.want, any = s.apong.want || s.baobao.want, been = s.apong.been || s.baobao.been;
-      const color = both ? gold : any ? rail : been ? stamp : muted;
-      const m = window.L.circleMarker(p.ll, { radius: both ? 9 : 6, color: ink, weight: both ? 2.5 : 1.5, fillColor: color, fillOpacity: 0.95 });
-      m.bindPopup(h('div', { class: 'tw-map-pop' }, h('strong', {}, p.n), h('br', {}), h('a', { href: `#/p/${p.id}` }, '看詳情')));
+      const color = both ? gold : any ? rail : been ? stamp : none;
+      const m = window.L.circleMarker(p.ll, { radius: both ? 9 : 7, color: been && !any ? '#fff' : ink, weight: both ? 2.5 : 2, fillColor: color, fillOpacity: 0.95 });
+      m.bindPopup(() => popupFor(p), { minWidth: 250, maxWidth: 290, autoPanPadding: [20, 20] });
       m.addTo(pinLayer);
+      pts.push(p.ll);
     }
+    if (fit && pts.length) leaflet.fitBounds(pts, { padding: [30, 30], maxZoom: 15 });
+  }
+
+  // Google 風格資訊卡：照片、評分、營業狀態、AI 評語、想去／詳情／Google 地圖
+  function popupFor(p) {
+    const g = googleOf(p.pid);
+    const open = g ? isOpenNow(g) : null;
+    const mapUrl = g?.maps ?? p.gurl ?? `https://www.google.com/maps/place/?q=place_id:${p.pid}`;
+    const s = statusOf(store, p.id);
+    const who = store.get('who');
+    const mine = who ? s[who].want : false;
+    const today = g?.hours?.find((t) => t.startsWith(todayZh()));
+    return h('div', { class: 'tw-map-pop' },
+      p.pid && ctx.config?.google?.placesKey && h('div', { class: 'tw-pop-photo' }, thumb(ctx, p)),
+      h('strong', { class: 'tw-pop-name' }, p.n),
+      h('div', { class: 'tw-pop-meta' }, p.c, g?.rating ? ` ・ ${g.rating.toFixed(1)} ★（${(g.n ?? 0).toLocaleString('zh-TW')}）` : '',
+        open != null && h('span', { class: `tw-live-open${open ? ' is-open' : ''}` }, open ? '營業中' : '休息中')),
+      today && h('div', { class: 'tw-pop-meta' }, `今天 ${today.replace(/^[^:：]*[:：]\s*/, '')}`),
+      g?.ai?.t && h('p', { class: 'tw-pop-ai' }, g.ai.t),
+      p.a && h('div', { class: 'tw-pop-addr' }, p.a),
+      h('div', { class: 'tw-pop-acts' },
+        h('button', { type: 'button', class: `tw-pop-btn${mine ? ' is-on' : ''}`, onclick: (e) => { quickMark(ctx, p.id, 'want'); e.target.textContent = who ? (mine ? '想去' : '已標想去') : '想去'; } }, mine ? '已標想去' : '想去'),
+        h('a', { class: 'tw-pop-btn', href: `#/p/${p.id}` }, '詳情'),
+        h('a', { class: 'tw-pop-btn', href: mapUrl, target: '_blank', rel: 'noopener' }, 'Google 地圖')));
   }
 
   // ── 下方內容 ──
@@ -239,10 +269,27 @@ export async function mount(el, ctx) {
       leaflet = window.L.map(canvas, { zoomControl: true }).setView(found.node.center ?? cfg.center ?? [23.7, 120.96], found.node.zoom ?? 11);
       window.L.tileLayer(TILES, { maxZoom: 18, attribution: '© OpenStreetMap' }).addTo(leaflet);
       pinLayer = window.L.layerGroup().addTo(leaflet);
+      const legend = window.L.control({ position: 'bottomleft' });
+      legend.onAdd = () => {
+        const d = window.L.DomUtil.create('details', 'tw-map-legend');
+        d.open = true;
+        d.innerHTML = '<summary>圖例</summary><ul><li><i style="background:var(--gold)"></i>兩人都想去</li><li><i style="background:var(--rail)"></i>有人想去</li><li><i style="background:var(--stamp);border-color:#fff"></i>去過了</li><li><i style="background:var(--line)"></i>還沒標</li></ul>';
+        window.L.DomEvent.disableClickPropagation(d);
+        return d;
+      };
+      legend.addTo(leaflet);
       requestAnimationFrame(() => leaflet?.invalidateSize());
+      shownIds = null; lastKey = '';
       drawPins();
     }
-    browser = listView(ctx, places);
+    loadGoogle();
+    browser = listView(ctx, places, { onFiltered: (rows) => {
+      shownIds = new Set(rows.map((p) => p.id));
+      const key = [...shownIds].sort().join(',');
+      const changed = key !== lastKey;
+      lastKey = key;
+      if (leaflet) drawPins(changed);
+    } });
     below.append(browser.el);
   }
 

@@ -51,7 +51,7 @@
 | `data/geo/counties.json` | 22 縣市邊界（GeoJSON FeatureCollection，已簡化約 150 KB）；每個 feature 的 `properties.id` 對應 `regions.json` 的縣市 id，`n` 為縣市名；給首頁地圖點亮台灣用 | A |
 | `data/staging/import-list.json` | Google 清單匯入的暫存清單（店名、分類、備註、歇業狀態），查到座標前不進 `places.json` | A |
 | `tools/places-lookup.mjs`、`.github/workflows/lookup-places.yml` | 用 Places API 查暫存清單的座標、縣市、`pid`，結果存到 `snapshot` 分支的 `lookup/`；需 repo secret `GOOGLE_PLACES_KEY`（經總管同意，這兩檔歸 A） | A |
-| `js/map.js` | 首頁「環島郵路」：最上面一條「快速選擇」橫幅（顯示目前身分還有幾個地點沒表態，連到 `#/quick`；沒選身分時改成「選身分」），窄螢幕時地圖排在最前面；用 `data/geo/counties.json` 的真實縣市邊界畫成 SVG，橘線繞一圈串起各縣市，泡泡大小是地點數，去過的縣市蓋郵戳（紅雙圈、邊界塗色），金色小牌是雙人票數；選到縣市後下方出現 Leaflet 縣市地圖（個別地點）與篩選、卡片。只畫有 `ll` 的地點；沒有邊界檔時退回只畫泡泡 | D |
+| `js/map.js` | 首頁「環島郵路」：最上面一條「快速選擇」橫幅（顯示目前身分還有幾個地點沒表態，連到 `#/quick`；沒選身分時改成「選身分」），窄螢幕時地圖排在最前面；用 `data/geo/counties.json` 的真實縣市邊界畫成 SVG，橘線繞一圈串起各縣市，泡泡大小是地點數，去過的縣市蓋郵戳（紅雙圈、邊界塗色），金色小牌是雙人票數；選到縣市後下方出現 Leaflet 縣市地圖（個別地點）與篩選、列表；地圖只畫目前篩選出的地點並自動縮放，圖釘顏色：金＝兩人都想去、橘＝有人想去、紅＝去過、淺灰＝還沒標（左下有圖例），點圖釘出現 Google 風格資訊卡（照片、評分、營業狀態、今天時間、AI 評語、想去／詳情／Google 地圖）；全站捲離頂端後右下角有「回到頂端」按鈕（`app.js` 的 `mountToTop`）。只畫有 `ll` 的地點；沒有邊界檔時退回只畫泡泡 | D |
 | `js/places.js` | 地區頁 `#/r/<id>`（往下一層只列有地點的）、地點詳情 `#/p/<id>`；輸出 `findRegion`、`inRegion`、`countIn`、`placeCard`、`listView`（分類、標記、搜尋篩選，條件換頁保留）；Google 評分與營業時間在 `google.placesKey` 有填時即時查，只放 `sessionStorage`（30 分鐘內有效）；清單的「現在營業」篩選與評分排序只看已查過的地點，按「查詢這批」才替目前清單前 40 筆查（同時 4 個請求，控制 Places 費用） | D |
 | `js/marks.js` | `#/compare` 兩人對照四組（預設停在第一個有地點的分組）與點亮台灣；輸出 `markBar`（想去、去過、想再去、年月、星等、喜歡程度 `like`、好吃 `good`、雷點 `avoid`、備註 `note`，寫入走 `sync.setMark`）、`markCompare`（兩人並排顯示全部欄位）、`LIKES`／`likeOf`、`statusOf`、`litCounties`；地點卡片上顯示兩人的喜歡程度 | D |
 | `img/bg/`、`img/og.jpg` | 背景照片（Wikimedia Commons，CC BY 2.0，授權寫在 `index.html` 頁尾）與分享預覽圖 | C |

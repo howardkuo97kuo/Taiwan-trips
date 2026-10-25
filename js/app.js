@@ -63,6 +63,15 @@ function stationSign(id) {
   setTimeout(() => el.remove(), 2400);
 }
 
+// 捲離頂端後出現「回到頂端」按鈕
+function mountToTop() {
+  const b = h('button', { type: 'button', class: 'tw-totop', hidden: true, 'aria-label': '回到頂端', onclick: () => window.scrollTo({ top: 0, behavior: prefs.motionOn() ? 'smooth' : 'auto' }) }, '↑ 回到頂端');
+  document.body.append(b);
+  const upd = () => { b.hidden = window.scrollY < 700; };
+  window.addEventListener('scroll', upd, { passive: true });
+  upd();
+}
+
 async function render() {
   const token = ++navToken;
   const { key, params } = parseHash();
@@ -174,6 +183,7 @@ async function boot() {
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch((e) => console.warn('[sw]', e)); // 離線快取（E）
   if (!store.get('who')) pickWho();
   window.addEventListener('hashchange', render);
+  mountToTop();
   await render();
 }
 
