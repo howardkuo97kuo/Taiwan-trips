@@ -60,7 +60,7 @@
 | `css/fx.css` | 圖示尺寸、導覽圖示（CSS mask）、換頁與車票進場、按鈕回饋、載入／空狀態插圖；動態受 `app.css` 的減少動態規則管轄 | C |
 | `css/*.css` | 樣式（`tokens.css` 設計變數、`app.css` 外殼、`home.css`／`places.css`／`marks.css` 各畫面）；模組自己的 class 用前綴（`tw-map-`、`tw-place-`、`tw-mark-`、`tw-inbox-`、`tw-trip-`） | C |
 | `js/quick.js`、`css/quick.css` | `#/quick` 快速選擇（卡片有可滑的照片輪播、評分與營業狀態、兩行 AI 評語、米其林、今天營業時間、地址、「更多資訊」展開、另一方狀態與兩則 Google 評論；按鈕固定在畫面下緣）：一次一張尚未標記的地點（沒有 `want`、`been`、`skip`、`neutral`），按鈕／滑動（右想去、左不想去）／鍵盤（→ ← ↓ 退格）；可依大區、縣市、分類、狀態篩選；「沒意見」存成 `neutral`（看過但沒決定，不再出現在待選，用「狀態」篩選挑出來重選）；底部列出自己標了不想去的並可改回；寫入走 `sync.setMark`，`want`、`skip`、`neutral` 互斥 | 新增（B 的路由表、D 的 `marks.js` 配合） |
-| `js/inbox.js` | `#/inbox`：新增／修正兩種送件（寫 `/inbox`，≤ 500 字），每 30 秒輪詢 `/inbox` 與 `/places`（頁面隱藏時暫停），顯示處理狀態與「已查好、等併回」的地點；自己送的待處理項目可收回；離線送件先存 localStorage `twInboxQueue`，連上網路後補送。狀態：`new` 待處理、`done` 已上架、`dup` 已經有了、`skip` 不收錄 | E |
+| `js/inbox.js` | `#/inbox`：新增／修正／網站意見三種送件（寫 `/inbox`，≤ 500 字；網站意見前綴【意見】，每週由 Claude 排程任務整理成修改方向，站主決定後才執行，處理完標 `done` 顯示為「已處理」），每 30 秒輪詢 `/inbox` 與 `/places`（頁面隱藏時暫停），顯示處理狀態與「已查好、等併回」的地點；自己送的待處理項目可收回；離線送件先存 localStorage `twInboxQueue`，連上網路後補送。狀態：`new` 待處理、`done` 已上架、`dup` 已經有了、`skip` 不收錄 | E |
 | `sw.js`、`manifest.webmanifest`、`img/icons/` | Service Worker：快取名 `tw-v2`（圖磚 `tw-tiles-v1`，最多 400 張）；同網域檔案網路優先（3 秒逾時退回快取），離線也能開；Leaflet、字型、OSM 圖磚先用快取再背景更新；Firebase 與 Places API 不攔截。`SHELL` 列出要預先快取的檔案，新增同網域檔案要加進去。manifest 與圖示供加到主畫面（`start_url` 與 `scope` 用相對路徑，Pages 子路徑也能用） | E |
 | `tools/inbox-to-list.mjs` | 把 `live/inbox.json` 的待處理項目轉成暫存清單（短網址會跟著轉址取店名；【修正】的不轉，列出給人工處理） | E |
 | `js/google.js` | Google 地點資料（預存版）：進站時從 Firebase `/google` 抓一次（讀進記憶體），提供 `googleOf(pid)`、`isOpenNow`（用預存的營業時段算）、`updatedLabel`、`staleDays`、`ago`；畫面一定要顯示「上次更新」，超過 10 天加警語 | D |

@@ -1,4 +1,5 @@
-// 收件匣（模組 E）：貼 Google 地圖連結或店名，由 Claude 查好再上架；也可以送「修正」。
+// 收件匣（模組 E）：貼 Google 地圖連結或店名，由 Claude 查好再上架；也可以送「修正」與「網站意見」。
+// 網站意見前綴【意見】，每週由排程整理成修改方向，站主決定後才執行。
 // 寫入 /inbox/{id} = { text, by, ts, status }（規則見 firebase-rules.json）；
 // 讀取用輪詢（不佔 SSE 連線），頁面看不到時暫停。離線時先存 localStorage，連上後補送。
 // status：new 待處理、done 已上架、dup 已經有了、skip 不收錄（Claude 處理後用 write-data 更新）。
@@ -6,9 +7,11 @@
 const QUEUE_KEY = 'twInboxQueue';
 const POLL_MS = 30000;
 const MAX_LEN = 500;
+const IDEA = '【意見】';
 const KINDS = [
   { id: 'add', label: '新增地點', prefix: '', ph: '貼上 Google 地圖連結，或直接寫店名與縣市' },
   { id: 'fix', label: '修正地點', prefix: '【修正】', ph: '哪一間要改什麼？例如：○○ 搬到新北市，或歇業了' },
+  { id: 'idea', label: '網站意見', prefix: IDEA, ph: '哪裡不好用、想要什麼功能、哪裡看不懂都可以寫', hint: '送出後每週會整理一次，由站主決定要不要改；這裡看得到處理進度。' },
 ];
 const STATUS = {
   new: ['待處理', 'is-new'],
@@ -40,7 +43,7 @@ export function mount(el, ctx) {
 
   const input = h('textarea', {
     class: 'tw-inbox-input', rows: '3', maxlength: String(MAX_LEN), placeholder: kind.ph,
-    'aria-label': '連結或店名',
+    'aria-label': '內容',
   });
   const kindBox = h('div', { class: 'tw-inbox-kinds', role: 'group', 'aria-label': '類型' });
   const hint = h('p', { class: 'tw-hint tw-inbox-hint' });
@@ -51,7 +54,7 @@ export function mount(el, ctx) {
   const drawKinds = () => {
     clear(kindBox).append(...KINDS.map((k) => h('button', {
       class: `tw-inbox-kind${k === kind ? ' is-active' : ''}`, type: 'button', 'aria-pressed': String(k === kind),
-      onclick: () => { kind = k; input.placeholder = k.ph; drawKinds(); },
+      onclick: () => { kind = k; input.placeholder = k.ph; drawKinds(); drawHint(); },
     }, k.label)));
   };
 
@@ -60,12 +63,12 @@ export function mount(el, ctx) {
     const queued = readQueue().length;
     hint.textContent = !who ? '先在右上角選身分，才知道是誰送的。'
       : queued ? `有 ${queued} 筆還沒送出（目前離線），連上網路後會自動補送。`
-        : '送出後 Claude 會查地址與座標再上架，通常要等一下；這裡看得到處理進度。';
+        : kind.hint ?? '送出後 Claude 會查地址與座標再上架，通常要等一下；這裡看得到處理進度。';
     submit.disabled = !who || sending;
   };
 
   const entry = (it) => {
-    const [label, cls] = STATUS[it.status] ?? [it.status, 'is-new'];
+    const [label, cls] = it.status === 'done' && it.text.startsWith(IDEA) ? ['已處理', 'is-done'] : STATUS[it.status] ?? [it.status, 'is-new'];
     const mine = it.by === store.get('who') && it.status === 'new' && !it.pending;
     return h('article', { class: `tw-inbox-item${it.pending ? ' is-pending' : ''}` },
       h('p', { class: 'tw-inbox-text' }, it.text),
@@ -82,7 +85,7 @@ export function mount(el, ctx) {
     if (items === null && !queued.length) {
       listBox.append(h('p', { class: loadError ? 'tw-empty' : 'tw-loading' }, loadError ? '讀不到送件紀錄（可能離線），稍後會再試。' : '載入中…'));
     } else if (!rows.length) {
-      listBox.append(h('p', { class: 'tw-empty' }, '還沒有東西。貼一個想去的地方吧。'));
+      listBox.append(h('p', { class: 'tw-empty' }, '還沒有東西。貼一個想去的地方，或寫下對網站的想法吧。'));
     } else {
       listBox.append(...rows.map(entry));
     }
@@ -167,8 +170,8 @@ export function mount(el, ctx) {
   const onOnline = () => { flush(); drawHint(); };
 
   el.append(h('section', { class: 'tw-inbox' },
-    h('h2', { class: 'tw-inbox-title' }, '新增地點'),
-    h('p', { class: 'tw-inbox-lead' }, '想加的地點、要修正的資料，丟進來就好。'),
+    h('h2', { class: 'tw-inbox-title' }, '收件匣'),
+    h('p', { class: 'tw-inbox-lead' }, '想加的地點、要修正的資料、對網站的意見，丟進來就好。'),
     kindBox, input, h('div', { class: 'tw-inbox-actions' }, submit), hint,
     h('h3', { class: 'tw-inbox-sub' }, '送過的紀錄'), listBox, pubBox));
 
