@@ -19,6 +19,9 @@
           "skip": {
             ".validate": "newData.isBoolean()"
           },
+          "neutral": {
+            ".validate": "newData.isBoolean()"
+          },
           "ym": {
             ".validate": "newData.isString() && newData.val().matches(/^[0-9]{4}-(0[1-9]|1[0-2])$/)"
           },

@@ -82,8 +82,8 @@ export async function quickMark(ctx, placeId, key) {
   if (key === 'been') patch = on ? { been: null, ym: null, again: null, stars: null } : { been: true, ym: prev?.ym ?? ymNow() };
   else if (key === 'again') patch = on ? { again: null } : { again: true, been: true, ym: prev?.ym ?? ymNow() };
   else patch = { [key]: on ? null : true };
-  if (key === 'want' && !on) patch.skip = null; // 想去與不想去互斥
-  if (key === 'skip' && !on) patch.want = null;
+  if (key === 'want' && !on) { patch.skip = null; patch.neutral = null; } // 想去與不想去互斥；標了就不再是沒意見
+  if (key === 'skip' && !on) { patch.want = null; patch.neutral = null; }
 
   // 動畫旗標要在寫入前設好：setMark 會先更新畫面
   if (key === 'been' && !on) fx.slam = placeId;
@@ -132,7 +132,7 @@ export function markBar(ctx, placeId) {
     'aria-pressed': on ? 'true' : 'false',
     onclick: () => {
       const patch = { [key]: on ? null : true };
-      if (key === 'want' && !on) patch.skip = null; // 想去與不想去互斥
+      if (key === 'want' && !on) { patch.skip = null; patch.neutral = null; } // 想去與不想去互斥
       if (key === 'been' && !on) patch.ym = mine.ym ?? ymNow(); // 剛標去過，預設這個月
       if (key === 'been' && on) { patch.ym = null; patch.again = null; patch.stars = null; }
       save(patch);
