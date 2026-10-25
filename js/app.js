@@ -67,7 +67,11 @@ function stationSign(id) {
 function mountToTop() {
   const b = h('button', { type: 'button', class: 'tw-totop', hidden: true, 'aria-label': '回到頂端', onclick: () => window.scrollTo({ top: 0, behavior: prefs.motionOn() ? 'smooth' : 'auto' }) }, '↑ 回到頂端');
   document.body.append(b);
-  const upd = () => { b.hidden = window.scrollY < 700; };
+  const upd = () => {
+    b.hidden = window.scrollY < 700;
+    const y = window.scrollY; // 導覽縮成一排固定在上方（桌面，見 app.css .tw-top）；進出門檻錯開避免抖動
+    if (y > 90) document.body.classList.add('is-stuck'); else if (y < 60) document.body.classList.remove('is-stuck');
+  };
   window.addEventListener('scroll', upd, { passive: true });
   upd();
 }
