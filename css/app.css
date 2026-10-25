@@ -42,6 +42,24 @@ body { display: flex; flex-direction: column; padding-bottom: calc(var(--nav-h) 
 /* ── 導覽：桌面在頂列下方，手機固定在底部 ── */
 .tw-nav { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 28px; display: flex; gap: 8px; order: 1; }
 .tw-header { order: 0; } .tw-air { order: -1; } .tw-view { order: 2; }
+.tw-top { order: 0; display: flex; flex-direction: column; }
+/* 桌面：捲動時導覽固定在上方並縮成一排。外框高度不變（不會讓內容跳動），top 為負值只讓下面 56px 留在畫面裡 */
+@media (min-width: 761px) {
+  .tw-top { position: sticky; top: -64px; z-index: 30; height: 120px; pointer-events: none; }
+  .tw-top > * { pointer-events: auto; }
+  .tw-top::before { content: ""; position: absolute; inset: auto 0 0; height: 56px; opacity: 0; transition: opacity .2s;
+    background: color-mix(in srgb, var(--card) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 2px solid var(--ink); }
+  body.is-stuck .tw-top::before { opacity: 1; }
+  body.is-stuck .tw-top { flex-direction: row; flex-wrap: nowrap; align-items: center; align-content: flex-start; gap: 14px; height: 120px;
+    padding: 73px max(28px, calc((100vw - var(--wrap)) / 2 + 28px)) 0; }
+  body.is-stuck .tw-header { display: contents; }
+  body.is-stuck .tw-title { font-size: 22px; margin-right: 0; text-shadow: none; position: relative; }
+  body.is-stuck .tw-header > :not(.tw-title) { position: relative; order: 2; }
+  body.is-stuck .tw-header > .tw-sync { margin-left: auto; }
+  body.is-stuck .tw-nav { position: relative; width: auto; max-width: none; padding: 0; flex: none; }
+  body.is-stuck .tw-nav-item { min-height: 36px; padding: 2px 14px; font-size: 15px; }
+  body.is-stuck .tw-who-btn { min-height: 34px; padding: 2px 14px; font-size: 15px; }
+}
 .tw-nav-item { text-decoration: none; color: var(--ink); border: 2px solid var(--ink); background: color-mix(in srgb, var(--card) 85%, transparent); border-radius: var(--r-sm); padding: 4px 20px; font-size: 16px; min-height: 40px; display: inline-flex; align-items: center; transition: background .2s, color .2s; }
 .tw-nav-item:hover { background: var(--card); }
 .tw-nav-item.is-active { background: var(--ink); color: var(--paper); }
