@@ -33,6 +33,8 @@ const FIELDS = [
   'places.businessStatus',
   'places.googleMapsUri',
   'places.addressComponents',
+  'places.types',
+  'places.primaryType',
 ].join(',');
 
 const summarize = (p) => {
@@ -47,6 +49,8 @@ const summarize = (p) => {
     gurl: p.googleMapsUri ?? null,
     county,
     region: county ? (countyId.get(county) ?? null) : null,
+    types: p.types ?? [],
+    primary: p.primaryType ?? null,
   };
 };
 
@@ -73,13 +77,26 @@ async function search(q) {
   throw new Error('Places API 多次重試仍失敗');
 }
 
+// 清單項目有 pid（例如從 Google Takeout 的網址換算出來的）就直接用 ID 查詳細資料，不再用名稱搜尋
+async function details(pid) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const res = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(pid)}?languageCode=zh-TW&regionCode=TW`, {
+      headers: { 'X-Goog-Api-Key': key, 'X-Goog-FieldMask': FIELDS.replace(/places\./g, '') },
+    });
+    if (res.ok) return await res.json();
+    if (res.status === 429 || res.status >= 500) { await sleep(1000 * attempt); continue; }
+    throw new Error(`Places API ${res.status}：${(await res.text()).slice(0, 200)}`);
+  }
+  throw new Error('Places API 多次重試仍失敗');
+}
+
 const results = [];
 const idx = pick ?? list.slice(offset, offset + limit).map((_, k) => offset + k);
 const slice = idx;
 for (const i of idx) {
   const item = list[i];
   try {
-    const found = (await search(item.q ?? item.n)).map(summarize);
+    const found = item.pid ? [summarize(await details(item.pid))] : (await search(item.q ?? item.n)).map(summarize);
     const top = found[0] ?? null;
     results.push({
       i,
@@ -90,7 +107,7 @@ for (const i of idx) {
       match: top,
       alts: found.slice(1),
       // 吻合：名稱相近、座標與縣市都查得到
-      ok: !!(top && top.ll && top.region && similar(item.n, top.name ?? '')),
+      ok: !!(top && top.ll && top.region && (item.pid || similar(item.n, top.name ?? ''))),
     });
   } catch (e) {
     results.push({ i, n: item.n, error: String(e.message ?? e) });
