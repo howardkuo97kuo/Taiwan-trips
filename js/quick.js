@@ -1,5 +1,6 @@
-// 快速選擇 #/quick：一次一張卡，想去／不想去／之後再說。可滑動、鍵盤 ←（不想去）→（想去）。
-// 寫入走 sync.setMark，想去與不想去互斥（skip 欄位見 docs/SPEC.md）。
+// 快速選擇 #/quick：一次一張卡，想去／不想去／沒意見。可滑動、鍵盤 ←（不想去）→（想去）。
+// 寫入走 sync.setMark，想去、不想去、沒意見三者互斥（skip、neutral 欄位見 docs/SPEC.md）。
+// 沒意見是「看過但沒決定」，不會再出現在預設的待選清單，可用「狀態」篩選挑出來重選。
 import { statusOf } from './marks.js';
 import { findRegion, michBadge, googleBlock } from './places.js';
 import { carousel } from './photos.js';
@@ -11,19 +12,19 @@ const SWIPE_PX = 90;
 export function mount(el, ctx) {
   const { h, clear, store, sync, toast } = ctx;
   let who = store.get('who');
-  const later = new Set(); // 這次先跳過的，離開頁面就忘
   const hist = []; // { id, prev }
-  const f = { zone: '', cat: '' };
+  const f = { zone: '', county: '', cat: '', st: '' };
   let queue = [];
   let idx = 0;
   let cardEl = null;
 
   const mark = (id) => store.get('marks')[who]?.[id] ?? null;
-  const undecided = (p) => { const m = mark(p.id); return !m?.want && !m?.been && !m?.skip; };
+  const undecided = (p) => { const m = mark(p.id); return !m?.want && !m?.been && !m?.skip && !m?.neutral; };
+  const isNeutral = (p) => { const m = mark(p.id); return !!m?.neutral && !m?.want && !m?.been && !m?.skip; };
   const zoneOf = (p) => (store.get('regions')?.zones ?? []).find((z) => p.region?.startsWith(`${z.id}-`))?.id ?? '';
   const pool = () => store.get('places').filter((p) => store.isVisible(p)
-    && (!f.zone || zoneOf(p) === f.zone) && (!f.cat || p.c === f.cat || [p.c2].flat().includes(f.cat)));
-  const buildQueue = () => { queue = pool().filter((p) => undecided(p) && !later.has(p.id)).map((p) => p.id); idx = 0; };
+    && (!f.zone || zoneOf(p) === f.zone) && (!f.county || p.region === f.county || p.region?.startsWith(`${f.county}-`)) && (!f.cat || p.c === f.cat || [p.c2].flat().includes(f.cat)));
+  const buildQueue = () => { queue = pool().filter((p) => (f.st === 'neutral' ? isNeutral(p) : undecided(p))).map((p) => p.id); idx = 0; };
 
   async function decide(kind) {
     const p = store.placeById(queue[idx]);
@@ -33,8 +34,7 @@ export function mount(el, ctx) {
     idx += 1;
     render();
     try {
-      if (kind === 'later') later.add(p.id);
-      else await sync.setMark(p.id, kind === 'want' ? { want: true, skip: null } : { skip: true, want: null });
+      await sync.setMark(p.id, kind === 'want' ? { want: true, skip: null, neutral: null } : kind === 'skip' ? { skip: true, want: null, neutral: null } : { neutral: true, want: null, skip: null });
     } catch (e) {
       console.warn(e);
       hist.pop(); idx -= 1; render();
@@ -45,8 +45,7 @@ export function mount(el, ctx) {
   async function undo() {
     const last = hist.pop();
     if (!last) return;
-    later.delete(last.id);
-    const back = { want: last.prev?.want ?? null, skip: last.prev?.skip ?? null };
+    const back = { want: last.prev?.want ?? null, skip: last.prev?.skip ?? null, neutral: last.prev?.neutral ?? null };
     idx = Math.max(0, idx - 1);
     if (queue[idx] !== last.id) { queue.splice(idx, 0, last.id); }
     render();
@@ -59,13 +58,16 @@ export function mount(el, ctx) {
   function filters() {
     const zones = store.get('regions')?.zones ?? [];
     const cats = store.get('config')?.categories ?? [];
-    const sel = (key, label, opts) => h('label', { class: 'tw-quick-filter' }, h('span', {}, label),
-      h('select', { onchange: (e) => { f[key] = e.target.value; buildQueue(); render(); } },
-        h('option', { value: '' }, '全部'),
+    const counties = zones.filter((z) => !f.zone || z.id === f.zone).flatMap((z) => z.counties ?? []);
+    const sel = (key, label, opts, all = '全部') => h('label', { class: 'tw-quick-filter' }, h('span', {}, label),
+      h('select', { onchange: (e) => { f[key] = e.target.value; if (key === 'zone') f.county = ''; buildQueue(); render(); } },
+        h('option', { value: '' }, all),
         opts.map(([v, n]) => h('option', { value: v, selected: f[key] === v ? '' : null }, n))));
     return h('div', { class: 'tw-quick-filters' },
       sel('zone', '地區', zones.map((z) => [z.id, z.n])),
-      sel('cat', '分類', cats.map((c) => { const n = typeof c === 'string' ? c : c.n ?? c.id; return [n, n]; })));
+      sel('county', '縣市', counties.map((x) => [x.id, x.n])),
+      sel('cat', '分類', cats.map((c) => { const n = typeof c === 'string' ? c : c.n ?? c.id; return [n, n]; })),
+      sel('st', '狀態', [['neutral', '沒意見']], '還沒選'));
   }
 
   function cardFor(p) {
@@ -129,10 +131,11 @@ export function mount(el, ctx) {
     const decided = pool().filter((p) => !undecided(p)).length;
     const p = store.placeById(queue[idx]);
     const mine = store.get('marks')[who] ?? {};
+    const neutralN = pool().filter(isNeutral).length;
     const skipped = pool().filter((x) => mine[x.id]?.skip);
     el.append(
       h('h1', {}, '快速選擇'),
-      h('p', { class: 'tw-hint' }, `${store.whoName(who)}已選 ${decided}／${total}。右滑或按 → 想去，左滑或按 ← 不想去。`),
+      h('p', { class: 'tw-hint' }, `${store.whoName(who)}已選 ${decided}／${total}。右滑或按 → 想去，左滑或按 ← 不想去，按 ↓ 沒意見。`),
       filters());
     cardEl = null;
     if (p) {
@@ -140,16 +143,16 @@ export function mount(el, ctx) {
       el.append(cardEl,
         h('div', { class: 'tw-quick-actions' },
           h('button', { type: 'button', class: 'tw-quick-btn is-no', onclick: () => decide('skip') }, '✕ 不想去'),
-          h('button', { type: 'button', class: 'tw-quick-btn is-later', onclick: () => decide('later') }, '之後再說'),
+          h('button', { type: 'button', class: 'tw-quick-btn is-later', onclick: () => decide('neutral') }, '沒意見'),
           h('button', { type: 'button', class: 'tw-quick-btn is-yes', onclick: () => decide('want') }, '♥ 想去')),
         h('p', { class: 'tw-hint tw-quick-foot' },
           h('button', { type: 'button', class: 'tw-quick-undo', disabled: hist.length ? null : '', onclick: undo }, '↶ 上一步'),
           `　第 ${idx + 1}／${queue.length} 個`));
     } else {
       el.append(h('section', { class: 'tw-quick-done' },
-        h('h2', {}, queue.length ? '這一批看完了' : '沒有還沒選的地點了'),
-        h('p', {}, later.size ? `有 ${later.size} 個先跳過，` : '', '想去的到「兩人對照」看。'),
-        later.size > 0 && h('button', { type: 'button', class: 'tw-quick-btn', onclick: () => { later.clear(); buildQueue(); render(); } }, '把跳過的再看一輪'),
+        h('h2', {}, queue.length ? '這一批看完了' : f.st === 'neutral' ? '沒有沒意見的地點了' : '沒有還沒選的地點了'),
+        h('p', {}, f.st !== 'neutral' && neutralN ? `有 ${neutralN} 個標了沒意見，` : '', '想去的到「兩人對照」看。'),
+        f.st !== 'neutral' && neutralN > 0 && h('button', { type: 'button', class: 'tw-quick-btn', onclick: () => { f.st = 'neutral'; buildQueue(); render(); } }, '把沒意見的再選一輪'),
         h('a', { class: 'tw-quick-link', href: '#/compare' }, '去兩人對照')));
     }
     if (skipped.length) {
@@ -164,7 +167,7 @@ export function mount(el, ctx) {
     if (e.target.closest?.('input,select,textarea') || e.metaKey || e.ctrlKey || e.altKey) return;
     if (e.key === 'ArrowRight') decide('want');
     else if (e.key === 'ArrowLeft') decide('skip');
-    else if (e.key === 'ArrowDown') decide('later');
+    else if (e.key === 'ArrowDown') decide('neutral');
     else if (e.key === 'Backspace') undo();
   };
   document.addEventListener('keydown', onKey);

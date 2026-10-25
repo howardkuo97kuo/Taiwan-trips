@@ -109,7 +109,7 @@
 
 | 路徑 | 用途 | 誰能寫 |
 |---|---|---|
-| `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, skip?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、不想去 `skip`（與 `want` 互斥，網站寫入時會清掉另一個）、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
+| `/marks/{apong\|baobao}/{placeId}` | `{want?, been?, again?, skip?, neutral?, ym?, stars?, like?, good?, avoid?, note?, ts}`：想去、去過、想再去、不想去 `skip`（與 `want` 互斥，網站寫入時會清掉另一個）、沒意見 `neutral`（快速選擇看過但沒決定；與 `want`、`skip` 互斥，不會再出現在預設待選清單，可用「狀態」篩選挑出來重選）、年月（`YYYY-MM`）、1 到 5 星、喜歡程度 `like`（`love`｜`ok`｜`meh`）、好吃／推薦 `good`（≤ 300 字）、雷點／要避開 `avoid`（≤ 300 字）、一般備註 `note`（≤ 200 字） | 網站（分別寫自己那條）、Claude（write-data） |
 | `/inbox/{id}` | 收件匣：連結或店名、誰送的、時間、狀態 | 網站 |
 | `/places`、`/removed` | 排程查好後的新地點、被移除的地點（定期併回 `places.json`） | 只有排程工具與 write-data |
 | `/google/{pid}` | Google 地點資料：`{u 更新時間 ms, status?, rating?, n 評論數?, addr?, maps?, hours? 七行文字, periods? 營業時段, reviews? 最多 5 則 {r, t, o?, by, uri?, at?}, ai? {t 評語（最多 200 字）, n 整理自幾則評論, at 時間 ms}}`；格式與用法見 `js/google.js` 開頭 | 排程 `refresh-google` 寫其餘欄位（`tools/google-refresh.mjs`，只改自己的欄位、不動 `ai`）；`ai` 只由 `write-google-ai` 工作流程寫（`tools/write-google-ai.mjs`）；網站只讀 |
