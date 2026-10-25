@@ -63,6 +63,7 @@ function stationSign(id) {
   setTimeout(() => el.remove(), 2400);
 }
 
+let prefsOpen = false; // 手機頁首的「⚙」設定面板（動畫、深色）是否展開
 // 捲離頂端後出現「回到頂端」按鈕
 function mountToTop() {
   const b = h('button', { type: 'button', class: 'tw-totop', hidden: true, 'aria-label': '回到頂端', onclick: () => window.scrollTo({ top: 0, behavior: prefs.motionOn() ? 'smooth' : 'auto' }) }, '↑ 回到頂端');
@@ -110,17 +111,21 @@ function renderHeader() {
   // 三種狀態：已同步／連線中（還沒拿到任何資料）／離線（顯示的是上次拿到的資料）
   const st = online ? ['is-online', '已同步', '標記會即時同步'] : store.get('synced')
     ? ['is-offline', '離線', '目前連不上，顯示的是上次的標記'] : ['is-pending', '連線中', '正在連線'];
+  $('tw-header').classList.toggle('is-prefs-open', prefsOpen);
   clear($('tw-header')).append(
     h('a', { class: 'tw-title', href: '#/' }, store.get('config')?.siteName ?? '胖寶寶台灣行'),
     h('span', { class: `tw-sync ${st[0]}`, title: st[2], role: 'status' },
       h('i', { class: 'tw-dot', 'aria-hidden': 'true' }), st[1]),
+    h('button', { class: 'tw-pill tw-prefs-toggle', type: 'button', 'aria-label': '顯示設定', 'aria-expanded': String(prefsOpen),
+      onclick: (e) => { prefsOpen = !prefsOpen; $('tw-header').classList.toggle('is-prefs-open', prefsOpen); e.currentTarget.setAttribute('aria-expanded', String(prefsOpen)); } }, '⚙'),
+    h('span', { class: 'tw-prefs' },
     h('button', {
       class: 'tw-pill tw-motion-btn', type: 'button', onclick: prefs.toggleMotion,
       title: prefs.systemReducesMotion() && !document.documentElement.dataset.motion
         ? '你的系統設定了減少動態，所以預設是關的；點一下可以開啟' : '開關背景與蓋章動畫',
     }, prefs.motionOn() ? '動畫：開' : '動畫：關'),
     h('button', { class: 'tw-pill tw-theme-btn', type: 'button', onclick: prefs.toggleTheme },
-      prefs.isDark() ? '淺色' : '深色'),
+      prefs.isDark() ? '淺色' : '深色')),
     h('button', { class: 'tw-who-btn', type: 'button', onclick: () => pickWho(), title: '切換身分' },
       who ? `我是${store.whoName(who)} ▾` : '我是誰？'),
   );
