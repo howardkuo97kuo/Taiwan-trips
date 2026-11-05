@@ -137,16 +137,19 @@ export function placeCard(ctx, p) {
       type: 'button', dataset: { ini: name(id)[0], who: id }, class: `tw-mark-dot${s[id].want ? ' is-on' : ''}`, 'aria-label': `${name(id)}${s[id].want ? '想去' : '沒有標想去'}（先選身分才能標記）`,
       onclick: () => quickMark(ctx, p.id, 'want') }, ...(s[id].want ? [pm(id)] : [])), name(id)));
 
-  const beenMark = who ? me.mark : (s.apong.mark?.been ? s.apong.mark : s.baobao.mark);
-  const stamped = who ? me.been : (s.apong.been || s.baobao.been);
+  // 只有對方去過：顯示對方的半票，按一下就是「我也去過」，兩人都去過變全票
+  const peerOnly = !!(who && !me.been && s[other].been);
+  const beenMark = who ? (peerOnly ? s[other].mark : me.mark) : (s.apong.mark?.been ? s.apong.mark : s.baobao.mark);
+  const stamped = who ? (me.been || peerOnly) : (s.apong.been || s.baobao.been);
   const stampBtn = stamped
-    ? h('button', { type: 'button', class: `tw-mark-stamp${fx.slam ? ' is-slam' : ''}`, 'aria-pressed': 'true',
-      'aria-label': `取消蓋章：${p.n}`, onclick: () => quickMark(ctx, p.id, 'been') })
+    ? h('button', { type: 'button', class: `tw-mark-stamp${fx.slam ? ' is-slam' : ''}${peerOnly ? ' is-peer' : ''}`, 'aria-pressed': peerOnly ? 'false' : 'true',
+      'aria-label': peerOnly ? `${name(other)}去過，我也去過：${p.n}` : `取消蓋章：${p.n}`, title: peerOnly ? `${name(other)}去過了，按一下＝我也去過（變全票）` : null,
+      onclick: () => quickMark(ctx, p.id, 'been') })
     : h('button', { type: 'button', class: 'tw-mark-stamp-empty', 'aria-pressed': 'false', 'aria-label': `蓋章去過：${p.n}`,
       onclick: () => quickMark(ctx, p.id, 'been') }, '標去過');
   if (stamped) {
     const beenIds = ['apong', 'baobao'].filter((id) => s[id].been);
-    stampBtn.innerHTML = stampSVG(beenMark?.ym, county.replace(/[縣市]$/, ''), who ? !!me.again : !!(s.apong.again || s.baobao.again), beenIds.map(name).join('、'), beenIds.length === 2);
+    stampBtn.innerHTML = stampSVG(beenMark?.ym, county.replace(/[縣市]$/, ''), who ? !!(peerOnly ? s[other].again : me.again) : !!(s.apong.again || s.baobao.again), beenIds.map(name).join('、'), beenIds.length === 2);
   }
 
   const ghostBits = (id, m) => [name(id), m.want && '想去', m.skip && '不想去', m.been && `去過${m.mark?.ym ? ` ${m.mark.ym}` : ''}`].filter(Boolean).join(' ');
@@ -178,7 +181,7 @@ export function placeCard(ctx, p) {
       h('button', { type: 'button', class: 'tw-mark-skip', 'aria-pressed': me?.skip ? 'true' : 'false', 'aria-label': `不想去：${p.n}`,
         onclick: () => quickMark(ctx, p.id, 'skip') }, me?.skip ? '已標：不想去' : '不想去')),
     h('div', { class: 'tw-mark-stampzone' }, stampBtn,
-      stamped && who && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
+      stamped && who && !peerOnly && h('button', { type: 'button', class: 'tw-mark-again', 'aria-pressed': me.again ? 'true' : 'false',
         onclick: () => quickMark(ctx, p.id, 'again') }, me.again ? '已標：想再去' : '標成想再去')),
     hasMedia && h('div', { class: 'tw-place-media' }, carousel(ctx, p, { card: true }), peer),
     googleBlock(ctx, p, sumSlot));

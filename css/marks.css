@@ -135,6 +135,9 @@ button.tw-mark-dot:hover { transform: scale(1.1); }
 .tw-place-card .tw-mark-stamp .tk { font-family: var(--f-display); }
 .tw-place-card .tw-mark-stamp .again { animation: tw-again-in .35s cubic-bezier(.2, 1.1, .4, 1) .5s both; }
 @keyframes tw-again-in { from { opacity: 0; transform: rotate(-12deg) scale(2); } }
+/* 只有對方去過的半票：可以按，按了變全票 */
+.tw-mark-stamp.is-peer { cursor: pointer; opacity: .9; }
+.tw-mark-stamp.is-peer:hover, .tw-mark-stamp.is-peer:focus-visible { opacity: 1; transform: translateY(-2px); }
 
 .tw-place-card .tw-mark-stamp { width: 250px; height: auto; aspect-ratio: 400 / 180; transform: none; filter: drop-shadow(0 2px 3px #0005); }
 .tw-place-card .tw-mark-stamp svg { width: 100%; height: 100%; }
